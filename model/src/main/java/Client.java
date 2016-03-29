@@ -1,4 +1,5 @@
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,9 +8,9 @@ import java.util.List;
 
 @Entity
 @Table(name="clients")
-public class Client {
+public class Client extends IdGenerate{
 
-    @Id
+    @Column(nullable = false)
     private String login;
 
     @Column(nullable = false)
@@ -19,33 +20,24 @@ public class Client {
     private String pass;
 
     @ManyToMany
-    private List<Client> friends;
+    @JoinColumn(name="friend_id", referencedColumnName = "id")
+    private List<Client> iFriendTo = new ArrayList<>();
+
+    @ManyToMany(mappedBy="iFriendTo", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    private List<Client> myFriends = new ArrayList<>();
 
     public Client() {
     }
 
-    public Client(String login, String name, String pass, List<Client> clients) {
+    public Client(String login, String name, String pass) {
         this.login = login;
         this.name = name;
         this.pass = pass;
-        this.friends = clients;
     }
 
     public Client(Login client){
         login = client.name;
         pass = client.pass;
-    }
-
-    public void setFriends(List<Client> friends) {
-        this.friends = friends;
-    }
-
-    public List<Client> getFriends() {
-        return friends;
-    }
-
-    public void addFriend(Client client){
-        friends.add(client);
     }
 
     public String getLogin() {
@@ -72,25 +64,20 @@ public class Client {
         this.pass = pass;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Client client = (Client) o;
-
-        if (login != null ? !login.equals(client.login) : client.login != null) return false;
-        if (name != null ? !name.equals(client.name) : client.name != null) return false;
-        return pass != null ? pass.equals(client.pass) : client.pass == null;
-
+    public List<Client> getiFriendTo() {
+        return iFriendTo;
     }
 
-    @Override
-    public int hashCode() {
-        int result = login != null ? login.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (pass != null ? pass.hashCode() : 0);
-        return result;
+    public void setiFriendTo(List<Client> iFriendTo) {
+        this.iFriendTo = iFriendTo;
+    }
+
+    public List<Client> getMyFriends() {
+        return myFriends;
+    }
+
+    public void setMyFriends(List<Client> myFriends) {
+        this.myFriends = myFriends;
     }
 
     @Override

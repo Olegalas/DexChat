@@ -17,8 +17,6 @@ public final class Server {
 
     public void run(){
 
-        init();
-
         try{
 
             serverSocket = new ServerSocket(8080);
@@ -44,10 +42,4 @@ public final class Server {
         }
     }
 
-    private void init(){
-        EntityManagerFactory entityManagerFactory =
-                Persistence.createEntityManagerFactory("myunit");
-
-        EntityManager manager = entityManagerFactory.createEntityManager();
-    }
 }

@@ -5,14 +5,14 @@
              version="2.0">
 
     <!--some indetifier-->
-    <persistence-unit name="myunit" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="dexunit" transaction-type="RESOURCE_LOCAL">
         <description>
             Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
         </description>
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>Client.java</class>
+        <class>Client</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
