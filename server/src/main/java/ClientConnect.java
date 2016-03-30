@@ -22,6 +22,7 @@ public class ClientConnect extends Thread {
     private final Socket client;
     private final static Logger LOGGER = Logger.getLogger(Server.class);
     private final ClientInfoSocket clientInfo;
+    private BufferedReader br;
 
     ClientConnect(Socket client, ClientInfoSocket info){
         this.client = client;
@@ -33,6 +34,7 @@ public class ClientConnect extends Thread {
     // fot choose validation client-side must send "2"
     // then server takes login and pass and check it out
     // finally if client passed validation - server give to client new thread where they will work
+    // when the client-side send <@exit> combination this thread will die
     @Override
     public void run() {
 
@@ -44,13 +46,17 @@ public class ClientConnect extends Thread {
             try {
                 LOGGER.debug(clientInfo +" - Wait for choose from client");
 
-                BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
+                br = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 choose = br.readLine();
+                checkExit(choose);
                 choose = choose.substring(0,1);
 
                 LOGGER.debug(clientInfo +" - Gut " + choose + " from client");
             } catch (IOException e) {
                 LOGGER.error("IOException from input stream in "+ clientInfo +" - " + e.getMessage());
+                break;
+            } catch (InterruptedException e){
+                LOGGER.fatal("Client close client-side application");
                 break;
             }
 
@@ -58,14 +64,27 @@ public class ClientConnect extends Thread {
 
                 case REGISTRATION:
                     LOGGER.debug(clientInfo +" - REGISTRATION");
-                    registration();
-                    LOGGER.debug(clientInfo +" - REGISTRATION completed");
+                    while(!isInterrupted()){
+                        try {
+                            if(registration()){
+                                LOGGER.debug(clientInfo +" - REGISTRATION completed");
+                                break;
+                            }
+                        } catch (InterruptedException e) {
+                            LOGGER.info(clientInfo +" - quit from registration");
+                            break;
+                        }
+                    }
                     break;
                 case VALIDATION:
                     LOGGER.debug(clientInfo +" - VALIDATION");
-                    if(validation()){
-                        /* run new thread and interrupted this thread*/
-                        LOGGER.info("Client passed validation " + clientInfo);
+                    try {
+                        if(validation()){
+                            /* run new thread and interrupted this thread*/
+                            LOGGER.info("Client passed validation " + clientInfo);
+                        }
+                    } catch (InterruptedException e) {
+                        LOGGER.fatal("Client close client-side application");
                     }
                     break;
 
@@ -75,14 +94,14 @@ public class ClientConnect extends Thread {
         LOGGER.debug("ClientConnect " + clientInfo + " thread was killed");
     }
 
-    private boolean validation() {
+    private boolean validation() throws InterruptedException {
 
         Client client = null;
         try {
             client = getLoginAndPassFromClient();
         } catch (IOException e) {
             LOGGER.error("IOException from input stream in "+ clientInfo +" - " + e.getMessage());
-            LOGGER.error("getLoginAndPassFromClient returned null");
+            LOGGER.error("getLoginAndPassFromClient returned false");
             return false;
         }
 
@@ -104,28 +123,57 @@ public class ClientConnect extends Thread {
         return client.getPass().equals(fromResult.getPass());
     }
 
-    //// TODO: 30.03.16
-    private void registration() {
+    private boolean registration() throws InterruptedException{
+        Client client = null;
         try {
-            getLoginAndPassFromClient();
+
+            client = getLoginAndPassFromClient();
+            String name = "";
+            LOGGER.info("ClientConnect " + clientInfo + " wait for user name");
+            name = br.readLine();
+            checkExit(name);
+
+            client.setName(name);
+
         } catch (IOException e) {
             LOGGER.error("IOException from input stream in "+ clientInfo +" - " + e.getMessage());
-            LOGGER.error("getLoginAndPassFromClient returned null");
+            LOGGER.error("getLoginAndPassFromClient returned false");
+            return false;
         }
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        try{
+            manager.getTransaction().begin();
+            manager.persist(client);
+            manager.getTransaction().commit();
+
+        }catch (Exception e){
+            LOGGER.error("This login has already used");
+            return false;
+        }
+
+        return true;
     }
 
-    private Client getLoginAndPassFromClient() throws IOException{
+    private Client getLoginAndPassFromClient() throws IOException, InterruptedException {
 
-            Login login = new Login();
-            BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        Login login = new Login();
 
-            LOGGER.info("ClientConnect " + clientInfo + " wait for login");
-            login.name = br.readLine();
-            LOGGER.info("ClientConnect " + clientInfo + " wait for pass");
-            login.pass = br.readLine();
+        LOGGER.info("ClientConnect " + clientInfo + " wait for login");
+        login.name = br.readLine();
+        checkExit(login.name);
+        LOGGER.info("ClientConnect " + clientInfo + " wait for pass");
+        login.pass = br.readLine();
+        checkExit(login.pass);
 
-            br.close();
-            return new Client(login);
+        return new Client(login);
+    }
+
+    private void checkExit(String exitCommand) throws InterruptedException {
+        if("@exit".equals(exitCommand)){
+            throw new InterruptedException("user want exit from registration");
+        }
     }
 
 
