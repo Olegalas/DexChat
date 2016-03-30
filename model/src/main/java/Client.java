@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name="clients")
 public class Client extends IdGenerate{
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String login;
 
     @Column(nullable = false)

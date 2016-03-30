@@ -3,6 +3,6 @@
  */
 public class TestServer {
     public static void main(String[] args) {
-        new Server().run();
+        Server.newInstance().run();
     }
 }
