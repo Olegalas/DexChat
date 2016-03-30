@@ -18,6 +18,7 @@ public class ClientConnect extends Thread {
 
     private final static String REGISTRATION = "1";
     private final static String VALIDATION = "2";
+    private static boolean interapt = false;
 
     private final Socket client;
     private final static Logger LOGGER = Logger.getLogger(Server.class);
@@ -41,7 +42,7 @@ public class ClientConnect extends Thread {
         LOGGER.debug("ClientConnect " + clientInfo + " thread was run");
         String choose = "";
 
-        while (!isInterrupted()){
+        while (!interapt && !isInterrupted()){
 
             try {
                 LOGGER.debug(clientInfo +" - Wait for choose from client");
@@ -56,7 +57,7 @@ public class ClientConnect extends Thread {
                 LOGGER.error("IOException from input stream in "+ clientInfo +" - " + e.getMessage());
                 break;
             } catch (InterruptedException e){
-                LOGGER.fatal("Client close client-side application");
+                LOGGER.fatal("InterruptException "+ clientInfo +" Client close client-side application");
                 break;
             }
 
@@ -85,13 +86,15 @@ public class ClientConnect extends Thread {
                         }
                     } catch (InterruptedException e) {
                         LOGGER.fatal("Client close client-side application");
+                        interapt = true;
                     }
                     break;
 
             }
+            LOGGER.debug(clientInfo + " status is " + isInterrupted());
         }
 
-        LOGGER.debug("ClientConnect " + clientInfo + " thread was killed");
+        LOGGER.debug("ClientConnect " + clientInfo + " thread was correctly killed");
     }
 
     private boolean validation() throws InterruptedException {
@@ -171,7 +174,7 @@ public class ClientConnect extends Thread {
     }
 
     private void checkExit(String exitCommand) throws InterruptedException {
-        if("@exit".equals(exitCommand)){
+        if("@exit".equals(exitCommand) || exitCommand == null){
             throw new InterruptedException("user want exit from registration");
         }
     }
