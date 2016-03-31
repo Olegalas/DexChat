@@ -10,9 +10,6 @@ import java.util.List;
  */
 public class Conversation extends Thread {
 
-    private final static String ADD_NEW_FRIEND = "1";
-    private final static String BEGIN_NEW_CHAT = "2";
-
     private final static Logger LOGGER = Logger.getLogger(Server.class);
 
     private ServerSocket serverSocketForConversation;
@@ -20,7 +17,6 @@ public class Conversation extends Thread {
     private Socket clientSocketForFiles;
     private Socket clientSocketForSearchFriends;
 
-    private BufferedReader br;
     private final Socket clientSocket;
     private final ClientInfoSocket infoSocket;
     private final Client client;
