@@ -1,5 +1,9 @@
 import org.apache.log4j.Logger;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -21,10 +25,16 @@ public class Conversation extends Thread {
     private final ClientInfoSocket infoSocket;
     private final Client client;
 
+    private EntityManager manager;
+
     Conversation(Socket clientSocket, ClientInfoSocket infoSocket, Client client){
         this.client = client;
         this.clientSocket = clientSocket;
         this.infoSocket = infoSocket;
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
+        manager = entityManagerFactory.createEntityManager();
+
     }
 
     @Override
@@ -52,7 +62,7 @@ public class Conversation extends Thread {
 
                 LOGGER.debug(infoSocket +" - Gut " + friend + " from client");
 
-                /* there is must be run new thread to chat with friend */
+                startNewChar(friend);
 
             } catch (IOException e) {
                 LOGGER.error("IOException from input stream in "+ infoSocket +" - " + e.getMessage());
@@ -63,6 +73,17 @@ public class Conversation extends Thread {
             }
 
         }
+    }
+
+    private void startNewChar(Client friend){
+
+        try {
+            Socket socketFroNewChat = serverSocketForConversation.accept();
+            new Chat(socketFroNewChat, friend).run();
+        } catch (IOException e) {
+            LOGGER.error("IOException from accept new socket in startNewChat in "+ infoSocket +" - " + e.getMessage());
+        }
+
     }
 
     private void sendFriends(List<Client> friends) {
@@ -122,7 +143,41 @@ public class Conversation extends Thread {
 
         @Override
         public void run(){
+            try {
 
+                BufferedReader br = new BufferedReader(
+                        new InputStreamReader(clientSocketForFiles.getInputStream()));
+                ObjectOutputStream oos = new ObjectOutputStream(
+                        clientSocketForSearchFriends.getOutputStream());
+
+
+                String friendLogin = "";
+
+                while(!interrupted()){
+
+                    friendLogin = br.readLine();
+
+                    LOGGER.info(infoSocket + "SearchNewFriend - client sent " + friendLogin + " for search in database");
+                    manager.getTransaction().begin();
+                    Query query =
+                            manager.createQuery("SELECT c FROM Client c WHERE c.login LIKE :login");
+
+                    LOGGER.debug(infoSocket +"SearchNewFriend  - Query was created for validation");
+
+                    List<Client> queryFriends =  query.setParameter("login", friendLogin + "%").getResultList();
+
+                    manager.getTransaction().commit();
+                    LOGGER.info(infoSocket +" SearchNewFriend founded "+queryFriends.size() +" fiends");
+                    LOGGER.info(infoSocket + queryFriends.toString());
+
+                    oos.writeObject(queryFriends);
+                    oos.flush();
+                }
+
+
+            } catch (IOException e) {
+                LOGGER.error(infoSocket + "IOException in SearchNewFriend " + e.getMessage());
+            }
         }
     }
 
