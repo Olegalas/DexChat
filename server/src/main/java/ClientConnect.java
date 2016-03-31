@@ -18,15 +18,15 @@ public class ClientConnect extends Thread {
 
     private final static String REGISTRATION = "1";
     private final static String VALIDATION = "2";
-    private static boolean interapt = false;
+    private static boolean interrupt = false;
 
-    private final Socket client;
+    private final Socket clientSocket;
     private final static Logger LOGGER = Logger.getLogger(Server.class);
     private final ClientInfoSocket clientInfo;
     private BufferedReader br;
 
     ClientConnect(Socket client, ClientInfoSocket info){
-        this.client = client;
+        this.clientSocket = client;
         clientInfo = info;
     }
 
@@ -42,12 +42,12 @@ public class ClientConnect extends Thread {
         LOGGER.debug("ClientConnect " + clientInfo + " thread was run");
         String choose = "";
 
-        while (!interapt && !isInterrupted()){
+        while (!interrupt || !isInterrupted()){
 
             try {
                 LOGGER.debug(clientInfo +" - Wait for choose from client");
 
-                br = new BufferedReader(new InputStreamReader(client.getInputStream()));
+                br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 choose = br.readLine();
                 checkExit(choose);
                 choose = choose.substring(0,1);
@@ -65,7 +65,7 @@ public class ClientConnect extends Thread {
 
                 case REGISTRATION:
                     LOGGER.debug(clientInfo +" - REGISTRATION");
-                    while(!isInterrupted()){
+                    while(!interrupt || !isInterrupted()){
                         try {
                             if(registration()){
                                 LOGGER.debug(clientInfo +" - REGISTRATION completed");
@@ -79,25 +79,31 @@ public class ClientConnect extends Thread {
                     break;
                 case VALIDATION:
                     LOGGER.debug(clientInfo +" - VALIDATION");
-                    try {
-                        if(validation()){
-                            /* run new thread and interrupted this thread*/
-                            LOGGER.info("Client passed validation " + clientInfo);
+                    while(!interrupt || !isInterrupted()){
+                        try {
+                            Client client = validation();
+                            if(client != null){
+
+                                // run new thread for conversation
+                                new Conversation(clientSocket, clientInfo, client).run();
+
+                                interrupt = true;
+                                LOGGER.info("Client passed validation " + clientInfo);
+                            }
+                        } catch (InterruptedException e) {
+                            LOGGER.fatal("Client close client-side application");
+                            interrupt = true;
                         }
-                    } catch (InterruptedException e) {
-                        LOGGER.fatal("Client close client-side application");
-                        interapt = true;
                     }
                     break;
 
             }
-            LOGGER.debug(clientInfo + " status is " + isInterrupted());
         }
 
         LOGGER.debug("ClientConnect " + clientInfo + " thread was correctly killed");
     }
 
-    private boolean validation() throws InterruptedException {
+    private Client validation() throws InterruptedException {
 
         Client client = null;
         try {
@@ -105,7 +111,7 @@ public class ClientConnect extends Thread {
         } catch (IOException e) {
             LOGGER.error("IOException from input stream in "+ clientInfo +" - " + e.getMessage());
             LOGGER.error("getLoginAndPassFromClient returned false");
-            return false;
+            return null;
         }
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
@@ -123,7 +129,7 @@ public class ClientConnect extends Thread {
 
         manager.getTransaction().commit();
 
-        return client.getPass().equals(fromResult.getPass());
+        return client.getPass().equals(fromResult.getPass()) ? client : null;
     }
 
     private boolean registration() throws InterruptedException{

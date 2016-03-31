@@ -15588,3 +15588,663 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-03-31 00:28:18 FATAL Server:60 - InterruptException localhost:41567 Client close client-side application
 2016-03-31 00:28:18 DEBUG Server:97 - ClientConnect localhost:41567 thread was correctly killed
 2016-03-31 00:28:20 DEBUG DriverManagerConnectionProviderImpl:49 - Connection pool now considered primed; min-size will be maintained
+2016-03-31 12:47:04 DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2016-03-31 12:47:04 DEBUG ClassLoaderServiceImpl:124 - Incoming config yielded no classloaders; adding standard SE ones
+2016-03-31 12:47:06 DEBUG HibernatePersistenceProvider:87 - Located and parsed 1 persistence units; checking each
+2016-03-31 12:47:06 DEBUG HibernatePersistenceProvider:95 - Checking persistence-unit [name=dexunit, explicit-provider=org.hibernate.jpa.HibernatePersistenceProvider] against incoming persistence unit name [dexunit]
+2016-03-31 12:47:06 DEBUG ProviderChecker:89 - Persistence-unit [dexunit] requested PersistenceProvider [org.hibernate.jpa.HibernatePersistenceProvider]
+2016-03-31 12:47:06 DEBUG LogHelper:102 - PersistenceUnitInfo [
+	name: dexunit
+	persistence provider classname: org.hibernate.jpa.HibernatePersistenceProvider
+	classloader: null
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: null
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/dexter/Java/IdeaProjects/MyChat/server/target/classes/
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names [
+		Client]
+	Mapping files names []
+	Properties [
+		javax.persistence.jdbc.driver: com.mysql.jdbc.Driver
+		javax.persistence.jdbc.password: root
+		javax.persistence.jdbc.url: jdbc:mysql://localhost:3306/dexchat
+		hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+		hibernate.show_sql: true
+		hibernate.hbm2ddl.auto: update
+		javax.persistence.jdbc.user: root]
+2016-03-31 12:47:06 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2016-03-31 12:47:06 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2016-03-31 12:47:06 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2016-03-31 12:47:06 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+2016-03-31 12:47:06 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-03-31 12:47:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-03-31 12:47:06 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-03-31 12:47:07 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2016-03-31 12:47:07 DEBUG RegionFactoryInitiator:88 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2016-03-31 12:47:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration boolean -> org.hibernate.type.BooleanType@16d04d3d
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration boolean -> org.hibernate.type.BooleanType@16d04d3d
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@16d04d3d
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@8f4ea7c
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@77847718
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration yes_no -> org.hibernate.type.YesNoType@2b662a77
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration byte -> org.hibernate.type.ByteType@4ec4f3a0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration byte -> org.hibernate.type.ByteType@4ec4f3a0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4ec4f3a0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration character -> org.hibernate.type.CharacterType@4efbca5a
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration char -> org.hibernate.type.CharacterType@4efbca5a
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4efbca5a
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration short -> org.hibernate.type.ShortType@5b8dfcc1
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration short -> org.hibernate.type.ShortType@5b8dfcc1
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@5b8dfcc1
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration integer -> org.hibernate.type.IntegerType@55183b20
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration int -> org.hibernate.type.IntegerType@55183b20
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@55183b20
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration long -> org.hibernate.type.LongType@6aeb35e6
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration long -> org.hibernate.type.LongType@6aeb35e6
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@6aeb35e6
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration float -> org.hibernate.type.FloatType@351d00c0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration float -> org.hibernate.type.FloatType@351d00c0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@351d00c0
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration double -> org.hibernate.type.DoubleType@4c371370
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration double -> org.hibernate.type.DoubleType@4c371370
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4c371370
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@34a3d150
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@34a3d150
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@128d2484
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@128d2484
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration string -> org.hibernate.type.StringType@4c583ecf
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.String -> org.hibernate.type.StringType@4c583ecf
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1aafa419
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@235834f2
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration url -> org.hibernate.type.UrlType@77888435
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@77888435
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration date -> org.hibernate.type.DateType@1bb5a082
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@1bb5a082
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration time -> org.hibernate.type.TimeType@639c2c1d
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@639c2c1d
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration timestamp -> org.hibernate.type.TimestampType@30c15d8b
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@30c15d8b
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@30c15d8b
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@51399530
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration calendar -> org.hibernate.type.CalendarType@28701274
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@28701274
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@28701274
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@62379589
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration locale -> org.hibernate.type.LocaleType@776aec5c
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@776aec5c
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration currency -> org.hibernate.type.CurrencyType@408d971b
+2016-03-31 12:47:07 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@408d971b
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@292b08d6
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@292b08d6
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration class -> org.hibernate.type.ClassType@3c41ed1d
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3c41ed1d
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@2d1ef81a
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@2d1ef81a
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5b12b668
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration binary -> org.hibernate.type.BinaryType@815b41f
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration byte[] -> org.hibernate.type.BinaryType@815b41f
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration [B -> org.hibernate.type.BinaryType@815b41f
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@7e6f74c
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@7e6f74c
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@7e6f74c
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration image -> org.hibernate.type.ImageType@10683d9d
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration characters -> org.hibernate.type.CharArrayType@139982de
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration char[] -> org.hibernate.type.CharArrayType@139982de
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration [C -> org.hibernate.type.CharArrayType@139982de
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@31190526
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@31190526
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@31190526
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration text -> org.hibernate.type.TextType@77c2494c
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration ntext -> org.hibernate.type.NTextType@1e800aaa
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration blob -> org.hibernate.type.BlobType@302552ec
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@302552ec
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2cd76f31
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration clob -> org.hibernate.type.ClobType@510f3d34
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@510f3d34
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration nclob -> org.hibernate.type.NClobType@38afe297
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@38afe297
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@70325e14
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@20d525
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration serializable -> org.hibernate.type.SerializableType@ae13544
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration object -> org.hibernate.type.ObjectType@609cd4d8
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@609cd4d8
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@13b6aecc
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@158a8276
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3c3d9b6b
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@79d8407f
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5fbe4146
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1e66f1f5
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4e50c791
+2016-03-31 12:47:08 DEBUG BasicTypeRegistry:135 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@7530ad9c
+2016-03-31 12:47:08 WARN  DriverManagerConnectionProviderImpl:72 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-03-31 12:47:08 INFO  DriverManagerConnectionProviderImpl:128 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/dexchat]
+2016-03-31 12:47:08 INFO  DriverManagerConnectionProviderImpl:134 - HHH000046: Connection properties: {user=root, password=root}
+2016-03-31 12:47:08 INFO  DriverManagerConnectionProviderImpl:142 - HHH000006: Autocommit mode: false
+2016-03-31 12:47:08 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+2016-03-31 12:47:08 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-03-31 12:47:10 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : MySQL
+    version : 5.6.28-0ubuntu0.15.04.1
+      major : 5
+      minor : 6
+2016-03-31 12:47:10 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+      major : 5
+      minor : 1
+2016-03-31 12:47:10 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 3.0
+2016-03-31 12:47:11 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-03-31 12:47:11 DEBUG StandardRefCursorSupport:170 - Unexpected error trying to gauge level of JDBC REF_CURSOR support : null
+2016-03-31 12:47:11 DEBUG IdentifierHelperBuilder:116 - JDBC driver metadata reported database stores quoted identifiers in more than one case
+2016-03-31 12:47:11 DEBUG IdentifierHelperBuilder:182 - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2016-03-31 12:47:11 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2016-03-31 12:47:11 DEBUG DefaultIdentifierGeneratorFactory:78 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2016-03-31 12:47:11 DEBUG Namespace:47 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2016-03-31 12:47:11 DEBUG AnnotationBinder:509 - Binding entity from annotated class: Client
+2016-03-31 12:47:11 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2016-03-31 12:47:11 DEBUG EntityBinder:389 - Import with entity name Client
+2016-03-31 12:47:11 DEBUG EntityBinder:665 - Bind entity Client on table clients
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG PropertyBinder:169 - MetadataSourceProcessor property id with lazy=false
+2016-03-31 12:47:12 DEBUG AbstractPropertyHolder:90 - Attempting to locate auto-apply AttributeConverter for property [Client:id]
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:384 - building SimpleValue for id
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property id
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='friend_id', referencedColumn='id', mappedBy=''}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=iFriendTo_KEY, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='iFriendTo_KEY', referencedColumn='null', mappedBy='null'}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2016-03-31 12:47:12 DEBUG CollectionBinder:386 - Collection role: Client.iFriendTo
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property iFriendTo
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=login, insertable=true, updatable=true, unique=true}
+2016-03-31 12:47:12 DEBUG PropertyBinder:169 - MetadataSourceProcessor property login with lazy=false
+2016-03-31 12:47:12 DEBUG AbstractPropertyHolder:90 - Attempting to locate auto-apply AttributeConverter for property [Client:login]
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:384 - building SimpleValue for login
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property login
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=myFriends_KEY, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='myFriends_KEY', referencedColumn='null', mappedBy='null'}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='iFriendTo'}
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='iFriendTo'}
+2016-03-31 12:47:12 DEBUG CollectionBinder:386 - Collection role: Client.myFriends
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property myFriends
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG PropertyBinder:169 - MetadataSourceProcessor property name with lazy=false
+2016-03-31 12:47:12 DEBUG AbstractPropertyHolder:90 - Attempting to locate auto-apply AttributeConverter for property [Client:name]
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:384 - building SimpleValue for name
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property name
+2016-03-31 12:47:12 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(clients), mappingColumn=pass, insertable=true, updatable=true, unique=false}
+2016-03-31 12:47:12 DEBUG PropertyBinder:169 - MetadataSourceProcessor property pass with lazy=false
+2016-03-31 12:47:12 DEBUG AbstractPropertyHolder:90 - Attempting to locate auto-apply AttributeConverter for property [Client:pass]
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:384 - building SimpleValue for pass
+2016-03-31 12:47:12 DEBUG PropertyBinder:260 - Building property pass
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:423 - Starting fillSimpleValue for id
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:423 - Starting fillSimpleValue for login
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:423 - Starting fillSimpleValue for name
+2016-03-31 12:47:12 DEBUG SimpleValueBinder:423 - Starting fillSimpleValue for pass
+2016-03-31 12:47:12 DEBUG CollectionSecondPass:51 - Second pass for collection: Client.iFriendTo
+2016-03-31 12:47:12 DEBUG CollectionBinder:1158 - Binding as ManyToMany: Client.iFriendTo
+2016-03-31 12:47:12 DEBUG CollectionSecondPass:68 - Mapped collection key: myFriends_id, element: iFriendTo_id
+2016-03-31 12:47:12 DEBUG CollectionSecondPass:51 - Second pass for collection: Client.myFriends
+2016-03-31 12:47:12 DEBUG CollectionBinder:1158 - Binding as ManyToMany: Client.myFriends
+2016-03-31 12:47:12 DEBUG TableBinder:565 - Retrieving property Client.iFriendTo
+2016-03-31 12:47:12 DEBUG CollectionSecondPass:68 - Mapped collection key: iFriendTo_id, element: myFriends_id
+2016-03-31 12:47:12 DEBUG InFlightMetadataCollectorImpl:1803 - Resolving reference to class: Client
+2016-03-31 12:47:12 DEBUG InFlightMetadataCollectorImpl:1803 - Resolving reference to class: Client
+2016-03-31 12:47:12 DEBUG InFlightMetadataCollectorImpl:1803 - Resolving reference to class: Client
+2016-03-31 12:47:12 DEBUG InFlightMetadataCollectorImpl:1803 - Resolving reference to class: Client
+2016-03-31 12:47:12 DEBUG SessionFactoryImpl:210 - Building session factory
+2016-03-31 12:47:12 DEBUG Settings:69 - SessionFactory name : null
+2016-03-31 12:47:12 DEBUG Settings:70 - Automatic flush during beforeCompletion(): disabled
+2016-03-31 12:47:12 DEBUG Settings:71 - Automatic session close at end of transaction: disabled
+2016-03-31 12:47:12 DEBUG Settings:73 - Statistics: disabled
+2016-03-31 12:47:12 DEBUG Settings:75 - Deleted entity synthetic identifier rollback: disabled
+2016-03-31 12:47:12 DEBUG Settings:76 - Default entity-mode: pojo
+2016-03-31 12:47:12 DEBUG Settings:77 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2016-03-31 12:47:12 DEBUG Settings:78 - Allow initialization of lazy state outside session : disabled
+2016-03-31 12:47:12 DEBUG Settings:80 - Using BatchFetchStyle : LEGACY
+2016-03-31 12:47:12 DEBUG Settings:81 - Default batch fetch size: -1
+2016-03-31 12:47:12 DEBUG Settings:82 - Maximum outer join fetch depth: 2
+2016-03-31 12:47:12 DEBUG Settings:83 - Default null ordering: NONE
+2016-03-31 12:47:12 DEBUG Settings:84 - Order SQL updates by primary key: disabled
+2016-03-31 12:47:12 DEBUG Settings:85 - Order SQL inserts for batching: disabled
+2016-03-31 12:47:12 DEBUG Settings:87 - multi-tenancy strategy : NONE
+2016-03-31 12:47:12 DEBUG Settings:89 - JTA Track by Thread: enabled
+2016-03-31 12:47:12 DEBUG Settings:91 - Query language substitutions: {}
+2016-03-31 12:47:12 DEBUG Settings:92 - JPA query language strict compliance: disabled
+2016-03-31 12:47:12 DEBUG Settings:93 - Named query checking : enabled
+2016-03-31 12:47:12 DEBUG Settings:95 - Second-level cache: enabled
+2016-03-31 12:47:12 DEBUG Settings:96 - Second-level query cache: disabled
+2016-03-31 12:47:12 DEBUG Settings:97 - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@332796d3
+2016-03-31 12:47:12 DEBUG Settings:98 - Second-level cache region prefix: null
+2016-03-31 12:47:12 DEBUG Settings:99 - Optimize second-level cache for minimal puts: disabled
+2016-03-31 12:47:12 DEBUG Settings:100 - Structured second-level cache entries: disabled
+2016-03-31 12:47:12 DEBUG Settings:101 - Second-level cache direct-reference entries: disabled
+2016-03-31 12:47:12 DEBUG Settings:102 - Automatic eviction of collection cache: disabled
+2016-03-31 12:47:12 DEBUG Settings:104 - JDBC batch size: 15
+2016-03-31 12:47:12 DEBUG Settings:105 - JDBC batch updates for versioned data: enabled
+2016-03-31 12:47:12 DEBUG Settings:106 - Scrollable result sets: enabled
+2016-03-31 12:47:12 DEBUG Settings:107 - Wrap result sets: disabled
+2016-03-31 12:47:12 DEBUG Settings:108 - JDBC3 getGeneratedKeys(): enabled
+2016-03-31 12:47:12 DEBUG Settings:109 - JDBC result set fetch size: null
+2016-03-31 12:47:12 DEBUG Settings:110 - Connection release mode: ON_CLOSE
+2016-03-31 12:47:12 DEBUG Settings:111 - Generate SQL with comments: disabled
+2016-03-31 12:47:12 DEBUG SessionFactoryImpl:255 - Session factory constructed with filter configurations : {}
+2016-03-31 12:47:12 DEBUG SessionFactoryImpl:256 - Instantiating session factory with properties: {hibernate.connection.password=root, java.runtime.name=Java(TM) SE Runtime Environment, java.vm.version=25.66-b17, sun.boot.library.path=/home/dexter/Java/jdk1.8.0_66/jre/lib/amd64, hibernate.connection.username=root, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@324a0017, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, idea.launcher.port=7532, sun.os.patch.level=unknown, user.country=US, sun.java.launcher=SUN_STANDARD, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/home/dexter/Java/IdeaProjects/MyChat, java.runtime.version=1.8.0_66-b17, javax.persistence.jdbc.user=root, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, os.arch=amd64, java.endorsed.dirs=/home/dexter/Java/jdk1.8.0_66/jre/lib/endorsed, java.io.tmpdir=/tmp, line.separator=
+, javax.persistence.jdbc.password=root, java.vm.specification.vendor=Oracle Corporation, os.name=Linux, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, sun.jnu.encoding=UTF-8, javax.persistence.jdbc.url=jdbc:mysql://localhost:3306/dexchat, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, javax.persistence.jdbc.driver=com.mysql.jdbc.Driver, java.class.version=52.0, hibernate.ejb.persistenceUnitName=dexunit, java.specification.name=Java Platform API Specification, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=3.19.0-56-generic, user.home=/home/dexter, user.timezone=Europe/Kiev, java.awt.printerjob=sun.print.PSPrinterJob, idea.launcher.bin.path=/home/dexter/Java/idea-IC-143.1184.17/bin, file.encoding=UTF-8, java.specification.version=1.8, hibernate.connection.driver_class=com.mysql.jdbc.Driver, user.name=dexter, java.class.path=/home/dexter/Java/jdk1.8.0_66/jre/lib/charsets.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/deploy.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/cldrdata.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/dnsns.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/jaccess.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/jfxrt.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/localedata.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/nashorn.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/sunec.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/sunjce_provider.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/sunpkcs11.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/ext/zipfs.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/javaws.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jce.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jfr.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jfxswt.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jsse.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/management-agent.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/plugin.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/resources.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/rt.jar:/home/dexter/Java/IdeaProjects/MyChat/server/target/classes:/home/dexter/Java/IdeaProjects/MyChat/model/target/classes:/home/dexter/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/dexter/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dexter/.m2/repository/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar:/home/dexter/.m2/repository/org/jsoup/jsoup/1.8.3/jsoup-1.8.3.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-java/2.52.0/selenium-java-2.52.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/2.52.0/selenium-chrome-driver-2.52.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/2.52.0/selenium-remote-driver-2.52.0.jar:/home/dexter/.m2/repository/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-api/2.52.0/selenium-api-2.52.0.jar:/home/dexter/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/2.52.0/selenium-edge-driver-2.52.0.jar:/home/dexter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/dexter/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-htmlunit-driver/2.52.0/selenium-htmlunit-driver-2.52.0.jar:/home/dexter/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.18/htmlunit-2.18.jar:/home/dexter/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/home/dexter/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar:/home/dexter/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/dexter/.m2/repository/org/apache/httpcomponents/httpmime/4.5/httpmime-4.5.jar:/home/dexter/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/dexter/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.17/htmlunit-core-js-2.17.jar:/home/dexter/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/home/dexter/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar:/home/dexter/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.16/cssparser-0.9.16.jar:/home/dexter/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/dexter/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/dexter/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.2.12.v20150709/websocket-client-9.2.12.v20150709.jar:/home/dexter/.m2/repository/org/eclipse/jetty/jetty-util/9.2.12.v20150709/jetty-util-9.2.12.v20150709.jar:/home/dexter/.m2/repository/org/eclipse/jetty/jetty-io/9.2.12.v20150709/jetty-io-9.2.12.v20150709.jar:/home/dexter/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.2.12.v20150709/websocket-common-9.2.12.v20150709.jar:/home/dexter/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.2.12.v20150709/websocket-api-9.2.12.v20150709.jar:/home/dexter/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/dexter/.m2/repository/org/apache/httpcomponents/httpclient/4.5.1/httpclient-4.5.1.jar:/home/dexter/.m2/repository/org/apache/httpcomponents/httpcore/4.4.3/httpcore-4.4.3.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/2.52.0/selenium-firefox-driver-2.52.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/2.52.0/selenium-ie-driver-2.52.0.jar:/home/dexter/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/dexter/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/2.52.0/selenium-safari-driver-2.52.0.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-support/2.52.0/selenium-support-2.52.0.jar:/home/dexter/.m2/repository/org/webbitserver/webbit/0.4.14/webbit-0.4.14.jar:/home/dexter/.m2/repository/io/netty/netty/3.5.2.Final/netty-3.5.2.Final.jar:/home/dexter/.m2/repository/org/seleniumhq/selenium/selenium-leg-rc/2.52.0/selenium-leg-rc-2.52.0.jar:/home/dexter/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar:/home/dexter/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/dexter/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/dexter/.m2/repository/org/hibernate/hibernate-core/5.0.3.Final/hibernate-core-5.0.3.Final.jar:/home/dexter/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/dexter/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/dexter/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/dexter/.m2/repository/org/jboss/jandex/2.0.0.CR1/jandex-2.0.0.CR1.jar:/home/dexter/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/home/dexter/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/dexter/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.0.Final/hibernate-commons-annotations-5.0.0.Final.jar:/home/dexter/.m2/repository/org/hibernate/hibernate-entitymanager/5.0.3.Final/hibernate-entitymanager-5.0.3.Final.jar:/home/dexter/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/dexter/Java/idea-IC-143.1184.17/lib/idea_rt.jar, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, java.vm.specification.version=1.8, sun.arch.data.model=64, sun.java.command=com.intellij.rt.execution.application.AppMain TestServer, java.home=/home/dexter/Java/jdk1.8.0_66/jre, hibernate.connection.url=jdbc:mysql://localhost:3306/dexchat, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.X11.XToolkit, java.vm.info=mixed mode, java.version=1.8.0_66, java.ext.dirs=/home/dexter/Java/jdk1.8.0_66/jre/lib/ext:/usr/java/packages/lib/ext, sun.boot.class.path=/home/dexter/Java/jdk1.8.0_66/jre/lib/resources.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/rt.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/sunrsasign.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jsse.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jce.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/charsets.jar:/home/dexter/Java/jdk1.8.0_66/jre/lib/jfr.jar:/home/dexter/Java/jdk1.8.0_66/jre/classes, java.vendor=Oracle Corporation, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, hibernate.hbm2ddl.auto=update, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=gnome, sun.cpu.isalist=}
+2016-03-31 12:47:12 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+2016-03-31 12:47:12 DEBUG CascadeStyles:268 - External cascade style regsitration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST]
+2016-03-31 12:47:12 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [Client] is safe
+2016-03-31 12:47:12 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Client
+2016-03-31 12:47:13 DEBUG ClassLoaderAccessImpl:55 - Not known whether passed class name [Client] is safe
+2016-03-31 12:47:13 DEBUG ClassLoaderAccessImpl:57 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : Client
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:664 - Static SQL for collection: Client.myFriends
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:666 -  Row insert: insert into clients_clients (iFriendTo_id, myFriends_id) values (?, ?)
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:669 -  Row update: update clients_clients set myFriends_id=? where iFriendTo_id=? and myFriends_id=?
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:672 -  Row delete: delete from clients_clients where iFriendTo_id=? and myFriends_id=?
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:675 -  One-shot delete: delete from clients_clients where iFriendTo_id=?
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:664 - Static SQL for collection: Client.iFriendTo
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:666 -  Row insert: insert into clients_clients (myFriends_id, iFriendTo_id) values (?, ?)
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:669 -  Row update: update clients_clients set iFriendTo_id=? where myFriends_id=? and iFriendTo_id=?
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:672 -  Row delete: delete from clients_clients where myFriends_id=? and iFriendTo_id=?
+2016-03-31 12:47:13 DEBUG AbstractCollectionPersister:675 -  One-shot delete: delete from clients_clients where myFriends_id=?
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:3479 - Static SQL for entity: Client
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:3484 -  Version select: select id from clients where id =?
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:3487 -  Snapshot select: select client_.id, client_.login as login2_0_, client_.name as name3_0_, client_.pass as pass4_0_ from clients client_ where client_.id=?
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into clients (login, name, pass, id) values (?, ?, ?, ?)
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:394 -  Update 0: update clients set login=?, name=?, pass=? where id=?
+2016-03-31 12:47:13 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from clients where id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4da602fc]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [NONE]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b77a04f]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [READ]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e11485]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [UPGRADE]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@662f5666]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [UPGRADE_NOWAIT]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5974109]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [UPGRADE_SKIPLOCKED]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1ef3efa8]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [FORCE]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6f8f9349]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [PESSIMISTIC_READ]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? lock in share mode
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7446d8d5]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [PESSIMISTIC_WRITE]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4fbda97b]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [PESSIMISTIC_FORCE_INCREMENT]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=? for update
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@37b70343]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [OPTIMISTIC]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@12bcd0c0]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=Client)
+    - Returns
+       - EntityReturnImpl(entity=Client, querySpaceUid=<gen:0>, path=Client)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2016-03-31 12:47:13 DEBUG EntityLoader:128 - Static select for entity Client [OPTIMISTIC_FORCE_INCREMENT]: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity Client: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity Client: select client0_.id as id1_0_0_, client0_.login as login2_0_0_, client0_.name as name3_0_0_, client0_.pass as pass4_0_0_ from clients client0_ where client0_.id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@636e8cc]
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@12dae582]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=Client.myFriends)
+    - Returns
+       - CollectionReturnImpl(collection=Client.myFriends, querySpaceUid=<gen:0>, path=[Client.myFriends])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=Client, querySpaceUid=<gen:1>, path=[Client.myFriends].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=Client.myFriends)
+          - SQL table alias mapping - myfriends0_
+          - alias suffix - 0_
+          - suffixed key columns - {iFriendT2_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=Client)
+                - SQL table alias mapping - client1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+2016-03-31 12:47:13 DEBUG CollectionLoader:96 - Static select for collection Client.myFriends: select myfriends0_.iFriendTo_id as iFriendT2_1_0_, myfriends0_.myFriends_id as myFriend1_1_0_, client1_.id as id1_0_1_, client1_.login as login2_0_1_, client1_.name as name3_0_1_, client1_.pass as pass4_0_1_ from clients_clients myfriends0_ inner join clients client1_ on myfriends0_.myFriends_id=client1_.id where myfriends0_.iFriendTo_id=?
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@485a3466]
+2016-03-31 12:47:13 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25748410]
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : iFriendTo
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : login
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:145 - Property path deemed to be circular : myFriends
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : name
+2016-03-31 12:47:13 DEBUG MetamodelGraphWalker:137 - Visiting attribute path : pass
+2016-03-31 12:47:13 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:76 - Building LoadPlan...
+2016-03-31 12:47:13 DEBUG LoadQueryJoinAndFetchProcessor:95 - processing queryspace <gen:0>
+2016-03-31 12:47:13 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=Client.iFriendTo)
+    - Returns
+       - CollectionReturnImpl(collection=Client.iFriendTo, querySpaceUid=<gen:0>, path=[Client.iFriendTo])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=Client, querySpaceUid=<gen:1>, path=[Client.iFriendTo].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=Client.iFriendTo)
+          - SQL table alias mapping - ifriendto0_
+          - alias suffix - 0_
+          - suffixed key columns - {myFriend1_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=Client)
+                - SQL table alias mapping - client1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+2016-03-31 12:47:13 DEBUG CollectionLoader:96 - Static select for collection Client.iFriendTo: select ifriendto0_.myFriends_id as myFriend1_1_0_, ifriendto0_.iFriendTo_id as iFriendT2_1_0_, client1_.id as id1_0_1_, client1_.login as login2_0_1_, client1_.name as name3_0_1_, client1_.pass as pass4_0_1_ from clients_clients ifriendto0_ inner join clients client1_ on ifriendto0_.iFriendTo_id=client1_.id where ifriendto0_.myFriends_id=?
+2016-03-31 12:47:13 DEBUG SessionFactoryImpl:462 - Instantiated session factory
+2016-03-31 12:47:13 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-03-31 12:47:15 DEBUG SchemaUpdate:492 - No alter strings for table : clients
+2016-03-31 12:47:15 DEBUG SchemaUpdate:492 - No alter strings for table : clients_clients
+2016-03-31 12:47:15 DEBUG SchemaUpdate:492 - No alter strings for table : hibernate_sequence
+2016-03-31 12:47:15 DEBUG JtaPlatformInitiator:42 - No JtaPlatform was specified, checking resolver
+2016-03-31 12:47:15 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2016-03-31 12:47:15 DEBUG StandardJtaPlatformResolver:101 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2016-03-31 12:47:15 DEBUG NamedQueryRepository:149 - Checking 0 named HQL queries
+2016-03-31 12:47:15 DEBUG NamedQueryRepository:165 - Checking 0 named SQL queries
+2016-03-31 12:47:15 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@4ba534b0
+2016-03-31 12:47:15 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: ded0cd62-e358-4244-b05f-1ac08c21537c (<unnamed>)
+2016-03-31 12:47:15 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2016-03-31 12:47:15 DEBUG JpaSchemaGenerator:106 - No actions specified; doing nothing
+2016-03-31 12:47:15 DEBUG EntityManagerFactoryRegistry:39 - Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@94f6bfb
+2016-03-31 12:47:15 DEBUG EntityManagerFactoryRegistry:49 - Registering EntityManagerFactory: dexunit 
+2016-03-31 12:47:16 DEBUG StatisticsInitiator:82 - Statistics initialized [enabled=false]
+2016-03-31 12:47:16 DEBUG TransactionImpl:51 - begin
+2016-03-31 12:47:16 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+2016-03-31 12:47:16 DEBUG SQL:92 - update hibernate_sequence set next_val= ? where next_val=?
+2016-03-31 12:47:17 DEBUG AbstractSaveEventListener:114 - Generated identifier: 32, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2016-03-31 12:47:17 DEBUG TransactionImpl:62 - committing
+2016-03-31 12:47:17 DEBUG AbstractFlushingEventListener:132 - Processing flush-time cascades
+2016-03-31 12:47:17 DEBUG AbstractFlushingEventListener:174 - Dirty checking collections
+2016-03-31 12:47:17 DEBUG Collections:177 - Collection found: [Client.iFriendTo#32], was: [<unreferenced>] (initialized)
+2016-03-31 12:47:17 DEBUG Collections:177 - Collection found: [Client.myFriends#32], was: [<unreferenced>] (initialized)
+2016-03-31 12:47:17 DEBUG AbstractFlushingEventListener:106 - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2016-03-31 12:47:17 DEBUG AbstractFlushingEventListener:113 - Flushed: 2 (re)creations, 0 updates, 0 removals to 2 collections
+2016-03-31 12:47:17 DEBUG EntityPrinter:102 - Listing entities:
+2016-03-31 12:47:17 DEBUG EntityPrinter:109 - Client{pass=client, name=client, id=32, iFriendTo=[], login=client, myFriends=[]}
+2016-03-31 12:47:17 DEBUG SQL:92 - insert into clients (login, name, pass, id) values (?, ?, ?, ?)
+2016-03-31 12:47:17 DEBUG SqlExceptionHelper:122 - could not execute statement [n/a]
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'client' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1015)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1936)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2060)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2542)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1734)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2019)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1937)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1922)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2884)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3384)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:451)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:336)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:335)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1224)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:464)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2905)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2281)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:485)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:146)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:230)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at Server.init(Server.java:61)
+	at Server.run(Server.java:25)
+	at TestServer.main(TestServer.java:6)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+2016-03-31 12:47:17 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-03-31 12:47:17 ERROR SqlExceptionHelper:129 - Duplicate entry 'client' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-03-31 12:47:17 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-03-31 12:47:17 DEBUG AbstractEntityManagerImpl:1494 - Mark transaction for rollback
+2016-03-31 12:47:17 DEBUG JdbcResourceLocalTransactionCoordinatorImpl:264 - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:264)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:155)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:230)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:65)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:61)
+	at Server.init(Server.java:61)
+	at Server.run(Server.java:25)
+	at TestServer.main(TestServer.java:6)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+2016-03-31 12:47:17 DEBUG AbstractEntityManagerImpl:1494 - Mark transaction for rollback
+2016-03-31 12:47:17 DEBUG TransactionImpl:77 - rollback() called on an inactive transaction
+2016-03-31 12:47:17 INFO  Server:64 - ****************test client has already created before
+2016-03-31 12:47:17 DEBUG JdbcCoordinatorImpl:189 - HHH000420: Closing un-released batch
+2016-03-31 12:47:17 INFO  Server:29 - server was run
+2016-03-31 12:47:36 INFO  Server:38 - new client was accepted
+2016-03-31 12:47:36 DEBUG Server:39 - Internet address new client - localhost:45172
+2016-03-31 12:47:36 DEBUG Server:42 - ClientConnect localhost:45172 thread was run
+2016-03-31 12:47:36 DEBUG Server:48 - localhost:45172 - Wait for choose from client
+2016-03-31 12:47:40 DEBUG DriverManagerConnectionProviderImpl:49 - Connection pool now considered primed; min-size will be maintained
+2016-03-31 12:47:43 DEBUG Server:55 - localhost:45172 - Gut 1 from client
+2016-03-31 12:47:43 DEBUG Server:67 - localhost:45172 - REGISTRATION
+2016-03-31 12:47:43 INFO  Server:166 - ClientConnect localhost:45172 wait for login
+2016-03-31 12:47:50 INFO  Server:75 - localhost:45172 - quit from registration
+2016-03-31 12:47:50 DEBUG Server:94 - localhost:45172 status is false
+2016-03-31 12:47:50 DEBUG Server:48 - localhost:45172 - Wait for choose from client
+2016-03-31 12:47:50 FATAL Server:60 - InterruptException localhost:45172 Client close client-side application
+2016-03-31 12:47:50 DEBUG Server:97 - ClientConnect localhost:45172 thread was correctly killed
