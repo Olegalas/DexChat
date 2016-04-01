@@ -52,7 +52,7 @@ public class Conversation extends Thread {
 
         new CatchFile().run();
         new SearchNewFriend().run();
-        new SendMessages().run(); // TODO: 01.04.16
+        new ReceptionMessage().run(); // TODO: 01.04.16
 
         while (!isInterrupted()){
 
@@ -185,7 +185,7 @@ public class Conversation extends Thread {
     }
 
     // TODO: 01.04.16
-    private class SendMessages extends Thread{
+    private class ReceptionMessage extends Thread{
 
         @Override
         public void run(){

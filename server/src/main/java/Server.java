@@ -25,9 +25,6 @@ public final class Server {
 
     public void run(){
 
-
-        init(); // in this method I check out my data base... It's not correct, but whatever
-
         try{
 
             serverSocket = new ServerSocket(8080);
@@ -51,60 +48,6 @@ public final class Server {
         } catch (IOException e){
             LOGGER.error("server caught IOException - " + e.getMessage());
         }
-    }
-
-
-    // in this method I check out my data base... It's not correct, but whatever
-    private void init(){
-
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
-        EntityManager manager = entityManagerFactory.createEntityManager();
-
-        LOGGER.info("****************manager was created");
-
-        Client client = new Client("client", "client", "client");
-
-        MessageBuffer messageBuffer = new MessageBuffer();
-        Message testMessage = new Message("testMessage", client.getId(), client.getId(), new Date(), messageBuffer);
-
-        messageBuffer.getMessages().add(testMessage);
-        messageBuffer.setIdOwner(client);
-        messageBuffer.setIdSender(client.getId());
-
-        client.getBuffers().add(messageBuffer);
-
-        try{
-
-            manager.getTransaction().begin();
-            manager.persist(client);
-            manager.getTransaction().commit();
-
-        }catch (Exception e){
-            LOGGER.info("****************test client has already created before");
-        }
-
-
-        manager.close();
-
-        manager = entityManagerFactory.createEntityManager();
-
-        try{
-
-            manager.getTransaction().begin();
-            Client clientFromDB = manager.find(Client.class, 1);
-            manager.getTransaction().commit();
-            manager.close();
-
-            LOGGER.debug("******************* test client : " + clientFromDB);
-            LOGGER.debug("******************* test message : " + clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage());
-
-        }catch (Exception e){
-            LOGGER.info("*************** error ");
-        }
-
-
-
-
     }
 
 }
