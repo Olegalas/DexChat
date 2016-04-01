@@ -20,6 +20,7 @@ public class Conversation extends Thread {
 
     private Socket clientSocketForFiles;
     private Socket clientSocketForSearchFriends;
+    private Socket clientSocketForMessages;
 
     private final Socket clientSocket;
     private final ClientInfoSocket infoSocket;
@@ -51,6 +52,7 @@ public class Conversation extends Thread {
 
         new CatchFile().run();
         new SearchNewFriend().run();
+        new SendMessages().run(); // TODO: 01.04.16
 
         while (!isInterrupted()){
 
@@ -79,6 +81,7 @@ public class Conversation extends Thread {
 
         try {
             Socket socketFroNewChat = serverSocketForConversation.accept();
+            // TODO: 01.04.16
             //new Chat(socketFroNewChat, friend).run();
         } catch (IOException e) {
             LOGGER.error("IOException from accept new socket in startNewChat in "+ infoSocket +" - " + e.getMessage());
@@ -181,6 +184,28 @@ public class Conversation extends Thread {
         }
     }
 
+    // TODO: 01.04.16
+    private class SendMessages extends Thread{
+
+        @Override
+        public void run(){
+
+            try{
+                ObjectOutputStream oos = new ObjectOutputStream(clientSocketForMessages.getOutputStream());
+                for(MessageBuffer tmp : client.getBuffers()){
+                    for(Message message : tmp.getMessages()){
+                        oos.writeObject(message);
+                    }
+                }
+                oos.flush();
+            }catch (IOException e){
+                LOGGER.error(infoSocket + "IOException in SendMessageFriend " + e.getMessage());
+            }
+
+        }
+
+    }
+
     private void initSockets(){
         int currentConversationPort = 8080 + client.getId();
         try {
@@ -188,6 +213,7 @@ public class Conversation extends Thread {
             // for accept client-side .. for send files from friends to client
             clientSocketForFiles = serverSocketForConversation.accept();
             clientSocketForSearchFriends = serverSocketForConversation.accept();
+            clientSocketForMessages = serverSocketForConversation.accept();
         } catch (IOException e) {
             LOGGER.error(infoSocket + " IOException from initial ServerSocket " + e.getMessage());
         }
