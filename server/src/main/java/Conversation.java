@@ -79,7 +79,7 @@ public class Conversation extends Thread {
 
         try {
             Socket socketFroNewChat = serverSocketForConversation.accept();
-            new Chat(socketFroNewChat, friend).run();
+            //new Chat(socketFroNewChat, friend).run();
         } catch (IOException e) {
             LOGGER.error("IOException from accept new socket in startNewChat in "+ infoSocket +" - " + e.getMessage());
         }

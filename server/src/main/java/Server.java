@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,7 +24,10 @@ public final class Server {
     }
 
     public void run(){
-        init();
+
+
+        init(); // in this method I check out my data base... It's not correct, but whatever
+
         try{
 
             serverSocket = new ServerSocket(8080);
@@ -48,16 +53,30 @@ public final class Server {
         }
     }
 
+
+    // in this method I check out my data base... It's not correct, but whatever
     private void init(){
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
         EntityManager manager = entityManagerFactory.createEntityManager();
 
+        LOGGER.info("****************manager was created");
+
+        Client client = new Client("client", "client", "client");
+
+        MessageBuffer messageBuffer = new MessageBuffer();
+        Message testMessage = new Message("testMessage", client.getId(), client.getId(), new Date(), messageBuffer);
+
+        messageBuffer.getMessages().add(testMessage);
+        messageBuffer.setIdOwner(client);
+        messageBuffer.setIdSender(client.getId());
+
+        client.getBuffers().add(messageBuffer);
 
         try{
 
             manager.getTransaction().begin();
-            manager.persist(new Client("client", "client", "client"));
+            manager.persist(client);
             manager.getTransaction().commit();
 
         }catch (Exception e){
@@ -66,6 +85,26 @@ public final class Server {
 
 
         manager.close();
+
+        manager = entityManagerFactory.createEntityManager();
+
+        try{
+
+            manager.getTransaction().begin();
+            Client clientFromDB = manager.find(Client.class, 1);
+            manager.getTransaction().commit();
+            manager.close();
+
+            LOGGER.debug("******************* test client : " + clientFromDB);
+            LOGGER.debug("******************* test message : " + clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage());
+
+        }catch (Exception e){
+            LOGGER.info("*************** error ");
+        }
+
+
+
+
     }
 
 }
