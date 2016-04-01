@@ -10,6 +10,10 @@ import org.junit.Test;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 
 /**
@@ -44,14 +48,30 @@ public class TestDataBase {
     }
 
     @After
-    public void tearDown(){
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
-        session.createSQLQuery("drop table hibernate_sequence;");
-        session.createSQLQuery("drop table clients_clients;");
-        session.createSQLQuery("drop table messages;");
-        session.createSQLQuery("drop table Message_buffer;");
-        session.createSQLQuery("drop table clients;");
+    public void tearDown() throws ClassNotFoundException {
+
+        Class.forName("com.mysql.jdbc.Driver");
+        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dexchat", "root", "root")) {
+
+            Statement statement = connection.createStatement();
+            statement.execute("drop table hibernate_sequence");
+            statement.execute("drop table clients_clients");
+            statement.execute("drop table messages");
+            statement.execute("drop table Message_buffer");
+            statement.execute("drop table clients");
+            LOGGER.info("********DataBase was removed");
+
+        } catch (SQLException e) {
+            LOGGER.error("Error connection");
+        }
+
+//        SessionFactory factory = new Configuration().configure().buildSessionFactory();
+//        Session session = factory.openSession();
+//        session.createSQLQuery("drop table hibernate_sequence;");
+//        session.createSQLQuery("drop table clients_clients;");
+//        session.createSQLQuery("drop table messages;");
+//        session.createSQLQuery("drop table Message_buffer;");
+//        session.createSQLQuery("drop Message_buffer;");
     }
 
     @Test
@@ -82,7 +102,7 @@ public class TestDataBase {
             manager.getTransaction().commit();
             manager.close();
 
-           // Assert.assertEquals(clientFromDB, client);
+            Assert.assertEquals(clientFromDB, client);
             String messageFromDB = clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage();
             Assert.assertEquals(messageFromDB, message);
 

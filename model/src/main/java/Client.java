@@ -25,10 +25,10 @@ public class Client extends IdGenerate{
     @JoinColumn(name="friend_id", referencedColumnName = "id")
     private List<Client> iFriendTo = new ArrayList<>();
 
-    @ManyToMany(mappedBy="iFriendTo", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy="iFriendTo", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Client> myFriends = new ArrayList<>();
 
-    @OneToMany(mappedBy="idOwner", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="idOwner", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<MessageBuffer> buffers = new ArrayList<>();
 
     public Client() {
