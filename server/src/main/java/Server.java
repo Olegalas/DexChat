@@ -1,12 +1,8 @@
 import org.apache.log4j.Logger;
 
-import javax.persistence.*;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by dexter on 28.03.16.
@@ -40,7 +36,7 @@ public final class Server {
                 LOGGER.info("new client was accepted");
                 LOGGER.debug("Internet address new client - " + info);
 
-                new ClientConnect(client, info).run();
+                new ClientLogin(client, info).run();
 
             }
         } catch (ThreadDeath death){

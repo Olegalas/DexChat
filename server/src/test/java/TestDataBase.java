@@ -29,7 +29,6 @@ public class TestDataBase {
     public void setUp(){
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexTest");
-        EntityManager manager = entityManagerFactory.createEntityManager();
 
         LOGGER.info("****************manager was created");
 
@@ -65,13 +64,6 @@ public class TestDataBase {
             LOGGER.error("Error connection");
         }
 
-//        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-//        Session session = factory.openSession();
-//        session.createSQLQuery("drop table hibernate_sequence;");
-//        session.createSQLQuery("drop table clients_clients;");
-//        session.createSQLQuery("drop table messages;");
-//        session.createSQLQuery("drop table Message_buffer;");
-//        session.createSQLQuery("drop Message_buffer;");
     }
 
     @Test

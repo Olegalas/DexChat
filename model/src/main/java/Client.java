@@ -41,8 +41,9 @@ public class Client extends IdGenerate{
     }
 
     public Client(Login client){
-        login = client.name;
-        pass = client.pass;
+        this.login = client.login;
+        this.pass = client.pass;
+        this.name = client.name;
     }
 
     public String getLogin() {
