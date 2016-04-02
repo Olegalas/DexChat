@@ -1,7 +1,4 @@
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -27,8 +24,6 @@ public class TestDataBase {
 
     @Before
     public void setUp(){
-
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexTest");
 
         LOGGER.info("****************manager was created");
 
@@ -82,24 +77,21 @@ public class TestDataBase {
             LOGGER.info("****************test client has already created before");
         }
 
-
         manager.close();
 
         manager = entityManagerFactory.createEntityManager();
 
-        try{
+        manager.getTransaction().begin();
+        Client clientFromDB = manager.find(Client.class, client.getId());
+        manager.getTransaction().commit();
+        manager.close();
 
-            manager.getTransaction().begin();
-            Client clientFromDB = manager.find(Client.class, client.getId());
-            manager.getTransaction().commit();
-            manager.close();
+        Assert.assertEquals(clientFromDB, client);
+        String messageFromDB = clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage();
+        Assert.assertEquals(messageFromDB, message);
 
-            Assert.assertEquals(clientFromDB, client);
-            String messageFromDB = clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage();
-            Assert.assertEquals(messageFromDB, message);
+        LOGGER.debug("load test client = " + clientFromDB);
+        LOGGER.debug("message = " + messageFromDB);
 
-        }catch (Exception e){
-            LOGGER.info("error ");
-        }
     }
 }

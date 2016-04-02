@@ -9,7 +9,7 @@ import java.util.List;
 @Table(name ="Message_buffer")
 public class MessageBuffer extends IdGenerate {
 
-    @OneToMany(mappedBy = "buffer", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "buffer", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
     private List<Message> messages = new ArrayList<>();
 
     @ManyToOne

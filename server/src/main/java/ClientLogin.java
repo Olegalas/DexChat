@@ -6,14 +6,13 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
  * Created by dexter on 02.04.16.
  */
 public class ClientLogin extends Thread {
-
-    private static boolean interrupt = false;
 
     private final Socket clientSocket;
     private final static Logger LOGGER = Logger.getLogger(Server.class);
@@ -28,8 +27,9 @@ public class ClientLogin extends Thread {
     public void run() {
 
         LOGGER.debug("ClientLogin " + clientInfo + " thread was run");
+        sendToClient("Welcome");
 
-        while (!interrupt || !isInterrupted()){
+        while (!isInterrupted()){
 
             try {
                 LOGGER.debug(clientInfo +" - Wait for Login object from client");
@@ -46,12 +46,17 @@ public class ClientLogin extends Thread {
                 if(loginFromClient.name.isEmpty()){
                     Client client = login(loginFromClient);
                     if(client != null){
+                        sendToClient("login passed");
                         new Conversation(clientSocket, clientInfo, client).run();
                         interrupt();
                         break;
                     }
                 } else {
-                    registration(loginFromClient);
+                    if(registration(loginFromClient)){
+                        sendToClient("client was saved");
+                    } else {
+                        sendToClient("client was not saved");
+                    }
                 }
 
 
@@ -106,4 +111,13 @@ public class ClientLogin extends Thread {
         return true;
     }
 
+    private void sendToClient(String message){
+        try {
+            PrintWriter pw = new PrintWriter(clientSocket.getOutputStream());
+            pw.print(message + '\n');
+            pw.flush();
+        } catch (IOException e) {
+            LOGGER.error("ClientLogin cant send message to client "+ e.getMessage());
+        }
+    }
 }
