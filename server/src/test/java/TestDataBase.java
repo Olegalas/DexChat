@@ -3,6 +3,9 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import ua.dexchat.model.Client;
+import ua.dexchat.model.Message;
+import ua.dexchat.model.MessageBuffer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

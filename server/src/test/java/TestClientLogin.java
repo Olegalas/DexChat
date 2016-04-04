@@ -2,6 +2,9 @@ import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
+import ua.dexchat.model.ClientInfoSocket;
+import ua.dexchat.model.Login;
+import ua.dexchat.server.ClientLogin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,10 +12,6 @@ import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  * Created by dexter on 02.04.16.
@@ -23,22 +22,7 @@ public class TestClientLogin {
 
     @After
     public void tearDown() throws ClassNotFoundException {
-
-        Class.forName("com.mysql.jdbc.Driver");
-        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dexchat", "root", "root")) {
-
-            Statement statement = connection.createStatement();
-            statement.execute("drop table hibernate_sequence");
-            statement.execute("drop table clients_clients");
-            statement.execute("drop table messages");
-            statement.execute("drop table Message_buffer");
-            statement.execute("drop table clients");
-            LOGGER.info("********DataBase was removed");
-
-        } catch (SQLException e) {
-            LOGGER.error("Error connection");
-        }
-
+        DropTables.dropTables();
     }
 
     @Test
@@ -48,7 +32,7 @@ public class TestClientLogin {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
-            LOGGER.debug("sleep to wait for run server");
+            LOGGER.info("sleep to wait for run server");
         }
 
         Socket socket = null;
@@ -58,30 +42,30 @@ public class TestClientLogin {
             LOGGER.error("IOException from Socket in connection " + e.getMessage());
         }
 
-        LOGGER.debug("read Welcome message start");
+        LOGGER.info("read Welcome message start");
         String welcomeMessage = getMessage(socket);
         Assert.assertEquals("Welcome", welcomeMessage);
-        LOGGER.debug("read Welcome message end");
+        LOGGER.info("read Welcome message end");
 
-        LOGGER.debug("send Login start");
+        LOGGER.info("send newLogin start");
         Login login = new Login("name", "pass", "login");
         sendLogin(socket, login);
-        LOGGER.debug("send Login end");
+        LOGGER.info("send newLogin end");
 
-        LOGGER.debug("read return message start");
+        LOGGER.info("read return message after newLogin start");
         String registrationMessage = getMessage(socket);
         Assert.assertEquals("client was saved", registrationMessage);
-        LOGGER.debug("read return message end");
+        LOGGER.info("read return message after newLogin end");
 
-        LOGGER.debug("send double Login start");
+        LOGGER.info("send double oldLogin start");
         Login nextLogin = new Login("name", "pass", "login");
         sendLogin(socket, nextLogin);
-        LOGGER.debug("send double Login start");
+        LOGGER.info("send double oldLogin end");
 
-        LOGGER.debug("read return message start");
+        LOGGER.info("read return message after oldLogin start");
         String secondRegistrationMessage = getMessage(socket);
         Assert.assertEquals("client was saved", registrationMessage);
-        LOGGER.debug("read return message end");
+        LOGGER.info("read return message after oldLogin end");
 
         Assert.assertEquals("client was not saved", secondRegistrationMessage);
 
@@ -118,7 +102,7 @@ public class TestClientLogin {
 
         @Override
         public void run(){
-            SERVER_LOGGER.debug("test server was run");
+            SERVER_LOGGER.info("test server was run");
             Socket testSocket = null;
             ClientInfoSocket info = null;
 
@@ -134,9 +118,7 @@ public class TestClientLogin {
             }
 
             new ClientLogin(testSocket, info).start();
-            SERVER_LOGGER.debug("killed test server");
+            SERVER_LOGGER.info("killed test server");
         }
-
     }
-
 }
