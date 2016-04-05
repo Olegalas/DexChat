@@ -7,10 +7,9 @@ import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientInfoSocket;
 import ua.dexchat.model.Login;
 import ua.dexchat.server.dao.ClientDao;
+import ua.dexchat.server.json.JsonClientUtil;
+import ua.dexchat.server.stream.StreamUtils;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
@@ -37,17 +36,16 @@ public class ClientLogin extends Thread {
 
 
         LOGGER.info("***ClientLogin " + clientInfo + " thread was run");
-        sendToClient("Welcome");
+        StreamUtils.sendString("Welcome", clientSocket);
 
         while (!isInterrupted()){
 
             try {
                 LOGGER.info("***" + clientInfo +" - Wait for Login object from client");
 
-                ObjectInputStream ois = new ObjectInputStream(clientSocket.getInputStream());
-                Login loginFromClient = (Login) ois.readObject();
+                Login loginFromClient = StreamUtils.readJsonMessage(clientSocket);
 
-                LOGGER.info("***" + clientInfo +" - Gut " + loginFromClient + " from client");
+                LOGGER.info("***" + clientInfo +" - parse json in : " + loginFromClient + " from client");
 
                 if(loginFromClient == null || loginFromClient.login.isEmpty() || loginFromClient.pass.isEmpty()){
                     continue;
@@ -57,7 +55,7 @@ public class ClientLogin extends Thread {
                     Client client = clientDao.findClient(loginFromClient);
                     if(client != null){
                         LOGGER.error("*** client passed");
-                        sendToClient("login passed");
+                        StreamUtils.sendString("login passed", clientSocket);
                         new Conversation(clientSocket, clientInfo, client).run();
                         interrupt();
                         break;
@@ -66,37 +64,25 @@ public class ClientLogin extends Thread {
                     try{
                         if(clientDao.saveClient(loginFromClient) != -1){
                             LOGGER.error("*** client was saved");
-                            sendToClient("client was saved");
+                            StreamUtils.sendString("client was saved", clientSocket);
                         } else {
                             LOGGER.error("*** client was not saved");
-                            sendToClient("client was not saved");
+                            StreamUtils.sendString("client was not saved", clientSocket);
                         }
                     }catch (Exception ignore){
-                        sendToClient("client was not saved");
+                        StreamUtils.sendString("client was not saved", clientSocket);
                         LOGGER.error("*** client was not saved");
                     }
 
                 }
 
 
-            } catch (IOException e) {
-                LOGGER.error("***IOException from input stream in "+ clientInfo +" - " + e.getMessage());
+            } catch (InterruptedException e) {
+                LOGGER.error("***"+ clientInfo +" - " + e.getMessage());
                 break;
-            } catch (ClassNotFoundException e){
-                LOGGER.error("***ClassNotFoundException from input stream in "+ clientInfo +" - " + e.getMessage());
             }
         }
 
         LOGGER.info("***ClientLogin " + clientInfo + " thread was correctly killed");
-    }
-
-    private void sendToClient(String message){
-        try {
-            PrintWriter pw = new PrintWriter(clientSocket.getOutputStream());
-            pw.print(message + '\n');
-            pw.flush();
-        } catch (IOException e) {
-            LOGGER.error("***ClientLogin cant send message to client "+ e.getMessage());
-        }
     }
 }

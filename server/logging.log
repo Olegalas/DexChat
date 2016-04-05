@@ -822,3 +822,404 @@
 2016-04-04 22:22:53 INFO  TestClientLogin:68 - read return message after oldLogin end
 2016-04-04 22:22:53 INFO  Server:45 - ***localhost:40875 - Wait for Login object from client
 2016-04-04 22:22:54 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:10:40 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@668bc3d5: startup date [Tue Apr 05 13:10:40 EEST 2016]; root of context hierarchy
+2016-04-05 13:10:41 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:10:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:10:43 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:10:44 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:10:44 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:10:44 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:10:45 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-05 13:10:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-05 13:10:45 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-05 13:10:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-05 13:10:46 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:10:47 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:10:48 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:10:49 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:10:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:10:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:10:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:10:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:10:56 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:10:56 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:10:56 INFO  ClientDao:37 - ***Client was founded
+2016-04-05 13:10:57 INFO  ClientDao:38 - Client{login='login', name='name', pass='pass'}
+2016-04-05 13:10:57 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:10:57 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c2b58c0: startup date [Tue Apr 05 13:10:57 EEST 2016]; root of context hierarchy
+2016-04-05 13:10:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:10:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:10:58 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:10:58 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:10:58 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:10:58 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:10:58 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:10:58 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:10:58 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:10:58 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:10:58 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:10:58 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:10:58 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:10:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:10:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:10:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:10:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:04 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:11:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:11:04 INFO  ClientDao:43 - ***Clients table is empty
+2016-04-05 13:11:05 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:11:05 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10f19647: startup date [Tue Apr 05 13:11:05 EEST 2016]; root of context hierarchy
+2016-04-05 13:11:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:11:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:11:06 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:11:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:11:06 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:11:06 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:11:06 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:11:06 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:11:06 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:12 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:11:12 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:11:13 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:11:13 INFO  ClientDao:43 - ***Clients table is empty
+2016-04-05 13:11:14 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:11:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d51e129: startup date [Tue Apr 05 13:11:14 EEST 2016]; root of context hierarchy
+2016-04-05 13:11:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:11:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:11:14 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:11:14 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:11:14 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:11:14 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:11:14 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:11:14 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:11:14 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:11:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:21 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:11:22 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:11:22 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:11:22 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-04-05 13:11:22 ERROR SqlExceptionHelper:129 - Duplicate entry 'login' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-04-05 13:11:22 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-04-05 13:11:23 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:11:23 INFO  TestClientLogin$TestServerForClientLogin:105 - test server was run
+2016-04-05 13:11:26 INFO  TestClientLogin:45 - read Welcome message start
+2016-04-05 13:11:26 INFO  TestClientLogin$TestServerForClientLogin:121 - killed test server
+2016-04-05 13:11:26 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@116ee192: startup date [Tue Apr 05 13:11:26 EEST 2016]; root of context hierarchy
+2016-04-05 13:11:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:11:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:11:26 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:11:26 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:11:26 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:11:26 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:11:26 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:11:26 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:11:26 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:11:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:11:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:11:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:11:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:11:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:11:33 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:11:33 INFO  Server:38 - ***ClientLogin localhost:55290 thread was run
+2016-04-05 13:11:33 INFO  Server:44 - ***localhost:55290 - Wait for Login object from client
+2016-04-05 13:11:33 INFO  TestClientLogin:48 - read Welcome message end
+2016-04-05 13:11:33 INFO  TestClientLogin:50 - send newLogin start
+2016-04-05 13:11:33 INFO  TestClientLogin:53 - send newLogin end
+2016-04-05 13:11:33 INFO  TestClientLogin:55 - read return message after newLogin start
+2016-04-05 13:15:41 INFO  TestClientLogin$TestServerForClientLogin:105 - test server was run
+2016-04-05 13:15:44 INFO  TestClientLogin:45 - read Welcome message start
+2016-04-05 13:15:44 INFO  TestClientLogin$TestServerForClientLogin:121 - killed test server
+2016-04-05 13:15:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7d7c016d: startup date [Tue Apr 05 13:15:44 EEST 2016]; root of context hierarchy
+2016-04-05 13:15:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:15:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:15:46 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:15:46 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:15:46 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:15:46 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:15:47 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-05 13:15:47 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-05 13:15:47 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-05 13:15:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-05 13:15:48 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:15:48 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:15:49 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:15:50 INFO  Server:38 - ***ClientLogin localhost:55301 thread was run
+2016-04-05 13:15:50 INFO  Server:44 - ***localhost:55301 - Wait for Login object from client
+2016-04-05 13:15:50 INFO  TestClientLogin:48 - read Welcome message end
+2016-04-05 13:15:50 INFO  TestClientLogin:50 - send newLogin start
+2016-04-05 13:15:50 INFO  TestClientLogin:53 - send newLogin end
+2016-04-05 13:15:50 INFO  TestClientLogin:55 - read return message after newLogin start
+2016-04-05 13:32:09 INFO  TestClientLogin$TestServerForClientLogin:81 - test server was run
+2016-04-05 13:32:12 INFO  TestClientLogin:40 - ***read Welcome message start
+2016-04-05 13:32:12 INFO  TestClientLogin$TestServerForClientLogin:97 - killed test server
+2016-04-05 13:32:12 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1182750e: startup date [Tue Apr 05 13:32:12 EEST 2016]; root of context hierarchy
+2016-04-05 13:32:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:32:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:32:13 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:32:14 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:32:14 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:32:14 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:32:14 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-05 13:32:14 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-05 13:32:14 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-05 13:32:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-05 13:32:15 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:32:16 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:32:17 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:32:18 INFO  Server:38 - ***ClientLogin localhost:55322 thread was run
+2016-04-05 13:32:18 INFO  Server:44 - ***localhost:55322 - Wait for Login object from client
+2016-04-05 13:32:18 INFO  TestClientLogin:43 - ***read Welcome message end
+2016-04-05 13:32:18 INFO  TestClientLogin:45 - ***send newLogin start
+2016-04-05 13:32:18 INFO  StreamUtils:52 - ***Gut json : {"name":"name","pass":"pass","login":"login"} from client
+2016-04-05 13:32:18 INFO  TestClientLogin:48 - ***send newLogin end
+2016-04-05 13:32:18 INFO  TestClientLogin:50 - ***read return message after newLogin start
+2016-04-05 13:32:18 INFO  Server:48 - ***localhost:55322 - parse json in : Login{name='name', pass='pass', login='login'} from client
+2016-04-05 13:32:19 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:32:19 ERROR Server:66 - *** client was saved
+2016-04-05 13:32:19 INFO  Server:44 - ***localhost:55322 - Wait for Login object from client
+2016-04-05 13:32:19 INFO  TestClientLogin:53 - ***read return message after newLogin end
+2016-04-05 13:32:19 INFO  TestClientLogin:55 - ***send double oldLogin start
+2016-04-05 13:32:19 INFO  TestClientLogin:58 - ***send double oldLogin end
+2016-04-05 13:32:19 INFO  StreamUtils:52 - ***Gut json : {"name":"name","pass":"pass","login":"login"} from client
+2016-04-05 13:32:19 INFO  TestClientLogin:60 - ***read return message after oldLogin start
+2016-04-05 13:32:19 INFO  Server:48 - ***localhost:55322 - parse json in : Login{name='name', pass='pass', login='login'} from client
+2016-04-05 13:32:19 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:32:19 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-04-05 13:32:19 ERROR SqlExceptionHelper:129 - Duplicate entry 'login' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-04-05 13:32:19 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-04-05 13:32:19 ERROR Server:74 - *** client was not saved
+2016-04-05 13:32:19 INFO  Server:44 - ***localhost:55322 - Wait for Login object from client
+2016-04-05 13:32:19 INFO  TestClientLogin:63 - ***read return message after oldLogin end
+2016-04-05 13:32:20 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:32:29 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@668bc3d5: startup date [Tue Apr 05 13:32:29 EEST 2016]; root of context hierarchy
+2016-04-05 13:32:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:32:31 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:32:31 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:32:32 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:32:32 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:32:32 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:32:32 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-05 13:32:32 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-05 13:32:32 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-05 13:32:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-05 13:32:33 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:32:34 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:32:35 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:32:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:32:37 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:32:43 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:32:43 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:32:44 INFO  ClientDao:37 - ***Client was founded
+2016-04-05 13:32:44 INFO  ClientDao:38 - Client{login='login', name='name', pass='pass'}
+2016-04-05 13:32:44 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:32:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c2b58c0: startup date [Tue Apr 05 13:32:44 EEST 2016]; root of context hierarchy
+2016-04-05 13:32:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:32:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:32:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:32:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:32:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:32:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:32:45 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:32:45 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:32:45 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:32:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:32:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:32:52 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:32:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:32:52 INFO  ClientDao:43 - ***Clients table is empty
+2016-04-05 13:32:53 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:32:53 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10f19647: startup date [Tue Apr 05 13:32:53 EEST 2016]; root of context hierarchy
+2016-04-05 13:32:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:32:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:32:53 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:32:53 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:32:53 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:32:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:32:53 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:32:53 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:32:54 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:32:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:32:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:32:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:00 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:33:00 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:33:00 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-05 13:33:00 INFO  ClientDao:43 - ***Clients table is empty
+2016-04-05 13:33:01 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:33:01 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d51e129: startup date [Tue Apr 05 13:33:01 EEST 2016]; root of context hierarchy
+2016-04-05 13:33:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:33:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:33:01 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:33:01 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:33:01 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:33:01 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:33:01 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:33:01 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:33:02 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:08 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:33:08 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:33:09 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:33:09 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-04-05 13:33:09 ERROR SqlExceptionHelper:129 - Duplicate entry 'login' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-04-05 13:33:09 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-04-05 13:33:10 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:33:10 INFO  TestClientLogin$TestServerForClientLogin:81 - test server was run
+2016-04-05 13:33:13 INFO  TestClientLogin:40 - ***read Welcome message start
+2016-04-05 13:33:13 INFO  TestClientLogin$TestServerForClientLogin:97 - killed test server
+2016-04-05 13:33:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@77e0f1d2: startup date [Tue Apr 05 13:33:13 EEST 2016]; root of context hierarchy
+2016-04-05 13:33:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-05 13:33:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-05 13:33:13 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-05 13:33:13 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-05 13:33:13 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-05 13:33:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-05 13:33:13 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:33:13 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:33:13 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:33:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:19 WARN  EntityManagerFactoryRegistry:63 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2016-04-05 13:33:19 INFO  Server:38 - ***ClientLogin localhost:55363 thread was run
+2016-04-05 13:33:19 INFO  TestClientLogin:43 - ***read Welcome message end
+2016-04-05 13:33:19 INFO  TestClientLogin:45 - ***send newLogin start
+2016-04-05 13:33:19 INFO  Server:44 - ***localhost:55363 - Wait for Login object from client
+2016-04-05 13:33:19 INFO  TestClientLogin:48 - ***send newLogin end
+2016-04-05 13:33:19 INFO  TestClientLogin:50 - ***read return message after newLogin start
+2016-04-05 13:33:19 INFO  StreamUtils:52 - ***Gut json : {"name":"name","pass":"pass","login":"login"} from client
+2016-04-05 13:33:19 INFO  Server:48 - ***localhost:55363 - parse json in : Login{name='name', pass='pass', login='login'} from client
+2016-04-05 13:33:20 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:33:20 ERROR Server:66 - *** client was saved
+2016-04-05 13:33:20 INFO  Server:44 - ***localhost:55363 - Wait for Login object from client
+2016-04-05 13:33:20 INFO  TestClientLogin:53 - ***read return message after newLogin end
+2016-04-05 13:33:20 INFO  TestClientLogin:55 - ***send double oldLogin start
+2016-04-05 13:33:20 INFO  TestClientLogin:58 - ***send double oldLogin end
+2016-04-05 13:33:20 INFO  TestClientLogin:60 - ***read return message after oldLogin start
+2016-04-05 13:33:20 INFO  StreamUtils:52 - ***Gut json : {"name":"name","pass":"pass","login":"login"} from client
+2016-04-05 13:33:20 INFO  Server:48 - ***localhost:55363 - parse json in : Login{name='name', pass='pass', login='login'} from client
+2016-04-05 13:33:20 INFO  ClientDao:64 - ***Client almost saved
+2016-04-05 13:33:20 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-04-05 13:33:20 ERROR SqlExceptionHelper:129 - Duplicate entry 'login' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-04-05 13:33:20 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-04-05 13:33:20 ERROR Server:74 - *** client was not saved
+2016-04-05 13:33:20 INFO  Server:44 - ***localhost:55363 - Wait for Login object from client
+2016-04-05 13:33:20 INFO  TestClientLogin:63 - ***read return message after oldLogin end
+2016-04-05 13:33:21 INFO  DropTables:23 - ********DataBase was removed
+2016-04-05 13:33:21 INFO  TestDataBase:31 - ****************manager was created
+2016-04-05 13:33:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: dexunit
+	...]
+2016-04-05 13:33:21 WARN  DriverManagerConnectionProviderImpl:72 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-04-05 13:33:21 INFO  DriverManagerConnectionProviderImpl:128 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/dexchat]
+2016-04-05 13:33:21 INFO  DriverManagerConnectionProviderImpl:137 - HHH000046: Connection properties: {user=root, password=****}
+2016-04-05 13:33:21 INFO  DriverManagerConnectionProviderImpl:142 - HHH000006: Autocommit mode: false
+2016-04-05 13:33:21 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-04-05 13:33:21 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-05 13:33:21 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-05 13:33:21 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-05 13:33:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-05 13:33:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-05 13:33:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-05 13:33:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-05 13:33:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-05 13:33:28 INFO  TestDataBase:59 - ********DataBase was removed

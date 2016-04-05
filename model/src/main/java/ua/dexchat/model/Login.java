@@ -28,4 +28,25 @@ public class Login implements Serializable{
                 ", login='" + login + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Login login1 = (Login) o;
+
+        if (name != null ? !name.equals(login1.name) : login1.name != null) return false;
+        if (pass != null ? !pass.equals(login1.pass) : login1.pass != null) return false;
+        return login != null ? login.equals(login1.login) : login1.login == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (pass != null ? pass.hashCode() : 0);
+        result = 31 * result + (login != null ? login.hashCode() : 0);
+        return result;
+    }
 }
