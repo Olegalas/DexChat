@@ -32,14 +32,12 @@ public final class Server {
 
                 Socket client = serverSocket.accept();
 
-                ClientInfoSocket info = new ClientInfoSocket();
-                info.ip = client.getInetAddress().getCanonicalHostName();
-                info.port = client.getPort();
+                ClientInfoSocket info = new ClientInfoSocket(client);
 
                 LOGGER.info("***new client was accepted");
                 LOGGER.info("***Internet address new client - " + info);
 
-                new ClientLogin(client, info).run();
+                new ClientLogin(client, info).start();
 
             }
         } catch (ThreadDeath death){

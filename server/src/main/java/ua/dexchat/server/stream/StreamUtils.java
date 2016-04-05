@@ -1,14 +1,13 @@
 package ua.dexchat.server.stream;
 
 import org.apache.log4j.Logger;
+import ua.dexchat.model.Client;
 import ua.dexchat.model.Login;
-import ua.dexchat.server.json.JsonClientUtil;
+import ua.dexchat.server.json.JsonUtils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.util.List;
 
 /**
  * Created by dexter on 05.04.16.
@@ -16,6 +15,7 @@ import java.net.Socket;
 public class StreamUtils {
 
     private static final Logger LOGGER = Logger.getLogger(StreamUtils.class);
+    private static final int DEFAULT_SIZE = 8000;
 
     public static void sendString(String message, Socket clientSocket){
         try {
@@ -27,8 +27,8 @@ public class StreamUtils {
         }
     }
 
-    public static void sendLogin(Login login, Socket clientSocket){
-        String json = JsonClientUtil.transformLoginInJson(login);
+    public static void sendObject(Object object, Socket clientSocket){
+        String json = JsonUtils.transformObjectInJson(object);
         sendString(json, clientSocket);
     }
 
@@ -50,6 +50,31 @@ public class StreamUtils {
     public static Login readJsonMessage(Socket clientSocket) throws InterruptedException {
         String jsonLogin = readMessage(clientSocket);
         LOGGER.info("***Gut json : " + jsonLogin + " from client");
-        return JsonClientUtil.parseLoginJson(jsonLogin);
+        return JsonUtils.parseLoginJson(jsonLogin);
+    }
+
+    public static void reSendFile(Socket client, Socket friend){
+
+        try(InputStream is = friend.getInputStream()) {
+
+            OutputStream os = client.getOutputStream();
+
+            byte[] buffer = new byte[DEFAULT_SIZE];
+            int isRead = 0;
+
+            while((isRead = is.read(buffer)) != -1){
+                os.write(buffer, 0, isRead);
+                buffer = new byte[DEFAULT_SIZE];
+            }
+            LOGGER.info("***File was send (before flush)");
+            os.flush();
+            os.close();
+        } catch (IOException e) {
+            LOGGER.info("***IOException in reSendFile Method");
+            LOGGER.info("***" + e.getMessage());
+            return;
+        }
+
+        LOGGER.info("***File was correctly send");
     }
 }

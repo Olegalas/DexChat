@@ -7,10 +7,7 @@ import ua.dexchat.model.Login;
 import ua.dexchat.server.ClientLogin;
 import ua.dexchat.server.stream.StreamUtils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -44,7 +41,7 @@ public class TestClientLogin {
 
             LOGGER.info("***send newLogin start");
             Login login = new Login("name", "pass", "login");
-            StreamUtils.sendLogin(login, socket);
+            StreamUtils.sendObject(login, socket);
             LOGGER.info("***send newLogin end");
 
             LOGGER.info("***read return message after newLogin start");
@@ -54,7 +51,7 @@ public class TestClientLogin {
 
             LOGGER.info("***send double oldLogin start");
             Login nextLogin = new Login("name", "pass", "login");
-            StreamUtils.sendLogin(login, socket);
+            StreamUtils.sendObject(login, socket);
             LOGGER.info("***send double oldLogin end");
 
             LOGGER.info("***read return message after oldLogin start");
@@ -85,9 +82,7 @@ public class TestClientLogin {
             try {
                 server = new ServerSocket(8080);
                 testSocket = server.accept();
-                info = new ClientInfoSocket();
-                info.ip = testSocket.getInetAddress().getCanonicalHostName();
-                info.port = testSocket.getPort();
+                info = new ClientInfoSocket(testSocket);
 
             } catch (IOException e) {
                 SERVER_LOGGER.error("IOException from SererSocket " + e.getMessage());

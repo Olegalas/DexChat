@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import ua.dexchat.model.Login;
-import ua.dexchat.server.json.JsonClientUtil;
+import ua.dexchat.server.json.JsonUtils;
 
 /**
  * Created by dexter on 05.04.16.
@@ -13,13 +13,13 @@ public class TestJsonClientUtil {
 
     @Test
     public void testParseLogin(){
-        Login actualLogin = JsonClientUtil.parseLoginJson(expectedJson);
+        Login actualLogin = JsonUtils.parseLoginJson(expectedJson);
         Assert.assertEquals(expectedLogin, actualLogin);
     }
 
     @Test
     public void testTransformLoginInJson(){
-        String jsonLogin = JsonClientUtil.transformLoginInJson(expectedLogin);
+        String jsonLogin = JsonUtils.transformObjectInJson(expectedLogin);
         Assert.assertEquals(expectedJson, jsonLogin);
     }
 }

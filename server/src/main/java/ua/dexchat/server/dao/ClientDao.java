@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.dexchat.model.Client;
 import ua.dexchat.model.Login;
+import ua.dexchat.model.Message;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.util.List;
 
 /**
  * Created by dexter on 03.04.16.
@@ -32,7 +34,7 @@ public class ClientDao {
     public Client findClient(Login login){
 
         try{
-            Client fromResult = manager.createQuery("SELECT c FROM ua.dexchat.model.Client c WHERE c.login = :login", Client.class)
+            Client fromResult = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
                     .setParameter("login", login.login).getSingleResult();
             LOGGER.info("***Client was founded");
             LOGGER.info(fromResult);
@@ -51,9 +53,16 @@ public class ClientDao {
         }
     }
 
-    public int saveClient(Login login){
+    public Client findClient(int id){
+        return manager.find(Client.class, id);
+    }
 
+    public int saveClient(Login login){
         Client client = new Client(login);
+        return saveClient(client);
+    }
+
+    public int saveClient(Client client){
 
         try{
             manager.persist(client);

@@ -3,17 +3,16 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.dexchat.model.Client;
 import ua.dexchat.model.Message;
 import ua.dexchat.model.MessageBuffer;
+import ua.dexchat.server.dao.ClientDao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Date;
 
 /**
@@ -27,8 +26,6 @@ public class TestDataBase {
 
     @Before
     public void setUp(){
-
-        LOGGER.info("****************manager was created");
 
         client = new Client("client", "client", "client");
         message = "testMessage";
@@ -46,55 +43,25 @@ public class TestDataBase {
 
     @After
     public void tearDown() throws ClassNotFoundException {
-
-        Class.forName("com.mysql.jdbc.Driver");
-        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dexchat", "root", "root")) {
-
-            Statement statement = connection.createStatement();
-            statement.execute("drop table hibernate_sequence");
-            statement.execute("drop table clients_clients");
-            statement.execute("drop table messages");
-            statement.execute("drop table Message_buffer");
-            statement.execute("drop table clients");
-            LOGGER.info("********DataBase was removed");
-
-        } catch (SQLException e) {
-            LOGGER.error("Error connection");
-        }
-
+        DropTables.dropTables();
     }
 
     @Test
     public void testPersist(){
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("/spring-context.xml");
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
-        EntityManager manager = entityManagerFactory.createEntityManager();
+        ClientDao clientDao = context.getBean(ClientDao.class);
 
-        try{
+        clientDao.saveClient(client);
 
-            manager.getTransaction().begin();
-            manager.persist(client);
-            manager.getTransaction().commit();
-
-        }catch (Exception e){
-            LOGGER.info("****************test client has already created before");
-        }
-
-        manager.close();
-
-        manager = entityManagerFactory.createEntityManager();
-
-        manager.getTransaction().begin();
-        Client clientFromDB = manager.find(Client.class, client.getId());
-        manager.getTransaction().commit();
-        manager.close();
+        Client clientFromDB = clientDao.findClient(client.getId());
 
         Assert.assertEquals(clientFromDB, client);
         String messageFromDB = clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage();
         Assert.assertEquals(messageFromDB, message);
 
-        LOGGER.debug("load test client = " + clientFromDB);
-        LOGGER.debug("message = " + messageFromDB);
-
+        LOGGER.debug("***load test client = " + clientFromDB);
+        LOGGER.debug("***message = " + messageFromDB);
     }
 }

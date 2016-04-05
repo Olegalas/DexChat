@@ -6,7 +6,7 @@ import ua.dexchat.model.Login;
 /**
  * Created by dexter on 05.04.16.
  */
-public class JsonClientUtil {
+public class JsonUtils {
 
 
     public static Login parseLoginJson(String jsonLogin) {
@@ -14,8 +14,8 @@ public class JsonClientUtil {
         return gson.fromJson(jsonLogin, Login.class);
     }
 
-    public static String transformLoginInJson(Login login){
+    public static String transformObjectInJson(Object object){
         Gson gson = new Gson();
-        return gson.toJson(login);
+        return gson.toJson(object);
     }
 }

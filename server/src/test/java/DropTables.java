@@ -26,4 +26,8 @@ public class DropTables {
             LOGGER.error("Error connection");
         }
     }
+
+    public static void main(String[] args) throws ClassNotFoundException {
+        DropTables.dropTables();
+    }
 }

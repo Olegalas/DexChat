@@ -7,7 +7,6 @@ import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientInfoSocket;
 import ua.dexchat.model.Login;
 import ua.dexchat.server.dao.ClientDao;
-import ua.dexchat.server.json.JsonClientUtil;
 import ua.dexchat.server.stream.StreamUtils;
 
 import java.net.Socket;
@@ -56,7 +55,7 @@ public class ClientLogin extends Thread {
                     if(client != null){
                         LOGGER.error("*** client passed");
                         StreamUtils.sendString("login passed", clientSocket);
-                        new Conversation(clientSocket, clientInfo, client).run();
+                        new Conversation(clientSocket, clientInfo, client).start();
                         interrupt();
                         break;
                     }

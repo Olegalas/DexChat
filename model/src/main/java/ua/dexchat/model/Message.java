@@ -19,6 +19,11 @@ public class Message extends IdGenerate{
             referencedColumnName = "id")
     private MessageBuffer buffer;
 
+    @ManyToOne()
+    @JoinColumn(name = "temp_buffer_id",
+            referencedColumnName = "id")
+    private TemporaryBuffer tempBuffer;
+
     @Temporal(TemporalType.TIME)
     private Date date;
 
@@ -65,9 +70,24 @@ public class Message extends IdGenerate{
         this.date = date;
     }
 
-    @Override
+    public MessageBuffer getBuffer() {
+        return buffer;
+    }
+
+    public TemporaryBuffer getTempBuffer() {
+        return tempBuffer;
+    }
+
+    public void setTempBuffer(TemporaryBuffer tempBuffer) {
+        this.tempBuffer = tempBuffer;
+    }
+
+    public void setBuffer(MessageBuffer buffer) {
+        this.buffer = buffer;
+    }
+  @Override
     public String toString() {
-        return "ua.dexchat.model.Message{" +
+        return "Message{" +
                 "message='" + message + '\'' +
                 ", idSender=" + idSender +
                 ", idReceiver=" + idReceiver +

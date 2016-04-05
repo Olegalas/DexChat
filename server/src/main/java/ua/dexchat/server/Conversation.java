@@ -3,13 +3,8 @@ package ua.dexchat.server;
 import org.apache.log4j.Logger;
 import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientInfoSocket;
-import ua.dexchat.model.Message;
-import ua.dexchat.model.MessageBuffer;
+import ua.dexchat.server.stream.StreamUtils;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -22,206 +17,88 @@ public class Conversation extends Thread {
 
     private final static Logger LOGGER = Logger.getLogger(Server.class);
 
-    private ServerSocket serverSocketForConversation;
-
-    private Socket clientSocketForFiles;
-    private Socket clientSocketForSearchFriends;
-    private Socket clientSocketForMessages;
+    // number of the own clients port is his id + 8080
+    private ServerSocket clientFileServerSocket;
 
     private final Socket clientSocket;
     private final ClientInfoSocket infoSocket;
     private final Client client;
 
-    private EntityManager manager;
-
     Conversation(Socket clientSocket, ClientInfoSocket infoSocket, Client client){
         this.client = client;
         this.clientSocket = clientSocket;
         this.infoSocket = infoSocket;
-
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dexunit");
-        manager = entityManagerFactory.createEntityManager();
-
     }
 
     @Override
     public void run() {
         LOGGER.info(infoSocket +" - conversation session was run");
 
-        LOGGER.info(infoSocket +" - search for old friends");
+        LOGGER.info(infoSocket +" - search old friends");
         List<Client> friends = client.getiFriendTo();
         LOGGER.info(infoSocket +" - " + friends.size() + " friends was found");
 
         if(friends.size() != 0){
-            sendFriends(friends);
+            StreamUtils.sendObject(friends, clientSocket);
         }
 
-        new CatchFile().run();
-        new SearchNewFriend().run();
-        new ReceptionMessage().run(); // TODO: 01.04.16
+        Thread getFiles = new GetFiles();
+        getFiles.setDaemon(true);
+        getFiles.start();
+
+        Thread getMessages = new GetMessages();
+        getMessages.setDaemon(true);
+        getMessages.start();
+
 
         while (!isInterrupted()){
 
-            try {
-                LOGGER.debug(infoSocket +" - Wait for choose friend to talk");
+            LOGGER.debug(infoSocket +" - Wait for choose friend to talk");
 
-                ObjectInputStream ois = new ObjectInputStream(clientSocket.getInputStream());
-                Client friend = (Client) ois.readObject();
-
-                LOGGER.debug(infoSocket +" - Gut " + friend + " from client");
-
-                startNewChar(friend);
-
-            } catch (IOException e) {
-                LOGGER.error("IOException from input stream in "+ infoSocket +" - " + e.getMessage());
-                break;
-            } catch (ClassNotFoundException e){
-                LOGGER.fatal("ClassCastException "+ infoSocket+" ua.dexchat.model.Client send something wrong");
-                break;
-            }
+            // TODO: 05.04.16
+            LOGGER.debug(infoSocket +" - Gut " +  " NOP " + " from client");
 
         }
     }
 
-    private void startNewChar(Client friend){
-
-        try {
-            Socket socketFroNewChat = serverSocketForConversation.accept();
-            // TODO: 01.04.16
-            //new ua.dexchat.server.Chat(socketFroNewChat, friend).run();
-        } catch (IOException e) {
-            LOGGER.error("IOException from accept new socket in startNewChat in "+ infoSocket +" - " + e.getMessage());
-        }
-
-    }
-
-    private void sendFriends(List<Client> friends) {
-        try {
-
-            ObjectOutputStream oos = new ObjectOutputStream(clientSocket.getOutputStream());
-            oos.writeObject(friends);
-            oos.flush();
-
-
-        } catch (IOException e) {
-            LOGGER.error(infoSocket + " - OutPutStreamException " + e.getMessage());
-        }
-    }
-
-    private void checkExit(String exitCommand) throws InterruptedException {
-        if("@exit".equals(exitCommand) || exitCommand == null){
-            throw new InterruptedException("user want exit from registration");
-        }
-    }
-
-    private class CatchFile extends Thread{
+    private class GetFiles extends Thread {
 
         @Override
         public void run(){
-            try {
-                LOGGER.debug(infoSocket +" - CatchFile thread was run");
-                clientSocketForFiles  = serverSocketForConversation.accept();
-                InputStream is = clientSocketForFiles.getInputStream();
-                OutputStream os = clientSocketForFiles.getOutputStream();
+            int port = client.getId() + 8080;
 
-                byte[] buff = new byte[8000];
-                int count = 0;
-
-                while (!interrupted()){
-
-
-                    while((count = is.read(buff)) != -1){
-                        os.write(buff, 0, count);
-                        os.flush();
-                        buff = new byte[8000];
-                        count = 0;
-                    }
-
-
-                }
-
-            } catch (IOException e) {
-                LOGGER.error(infoSocket + " IOException in CatchFile thread " + e.getMessage());
-                interrupt();
-            }
-        }
-    }
-
-
-    private class SearchNewFriend extends Thread{
-
-        @Override
-        public void run(){
             try {
 
-                BufferedReader br = new BufferedReader(
-                        new InputStreamReader(clientSocketForFiles.getInputStream()));
-                ObjectOutputStream oos = new ObjectOutputStream(
-                        clientSocketForSearchFriends.getOutputStream());
-
-
-                String friendLogin = "";
+                ClientInfoSocket infoClientFileSocket = null;
+                Socket clientFileSocket = null;
 
                 while(!interrupted()){
 
-                    friendLogin = br.readLine();
+                    do{
+                        clientFileServerSocket = new ServerSocket(port);
+                        clientFileSocket = clientFileServerSocket.accept();
+                        infoClientFileSocket = new ClientInfoSocket(clientFileSocket);
+                    } while(!infoSocket.equals(infoClientFileSocket));
 
-                    LOGGER.info(infoSocket + "SearchNewFriend - client sent " + friendLogin + " for search in database");
-                    manager.getTransaction().begin();
-                    Query query =
-                            manager.createQuery("SELECT c FROM ua.dexchat.model.Client c WHERE c.login LIKE :login");
-
-                    LOGGER.debug(infoSocket +"SearchNewFriend  - Query was created for validation");
-
-                    List<Client> queryFriends =  query.setParameter("login", friendLogin + "%").getResultList();
-
-                    manager.getTransaction().commit();
-                    LOGGER.info(infoSocket +" SearchNewFriend founded "+queryFriends.size() +" fiends");
-                    LOGGER.info(infoSocket + queryFriends.toString());
-
-                    oos.writeObject(queryFriends);
-                    oos.flush();
+                    Socket fileSocketFromFriend = clientFileServerSocket.accept();
+                    StreamUtils.reSendFile(clientFileSocket, fileSocketFromFriend);
                 }
 
-
             } catch (IOException e) {
-                LOGGER.error(infoSocket + "IOException in SearchNewFriend " + e.getMessage());
+                LOGGER.error("***IOException in GetFile thread in " + infoSocket);
+                LOGGER.error("*** : " + e.getMessage());
             }
+
         }
     }
 
-    // TODO: 01.04.16
-    private class ReceptionMessage extends Thread{
+    private class GetMessages extends Thread {
 
         @Override
         public void run(){
 
-            try{
-                ObjectOutputStream oos = new ObjectOutputStream(clientSocketForMessages.getOutputStream());
-                for(MessageBuffer tmp : client.getBuffers()){
-                    for(Message message : tmp.getMessages()){
-                        oos.writeObject(message);
-                    }
-                }
-                oos.flush();
-            }catch (IOException e){
-                LOGGER.error(infoSocket + "IOException in SendMessageFriend " + e.getMessage());
-            }
 
-        }
 
-    }
-
-    private void initSockets(){
-        int currentConversationPort = 8080 + client.getId();
-        try {
-            serverSocketForConversation = new ServerSocket(currentConversationPort);
-            // for accept client-side .. for send files from friends to client
-            clientSocketForFiles = serverSocketForConversation.accept();
-            clientSocketForSearchFriends = serverSocketForConversation.accept();
-            clientSocketForMessages = serverSocketForConversation.accept();
-        } catch (IOException e) {
-            LOGGER.error(infoSocket + " IOException from initial ServerSocket " + e.getMessage());
         }
     }
 }
