@@ -55,7 +55,7 @@ public class Conversation extends Thread {
 
             LOGGER.debug(infoSocket +" - Wait for choose friend to talk");
 
-            // TODO: 05.04.16
+            // TODO: 05.04.16 Yo
             LOGGER.debug(infoSocket +" - Gut " +  " NOP " + " from client");
 
         }
