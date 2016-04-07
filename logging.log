@@ -2,3 +2,5 @@
 2016-04-07 00:31:32 ERROR DropTables:26 - Error connection
 2016-04-07 00:58:42 ERROR DropTables:27 - Error connection
 2016-04-07 15:03:26 ERROR DropTables:27 - Error connection
+2016-04-08 00:15:42 INFO  DropTables:24 - ********DataBase was removed
+2016-04-08 00:19:49 ERROR DropTables:27 - Error connection

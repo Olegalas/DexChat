@@ -24,9 +24,9 @@ public class ClientService {
     private ClientDao clientDao;
 
     public void sendMessage(Message message){
-        TemporaryBuffer buffer = temporaryBufferDao.findBufferByIdOwner(message.getIdReceiver());
-        buffer.getMessages().add(message);
-//        temporaryBufferDao.refreshBuffer(buffer);
+        TemporaryBuffer buffer =  temporaryBufferDao.findBufferByIdOwner(message.getIdReceiver());
+        message.setTempBuffer(buffer);
+        temporaryBufferDao.saveMessageInBuffer(message);
     }
 
     public TemporaryBuffer findTemporaryBuffer(int idOwner){
@@ -42,13 +42,9 @@ public class ClientService {
             return -1;
         }
 
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext("/spring-context.xml");
-
-        TemporaryBufferDao tempBuffDao = context.getBean(TemporaryBufferDao.class);
         TemporaryBuffer buff = new TemporaryBuffer();
         buff.setIdOwnerr(client.getId());
-        tempBuffDao.saveTempBuffer(buff);
+        temporaryBufferDao.saveTempBuffer(buff);
 
         return idClient;
     }
