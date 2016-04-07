@@ -11,7 +11,8 @@ import java.util.List;
 @Table(name = "Temporary_buffers")
 public class TemporaryBuffer extends IdGenerate{
 
-    @OneToMany(mappedBy = "tempBuffer", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "tempBuffer", cascade = {CascadeType.ALL},
+            fetch = FetchType.EAGER, orphanRemoval=true)
     private List<Message> messages = new ArrayList<>();
 
     private int idOwner;

@@ -1,13 +1,13 @@
 package ua.dexchat.server.dao;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ua.dexchat.model.Client;
-import ua.dexchat.model.Login;
-import ua.dexchat.model.Message;
+import ua.dexchat.model.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

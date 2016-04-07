@@ -12,7 +12,6 @@
 
     <modules>
         <module>client</module>
-        <module>view</module>
         <module>server</module>
         <module>model</module>
     </modules>

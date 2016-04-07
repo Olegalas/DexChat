@@ -30,12 +30,19 @@ public class Message extends IdGenerate{
     public Message() {
     }
 
-    public Message(String message, int idSender, int idReceiver, Date date, MessageBuffer buffer) {
+    public Message(String message, int idSender, int idReceiver, Date date) {
         this.message = message;
         this.idSender = idSender;
         this.idReceiver = idReceiver;
         this.date = date;
+    }
+
+    public Message(String message, int idSender, int idReceiver, Date date, MessageBuffer buffer) {
+        this.message = message;
+        this.idSender = idSender;
+        this.idReceiver = idReceiver;
         this.buffer = buffer;
+        this.date = date;
     }
 
     public String getMessage() {
@@ -85,7 +92,8 @@ public class Message extends IdGenerate{
     public void setBuffer(MessageBuffer buffer) {
         this.buffer = buffer;
     }
-  @Override
+
+    @Override
     public String toString() {
         return "Message{" +
                 "message='" + message + '\'' +

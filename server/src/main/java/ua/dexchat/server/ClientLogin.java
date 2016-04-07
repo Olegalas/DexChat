@@ -7,6 +7,7 @@ import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientInfoSocket;
 import ua.dexchat.model.Login;
 import ua.dexchat.server.dao.ClientDao;
+import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.stream.StreamUtils;
 
 import java.net.Socket;
@@ -31,7 +32,7 @@ public class ClientLogin extends Thread {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("/spring-context.xml");
 
-        ClientDao clientDao = context.getBean(ClientDao.class);
+        ClientService service = context.getBean(ClientService.class);
 
 
         LOGGER.info("***ClientLogin " + clientInfo + " thread was run");
@@ -51,7 +52,7 @@ public class ClientLogin extends Thread {
                 }
 
                 if(loginFromClient.name.isEmpty()){ // login client
-                    Client client = clientDao.findClient(loginFromClient);
+                    Client client = service.findClient(loginFromClient);
                     if(client != null){
                         LOGGER.error("*** client passed");
                         StreamUtils.sendString("login passed", clientSocket);
@@ -61,7 +62,7 @@ public class ClientLogin extends Thread {
                     }
                 } else { // registration client
                     try{
-                        if(clientDao.saveClient(loginFromClient) != -1){
+                        if(service.saveClient(loginFromClient) != -1){
                             LOGGER.error("*** client was saved");
                             StreamUtils.sendString("client was saved", clientSocket);
                         } else {

@@ -20,6 +20,7 @@ public class DropTables {
             statement.execute("drop table messages");
             statement.execute("drop table Message_buffer");
             statement.execute("drop table clients");
+            statement.execute("drop table Temporary_buffers");
             LOGGER.info("********DataBase was removed");
 
         } catch (SQLException e) {

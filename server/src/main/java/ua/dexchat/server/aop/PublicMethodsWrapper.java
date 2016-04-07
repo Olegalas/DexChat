@@ -40,6 +40,7 @@ public class PublicMethodsWrapper {
             value =  proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             LOGGER.error("***" + methodName + " method threw exception");
+            LOGGER.error(throwable.getClass().getName());
             LOGGER.error(throwable.getMessage());
         }
 
