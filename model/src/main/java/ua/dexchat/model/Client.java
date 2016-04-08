@@ -29,7 +29,7 @@ public class Client extends IdGenerate{
     private List<Client> myFriends = new ArrayList<>();
 
     @OneToMany(mappedBy="idOwner", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
-    private List<MessageBuffer> buffers = new ArrayList<>();
+    private List<History> buffers = new ArrayList<>();
 
     public Client() {
     }
@@ -86,11 +86,11 @@ public class Client extends IdGenerate{
         this.myFriends = myFriends;
     }
 
-    public List<MessageBuffer> getBuffers() {
+    public List<History> getHistory() {
         return buffers;
     }
 
-    public void setBuffers(List<MessageBuffer> buffers) {
+    public void setBuffers(List<History> buffers) {
         this.buffers = buffers;
     }
 

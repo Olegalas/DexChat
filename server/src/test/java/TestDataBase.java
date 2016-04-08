@@ -6,13 +6,10 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.dexchat.model.Client;
+import ua.dexchat.model.History;
 import ua.dexchat.model.Message;
-import ua.dexchat.model.MessageBuffer;
 import ua.dexchat.server.dao.ClientDao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.Date;
 
 /**
@@ -30,14 +27,14 @@ public class TestDataBase {
         client = new Client("client", "client", "client");
         message = "testMessage";
 
-        MessageBuffer messageBuffer = new MessageBuffer();
+        History messageBuffer = new History();
         Message testMessage = new Message(message, client.getId(), client.getId(), new Date(), messageBuffer);
 
         messageBuffer.getMessages().add(testMessage);
         messageBuffer.setIdOwner(client);
         messageBuffer.setIdSender(client.getId());
 
-        client.getBuffers().add(messageBuffer);
+        client.getHistory().add(messageBuffer);
 
     }
 
@@ -58,7 +55,7 @@ public class TestDataBase {
         Client clientFromDB = clientDao.findClient(client.getId());
 
         Assert.assertEquals(clientFromDB, client);
-        String messageFromDB = clientFromDB.getBuffers().get(0).getMessages().get(0).getMessage();
+        String messageFromDB = clientFromDB.getHistory().get(0).getMessages().get(0).getMessage();
         Assert.assertEquals(messageFromDB, message);
 
         LOGGER.debug("***load test client = " + clientFromDB);

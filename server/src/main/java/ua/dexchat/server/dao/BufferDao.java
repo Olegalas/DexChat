@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.dexchat.model.Message;
+import ua.dexchat.model.History;
 import ua.dexchat.model.TemporaryBuffer;
 
 import javax.persistence.EntityManager;
@@ -14,14 +15,14 @@ import javax.persistence.PersistenceContext;
  */
 @Service
 @Transactional
-public class TemporaryBufferDao {
+public class BufferDao {
 
-    private final static Logger LOGGER = Logger.getLogger(TemporaryBufferDao.class);
+    private final static Logger LOGGER = Logger.getLogger(BufferDao.class);
 
     @PersistenceContext
     private EntityManager manager;
 
-    public TemporaryBufferDao() {
+    public BufferDao() {
     }
 
     public TemporaryBuffer findBufferByIdOwner(int idOwner){
@@ -36,7 +37,11 @@ public class TemporaryBufferDao {
     public void removeBuffer(TemporaryBuffer buff) {
         TemporaryBuffer buffFromFind = manager.find(TemporaryBuffer.class, buff.getId());
         manager.remove(buffFromFind);
-        manager.flush();
+    }
+
+    public void removeMessage(Message message){
+        manager.createQuery("delete from Message m where m.id = :id")
+                .setParameter("id", message.getId()).executeUpdate();
     }
 
     public void saveMessageInBuffer(Message message){
@@ -45,5 +50,9 @@ public class TemporaryBufferDao {
 
     public void saveTempBuffer(TemporaryBuffer buff){
         manager.persist(buff);
+    }
+
+    public void saveNewMessageBuffer(History buffer){
+        manager.persist(buffer);
     }
 }

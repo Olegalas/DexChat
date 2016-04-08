@@ -56,7 +56,7 @@ public class ClientLogin extends Thread {
                     if(client != null){
                         LOGGER.error("*** client passed");
                         StreamUtils.sendString("login passed", clientSocket);
-                        new Conversation(clientSocket, clientInfo, client).start();
+                        new Conversation(clientSocket, clientInfo, client, service).start();
                         interrupt();
                         break;
                     }

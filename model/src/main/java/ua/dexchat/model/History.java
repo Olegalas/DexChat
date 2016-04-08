@@ -9,9 +9,9 @@ import java.util.List;
  */
 @Entity
 @Table(name ="Message_buffer")
-public class MessageBuffer extends IdGenerate {
+public class History extends IdGenerate {
 
-    @OneToMany(mappedBy = "buffer", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "buffer", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, orphanRemoval=true)
     private List<Message> messages = new ArrayList<>();
 
     @ManyToOne
@@ -21,7 +21,7 @@ public class MessageBuffer extends IdGenerate {
     @Column(nullable = false, unique = true)
     private int idSender;
 
-    public MessageBuffer() {
+    public History() {
     }
 
     public Client getIdOwner() {
@@ -50,7 +50,7 @@ public class MessageBuffer extends IdGenerate {
 
     @Override
     public String toString() {
-        return "ua.dexchat.model.MessageBuffer{" +
+        return "ua.dexchat.model.History{" +
                 "messages=" + messages +
                 ", idOwner=" + idOwner +
                 ", idSender=" + idSender +

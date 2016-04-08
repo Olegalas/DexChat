@@ -17,7 +17,7 @@ public class Message extends IdGenerate{
     @ManyToOne()
     @JoinColumn(name = "buffer_id",
             referencedColumnName = "id")
-    private MessageBuffer buffer;
+    private History buffer;
 
     @ManyToOne()
     @JoinColumn(name = "temp_buffer_id",
@@ -37,12 +37,19 @@ public class Message extends IdGenerate{
         this.date = date;
     }
 
-    public Message(String message, int idSender, int idReceiver, Date date, MessageBuffer buffer) {
+    public Message(String message, int idSender, int idReceiver, Date date, History buffer) {
         this.message = message;
         this.idSender = idSender;
         this.idReceiver = idReceiver;
         this.buffer = buffer;
         this.date = date;
+    }
+
+    public Message(Message message){
+        this.message = message.message;
+        this.idSender = message.idSender;
+        this.idReceiver = message.idReceiver;
+        this.date = message.date;
     }
 
     public String getMessage() {
@@ -77,7 +84,7 @@ public class Message extends IdGenerate{
         this.date = date;
     }
 
-    public MessageBuffer getBuffer() {
+    public History getHistory() {
         return buffer;
     }
 
@@ -89,7 +96,7 @@ public class Message extends IdGenerate{
         this.tempBuffer = tempBuffer;
     }
 
-    public void setBuffer(MessageBuffer buffer) {
+    public void setHistory(History buffer) {
         this.buffer = buffer;
     }
 

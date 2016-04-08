@@ -1,8 +1,8 @@
 package ua.dexchat.server;
 
 import org.apache.log4j.Logger;
-import ua.dexchat.model.Client;
-import ua.dexchat.model.ClientInfoSocket;
+import ua.dexchat.model.*;
+import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.stream.StreamUtils;
 
 import java.io.*;
@@ -23,11 +23,13 @@ public class Conversation extends Thread {
     private final Socket clientSocket;
     private final ClientInfoSocket infoSocket;
     private final Client client;
+    private final ClientService service;
 
-    Conversation(Socket clientSocket, ClientInfoSocket infoSocket, Client client){
+    Conversation(Socket clientSocket, ClientInfoSocket infoSocket, Client client, ClientService service){
         this.client = client;
         this.clientSocket = clientSocket;
         this.infoSocket = infoSocket;
+        this.service = service;
     }
 
     @Override
@@ -88,17 +90,37 @@ public class Conversation extends Thread {
                 LOGGER.error("***IOException in GetFile thread in " + infoSocket);
                 LOGGER.error("*** : " + e.getMessage());
             }
-
+            LOGGER.info("***GetFiles for " + infoSocket + " was killed");
         }
     }
 
     private class GetMessages extends Thread {
 
+        TemporaryBuffer buffer;
+
         @Override
         public void run(){
 
+            for (History buff : client.getHistory()){
+                for (Message message : buff.getMessages()){
+                    StreamUtils.sendObject(message, clientSocket);
+                }
+            }
 
 
+            while(!interrupted()){
+                buffer = service.findTemporaryBuffer(client.getId());
+                for (Message message : buffer.getMessages()){
+                    StreamUtils.sendObject(message, clientSocket);
+                    service.saveMessageInHistory(client, message);
+                    service.removeMessageFromTempBuff(message);
+                }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ignore) {break;}
+            }
+
+            LOGGER.info("***GetMessage for " + infoSocket + " was killed");
         }
     }
 }

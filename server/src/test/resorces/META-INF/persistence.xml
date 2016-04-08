@@ -14,7 +14,7 @@
 
         <class>ua.dexchat.model.Client</class>
         <class>ua.dexchat.model.Message</class>
-        <class>ua.dexchat.model.MessageBuffer</class>
+        <class>ua.dexchat.model.History</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
