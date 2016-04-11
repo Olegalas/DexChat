@@ -23,9 +23,7 @@ public final class Server {
     }
 
     public void run(){
-
         try{
-
             serverSocket = new ServerSocket(8080);
             LOGGER.info("***server was run");
             while(true){

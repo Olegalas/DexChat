@@ -8,6 +8,7 @@ import ua.dexchat.model.ClientInfoSocket;
 import ua.dexchat.model.Login;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.service.ClientService;
+import ua.dexchat.server.service.GetSpringContext;
 import ua.dexchat.server.stream.StreamUtils;
 
 import java.net.Socket;
@@ -29,9 +30,7 @@ public class ClientLogin extends Thread {
     @Override
     public void run() {
 
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext("/spring-context.xml");
-
+        ApplicationContext context = GetSpringContext.getContext();
         ClientService service = context.getBean(ClientService.class);
 
 
