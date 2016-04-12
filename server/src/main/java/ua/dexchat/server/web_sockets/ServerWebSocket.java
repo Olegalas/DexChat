@@ -4,7 +4,10 @@ import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import ua.dexchat.model.Login;
 import ua.dexchat.model.WebSocketMessage;
+import ua.dexchat.server.LoginClient;
+import ua.dexchat.server.Registration;
 import ua.dexchat.server.json.JsonUtils;
 
 import java.net.InetSocketAddress;
@@ -51,10 +54,14 @@ public class ServerWebSocket extends WebSocketServer {
 
             case LOGIN:{
 
+                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
+                new LoginClient(conn, login).start();
                 break;
             }
             case REGISTRASTION:{
 
+                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
+                new Registration(conn, login).start();
                 break;
             }
             case FILE:{

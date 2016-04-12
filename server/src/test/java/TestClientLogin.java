@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import ua.dexchat.model.ClientInfoSocket;
 import ua.dexchat.model.Login;
-import ua.dexchat.server.ClientLogin;
 import ua.dexchat.server.stream.StreamUtils;
 
 import java.io.IOException;
