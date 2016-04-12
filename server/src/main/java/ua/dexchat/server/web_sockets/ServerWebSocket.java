@@ -8,7 +8,7 @@ import ua.dexchat.model.Login;
 import ua.dexchat.model.WebSocketMessage;
 import ua.dexchat.server.LoginClient;
 import ua.dexchat.server.Registration;
-import ua.dexchat.server.json.JsonUtils;
+import ua.dexchat.server.utils.JsonUtils;
 
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;

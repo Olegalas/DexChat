@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import ua.dexchat.model.Login;
-import ua.dexchat.server.json.JsonUtils;
+import ua.dexchat.server.utils.JsonUtils;
 
 /**
  * Created by dexter on 05.04.16.

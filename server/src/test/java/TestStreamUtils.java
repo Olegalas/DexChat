@@ -1,7 +1,7 @@
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import ua.dexchat.model.ClientInfoSocket;
-import ua.dexchat.server.stream.StreamUtils;
+import ua.dexchat.server.utils.StreamUtils;
 
 import java.io.*;
 import java.net.ServerSocket;

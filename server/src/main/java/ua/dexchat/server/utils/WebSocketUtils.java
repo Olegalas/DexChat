@@ -1,8 +1,7 @@
-package ua.dexchat.server.service;
+package ua.dexchat.server.utils;
 
 import org.java_websocket.WebSocket;
 import ua.dexchat.model.WebSocketMessage;
-import ua.dexchat.server.json.JsonUtils;
 
 /**
  * Created by dexter on 12.04.16.

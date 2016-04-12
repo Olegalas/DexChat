@@ -1,4 +1,4 @@
-package ua.dexchat.server.json;
+package ua.dexchat.server.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.Primitives;

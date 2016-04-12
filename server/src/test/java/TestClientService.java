@@ -6,7 +6,6 @@ import ua.dexchat.model.Login;
 import ua.dexchat.model.Message;
 import ua.dexchat.model.TemporaryBuffer;
 import ua.dexchat.server.service.ClientService;
-import ua.dexchat.server.stream.StreamUtils;
 
 import java.util.Date;
 

@@ -1,13 +1,10 @@
-package ua.dexchat.server.stream;
+package ua.dexchat.server.utils;
 
 import org.apache.log4j.Logger;
-import ua.dexchat.model.Client;
 import ua.dexchat.model.Login;
-import ua.dexchat.server.json.JsonUtils;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.List;
 
 /**
  * Created by dexter on 05.04.16.

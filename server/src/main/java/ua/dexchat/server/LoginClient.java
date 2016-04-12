@@ -5,11 +5,9 @@ import org.java_websocket.WebSocket;
 import org.springframework.context.ApplicationContext;
 import ua.dexchat.model.Client;
 import ua.dexchat.model.Login;
-import ua.dexchat.model.WebSocketMessage;
-import ua.dexchat.server.json.JsonUtils;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
-import ua.dexchat.server.service.WebSocketUtils;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 /**
  * Created by dexter on 12.04.16.
