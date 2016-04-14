@@ -7,12 +7,10 @@ public class Confirmation {
 
     public boolean confirm;
     public int idSender;
-    public int idReceiver;
 
-    public Confirmation(boolean confirm, int idSender, int idReceiver) {
+    public Confirmation(boolean confirm, int idSender) {
         this.confirm = confirm;
         this.idSender = idSender;
-        this.idReceiver = idReceiver;
     }
 
     @Override
@@ -20,7 +18,6 @@ public class Confirmation {
         return "Confirmation{" +
                 "confirm=" + confirm +
                 ", idSender=" + idSender +
-                ", idReceiver=" + idReceiver +
                 '}';
     }
 }

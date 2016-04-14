@@ -4,9 +4,11 @@ import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import ua.dexchat.model.Confirmation;
 import ua.dexchat.model.FileMessage;
 import ua.dexchat.model.Login;
 import ua.dexchat.model.WebSocketMessage;
+import ua.dexchat.server.ConfirmFileResendThread;
 import ua.dexchat.server.LoginClient;
 import ua.dexchat.server.Registration;
 import ua.dexchat.server.utils.JsonUtils;
@@ -26,7 +28,7 @@ public class ServerWebSocket extends WebSocketServer {
 
     private static final Logger LOGGER = Logger.getLogger(ServerWebSocket.class);
     private Map<Integer, WebSocket> sockets = new HashMap<>();
-    private Map<Integer, AtomicBoolean> comfirms = new HashMap<>();
+    private Map<Integer, AtomicBoolean> confirms = new HashMap<>();
     private Map<String, WebSocket> socketsWaitings = new HashMap<>();
 
     private Map<String, WebSocket> mySockets = new HashMap<>();
@@ -72,11 +74,23 @@ public class ServerWebSocket extends WebSocketServer {
             case FILE:{
 
                 FileMessage fileMessage = JsonUtils.parseString(webSocketMessage.getMessage(), FileMessage.class);
-                // TODO: 14.04.16 Thread which will send request to friend and wait for confirmation
+                new ConfirmFileResendThread(conn, fileMessage, sockets, confirms).start();
+
                 break;
             }
             case CONFIRMATION:{
-                
+
+                Confirmation confirmation = JsonUtils.parseString(webSocketMessage.getMessage(), Confirmation.class);
+
+                if(confirmation.confirm){
+                    // notify sender
+                    AtomicBoolean confirm = confirms.get(confirmation.idSender);
+                    confirm.set(true);
+                    socketsWaitings.put(conn.getRemoteSocketAddress().toString(), conn);
+                } else {
+                    // notify sender
+                }
+
                 break;
             }
             case MESSAGE:{
