@@ -9,6 +9,8 @@ import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
 import ua.dexchat.server.utils.WebSocketUtils;
 
+import java.util.Map;
+
 /**
  * Created by dexter on 12.04.16.
  */
@@ -17,10 +19,12 @@ public class LoginClient extends Thread {
     private static final Logger LOGGER = Logger.getLogger(LoginClient.class);
     private final WebSocket clientSocket;
     private final Login login;
+    private final Map<Integer, WebSocket> sockets;
 
-    public LoginClient(WebSocket socket, Login login){
+    public LoginClient(WebSocket socket, Login login, Map<Integer, WebSocket> sockets){
         this.clientSocket = socket;
         this.login = login;
+        this.sockets = sockets;
     }
 
     @Override
@@ -34,6 +38,7 @@ public class LoginClient extends Thread {
             WebSocketUtils.sendTextMessageToClient("Incorrect pass or Login", clientSocket);
         } else {
             WebSocketUtils.sendTextMessageToClient("Welcome to DexChat", clientSocket);
+            sockets.put(client.getId(), clientSocket);
         }
     }
 }
