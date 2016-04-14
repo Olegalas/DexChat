@@ -19,15 +19,16 @@ public class ConfirmFileResendThread extends Thread {
     private final FileMessage fileMessage;
     private final Map<Integer, WebSocket> socketMap;
     private final Map<Integer, AtomicBoolean> confirms;
-
+    private final Map<String, WebSocket> socketsWaiting;
 
     public ConfirmFileResendThread(WebSocket sender, FileMessage fileMessage,
                             Map<Integer, WebSocket> sockets,
-                            Map<Integer, AtomicBoolean> confirms){
+                            Map<Integer, AtomicBoolean> confirms, Map<String , WebSocket> socketsWaiting){
         this.sender = sender;
         this.fileMessage = fileMessage;
         this.socketMap = sockets;
         this.confirms = confirms;
+        this.socketsWaiting = socketsWaiting;
     }
 
     @Override
@@ -47,7 +48,7 @@ public class ConfirmFileResendThread extends Thread {
 
         while(!confirmFromClient.get()){
             // notify sender that receiver want to receive the file
+            socketsWaiting.put(sender.getRemoteSocketAddress().toString(), receiver);
         }
-
     }
 }

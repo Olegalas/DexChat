@@ -29,32 +29,30 @@ public class ServerWebSocket extends WebSocketServer {
     private static final Logger LOGGER = Logger.getLogger(ServerWebSocket.class);
     private Map<Integer, WebSocket> sockets = new HashMap<>();
     private Map<Integer, AtomicBoolean> confirms = new HashMap<>();
-    private Map<String, WebSocket> socketsWaitings = new HashMap<>();
+    private Map<String, WebSocket> socketsWaiting = new HashMap<>();
 
-    private Map<String, WebSocket> mySockets = new HashMap<>();
-
-    public ServerWebSocket( int port ) throws UnknownHostException {
-        super( new InetSocketAddress( port ) );
+    public ServerWebSocket(int port) throws UnknownHostException {
+        super(new InetSocketAddress(port));
     }
 
-    public ServerWebSocket( InetSocketAddress address ) {
-        super( address );
+    public ServerWebSocket(InetSocketAddress address) {
+        super(address);
     }
 
     @Override
-    public void onOpen( WebSocket conn, ClientHandshake handshake ) {
+    public void onOpen(WebSocket conn, ClientHandshake handshake) {
         WebSocketMessage message = new WebSocketMessage("connection complete", WebSocketMessage.MessageType.TEXT);
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
         conn.send(JsonUtils.transformObjectInJson(message));
     }
 
     @Override
-    public void onClose( WebSocket conn, int code, String reason, boolean remote ) {
+    public void onClose(WebSocket conn, int code, String reason, boolean remote) {
         LOGGER.info("***" + conn + " has left the room!");
     }
 
     @Override
-    public void onMessage( WebSocket conn, String message ) {
+    public void onMessage(WebSocket conn, String message) {
         LOGGER.info("***" + conn + ": " + message);
         WebSocketMessage webSocketMessage = JsonUtils.parseWebSocketMessage(message);
         switch (webSocketMessage.getType()){
@@ -74,8 +72,7 @@ public class ServerWebSocket extends WebSocketServer {
             case FILE:{
 
                 FileMessage fileMessage = JsonUtils.parseString(webSocketMessage.getMessage(), FileMessage.class);
-                new ConfirmFileResendThread(conn, fileMessage, sockets, confirms).start();
-
+                new ConfirmFileResendThread(conn, fileMessage, sockets, confirms, socketsWaiting).start();
                 break;
             }
             case CONFIRMATION:{
@@ -86,7 +83,6 @@ public class ServerWebSocket extends WebSocketServer {
                     // notify sender
                     AtomicBoolean confirm = confirms.get(confirmation.idSender);
                     confirm.set(true);
-                    socketsWaitings.put(conn.getRemoteSocketAddress().toString(), conn);
                 } else {
                     // notify sender
                 }
@@ -113,9 +109,9 @@ public class ServerWebSocket extends WebSocketServer {
     }
 
     @Override
-    public void onError( WebSocket conn, Exception ex ) {
+    public void onError(WebSocket conn, Exception ex) {
         LOGGER.error("***"+ex.getMessage());
-        if( conn != null ) {
+        if(conn != null) {
             // some errors like port binding failed may not be assignable to a specific websocket
             LOGGER.error("conn == null");
         }
@@ -129,12 +125,16 @@ public class ServerWebSocket extends WebSocketServer {
      * @throws InterruptedException
      *             When socket related I/O errors occur.
      */
-    public void sendToAll( String text ) {
+    public void sendToAll(String text) {
         Collection<WebSocket> con = connections();
-        synchronized ( con ) {
-            for( WebSocket c : con ) {
-                c.send( text );
+        synchronized (con) {
+            for(WebSocket c : con) {
+                c.send(text);
             }
         }
+    }
+
+    public Map<String, WebSocket> getSocketsWaiting() {
+        return socketsWaiting;
     }
 }

@@ -1,18 +1,18 @@
 package ua.dexchat.server;
 
 import org.apache.log4j.Logger;
-import org.java_websocket.WebSocketImpl;
-import ua.dexchat.model.ClientInfoSocket;
+import ua.dexchat.server.web_sockets.FileServerSocket;
 import ua.dexchat.server.web_sockets.ServerWebSocket;
 
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 /**
  * Created by dexter on 28.03.16.
  */
 public final class Server {
+
+    private static final int MAIN_PORT  = 8887;
+    private static final int PORT_FOR_RESENT_FILE = 8888;
 
     private final static Logger LOGGER = Logger.getLogger(Server.class);
     private final static Server instance = new Server();
@@ -27,10 +27,10 @@ public final class Server {
     public void run(){
         try{
 
-            int port = 8887;
-
-            ServerWebSocket s = new ServerWebSocket( port );
-            s.start();
+            ServerWebSocket server = new ServerWebSocket(MAIN_PORT);
+            FileServerSocket fileServer = new FileServerSocket(PORT_FOR_RESENT_FILE, server.getSocketsWaiting());
+            server.start();
+            fileServer.start();
 
         } catch (IOException e){
             LOGGER.error("***server caught IOException - " + e.getMessage());
