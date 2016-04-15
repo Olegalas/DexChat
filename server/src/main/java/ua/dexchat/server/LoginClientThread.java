@@ -39,6 +39,7 @@ public class LoginClientThread extends Thread {
         } else {
             WebSocketUtils.sendTextMessageToClient("Welcome to DexChat", clientSocket);
             sockets.put(client.getId(), clientSocket);
+            new MessageServiceThread(client, clientSocket).start();
         }
     }
 }

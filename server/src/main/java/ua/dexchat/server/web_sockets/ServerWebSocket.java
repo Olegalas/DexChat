@@ -42,7 +42,6 @@ public class ServerWebSocket extends WebSocketServer {
         WebSocketMessage message = new WebSocketMessage("connection complete", WebSocketMessage.MessageType.TEXT);
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
         conn.send(JsonUtils.transformObjectInJson(message));
-
     }
 
     @Override

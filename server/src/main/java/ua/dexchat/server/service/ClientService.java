@@ -1,11 +1,15 @@
 package ua.dexchat.server.service;
 
 import org.apache.log4j.Logger;
+import org.java_websocket.WebSocket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.dexchat.model.*;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.dao.BufferDao;
+import ua.dexchat.server.utils.JsonUtils;
+
+import java.util.List;
 
 /**
  * Created by dexter on 05.04.16.
@@ -25,6 +29,27 @@ public class ClientService {
         TemporaryBuffer buffer =  bufferDao.findBufferByIdOwner(message.getIdReceiver());
         message.setTempBuffer(buffer);
         bufferDao.saveMessageInBuffer(message);
+    }
+
+    public void sendAllHistoryToClient(WebSocket clientSocket, Client client){
+        List<History> histories = client.getHistory();
+        String historiesJson = JsonUtils.transformObjectInJson(histories);
+        WebSocketMessage historyPackage = new WebSocketMessage(historiesJson, WebSocketMessage.MessageType.HISTORY);
+        String historyPackageJson = JsonUtils.transformObjectInJson(historyPackage);
+        clientSocket.send(historyPackageJson);
+    }
+
+    public void sendMessagesFromTemporaryBufferToClient(WebSocket clientSocket, Client client){
+        TemporaryBuffer buff = findTemporaryBuffer(client.getId());
+
+        for(Message message : buff.getMessages()){
+            String messageJson = JsonUtils.transformObjectInJson(message);
+            WebSocketMessage webSocketMessage = new WebSocketMessage(messageJson, WebSocketMessage.MessageType.MESSAGE);
+            String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
+            clientSocket.send(webSocketMessageJson);
+            saveMessageInHistory(client, message);
+            removeMessageFromTempBuff(message);
+        }
     }
 
     public TemporaryBuffer findTemporaryBuffer(int idOwner){

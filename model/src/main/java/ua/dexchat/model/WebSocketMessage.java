@@ -34,6 +34,7 @@ public class WebSocketMessage {
         MESSAGE,
         FILE,
         FRIEND,
+        HISTORY,
         TEXT,
         EXIT,
         LOGIN,
