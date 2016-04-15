@@ -4,13 +4,11 @@ import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
-import ua.dexchat.model.Confirmation;
-import ua.dexchat.model.FileMessage;
-import ua.dexchat.model.Login;
-import ua.dexchat.model.WebSocketMessage;
+import ua.dexchat.model.*;
 import ua.dexchat.server.ConfirmFileResendThread;
-import ua.dexchat.server.LoginClient;
-import ua.dexchat.server.Registration;
+import ua.dexchat.server.LoginClientThread;
+import ua.dexchat.server.RegistrationThread;
+import ua.dexchat.server.SendMessageThread;
 import ua.dexchat.server.utils.JsonUtils;
 
 import java.net.InetSocketAddress;
@@ -44,6 +42,7 @@ public class ServerWebSocket extends WebSocketServer {
         WebSocketMessage message = new WebSocketMessage("connection complete", WebSocketMessage.MessageType.TEXT);
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
         conn.send(JsonUtils.transformObjectInJson(message));
+
     }
 
     @Override
@@ -52,34 +51,34 @@ public class ServerWebSocket extends WebSocketServer {
     }
 
     @Override
-    public void onMessage(WebSocket conn, String message) {
-        LOGGER.info("***" + conn + ": " + message);
-        WebSocketMessage webSocketMessage = JsonUtils.parseWebSocketMessage(message);
-        switch (webSocketMessage.getType()){
+    public void onMessage(WebSocket conn, String messageString) {
+        LOGGER.info("***" + conn + ": " + messageString);
+        WebSocketMessage webSocketMessage = JsonUtils.parseWebSocketMessage(messageString);
+        switch (webSocketMessage.getType()) {
 
-            case LOGIN:{
-
-                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
-                new LoginClient(conn, login, sockets).start();
-                break;
-            }
-            case REGISTRATION:{
+            case LOGIN: {
 
                 Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
-                new Registration(conn, login).start();
+                new LoginClientThread(conn, login, sockets).start();
                 break;
             }
-            case FILE:{
+            case REGISTRATION: {
+
+                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
+                new RegistrationThread(conn, login).start();
+                break;
+            }
+            case FILE: {
 
                 FileMessage fileMessage = JsonUtils.parseString(webSocketMessage.getMessage(), FileMessage.class);
                 new ConfirmFileResendThread(conn, fileMessage, sockets, confirms, socketsWaiting).start();
                 break;
             }
-            case CONFIRMATION:{
+            case CONFIRMATION: {
 
                 Confirmation confirmation = JsonUtils.parseString(webSocketMessage.getMessage(), Confirmation.class);
 
-                if(confirmation.confirm){
+                if (confirmation.confirm) {
                     // notify sender
                     AtomicBoolean confirm = confirms.get(confirmation.idSender);
                     confirm.set(true);
@@ -89,19 +88,21 @@ public class ServerWebSocket extends WebSocketServer {
 
                 break;
             }
-            case MESSAGE:{
+            case MESSAGE: {
+
+                Message message = JsonUtils.parseString(messageString, Message.class);
+                new SendMessageThread(message).start();
+                break;
+            }
+            case FRIEND: {
 
                 break;
             }
-            case FRIEND:{
+            case EXIT: {
 
                 break;
             }
-            case EXIT:{
-
-                break;
-            }
-            case TEXT:{
+            case TEXT: {
 
                 break;
             }
@@ -110,8 +111,8 @@ public class ServerWebSocket extends WebSocketServer {
 
     @Override
     public void onError(WebSocket conn, Exception ex) {
-        LOGGER.error("***"+ex.getMessage());
-        if(conn != null) {
+        LOGGER.error("***" + ex.getMessage());
+        if (conn != null) {
             // some errors like port binding failed may not be assignable to a specific websocket
             LOGGER.error("conn == null");
         }
@@ -120,15 +121,13 @@ public class ServerWebSocket extends WebSocketServer {
     /**
      * Sends <var>text</var> to all currently connected WebSocket clients.
      *
-     * @param text
-     *            The String to send across the network.
-     * @throws InterruptedException
-     *             When socket related I/O errors occur.
+     * @param text The String to send across the network.
+     * @throws InterruptedException When socket related I/O errors occur.
      */
     public void sendToAll(String text) {
         Collection<WebSocket> con = connections();
         synchronized (con) {
-            for(WebSocket c : con) {
+            for (WebSocket c : con) {
                 c.send(text);
             }
         }
