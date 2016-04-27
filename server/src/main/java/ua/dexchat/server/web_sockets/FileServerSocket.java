@@ -9,8 +9,8 @@ import ua.dexchat.model.WebSocketMessage;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by dexter on 14.04.16.
@@ -19,7 +19,7 @@ public class FileServerSocket extends WebSocketServer {
 
     private static final Logger LOGGER = Logger.getLogger(ServerWebSocket.class);
 
-    private Map<String, WebSocket> socketsWaiting = new HashMap<>();
+    private Map<String, WebSocket> socketsWaiting = new ConcurrentHashMap<>();
 
     public FileServerSocket(int port, Map<String, WebSocket> socketsWaiting) throws UnknownHostException {
         super(new InetSocketAddress(port));
@@ -52,6 +52,8 @@ public class FileServerSocket extends WebSocketServer {
         WebSocket receiver = socketsWaiting.get(conn.getRemoteSocketAddress().toString());
         receiver.send(message);
         LOGGER.info("***file was sent");
+        socketsWaiting.remove(conn.getRemoteSocketAddress().toString());
+        LOGGER.debug("***receiver was removed from socketsWaiting");
     }
 
     @Override

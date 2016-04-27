@@ -13,6 +13,10 @@ public class Confirmation {
         this.idSender = idSender;
     }
 
+    public Confirmation(boolean confirm) {
+        this.confirm = confirm;
+    }
+
     @Override
     public String toString() {
         return "Confirmation{" +

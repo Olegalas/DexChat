@@ -5,18 +5,14 @@ import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 import ua.dexchat.model.*;
-import ua.dexchat.server.ConfirmFileResendThread;
-import ua.dexchat.server.LoginClientThread;
-import ua.dexchat.server.RegistrationThread;
-import ua.dexchat.server.SendMessageThread;
+import ua.dexchat.server.*;
 import ua.dexchat.server.utils.JsonUtils;
 
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -25,9 +21,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class ServerWebSocket extends WebSocketServer {
 
     private static final Logger LOGGER = Logger.getLogger(ServerWebSocket.class);
-    private Map<Integer, WebSocket> sockets = new HashMap<>();
-    private Map<Integer, AtomicBoolean> confirms = new HashMap<>();
-    private Map<String, WebSocket> socketsWaiting = new HashMap<>();
+    private Map<Integer, WebSocket> sockets = new ConcurrentHashMap<>(1000);
+    private Map<String, WebSocket> socketsWaiting = new ConcurrentHashMap<>(1000);
 
     public ServerWebSocket(int port) throws UnknownHostException {
         super(new InetSocketAddress(port));
@@ -70,20 +65,14 @@ public class ServerWebSocket extends WebSocketServer {
             case FILE: {
 
                 FileMessage fileMessage = JsonUtils.parseString(webSocketMessage.getMessage(), FileMessage.class);
-                new ConfirmFileResendThread(conn, fileMessage, sockets, confirms, socketsWaiting).start();
+                new NotifyReceiverFileSendThread(conn, fileMessage, sockets, socketsWaiting).start();
                 break;
             }
             case CONFIRMATION: {
 
                 Confirmation confirmation = JsonUtils.parseString(webSocketMessage.getMessage(), Confirmation.class);
 
-                if (confirmation.confirm) {
-                    // notify sender
-                    AtomicBoolean confirm = confirms.get(confirmation.idSender);
-                    confirm.set(true);
-                } else {
-                    // notify sender
-                }
+                new ReceiverConfirmSendFileThread(conn, sockets, confirmation, socketsWaiting).start();
 
                 break;
             }
