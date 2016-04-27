@@ -8,6 +8,7 @@ import ua.dexchat.model.*;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.dao.BufferDao;
 import ua.dexchat.server.utils.JsonUtils;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.List;
 
@@ -32,21 +33,14 @@ public class ClientService {
     }
 
     public void sendAllHistoryToClient(WebSocket clientSocket, Client client){
-        List<History> histories = client.getHistory();
-        String historiesJson = JsonUtils.transformObjectInJson(histories);
-        WebSocketMessage historyPackage = new WebSocketMessage(historiesJson, WebSocketMessage.MessageType.HISTORY);
-        String historyPackageJson = JsonUtils.transformObjectInJson(historyPackage);
-        clientSocket.send(historyPackageJson);
+        WebSocketUtils.sendHistoryToClient(client, clientSocket);
     }
 
     public void sendMessagesFromTemporaryBufferToClient(WebSocket clientSocket, Client client){
         TemporaryBuffer buff = findTemporaryBuffer(client.getId());
 
         for(Message message : buff.getMessages()){
-            String messageJson = JsonUtils.transformObjectInJson(message);
-            WebSocketMessage webSocketMessage = new WebSocketMessage(messageJson, WebSocketMessage.MessageType.MESSAGE);
-            String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
-            clientSocket.send(webSocketMessageJson);
+            WebSocketUtils.sendMessageToClient(message, clientSocket);
             saveMessageInHistory(client, message);
             removeMessageFromTempBuff(message);
         }
@@ -100,5 +94,9 @@ public class ClientService {
 
     public void removeMessageFromTempBuff(Message message) {
           bufferDao.removeMessage(message);
+    }
+
+    public List<Client> findFriends(String friendsLoginStartsWith, int maxListSize){
+        return clientDao.findClientsByLogin(friendsLoginStartsWith, maxListSize);
     }
 }

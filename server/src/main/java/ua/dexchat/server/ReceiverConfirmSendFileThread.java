@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
 import ua.dexchat.model.Confirmation;
 import ua.dexchat.server.utils.JsonUtils;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.Map;
 
@@ -41,8 +42,7 @@ public class ReceiverConfirmSendFileThread extends Thread{
         }
 
         // anyway notify sender
-        sender = sockets.get(confirmation.idSender);
-        sender.send(JsonUtils.transformObjectInJson(confirmation));
+        WebSocketUtils.sendConfirmationToClient(confirmation, sender);
 
         LOGGER.info("***Thread was killed");
     }

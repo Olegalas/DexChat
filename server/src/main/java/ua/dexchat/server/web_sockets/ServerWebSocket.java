@@ -7,6 +7,7 @@ import org.java_websocket.server.WebSocketServer;
 import ua.dexchat.model.*;
 import ua.dexchat.server.*;
 import ua.dexchat.server.utils.JsonUtils;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
@@ -34,9 +35,8 @@ public class ServerWebSocket extends WebSocketServer {
 
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
-        WebSocketMessage message = new WebSocketMessage("connection complete", WebSocketMessage.MessageType.TEXT);
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
-        conn.send(JsonUtils.transformObjectInJson(message));
+        WebSocketUtils.sendTextMessageToClient("connection complete", conn);
     }
 
     @Override
@@ -83,6 +83,8 @@ public class ServerWebSocket extends WebSocketServer {
                 break;
             }
             case FRIEND: {
+
+
 
                 break;
             }

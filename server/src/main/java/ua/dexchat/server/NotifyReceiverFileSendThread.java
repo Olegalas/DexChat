@@ -5,6 +5,7 @@ import org.java_websocket.WebSocket;
 import ua.dexchat.model.Confirmation;
 import ua.dexchat.model.FileMessage;
 import ua.dexchat.server.utils.JsonUtils;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.Map;
 
@@ -35,12 +36,9 @@ public class NotifyReceiverFileSendThread extends Thread {
 
         WebSocket receiver = socketMap.get(fileMessage.idReceiver);
         if(receiver == null){
-            Confirmation confirmation = new Confirmation(false);
-            sender.send(JsonUtils.transformObjectInJson(confirmation));
+            WebSocketUtils.sendConfirmationToClient(new Confirmation(false), sender);
         }
 
-        String jsonFileMessage =  JsonUtils.transformObjectInJson(fileMessage);
-        receiver.send(jsonFileMessage);
-
+        WebSocketUtils.sendFileMessageToClient(fileMessage, receiver);
     }
 }

@@ -73,4 +73,11 @@ public class ClientDao {
         LOGGER.info("***Client almost saved");
         return client.getId();
     }
+
+    public List<Client> findClientsByLogin(String login, int amount){
+        List<Client> clients = manager.createQuery("SELECT c FROM Client c WHERE c.login LIKE :login", Client.class)
+                .setParameter("login", login + "%").setMaxResults(amount).getResultList();
+
+        return clients;
+    }
 }
