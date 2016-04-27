@@ -10,6 +10,7 @@ import ua.dexchat.server.dao.BufferDao;
 import ua.dexchat.server.utils.JsonUtils;
 import ua.dexchat.server.utils.WebSocketUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -96,7 +97,21 @@ public class ClientService {
           bufferDao.removeMessage(message);
     }
 
-    public List<Client> findFriends(String friendsLoginStartsWith, int maxListSize){
-        return clientDao.findClientsByLogin(friendsLoginStartsWith, maxListSize);
+    public List<ClientDTO> findFriends(String friendsLoginStartsWith, int maxListSize){
+
+        List<Client> clients;
+        List<ClientDTO> clientsDTO = new ArrayList<>();
+
+        clients = clientDao.findClientsByLogin(friendsLoginStartsWith, maxListSize);
+
+        for(Client client : clients){
+            clientsDTO.add(ClientDTO.getClientDTOWithoutFriends(client));
+        }
+
+        return clientsDTO;
+    }
+
+    public void sendAllFriends(WebSocket clientSocket, Client client) {
+        WebSocketUtils.sendFriendsMessageToClient(ClientDTO.getClientDTOWithFrisnds(client), clientSocket);
     }
 }

@@ -84,7 +84,8 @@ public class ServerWebSocket extends WebSocketServer {
             }
             case FRIEND: {
 
-
+                ClientDTO clientDTO = JsonUtils.parseString(messageString, ClientDTO.class);
+                new FriendServiceThread(clientDTO, conn).start();
 
                 break;
             }

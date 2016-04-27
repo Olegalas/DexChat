@@ -30,6 +30,9 @@ public class MessageServiceThread extends Thread {
         service.sendAllHistoryToClient(clientSocket, client);
         LOGGER.info("***All history was sent");
 
+        service.sendAllFriends(clientSocket, client);
+        LOGGER.info("***All friends was sent");
+
         while(clientSocket.isConnecting()){
 
             service.sendMessagesFromTemporaryBufferToClient(clientSocket, client);
