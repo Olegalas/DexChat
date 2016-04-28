@@ -70,7 +70,7 @@ public class ClientDao {
             LOGGER.error("***This login has already used: " + e.getMessage());
             return -1;
         }
-        LOGGER.info("***Client almost saved");
+        LOGGER.info("***Client was persisted");
         return client.getId();
     }
 
@@ -79,5 +79,25 @@ public class ClientDao {
                 .setParameter("login", login + "%").setMaxResults(amount).getResultList();
 
         return clients;
+    }
+
+    public Client findClientByLogin(String login) {
+        Client fromResult = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
+                .setParameter("login", login).getSingleResult();
+
+        return fromResult;
+    }
+
+    public void addFriendToClient(String clientLogin, String friendLogin){
+        Client client = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
+                .setParameter("login", clientLogin).getSingleResult();
+        Client friend = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
+                .setParameter("login", friendLogin).getSingleResult();
+
+        client.getMyFriends().add(friend);
+        friend.getiFriendTo().add(client);
+
+        manager.merge(client);
+        manager.merge(friend);
     }
 }

@@ -86,8 +86,8 @@ public class TestClientLogin {
             } catch (IOException e) {
                 SERVER_LOGGER.error("IOException from SererSocket " + e.getMessage());
             }
-
-            new ClientLogin(testSocket, info).start();
+            // TODO: 28.04.16 LoginClientThread
+            //new ClientLogin(testSocket, info).start();
             SERVER_LOGGER.info("killed test server");
         }
     }

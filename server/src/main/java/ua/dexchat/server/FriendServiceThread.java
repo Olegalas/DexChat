@@ -35,13 +35,19 @@ public class FriendServiceThread extends Thread {
         // else... it means that client want to add new friend
         if(clientDTO.getFriends().isEmpty()){
 
+            LOGGER.info("***Client " + clientSocket.getRemoteSocketAddress() + " " +
+                    "want search new friends by \'" + clientDTO.getLogin() + "\'");
+            // search new friends among clients database
             List<ClientDTO> clients;
             clients = service.findFriends(clientDTO.getLogin(), 25);
 
-            // TODO: 27.04.16 send friends by ClientService if list is'n empty
+            service.sendAllFriends(clientSocket, clients);
 
         } else{
-            // TODO: 27.04.16 add new find to Client friends list by ClientService
+            LOGGER.info("***Client " + clientSocket.getRemoteSocketAddress() + " " +
+                    "want add new friend \'" + clientDTO.getFriends().get(0).getLogin() + "\'");
+
+            service.saveNewFriend(clientDTO);
         }
 
     }

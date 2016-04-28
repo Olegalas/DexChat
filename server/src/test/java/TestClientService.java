@@ -1,13 +1,12 @@
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.dexchat.model.Client;
-import ua.dexchat.model.Login;
-import ua.dexchat.model.Message;
-import ua.dexchat.model.TemporaryBuffer;
+import ua.dexchat.model.*;
 import ua.dexchat.server.service.ClientService;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by dexter on 07.04.16.
@@ -63,5 +62,20 @@ public class TestClientService {
         clientFromDB = service.findClient(login);
 
         Assert.assertEquals(1 , clientFromDB.getHistory().get(0).getMessages().size());
+    }
+
+    @Test
+    public void testAddNewFriendToClient(){
+
+        service.saveClient(new Login("name", "pass", "client"));
+        service.saveClient(new Login("name", "pass", "friend"));
+
+        List<ClientDTO> friend = new ArrayList<>();
+        friend.add(new ClientDTO("friend", "name"));
+        service.saveNewFriend(new ClientDTO("client", "name", friend));
+
+        Client client = service.findByLogin("client");
+
+        Assert.assertEquals(client.getMyFriends().get(0).getLogin(), "friend");
     }
 }

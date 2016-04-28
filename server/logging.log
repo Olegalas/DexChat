@@ -3944,3 +3944,188 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'dexchat.hibern
 2016-04-08 20:14:49 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
 2016-04-08 20:14:49 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
 2016-04-08 20:14:50 INFO  DropTables:24 - ********DataBase was removed
+2016-04-28 14:22:50 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6295d394: startup date [Thu Apr 28 14:22:50 EEST 2016]; root of context hierarchy
+2016-04-28 14:22:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-28 14:22:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-28 14:22:52 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-28 14:22:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-28 14:22:54 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-28 14:22:54 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-28 14:22:55 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-28 14:22:55 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-28 14:22:55 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-28 14:22:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-28 14:22:59 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-28 14:22:59 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-28 14:23:02 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-28 14:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:23:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:23:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:23:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:23:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:23:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:23:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:23:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:23:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:23:17 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:23:17 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:23:18 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:23:18 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:23:19 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:23:19 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:23:20 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:23:20 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:23:20 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:23:20 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:23:20 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:23:20 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:23:21 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:23:21 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:23:21 INFO  PublicMethodsWrapper:35 - ***saveNewFriend method was started
+2016-04-28 14:23:21 INFO  PublicMethodsWrapper:35 - ***addFriendToClient method was started
+2016-04-28 14:23:21 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:47 - ***addFriendToClient method was ended
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:47 - ***saveNewFriend method was ended
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:47 - ***findClientByLogin method was ended
+2016-04-28 14:23:22 INFO  PublicMethodsWrapper:47 - ***findByLogin method was ended
+2016-04-28 14:26:28 INFO  DropTables:24 - ********DataBase was removed
+2016-04-28 14:28:56 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6295d394: startup date [Thu Apr 28 14:28:56 EEST 2016]; root of context hierarchy
+2016-04-28 14:28:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-28 14:28:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-28 14:28:59 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-28 14:29:00 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-28 14:29:00 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-28 14:29:00 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-28 14:29:00 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-28 14:29:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-28 14:29:00 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-28 14:29:01 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-28 14:29:02 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-28 14:29:02 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-28 14:29:04 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-28 14:29:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:29:04 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:29:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:29:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:29:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:29:05 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:29:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:29:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:29:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:29:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:29:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:29:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:29:15 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:29:16 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:29:16 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:29:16 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:29:16 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:29:17 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:29:17 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:35 - ***saveNewFriend method was started
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:35 - ***addFriendToClient method was started
+2016-04-28 14:29:18 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:47 - ***addFriendToClient method was ended
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:47 - ***saveNewFriend method was ended
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:47 - ***findClientByLogin method was ended
+2016-04-28 14:29:18 INFO  PublicMethodsWrapper:47 - ***findByLogin method was ended
+2016-04-28 14:42:30 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6295d394: startup date [Thu Apr 28 14:42:30 EEST 2016]; root of context hierarchy
+2016-04-28 14:42:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-28 14:42:32 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-28 14:42:33 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-28 14:42:34 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-28 14:42:34 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-28 14:42:34 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-28 14:42:34 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-28 14:42:34 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-28 14:42:35 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-28 14:42:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-28 14:42:36 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-28 14:42:36 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-28 14:42:38 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-28 14:42:38 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:42:38 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:42:41 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:42:42 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:42:42 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:42:42 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:42:42 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-04-28 14:42:42 ERROR SqlExceptionHelper:129 - Duplicate entry '1' for key 'PRIMARY'
+2016-04-28 14:42:42 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-04-28 14:42:42 ERROR PublicMethodsWrapper:42 - ***saveClient method threw exception
+2016-04-28 14:42:42 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-04-28 14:42:42 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-04-28 14:42:42 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:42:44 INFO  DropTables:24 - ********DataBase was removed
+2016-04-28 14:46:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6295d394: startup date [Thu Apr 28 14:46:13 EEST 2016]; root of context hierarchy
+2016-04-28 14:46:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-28 14:46:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-28 14:46:16 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-28 14:46:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-28 14:46:17 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-28 14:46:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-28 14:46:18 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-28 14:46:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-28 14:46:18 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-28 14:46:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-28 14:46:19 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-28 14:46:19 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-28 14:46:21 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:46:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-04-28 14:46:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:46:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-04-28 14:46:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:46:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-04-28 14:46:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:46:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-04-28 14:46:31 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:46:31 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:46:32 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-04-28 14:46:32 INFO  ClientDao:73 - ***Client was persisted
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***saveNewFriend method was started
+2016-04-28 14:46:32 INFO  PublicMethodsWrapper:35 - ***addFriendToClient method was started
+2016-04-28 14:46:32 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:47 - ***addFriendToClient method was ended
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:47 - ***saveNewFriend method was ended
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:47 - ***findClientByLogin method was ended
+2016-04-28 14:46:33 INFO  PublicMethodsWrapper:47 - ***findByLogin method was ended
+2016-04-28 14:47:13 INFO  DropTables:24 - ********DataBase was removed
