@@ -4,8 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.transaction.TransactionSystemException;
 import ua.dexchat.model.*;
 import ua.dexchat.server.dao.BufferDao;
+import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.service.ClientService;
 
 import java.util.Date;
@@ -15,126 +17,157 @@ import java.util.Date;
  */
 public class TestBufferDao {
 
-    private static final int TEST_ID_OWNER = 10;
-    private static final int TEST_ID_SENDER = 100;
-    private static final String TEST_MESSAGE_OLD = "test message";
-    private static final String TEST_MESSAGE_NEW = "test message new";
+    private static String TEXT_MESSAGE = "tex message";
+    private static int ID_OWNER = 20;
+    private static int ID_SENDER = 10;
+    private static int UNEXPECTED_ID = 10000;
 
-    ApplicationContext context =
-            new ClassPathXmlApplicationContext("/spring-context.xml");
+    private TemporaryBuffer buff;
+    private int idMessage;
 
-    BufferDao buffDao = context.getBean(BufferDao.class);
+    private final ApplicationContext context = new ClassPathXmlApplicationContext("/spring-context.xml");
+    private final BufferDao bufferDao = context.getBean(BufferDao.class);
 
-    TemporaryBuffer expectedBuff;
 
+
+    @Before
+    public void before(){
+
+        buff = new TemporaryBuffer();
+        buff.setIdOwnerr(ID_OWNER);
+
+        bufferDao.saveTempBuffer(buff);
+        Message newMessage = new Message(TEXT_MESSAGE, ID_SENDER, ID_OWNER, new Date());
+        newMessage.setTempBuffer(buff);
+        bufferDao.saveMessageInBuffer(newMessage);
+        idMessage = newMessage.getId();
+    }
 
     @After
     public void after() throws ClassNotFoundException {
         DropTables.dropTables();
     }
 
-    @Before
-    public void before() {
-        expectedBuff = new TemporaryBuffer();
-        expectedBuff.setIdOwnerr(TEST_ID_OWNER);
-        Message message = new Message(TEST_MESSAGE_OLD, TEST_ID_SENDER, TEST_ID_OWNER, new Date());
-        expectedBuff.getMessages().add(message);
-        message.setTempBuffer(expectedBuff);
-        buffDao.saveTempBuffer(expectedBuff);
+    @Test
+    public void testFindBufferByIdOwner(){
+        TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertEquals(bufFromDB, buff);
     }
 
     @Test
-    public void testSaveAndFindTemporaryBuffer(){
-
-        TemporaryBuffer actualBuff = buffDao.findBufferByIdOwner(TEST_ID_OWNER);
-        Assert.assertEquals(expectedBuff.getMessages().size(), actualBuff.getMessages().size());
-
+    public void testFindBufferByIdOwnerNegative(){
+        TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(UNEXPECTED_ID);
+        Assert.assertNull(bufFromDB);
     }
 
     @Test
-    public void testRefreshTemporaryBuffer(){
-
-        // create new message
-        Message newMessage = new Message(TEST_MESSAGE_NEW, TEST_ID_SENDER, TEST_ID_OWNER, new Date());
-        expectedBuff.getMessages().add(newMessage);
-        newMessage.setTempBuffer(expectedBuff);
-
-
-        buffDao.saveMessageInBuffer(newMessage);
-
-
-        // get buffer after refresh
-        TemporaryBuffer actualBuff = buffDao.findBufferByIdOwner(TEST_ID_OWNER);
-        Assert.assertEquals(expectedBuff.getMessages().size(), actualBuff.getMessages().size());
+    public void testFindBufferById(){
+        TemporaryBuffer bufFromDB = bufferDao.findBufferById(buff.getId());
+        Assert.assertEquals(bufFromDB, buff);
     }
 
     @Test
-    public void testUpdateMassage(){
+    public void testFindBufferByIdNegative(){
+        TemporaryBuffer bufFromDB = bufferDao.findBufferById(UNEXPECTED_ID);
+        Assert.assertNull(bufFromDB);
+    }
 
-        ClientService service = context.getBean(ClientService.class);
+    @Test
+    public void testRemoveBuffer(){
+        bufferDao.removeBuffer(buff);
+        TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertNull(bufFromDB);
+    }
 
-        Login clientLogin = new Login("name", "pass", "login");
-        Login friendLogin = new Login("name2", "pass2", "login2");
+    @Test(expected = TransactionSystemException.class)
+    public void testRemoveBufferNegative(){
+        bufferDao.removeBuffer(new TemporaryBuffer());
+        TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertNull(bufFromDB);
+    }
 
-        int idClient = service.saveClient(clientLogin);
-        int idFriendClient = service.saveClient(friendLogin);
+    @Test
+    public void testRemoveMessage(){
+        buff = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertEquals(1, buff.getMessages().size()); // one message in temporary buffer before remove
+        Message messageToRemove = new Message();
+        messageToRemove.setId(idMessage);
+        bufferDao.removeMessage(messageToRemove);
+        buff = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertEquals(0, buff.getMessages().size()); // empty temporary buffer after remove
+    }
 
-        TemporaryBuffer actualBuff = buffDao.findBufferByIdOwner(idClient);
-        Client client = service.findClient(clientLogin);
+    @Test
+    public void testRemoveMessageNegative(){
+        Message defunct = new Message();
+        defunct.setId(UNEXPECTED_ID);
+        bufferDao.removeMessage(defunct); //this method doesn't delete anything.. but exception it doesn't throw too
+    }
 
+    @Test
+    public void testSaveMessageInBuffer(){
+        Message newMessage = new Message(TEXT_MESSAGE, ID_SENDER, ID_OWNER, new Date());
+        newMessage.setTempBuffer(buff);
+        bufferDao.saveMessageInBuffer(newMessage);
+        buff = bufferDao.findBufferByIdOwner(ID_OWNER);
+        Assert.assertEquals(buff.getMessages().size(), 2); // we put second message, that't why we have size - 2
+    }
 
-        Message newMessage = new Message(TEST_MESSAGE_NEW, idFriendClient, idClient, new Date());
-        newMessage.setTempBuffer(actualBuff);
-        buffDao.saveMessageInBuffer(newMessage);
+    @Test(expected = TransactionSystemException.class)
+    public void testSaveMessageInBufferNegative(){
+        bufferDao.saveMessageInBuffer(null);
+        buff = bufferDao.findBufferByIdOwner(ID_OWNER);
+    }
 
-        actualBuff = buffDao.findBufferByIdOwner(idClient);
-        Message actualMessageFromTempBuff = actualBuff.getMessages().get(0);
+    @Test(expected = TransactionSystemException.class)
+    public void testSaveMessageInBufferNegativeDuplicating(){
+        Message newMessageFirst = new Message(TEXT_MESSAGE, ID_SENDER, ID_OWNER, new Date());
+        newMessageFirst.setTempBuffer(buff);
+        bufferDao.saveMessageInBuffer(newMessageFirst);
+        bufferDao.saveMessageInBuffer(newMessageFirst); // resave - will throw TransactionSystemException.class
+     }
 
+    @Test
+    public void testSaveNewHistoryAndFind(){
         History history = new History();
-        history.setIdOwner(client);
-        history.setIdSender(idFriendClient);
-        client.getHistory().add(history);
 
-        buffDao.saveNewMessageBuffer(history);
+        Client owner = new Client("owner", "owner", "owner");
+        Client sender = new Client("sender", "sender", "sender");
 
-        Message fromMessageBuffer = new Message(actualMessageFromTempBuff);
-        fromMessageBuffer.setHistory(history);
-        buffDao.saveMessageInBuffer(fromMessageBuffer);
+        history.setIdOwner(owner);
+        history.setIdSender(sender.getId());
 
-        client = service.findClient(clientLogin);
+        ClientDao clientDao = context.getBean(ClientDao.class);
 
-        Assert.assertEquals(TEST_MESSAGE_NEW, client.getHistory().get(0).getMessages().get(0).getMessage());
+        clientDao.saveClient(owner);
+        clientDao.saveClient(sender);
+        bufferDao.saveNewHistory(history);
+        History historyFromDB = bufferDao.findHistoryById(history.getId());
+
+        Assert.assertEquals(history, historyFromDB);
     }
 
-    @Test
-    public void testSaveNewMessageBuffer(){
-        ClientService service = context.getBean(ClientService.class);
-        Login login = new Login("name", "pass", "login");
-        service.saveClient(login);
-        Client friend = service.findClient(login);
-
+    @Test(expected = TransactionSystemException.class)
+    public void testSaveNewHistoryNegativeDuplicating(){
         History history = new History();
 
-        friend.getHistory().add(history);
-        history.setIdOwner(friend);
-        history.setIdSender(TEST_ID_SENDER);
+        Client owner = new Client("owner", "owner", "owner");
+        Client sender = new Client("sender", "sender", "sender");
 
-        buffDao.saveNewMessageBuffer(history);
+        history.setIdOwner(owner);
+        history.setIdSender(sender.getId());
 
-        friend = service.findClient(login);
+        ClientDao clientDao = context.getBean(ClientDao.class);
 
-        Assert.assertEquals(history.getId(), friend.getHistory().get(0).getId());
+        clientDao.saveClient(owner);
+        clientDao.saveClient(sender);
+        bufferDao.saveNewHistory(history);
+        bufferDao.saveNewHistory(history); // resave - will throw TransactionSystemException.class
+
     }
 
-    @Test
-    public void testRemoveMassage(){
-
-        Message messageToRemove = expectedBuff.getMessages().get(0);
-        expectedBuff.getMessages().remove(0);
-        buffDao.removeMessage(messageToRemove);
-
-        TemporaryBuffer bufferFromDB = buffDao.findBufferByIdOwner(TEST_ID_OWNER);
-
-        Assert.assertEquals(0, bufferFromDB.getMessages().size());
+    @Test(expected = TransactionSystemException.class)
+    public void testSaveNewHistoryNegativeNull(){
+        bufferDao.saveNewHistory(null);
     }
 }

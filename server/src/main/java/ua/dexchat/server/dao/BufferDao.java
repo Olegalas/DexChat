@@ -52,7 +52,11 @@ public class BufferDao {
         manager.persist(buff);
     }
 
-    public void saveNewMessageBuffer(History buffer){
+    public void saveNewHistory(History buffer){
         manager.persist(buffer);
+    }
+
+    public History findHistoryById(int idHistory){
+        return manager.find(History.class, idHistory);
     }
 }

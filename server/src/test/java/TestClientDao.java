@@ -16,7 +16,7 @@ public class TestClientDao {
     private static Logger LOGGER = Logger.getLogger(TestClientDao.class);
 
     private Login login = new Login("name", "pass", "login");
-    ApplicationContext context =
+    private ApplicationContext context =
             new ClassPathXmlApplicationContext("/spring-context.xml");
 
 

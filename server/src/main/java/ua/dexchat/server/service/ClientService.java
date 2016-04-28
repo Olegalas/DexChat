@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import ua.dexchat.model.*;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.dao.BufferDao;
-import ua.dexchat.server.utils.JsonUtils;
 import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.ArrayList;
@@ -87,7 +86,7 @@ public class ClientService {
         newHistory.setIdOwner(client);
         newHistory.setIdSender(message.getIdSender());
         client.getHistory().add(newHistory);
-        bufferDao.saveNewMessageBuffer(newHistory);
+        bufferDao.saveNewHistory(newHistory);
         LOGGER.info("***New history for new friend was created");
         saveMessageInHistory(client, message);
 
