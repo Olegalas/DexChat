@@ -17,10 +17,10 @@ import java.util.Date;
  */
 public class TestBufferDao {
 
-    private static String TEXT_MESSAGE = "tex message";
-    private static int ID_OWNER = 20;
-    private static int ID_SENDER = 10;
-    private static int UNEXPECTED_ID = 10000;
+    private static final String TEXT_MESSAGE = "tex message";
+    private static final int ID_OWNER = 20;
+    private static final int ID_SENDER = 10;
+    private static final int UNEXPECTED_ID = 10000;
 
     private TemporaryBuffer buff;
     private int idMessage;
@@ -31,7 +31,7 @@ public class TestBufferDao {
 
 
     @Before
-    public void before(){
+    public void saveBuffer(){
 
         buff = new TemporaryBuffer();
         buff.setIdOwnerr(ID_OWNER);

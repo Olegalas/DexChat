@@ -2,7 +2,6 @@ package ua.dexchat.server;
 
 import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
-import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientDTO;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
@@ -39,7 +38,7 @@ public class FriendServiceThread extends Thread {
                     "want search new friends by \'" + clientDTO.getLogin() + "\'");
             // search new friends among clients database
             List<ClientDTO> clients;
-            clients = service.findFriends(clientDTO.getLogin(), 25);
+            clients = service.findPotentialFriends(clientDTO.getLogin(), 25);
 
             service.sendAllFriends(clientSocket, clients);
 

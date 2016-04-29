@@ -33,7 +33,7 @@ public class LoginClientThread extends Thread {
         ApplicationContext context = GetSpringContext.getContext();
         ClientService service = context.getBean(ClientService.class);
 
-        Client client = service.findClient(login);
+        Client client = service.findClientByLoginObject(login);
         if(client == null){
             WebSocketUtils.sendTextMessageToClient("Incorrect pass or Login", clientSocket);
         } else {

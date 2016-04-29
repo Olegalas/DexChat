@@ -40,14 +40,9 @@ public class ClientDao {
             LOGGER.info(fromResult);
 
             return login.pass.equals(fromResult.getPass()) ? fromResult : null;
-        } catch (NoResultException e){
+        } catch (Exception e){
 
-            LOGGER.info("***Clients table is empty");
-
-            return null;
-        } catch (DataIntegrityViolationException e){
-
-            LOGGER.info("***Clients table is empty");
+            LOGGER.error("***Something wrong :", e);
 
             return null;
         }

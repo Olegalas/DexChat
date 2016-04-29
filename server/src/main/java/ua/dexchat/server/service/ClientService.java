@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import ua.dexchat.model.*;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.dao.BufferDao;
+import ua.dexchat.server.exceptions.WasNotFoundException;
 import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.ArrayList;
@@ -28,8 +29,35 @@ public class ClientService {
 
     public void sendMessageToFriend(Message message){
         TemporaryBuffer buffer =  bufferDao.findBufferByIdOwner(message.getIdReceiver());
+        if(buffer == null) throw new WasNotFoundException("incorrect id receiver");
         message.setTempBuffer(buffer);
         bufferDao.saveMessageInBuffer(message);
+        saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
+    }
+
+    public void saveMessageInHistory(int idBufferOwner, int idSenderInBuffer, Message message){
+
+        Client client = clientDao.findClient(idBufferOwner);
+
+        for(History history : client.getHistory()){
+            if(history.getIdSender() == idSenderInBuffer){
+                Message newMessage = new Message(message);
+                newMessage.setHistory(history);
+                bufferDao.saveMessageInBuffer(newMessage);
+                LOGGER.info("***Output message was save in history : " + newMessage);
+                return;
+            }
+        }
+
+        History newHistory = new History();
+
+        newHistory.setIdOwner(client);
+        newHistory.setIdSender(idSenderInBuffer);
+        client.getHistory().add(newHistory);
+        bufferDao.saveNewHistory(newHistory);
+        LOGGER.info("***New history for new friend was created");
+        saveMessageInHistory(idBufferOwner, idSenderInBuffer, message);
+
     }
 
     public void sendAllHistoryToClient(WebSocket clientSocket, Client client){
@@ -41,7 +69,7 @@ public class ClientService {
 
         for(Message message : buff.getMessages()){
             WebSocketUtils.sendMessageToClient(message, clientSocket);
-            saveMessageInHistory(client, message);
+            saveMessageInHistory(message.getIdReceiver(), message.getIdSender(), message);
             removeMessageFromTempBuff(message);
         }
     }
@@ -66,37 +94,15 @@ public class ClientService {
         return idClient;
     }
 
-    public Client findClient(Login login){
+    public Client findClientByLoginObject(Login login){
         return clientDao.findClient(login);
     }
 
-    public void saveMessageInHistory(Client client, Message message){
-
-        for(History history : client.getHistory()){
-            if(history.getIdSender() == message.getIdSender()){
-                Message newMessage = new Message(message);
-                newMessage.setHistory(history);
-                bufferDao.saveMessageInBuffer(newMessage);
-                LOGGER.info("***Message was save in history : " + newMessage);
-                return;
-            }
-        }
-
-        History newHistory = new History();
-        newHistory.setIdOwner(client);
-        newHistory.setIdSender(message.getIdSender());
-        client.getHistory().add(newHistory);
-        bufferDao.saveNewHistory(newHistory);
-        LOGGER.info("***New history for new friend was created");
-        saveMessageInHistory(client, message);
-
-    }
-
-    public void removeMessageFromTempBuff(Message message) {
+    private void removeMessageFromTempBuff(Message message) {
           bufferDao.removeMessage(message);
     }
 
-    public List<ClientDTO> findFriends(String friendsLoginStartsWith, int maxListSize){
+    public List<ClientDTO> findPotentialFriends(String friendsLoginStartsWith, int maxListSize){
 
         List<Client> clients;
         List<ClientDTO> clientsDTO = new ArrayList<>();
@@ -130,4 +136,5 @@ public class ClientService {
     public Client findByLogin(String login){
         return clientDao.findClientByLogin(login);
     }
+
 }
