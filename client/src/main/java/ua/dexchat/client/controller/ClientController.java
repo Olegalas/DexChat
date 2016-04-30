@@ -6,6 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Created by dexter on 30.04.16.
  */
@@ -13,13 +17,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ClientController {
 
     private final static Logger LOGGER = Logger.getLogger(ClientController.class);
+    private final static String COOKIE_NAME = "DexChat";
+    private final static String COOKIE_VALUE = "Online";
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String firstPage(Model model) {
+    public String firstPage(HttpServletResponse response, HttpServletRequest request) {
 
         LOGGER.debug("***Enter in firstPage method");
 
+        if (checkCookies(request)) return "home";
+
         return "start";
+    }
+
+    private boolean checkCookies(HttpServletRequest request) {
+        if(request != null){
+
+            Cookie[] cookies =  request.getCookies();
+            if(cookies != null){
+                for(Cookie cookie : cookies){
+
+                    if(COOKIE_NAME.equals(cookie.getName()) && COOKIE_VALUE.equals(cookie.getValue())){
+
+
+                        return true;
+                    }
+
+                }
+            }
+        }
+        return false;
     }
 
 }
