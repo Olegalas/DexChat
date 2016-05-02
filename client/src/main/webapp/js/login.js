@@ -2,12 +2,18 @@ $(document).ready( function () {
 
     $(document).on("click", "#Sign_in", function () {
 
+        alert("Sign in");
 
-    });
-
-    $("#Sign_up").bind("click", function () {
-
-
+        // $.ajax({
+        //
+        //     type:'POST',
+        //     data:{},
+        //     url:'/registration',
+        //     success: function () {
+        //         alert("Go to registration")
+        //     }
+        //
+        // });
     });
 
 });

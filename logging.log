@@ -148,3 +148,10 @@
 2016-05-01 00:51:22 DEBUG ClientController:26 - ***Enter in firstPage method
 2016-05-01 00:53:51 DEBUG ClientController:26 - ***Enter in firstPage method
 2016-05-01 01:08:31 DEBUG ClientController:26 - ***Enter in firstPage method
+2016-05-02 13:32:10 DEBUG ClientController:26 - ***Enter in firstPage method
+2016-05-02 13:55:25 DEBUG ClientController:26 - ***Enter in firstPage method
+2016-05-02 14:35:29 DEBUG ClientController:26 - ***Enter in firstPage method
+2016-05-02 14:35:39 DEBUG ClientController:36 - ***Enter in registration method
+2016-05-02 14:35:45 DEBUG ClientController:36 - ***Enter in registration method
+2016-05-02 14:46:51 DEBUG ClientController:26 - ***Enter in firstPage method
+2016-05-02 14:47:01 DEBUG ClientController:36 - ***Enter in registration method

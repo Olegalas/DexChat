@@ -30,6 +30,15 @@ public class ClientController {
         return "start";
     }
 
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String registration(HttpServletResponse response, HttpServletRequest request) {
+
+        LOGGER.debug("***Enter in registration method");
+
+
+        return "registration";
+    }
+
     private boolean checkCookies(HttpServletRequest request) {
         if(request != null){
 
