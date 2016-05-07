@@ -1,13 +1,16 @@
 
 socket.onmessage = function(event) {
-    alert("RegistrationMessage " + event.data);
-    // if message will "Registration complete" redirect to login page
-    
-    // alert("Thank you for your registration");
-    //
-    // //return tu home page
-    // window.location = '/';
-    //
+    console.log("RegistrationMessage " + event.data);
+    var webMessage = JSON.parse(event.data);
+
+
+    if("Login or email has already used" == webMessage.message){
+        alert(event.data.message);
+    } else if ("Registration complete" == webMessage.message) {
+        alert(event.data.message);
+        redirect("/", "GET");
+    }
+
 };
 
 $(document).ready( function () {
@@ -76,7 +79,13 @@ function sendRegistrationForm(login, name, email, pass){
 
     };
 
-    alert("message was sent : " + JSON.stringify(webSocketMessage));
     socket.send(JSON.stringify(webSocketMessage));
     
 }
+
+var redirect = function(url, method) {
+    $('<form>', {
+        method: method,
+        action: url
+    }).submit();
+};

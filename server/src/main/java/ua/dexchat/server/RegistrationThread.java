@@ -30,8 +30,8 @@ public class RegistrationThread extends Thread{
         int idClient = service.saveClient(login);
 
         if(idClient == -1){
-            WebSocketUtils.sendTextMessageToClient("Incorrect pass or Login", clientSocket);
-            LOGGER.info("***Incorrect pass or Login");
+            WebSocketUtils.sendTextMessageToClient("Login or email has already used", clientSocket);
+            LOGGER.info("***Login or email has already used");
         } else {
             WebSocketUtils.sendTextMessageToClient("Registration complete", clientSocket);
             LOGGER.info("***Registration complete");

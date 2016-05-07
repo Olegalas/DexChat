@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 
 /**
  * Created by dexter on 30.04.16.
@@ -70,6 +71,23 @@ public class ClientController {
         }
 
         return "registration";
+    }
+
+    @RequestMapping(value = "/home", method = RequestMethod.POST)
+    public String homePost(HttpServletResponse response, HttpServletRequest request, Map<String, Object> model) {
+
+        LOGGER.debug("***Enter in homePost method");
+
+        String login = request.getParameter("login");
+        String pass = request.getParameter("pass");
+        LOGGER.info("***User entered : ");
+        LOGGER.info("***Login : " + login);
+        LOGGER.info("***Pass : " + pass);
+
+        model.put("login", login);
+        model.put("pass", pass);
+
+        return "home";
     }
 
     private boolean checkCookies(HttpServletRequest request) {
