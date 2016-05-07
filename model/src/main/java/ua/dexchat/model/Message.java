@@ -1,6 +1,7 @@
 package ua.dexchat.model;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -35,6 +36,13 @@ public class Message extends IdGenerate{
         this.idSender = idSender;
         this.idReceiver = idReceiver;
         this.date = date;
+    }
+
+    public Message(String message, String idSender, String idReceiver, String date) {
+        this.message = message;
+        this.idSender = Integer.parseInt(idSender);
+        this.idReceiver = Integer.parseInt(idReceiver);
+        this.date = Date.from(Instant.parse(date)) ;
     }
 
     public Message(String message, int idSender, int idReceiver, Date date, History buffer) {

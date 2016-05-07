@@ -5,7 +5,7 @@ package ua.dexchat.model;
  */
 public class WebSocketMessage {
 
-    private String message;
+    private Object message;
     private MessageType type;
 
     public WebSocketMessage(String message, MessageType type) {
@@ -13,11 +13,11 @@ public class WebSocketMessage {
         this.type = type;
     }
 
-    public String getMessage() {
+    public Object getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(Object message) {
         this.message = message;
     }
 
@@ -39,7 +39,7 @@ public class WebSocketMessage {
         EXIT,
         LOGIN,
         REGISTRATION,
-        CONFIRMATION;
+        CONFIRMATION
 
     }
 }

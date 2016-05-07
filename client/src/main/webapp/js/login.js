@@ -1,19 +1,30 @@
+
 $(document).ready( function () {
 
     $(document).on("click", "#Sign_in", function () {
 
-        alert("Sign in");
+        var login = $('#login').val();
+        var pass = $('#pass').val();
 
-        // $.ajax({
-        //
-        //     type:'POST',
-        //     data:{},
-        //     url:'/registration',
-        //     success: function () {
-        //         alert("Go to registration")
-        //     }
-        //
-        // });
+        
+        var loginObj = {
+
+            login : login,
+            pass : pass,
+            name : null
+
+        };
+
+        var webSocketMessage = {
+            
+            message : loginObj,
+            type : "LOGIN"
+            
+        };
+        
+        alert("message was sent : " + JSON.stringify(webSocketMessage));
+        socket.send(JSON.stringify(webSocketMessage));
+
     });
 
 });

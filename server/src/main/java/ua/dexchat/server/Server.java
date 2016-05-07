@@ -31,6 +31,7 @@ public final class Server {
             FileServerSocket fileServer = new FileServerSocket(PORT_FOR_RESENT_FILE, server.getSocketsWaiting());
             server.start();
             fileServer.start();
+            LOGGER.info("***Server was run");
 
         } catch (IOException e){
             LOGGER.error("***server caught IOException - " + e.getMessage());

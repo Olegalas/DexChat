@@ -11,7 +11,7 @@ import java.util.List;
 public class WebSocketUtils {
 
     public static void sendTextMessageToClient(String text, WebSocket clientSocket){
-        WebSocketMessage message = new WebSocketMessage("Incorrect pass or login", WebSocketMessage.MessageType.TEXT);
+        WebSocketMessage message = new WebSocketMessage(text, WebSocketMessage.MessageType.TEXT);
         String jsonMessage = JsonUtils.transformObjectInJson(message);
         clientSocket.send(jsonMessage);
     }
@@ -49,7 +49,7 @@ public class WebSocketUtils {
 
     public static void sendFriendsMessageToClient(ClientDTO friends, WebSocket webSocket){
         String friendsJson = JsonUtils.transformObjectInJson(friends);
-        WebSocketMessage webSocketMessage = new WebSocketMessage(friendsJson, WebSocketMessage.MessageType.CONFIRMATION);
+        WebSocketMessage webSocketMessage = new WebSocketMessage(friendsJson, WebSocketMessage.MessageType.FRIEND);
         String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
         webSocket.send(webSocketMessageJson);
     }

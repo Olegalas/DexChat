@@ -13,6 +13,11 @@ public class Confirmation {
         this.idSender = idSender;
     }
 
+    public Confirmation(String confirm, String idSender) {
+        this.confirm = Boolean.getBoolean(confirm);
+        this.idSender = Integer.parseInt(idSender);
+    }
+
     public Confirmation(boolean confirm) {
         this.confirm = confirm;
     }

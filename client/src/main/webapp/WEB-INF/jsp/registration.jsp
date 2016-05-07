@@ -1,4 +1,6 @@
 <%@include file="include.jsp" %>
+<jsp:include page="web_socket.jsp" />
+
 <html>
 <head>
     <title>Registration</title>

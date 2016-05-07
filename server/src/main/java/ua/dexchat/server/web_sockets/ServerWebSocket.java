@@ -1,5 +1,6 @@
 package ua.dexchat.server.web_sockets;
 
+import com.google.gson.internal.LinkedTreeMap;
 import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -12,6 +13,7 @@ import ua.dexchat.server.utils.WebSocketUtils;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -35,66 +37,78 @@ public class ServerWebSocket extends WebSocketServer {
 
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
-        LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
+        LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " : entered the room!");
         WebSocketUtils.sendTextMessageToClient("connection complete", conn);
     }
 
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
-        LOGGER.info("***" + conn + " has left the room!");
+        LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " : has left the room!");
+        // TODO: 07.05.16 I need create MessageServiceThread kill logic
     }
 
     @Override
     public void onMessage(WebSocket conn, String messageString) {
-        LOGGER.info("***" + conn + ": " + messageString);
+
+        LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " : " + messageString);
         WebSocketMessage webSocketMessage = JsonUtils.parseWebSocketMessage(messageString);
+        LinkedTreeMap map = (LinkedTreeMap) webSocketMessage.getMessage();
+
         switch (webSocketMessage.getType()) {
 
             case LOGIN: {
+                LOGGER.info("***LOGIN case");
 
-                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
+                Login login = new Login(null, (String) map.get("pass"), (String) map.get("login"));
                 new LoginClientThread(conn, login, sockets).start();
+
                 break;
             }
             case REGISTRATION: {
 
-                Login login = JsonUtils.parseString(webSocketMessage.getMessage(), Login.class);
+                LOGGER.info("***REGISTRATION case");
+                Login login = new Login((String) map.get("name"), (String) map.get("pass"), (String) map.get("login"));;
                 new RegistrationThread(conn, login).start();
                 break;
             }
             case FILE: {
 
-                FileMessage fileMessage = JsonUtils.parseString(webSocketMessage.getMessage(), FileMessage.class);
+                LOGGER.info("***FILE case");
+                FileMessage fileMessage = new FileMessage((String) map.get("fileName"), (String) map.get("fileType"), (String) map.get("idSender"), (String) map.get("idReceiver"));
                 new NotifyReceiverFileSendThread(conn, fileMessage, sockets, socketsWaiting).start();
                 break;
             }
             case CONFIRMATION: {
 
-                Confirmation confirmation = JsonUtils.parseString(webSocketMessage.getMessage(), Confirmation.class);
-
+                LOGGER.info("***CONFIRMATION case");
+                Confirmation confirmation = new Confirmation((String) map.get("confirm"), (String) map.get("idSender"));
                 new ReceiverConfirmSendFileThread(conn, sockets, confirmation, socketsWaiting).start();
 
                 break;
             }
             case MESSAGE: {
 
-                Message message = JsonUtils.parseString(messageString, Message.class);
+                LOGGER.info("***MESSAGE case");
+                Message message = new Message((String) map.get("message"), (String) map.get("idSender"), (String) map.get("idReceiver"), (String) map.get("date"));
                 new SendMessageThread(message).start();
                 break;
             }
             case FRIEND: {
 
-                ClientDTO clientDTO = JsonUtils.parseString(messageString, ClientDTO.class);
+                LOGGER.debug("***FRIEND case");
+                ClientDTO clientDTO = JsonUtils.getClientDTO(messageString);
                 new FriendServiceThread(clientDTO, conn).start();
 
                 break;
             }
             case EXIT: {
 
+                LOGGER.info("***EXIT case");
                 break;
             }
             case TEXT: {
 
+                LOGGER.info("***TEXT case");
                 break;
             }
         }
@@ -102,10 +116,10 @@ public class ServerWebSocket extends WebSocketServer {
 
     @Override
     public void onError(WebSocket conn, Exception ex) {
-        LOGGER.error("***" + ex.getMessage());
+        LOGGER.error("***OnError method...", ex);
         if (conn != null) {
             // some errors like port binding failed may not be assignable to a specific websocket
-            LOGGER.error("conn == null");
+            LOGGER.error("***But connection steel alive");
         }
     }
 

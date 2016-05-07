@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by dexter on 30.04.16.
@@ -20,21 +22,52 @@ public class ClientController {
     private final static String COOKIE_NAME = "DexChat";
     private final static String COOKIE_VALUE = "Online";
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String firstPage(HttpServletResponse response, HttpServletRequest request) {
 
-        LOGGER.debug("***Enter in firstPage method");
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String firstPageGet(HttpServletResponse response, HttpServletRequest request) {
+
+        LOGGER.debug("***Enter in firstPageGet method");
 
         if (checkCookies(request)) return "home";
 
         return "start";
     }
 
+
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String registration(HttpServletResponse response, HttpServletRequest request) {
+    public String registrationPost(HttpServletResponse response, HttpServletRequest request) {
 
-        LOGGER.debug("***Enter in registration method");
+        LOGGER.debug("***Enter in registrationPost method");
 
+        return "registration";
+    }
+
+    @RequestMapping(value = "/do_registration", method = RequestMethod.POST)
+    public String doRegistrationPost(HttpServletResponse response, HttpServletRequest request) {
+
+        LOGGER.debug("***Enter in doRegistrationPost method");
+
+        String name = request.getParameter("name");
+        String login = request.getParameter("login");
+        String email = request.getParameter("email");
+        String pass = request.getParameter("pass");
+
+        LOGGER.info("***User was registered : ");
+        LOGGER.info("***Login : " + login);
+        LOGGER.info("***Name : " + name);
+        LOGGER.info("***Email : " + email);
+        LOGGER.info("***Pass : " + pass);
+
+        response.setContentType("text/plain");
+
+        try {
+            PrintWriter out = response.getWriter();
+            out.print("success");
+            out.flush();
+            out.close();
+        } catch (IOException e) {
+            LOGGER.error("***Something was wrong during registration", e);
+        }
 
         return "registration";
     }
@@ -57,5 +90,7 @@ public class ClientController {
         }
         return false;
     }
+
+
 
 }

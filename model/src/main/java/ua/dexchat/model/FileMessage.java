@@ -17,6 +17,13 @@ public class FileMessage {
         this.idReceiver = idReceiver;
     }
 
+    public FileMessage(String fileName, String filetype, String idSender, String idReceiver) {
+        this.fileName = fileName;
+        this.fileType = filetype;
+        this.idSender = Integer.parseInt(idSender);
+        this.idReceiver = Integer.parseInt(idReceiver);
+    }
+
     @Override
     public String toString() {
         return "FileMessage{" +

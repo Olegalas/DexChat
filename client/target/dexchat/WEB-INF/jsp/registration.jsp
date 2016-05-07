@@ -1,9 +1,11 @@
 <%@include file="include.jsp" %>
+<jsp:include page="web_socket.jsp" />
+
 <html>
 <head>
     <title>Registration</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <%--<script type="text/javascript" src="/js/login.js"></script>--%>
+    <script type="text/javascript" src="/js/registration.js"></script>
 </head>
 <body>
 
@@ -24,11 +26,7 @@
     <label for="rePass">Repeat pass</label>
     <input type="password" name="rePass" placeholder="Pass" id="rePass" /></br></br>
 
-
-
-    <input type="button" name="Sign in" value="Sign in" onclick="return false" id="Sign_in"/>
-
-    <input type="button" name="Sign up" value="Sign up" onclick="return false" id="Sign_up"/>
+    <input type="button" name="Ready" value="Ready" onclick="return false" id="Ready"/>
 </form>
 
 </body>
