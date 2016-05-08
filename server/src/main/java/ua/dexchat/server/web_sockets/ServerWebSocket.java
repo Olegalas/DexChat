@@ -26,6 +26,8 @@ public class ServerWebSocket extends WebSocketServer {
     private static final Logger LOGGER = Logger.getLogger(ServerWebSocket.class);
     private Map<Integer, WebSocket> sockets = new ConcurrentHashMap<>(1000);
     private Map<String, WebSocket> socketsWaiting = new ConcurrentHashMap<>(1000);
+    private Map<WebSocket, String> ipAddresses = new ConcurrentHashMap<>(1000);
+    private Map<WebSocket, Thread> threads = new ConcurrentHashMap<>(1000);
 
     public ServerWebSocket(int port) throws UnknownHostException {
         super(new InetSocketAddress(port));
@@ -44,7 +46,9 @@ public class ServerWebSocket extends WebSocketServer {
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " : has left the room!");
-        // TODO: 07.05.16 I need create MessageServiceThread kill logic
+        Thread messageServiceThread = threads.get(conn);
+        messageServiceThread.interrupt();
+        LOGGER.info("***Server sent interrupt command to messageServiceThread");
     }
 
     @Override
@@ -59,15 +63,15 @@ public class ServerWebSocket extends WebSocketServer {
             case LOGIN: {
                 LOGGER.info("***LOGIN case");
 
-                Login login = new Login(null, (String) map.get("pass"), (String) map.get("login"));
-                new LoginClientThread(conn, login, sockets).start();
+                Login login = new Login(null, (String) map.get("pass"), (String) map.get("login"), (String) map.get("ip"));
+                new LoginClientThread(conn, login, sockets, ipAddresses, threads).start();
 
                 break;
             }
             case REGISTRATION: {
 
                 LOGGER.info("***REGISTRATION case");
-                Login login = new Login((String) map.get("name"), (String) map.get("pass"), (String) map.get("login"));;
+                Login login = new Login((String) map.get("name"), (String) map.get("pass"), (String) map.get("login"), (String) map.get("ip"));
                 new RegistrationThread(conn, login).start();
                 break;
             }

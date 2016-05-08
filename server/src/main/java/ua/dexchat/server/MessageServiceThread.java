@@ -33,7 +33,7 @@ public class MessageServiceThread extends Thread {
         service.sendAllFriends(clientSocket, client);
         LOGGER.info("***All friends was sent");
 
-        while(clientSocket.isConnecting()){
+        while(!isInterrupted()){
 
             service.sendMessagesFromTemporaryBufferToClient(clientSocket, client);
 
@@ -45,5 +45,7 @@ public class MessageServiceThread extends Thread {
             }
 
         }
+
+        LOGGER.info("***Thread was killed");
     }
 }

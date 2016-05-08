@@ -10,6 +10,7 @@ public class Login implements Serializable{
     public String name;
     public String pass;
     public String login;
+    public String id;
 
     public Login() {
     }
@@ -20,12 +21,20 @@ public class Login implements Serializable{
         this.login = login;
     }
 
+    public Login(String name, String pass, String login, String id) {
+        this.name = name;
+        this.pass = pass;
+        this.login = login;
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Login{" +
                 "name='" + name + '\'' +
                 ", pass='" + pass + '\'' +
                 ", login='" + login + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 

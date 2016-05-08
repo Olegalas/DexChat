@@ -16,6 +16,13 @@ socket.onmessage = function(event) {
 
 $(document).ready( function () {
 
+    var ip;
+
+    $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+        console.log("home ip address : " + data.ip);
+        ip = data.ip;
+    });
+
     $(document).on("click", "#Sign_in", function () {
 
         login = $('#login').val();
@@ -26,7 +33,8 @@ $(document).ready( function () {
 
             login : login,
             pass : pass,
-            name : null
+            name : null,
+            ip : ip
 
         };
 
@@ -36,7 +44,8 @@ $(document).ready( function () {
             type : "LOGIN"
             
         };
-        
+
+        console.log("was sent - " + JSON.stringify(webSocketMessage));
         socket.send(JSON.stringify(webSocketMessage));
 
     });

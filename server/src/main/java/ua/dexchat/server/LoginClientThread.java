@@ -20,11 +20,15 @@ public class LoginClientThread extends Thread {
     private final WebSocket clientSocket;
     private final Login login;
     private final Map<Integer, WebSocket> sockets;
+    private final Map<WebSocket, String> ipAddresses;
+    private final Map<WebSocket, Thread> threads;
 
-    public LoginClientThread(WebSocket socket, Login login, Map<Integer, WebSocket> sockets){
+    public LoginClientThread(WebSocket socket, Login login, Map<Integer, WebSocket> sockets, Map<WebSocket, String> ipAddresses, Map<WebSocket, Thread> threads){
         this.clientSocket = socket;
         this.login = login;
         this.sockets = sockets;
+        this.ipAddresses = ipAddresses;
+        this.threads = threads;
     }
 
     @Override
@@ -39,7 +43,10 @@ public class LoginClientThread extends Thread {
         } else {
             WebSocketUtils.sendTextMessageToClient("Welcome to DexChat", clientSocket);
             sockets.put(client.getId(), clientSocket);
-            new MessageServiceThread(client, clientSocket).start();
+            ipAddresses.put(clientSocket, login.id);
+            Thread messageServiceThread = new MessageServiceThread(client, clientSocket);
+            messageServiceThread.start();
+            threads.put(clientSocket, messageServiceThread);
         }
     }
 }

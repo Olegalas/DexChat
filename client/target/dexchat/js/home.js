@@ -1,11 +1,13 @@
 
 $(document).ready(function() {
 
-    var login = $('#login').text();
-    console.log(login);
+    $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+        console.log("home ip address : " + data.ip);
+        ip = data.ip;
+    });
     
+    var login = $('#login').text();
     var pass = $('#pass').text();
-    console.log(pass);
 
     document.title = "DexChat - " + login;
 
@@ -15,20 +17,27 @@ $(document).ready(function() {
         var webMessage = JSON.parse(event.data);
 
         if("connection complete" == webMessage.message){
-            doLogin(login, pass);
+
+            $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+                console.log("home ip address : " + data.ip);
+                var ip = data.ip;
+                doLogin(login, pass, ip);
+            });
+            
         }
         
     };
-
+    
 });
 
-function doLogin(login, pass) {
+function doLogin(login, pass, ip) {
 
     var loginObj = {
 
         login : login,
         pass : pass,
-        name : null
+        name : null,
+        ip : ip
 
     };
 
@@ -40,7 +49,7 @@ function doLogin(login, pass) {
     };
 
 
-
+    console.log("was sent - " + JSON.stringify(webSocketMessage));
     socket.send(JSON.stringify(webSocketMessage));
 
 }

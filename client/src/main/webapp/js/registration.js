@@ -13,7 +13,14 @@ socket.onmessage = function(event) {
 
 };
 
+var ip;
+
 $(document).ready( function () {
+
+    $.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
+        console.log("home ip address : " + data.ip);
+        ip = data.ip;
+    });
 
     $(document).on("click", "#Ready", function () {
 
@@ -64,11 +71,13 @@ $(document).ready( function () {
 
 function sendRegistrationForm(login, name, email, pass){
 
+    
     var loginObj = {
 
         login : login,
         pass : pass,
-        name : name
+        name : name,
+        ip : ip
 
     };
 
@@ -79,6 +88,7 @@ function sendRegistrationForm(login, name, email, pass){
 
     };
 
+    console.log("was sent - " + JSON.stringify(webSocketMessage));
     socket.send(JSON.stringify(webSocketMessage));
     
 }
