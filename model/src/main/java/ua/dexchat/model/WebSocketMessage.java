@@ -8,7 +8,7 @@ public class WebSocketMessage {
     private Object message;
     private MessageType type;
 
-    public WebSocketMessage(String message, MessageType type) {
+    public WebSocketMessage(Object message, MessageType type) {
         this.message = message;
         this.type = type;
     }

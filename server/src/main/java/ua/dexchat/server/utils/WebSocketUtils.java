@@ -17,39 +17,32 @@ public class WebSocketUtils {
     }
 
     public static void sendMessageToClient(Message message, WebSocket clientSocket){
-
-        String messageJson = JsonUtils.transformObjectInJson(message);
-
-        WebSocketMessage webMessage = new WebSocketMessage(messageJson, WebSocketMessage.MessageType.MESSAGE);
+        WebSocketMessage webMessage = new WebSocketMessage(message, WebSocketMessage.MessageType.MESSAGE);
         String jsonWebMessage = JsonUtils.transformObjectInJson(webMessage);
         clientSocket.send(jsonWebMessage);
     }
 
     public static void sendHistoryToClient(Client client, WebSocket clientSocket){
         List<History> histories = client.getHistory();
-        String historiesJson = JsonUtils.transformObjectInJson(histories);
-        WebSocketMessage historyPackage = new WebSocketMessage(historiesJson, WebSocketMessage.MessageType.HISTORY);
+        WebSocketMessage historyPackage = new WebSocketMessage(histories, WebSocketMessage.MessageType.HISTORY);
         String historyPackageJson = JsonUtils.transformObjectInJson(historyPackage);
         clientSocket.send(historyPackageJson);
     }
 
     public static void sendConfirmationToClient(Confirmation confirmation, WebSocket webSocket){
-        String confirmationJson = JsonUtils.transformObjectInJson(confirmation);
-        WebSocketMessage webSocketMessage = new WebSocketMessage(confirmationJson, WebSocketMessage.MessageType.CONFIRMATION);
+        WebSocketMessage webSocketMessage = new WebSocketMessage(confirmation, WebSocketMessage.MessageType.CONFIRMATION);
         String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
         webSocket.send(webSocketMessageJson);
     }
 
     public static void sendFileMessageToClient(FileMessage fileMessage, WebSocket webSocket){
-        String fileMessageJson = JsonUtils.transformObjectInJson(fileMessage);
-        WebSocketMessage webSocketMessage = new WebSocketMessage(fileMessageJson, WebSocketMessage.MessageType.CONFIRMATION);
+        WebSocketMessage webSocketMessage = new WebSocketMessage(fileMessage, WebSocketMessage.MessageType.CONFIRMATION);
         String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
         webSocket.send(webSocketMessageJson);
     }
 
     public static void sendFriendsMessageToClient(ClientDTO friends, WebSocket webSocket){
-        String friendsJson = JsonUtils.transformObjectInJson(friends);
-        WebSocketMessage webSocketMessage = new WebSocketMessage(friendsJson, WebSocketMessage.MessageType.FRIEND);
+        WebSocketMessage webSocketMessage = new WebSocketMessage(friends, WebSocketMessage.MessageType.FRIEND);
         String webSocketMessageJson = JsonUtils.transformObjectInJson(webSocketMessage);
         webSocket.send(webSocketMessageJson);
     }

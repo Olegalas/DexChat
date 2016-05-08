@@ -12,7 +12,17 @@ $(document).ready(function() {
     socket.onmessage = function(event) {
         console.log("HomeMessage " + event.data);
 
+        var webMessage = JSON.parse(event.data);
+
+        if("connection complete" == webMessage.message){
+            doLogin(login, pass);
+        }
+        
     };
+
+});
+
+function doLogin(login, pass) {
 
     var loginObj = {
 
@@ -29,7 +39,9 @@ $(document).ready(function() {
 
     };
 
+
+
     socket.send(JSON.stringify(webSocketMessage));
 
-});
+}
 

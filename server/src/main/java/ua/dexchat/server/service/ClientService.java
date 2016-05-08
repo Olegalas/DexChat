@@ -119,7 +119,7 @@ public class ClientService {
 
     // if I send clientsDTO with full list.. that's mean I send client with his friends
     public void sendAllFriends(WebSocket clientSocket, Client client) {
-        WebSocketUtils.sendFriendsMessageToClient(ClientDTO.getClientDTOWithFrisnds(client), clientSocket);
+        WebSocketUtils.sendFriendsMessageToClient(ClientDTO.getClientDTOWithFriends(client), clientSocket);
     }
 
     // if I send clientsDTO with empty list.. that's mean I send new friend

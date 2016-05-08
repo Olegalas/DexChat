@@ -5,9 +5,9 @@ socket.onmessage = function(event) {
 
 
     if("Login or email has already used" == webMessage.message){
-        alert(event.data.message);
+        alert(webMessage.message);
     } else if ("Registration complete" == webMessage.message) {
-        alert(event.data.message);
+        alert(webMessage.message);
         redirect("/", "GET");
     }
 

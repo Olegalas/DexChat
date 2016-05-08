@@ -24,7 +24,7 @@ public class ClientDTO {
         this.friends = friends;
     }
 
-    public static ClientDTO getClientDTOWithFrisnds(Client client){
+    public static ClientDTO getClientDTOWithFriends(Client client){
         return new ClientDTO(client.getLogin(), client.getName(), initFriends(client.getMyFriends()));
     }
 

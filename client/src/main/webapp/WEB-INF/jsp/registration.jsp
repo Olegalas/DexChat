@@ -1,10 +1,11 @@
 <%@include file="include.jsp" %>
-<jsp:include page="web_socket.jsp" />
+<%--<jsp:include page="web_socket.jsp" />--%>
 
 <html>
 <head>
     <title>Registration</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/web_socket.js"></script>
     <script type="text/javascript" src="/js/registration.js"></script>
 </head>
 <body>

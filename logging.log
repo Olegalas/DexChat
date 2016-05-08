@@ -3725,3 +3725,236 @@ javax.persistence.NoResultException: No entity found for query
 2016-05-08 01:23:30 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
 2016-05-08 01:23:30 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
 2016-05-08 01:23:30 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 15:58:01 INFO  Server:34 - ***Server was run
+2016-05-08 16:05:29 INFO  Server:34 - ***Server was run
+2016-05-08 16:06:24 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:06:28 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:06:44 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-08 16:06:44 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:06:45 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:07:14 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-08 16:07:14 INFO  ClientController:56 - ***User was registered : 
+2016-05-08 16:07:14 INFO  ClientController:57 - ***Login : dexter
+2016-05-08 16:07:14 INFO  ClientController:58 - ***Name : Oleg
+2016-05-08 16:07:14 INFO  ClientController:59 - ***Email : disposition@ukr.net
+2016-05-08 16:07:14 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-08 16:07:14 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"dexter","pass":"qqqq","name":"Oleg"},"type":"REGISTRATION"}
+2016-05-08 16:07:14 INFO  ServerWebSocket:69 - ***REGISTRATION case
+2016-05-08 16:07:15 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@528ef4bd: startup date [Sun May 08 16:07:15 EEST 2016]; root of context hierarchy
+2016-05-08 16:07:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-08 16:07:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-08 16:07:17 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-08 16:07:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-08 16:07:18 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-08 16:07:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-08 16:07:18 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-08 16:07:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-08 16:07:18 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-08 16:07:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-08 16:07:20 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-08 16:07:20 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-08 16:07:22 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-08 16:07:22 INFO  ClientController:56 - ***User was registered : 
+2016-05-08 16:07:22 INFO  ClientController:57 - ***Login : dexter
+2016-05-08 16:07:22 INFO  ClientController:58 - ***Name : Oleg
+2016-05-08 16:07:22 INFO  ClientController:59 - ***Email : disposition@ukr.net
+2016-05-08 16:07:22 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-08 16:07:22 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"dexter","pass":"qqqq","name":"Oleg"},"type":"REGISTRATION"}
+2016-05-08 16:07:22 INFO  ServerWebSocket:69 - ***REGISTRATION case
+2016-05-08 16:07:22 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-08 16:07:24 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:07:24 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:07:24 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:07:24 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:07:25 INFO  ClientDao:68 - ***Client was persisted
+2016-05-08 16:07:25 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:07:25 INFO  ClientDao:68 - ***Client was persisted
+2016-05-08 16:07:25 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:07:25 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-05-08 16:07:25 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-08 16:07:25 ERROR SqlExceptionHelper:129 - Duplicate entry 'dexter' for key 'UK_riyp540u0yca4mqdvwmf7vmbv'
+2016-05-08 16:07:25 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-08 16:07:26 ERROR PublicMethodsWrapper:42 - ***saveClient method threw exception
+2016-05-08 16:07:26 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-08 16:07:26 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_riyp540u0yca4mqdvwmf7vmbv]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-08 16:07:26 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:07:26 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-05-08 16:07:26 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:07:26 INFO  RegistrationThread:37 - ***Registration complete
+2016-05-08 16:07:31 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:07:31 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:07:32 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:07:40 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-08 16:07:40 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:07:41 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:08:07 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-08 16:08:07 INFO  ClientController:56 - ***User was registered : 
+2016-05-08 16:08:07 INFO  ClientController:57 - ***Login : user
+2016-05-08 16:08:07 INFO  ClientController:58 - ***Name : user
+2016-05-08 16:08:07 INFO  ClientController:59 - ***Email : user@or.ert
+2016-05-08 16:08:07 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-08 16:08:07 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"user","pass":"qqqq","name":"user"},"type":"REGISTRATION"}
+2016-05-08 16:08:07 INFO  ServerWebSocket:69 - ***REGISTRATION case
+2016-05-08 16:08:07 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:08:07 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-08 16:08:07 INFO  ClientDao:68 - ***Client was persisted
+2016-05-08 16:08:07 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:08:07 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-05-08 16:08:07 INFO  PublicMethodsWrapper:47 - ***saveTempBuffer method was ended
+2016-05-08 16:08:08 INFO  PublicMethodsWrapper:47 - ***saveClient method was ended
+2016-05-08 16:08:08 INFO  RegistrationThread:37 - ***Registration complete
+2016-05-08 16:09:12 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:09:12 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:09:13 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:09:21 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 16:09:21 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 16:09:21 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-08 16:09:21 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 16:09:21 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 16:09:21 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 16:09:21 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 16:09:21 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 16:09:35 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 16:09:35 INFO  ClientController:83 - ***User entered : 
+2016-05-08 16:09:35 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 16:09:35 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 16:09:36 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:09:36 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:14:25 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 16:14:25 INFO  ClientController:83 - ***User entered : 
+2016-05-08 16:14:25 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 16:14:25 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 16:14:25 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:14:25 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:14:54 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 16:14:54 INFO  ClientController:83 - ***User entered : 
+2016-05-08 16:14:54 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 16:14:54 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 16:14:54 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:14:55 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:25:30 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:25:30 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:25:33 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:25:34 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:25:37 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 16:25:37 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 16:25:37 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 16:25:38 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 16:25:38 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 16:25:38 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 16:25:38 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 16:25:38 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 16:25:54 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 16:25:54 INFO  ClientController:83 - ***User entered : 
+2016-05-08 16:25:54 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 16:25:54 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 16:25:55 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:25:56 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:28:56 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:28:56 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 16:28:59 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:29:00 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:29:03 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 16:29:03 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 16:29:03 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 16:29:04 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 16:29:04 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 16:29:04 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 16:29:04 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 16:29:04 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 16:29:07 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 16:29:07 INFO  ClientController:83 - ***User entered : 
+2016-05-08 16:29:07 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 16:29:07 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 16:29:08 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 16:29:09 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 16:29:09 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 16:29:09 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 16:29:09 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 16:29:10 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 16:29:10 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 16:29:10 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 16:29:10 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 16:29:10 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 17:15:03 INFO  Server:34 - ***Server was run
+2016-05-08 17:16:49 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 17:16:49 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-08 17:16:54 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 17:16:57 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 17:16:58 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 17:16:59 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3366601e: startup date [Sun May 08 17:16:59 EEST 2016]; root of context hierarchy
+2016-05-08 17:17:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-08 17:17:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-08 17:17:02 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-08 17:17:04 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-08 17:17:04 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-08 17:17:04 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-08 17:17:05 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-08 17:17:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-08 17:17:05 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-08 17:17:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-08 17:17:08 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-08 17:17:08 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-08 17:17:11 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-08 17:17:14 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 17:17:14 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 17:17:14 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-08 17:17:15 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 17:17:15 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 17:17:15 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 17:17:15 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 17:17:15 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-08 17:17:20 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-08 17:17:20 INFO  ClientController:83 - ***User entered : 
+2016-05-08 17:17:20 INFO  ClientController:84 - ***Login : Oleg
+2016-05-08 17:17:20 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-08 17:17:21 INFO  ServerWebSocket:46 - ***127.0.0.1 : has left the room!
+2016-05-08 17:17:22 INFO  ServerWebSocket:40 - ***127.0.0.1 : entered the room!
+2016-05-08 17:17:22 INFO  ServerWebSocket:53 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null},"type":"LOGIN"}
+2016-05-08 17:17:22 INFO  ServerWebSocket:60 - ***LOGIN case
+2016-05-08 17:17:22 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-08 17:17:22 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-08 17:17:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-08 17:17:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:47 - ***findClient method was ended
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:47 - ***findClientByLoginObject method was ended
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:47 - ***sendAllHistoryToClient method was ended
+2016-05-08 17:17:23 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-08 17:17:23 INFO  PublicMethodsWrapper:47 - ***sendAllFriends method was ended
+2016-05-08 17:17:23 INFO  MessageServiceThread:34 - ***All friends was sent

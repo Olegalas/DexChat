@@ -6,7 +6,7 @@ socket.onmessage = function(event) {
     if("Incorrect pass or Login" == webMessage.message){
         alert(webMessage.message);
     } else if("Welcome to DexChat" == webMessage.message){
-        alert(webMessage.message);
+        alert(webMessage.message + " " + login);
 
         $('#form').attr('action', '/home').submit();
         
@@ -44,20 +44,6 @@ $(document).ready( function () {
 });
 
 var redirect = function(url, method) {
-    //
-    // var loginField = $('<input>');
-    //
-    // loginField.attr("type", "hidden");
-    // loginField.attr("name", "login");
-    // loginField.attr("value", login);
-    //
-    //
-    // var passField = $('<input>');
-    //
-    // passField.attr("type", "hidden");
-    // passField.attr("name", "pass");
-    // passField.attr("value", pass);
-
 
     $('<form>', {
         method: method,
