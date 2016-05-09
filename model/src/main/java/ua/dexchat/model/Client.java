@@ -21,6 +21,9 @@ public class Client extends IdGenerate{
     @Column(nullable = false)
     private String pass;
 
+    @Column(nullable = false, unique = true)
+    private String email;
+
     @ManyToMany
     @JoinColumn(name="friend_id", referencedColumnName = "id")
     private List<Client> iFriendTo = new ArrayList<>();
@@ -34,16 +37,18 @@ public class Client extends IdGenerate{
     public Client() {
     }
 
-    public Client(String login, String name, String pass) {
+    public Client(String login, String name, String pass, String email) {
         this.login = login;
         this.name = name;
         this.pass = pass;
+        this.email = email;
     }
 
     public Client(Login client){
         this.login = client.login;
         this.pass = client.pass;
         this.name = client.name;
+        this.email = client.email;
     }
 
     public String getLogin() {
@@ -68,6 +73,18 @@ public class Client extends IdGenerate{
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<History> getBuffers() {
+        return buffers;
     }
 
     public List<Client> getiFriendTo() {

@@ -131,8 +131,8 @@ public class TestBufferDao {
     public void testSaveNewHistoryAndFind(){
         History history = new History();
 
-        Client owner = new Client("owner", "owner", "owner");
-        Client sender = new Client("sender", "sender", "sender");
+        Client owner = new Client("owner", "owner", "owner", "email@ukr.net");
+        Client sender = new Client("sender", "sender", "sender", "email2@ukr.net");
 
         history.setIdOwner(owner);
         history.setIdSender(sender.getId());
@@ -151,8 +151,8 @@ public class TestBufferDao {
     public void testSaveNewHistoryNegativeDuplicating(){
         History history = new History();
 
-        Client owner = new Client("owner", "owner", "owner");
-        Client sender = new Client("sender", "sender", "sender");
+        Client owner = new Client("owner", "owner", "owner", "email@ukr.net");
+        Client sender = new Client("sender", "sender", "sender", "email2@ukr.net");
 
         history.setIdOwner(owner);
         history.setIdSender(sender.getId());

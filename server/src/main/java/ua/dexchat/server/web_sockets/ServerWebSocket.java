@@ -71,7 +71,7 @@ public class ServerWebSocket extends WebSocketServer {
             case REGISTRATION: {
 
                 LOGGER.info("***REGISTRATION case");
-                Login login = new Login((String) map.get("name"), (String) map.get("pass"), (String) map.get("login"), (String) map.get("ip"));
+                Login login = new Login((String) map.get("name"), (String) map.get("pass"), (String) map.get("login"), (String) map.get("ip"), (String) map.get("email"));
                 new RegistrationThread(conn, login).start();
                 break;
             }
@@ -113,6 +113,13 @@ public class ServerWebSocket extends WebSocketServer {
             case TEXT: {
 
                 LOGGER.info("***TEXT case");
+                break;
+            }
+            case EMAIL: {
+
+                LOGGER.info("***EMAIL case");
+                Login login = new Login(null, null, (String) map.get("login"), (String) map.get("ip"), (String) map.get("email"));
+                new SendEmailThread(login.login, login.email, conn).start();
                 break;
             }
         }

@@ -50,14 +50,16 @@ public class JsonUtils {
         JsonArray array = object.getAsJsonArray("friends");
         String name = object.get("name").getAsString();
         String login = object.get("login").getAsString();
+        String email = object.get("email").getAsString();
 
         for(JsonElement tmp : array){
             JsonObject obj = tmp.getAsJsonObject();
             String nameFriend = obj.get("name").getAsString();
             String loginFriend = obj.get("login").getAsString();
-            friends.add(new ClientDTO(loginFriend, nameFriend));
+            String emailFriend = obj.get("email").getAsString();
+            friends.add(new ClientDTO(loginFriend, nameFriend, emailFriend));
         }
 
-        return new ClientDTO(login, name, friends);
+        return new ClientDTO(login, name, email,friends);
     }
 }

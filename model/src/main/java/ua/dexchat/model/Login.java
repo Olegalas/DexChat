@@ -11,6 +11,7 @@ public class Login implements Serializable{
     public String pass;
     public String login;
     public String id;
+    public String email;
 
     public Login() {
     }
@@ -28,6 +29,14 @@ public class Login implements Serializable{
         this.id = id;
     }
 
+    public Login(String name, String pass, String login, String id, String email) {
+        this.name = name;
+        this.pass = pass;
+        this.login = login;
+        this.id = id;
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "Login{" +
@@ -35,6 +44,7 @@ public class Login implements Serializable{
                 ", pass='" + pass + '\'' +
                 ", login='" + login + '\'' +
                 ", id='" + id + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 

@@ -39,7 +39,8 @@ public class WebSocketMessage {
         EXIT,
         LOGIN,
         REGISTRATION,
-        CONFIRMATION
+        CONFIRMATION,
+        EMAIL
 
     }
 }

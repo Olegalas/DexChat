@@ -10,26 +10,29 @@ public class ClientDTO {
 
     private String login;
     private String name;
+    private String email;
 
     private List<ClientDTO> friends = new ArrayList<>();
 
-    public ClientDTO(String login, String name){
+    public ClientDTO(String login, String name, String email){
         this.login = login;
         this.name = name;
+        this.email = email;
     }
 
-    public ClientDTO(String login, String name, List<ClientDTO> friends){
+    public ClientDTO(String login, String name, String email, List<ClientDTO> friends){
         this.login = login;
         this.name = name;
         this.friends = friends;
+        this.email = email;
     }
 
     public static ClientDTO getClientDTOWithFriends(Client client){
-        return new ClientDTO(client.getLogin(), client.getName(), initFriends(client.getMyFriends()));
+        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail(), initFriends(client.getMyFriends()));
     }
 
     public static ClientDTO getClientDTOWithoutFriends(Client client){
-        return new ClientDTO(client.getLogin(), client.getName());
+        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail());
     }
 
     private static List<ClientDTO> initFriends(List<Client> myFriends) {
@@ -54,6 +57,14 @@ public class ClientDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<ClientDTO> getFriends() {

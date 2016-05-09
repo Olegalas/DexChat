@@ -8,8 +8,10 @@
     <script type="text/javascript" src="/js/home.js"></script>
 </head>
 <body>
-    <h1>Home <c:out value="${login}"/></h1>
-    <span id="login"><c:out value="${login}"/></span>
-    <span id="pass"><c:out value="${pass}"/></span>
+    <span id="login" hidden><c:out value="${login}"/></span>
+    <span id="pass" hidden><c:out value="${pass}"/></span>
+
+
+
 </body>
 </html>

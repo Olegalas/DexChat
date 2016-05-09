@@ -5013,3 +5013,5 @@ javax.persistence.NoResultException: No entity found for query
 2016-05-08 19:20:50 INFO  ServerWebSocket:51 - ***Server sent interrupt command to messageServiceThread
 2016-05-08 19:20:50 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
 2016-05-08 19:20:50 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-09 21:11:04 INFO  DropTables:24 - ********DataBase was removed
+2016-05-09 21:12:54 INFO  DropTables:24 - ********DataBase was removed

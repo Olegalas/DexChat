@@ -37,10 +37,10 @@ public class TestClientService {
     @Before
     public void saveInDB(){
 
-        ownerLogin = new Login("Tomas", "pass", "LoginFirst");
+        ownerLogin = new Login("Tomas", "pass", "LoginFirst", "127.0.0.1", "email1@ukr.net");
         idOwnerBuffer = service.saveClient(ownerLogin);
 
-        secondLogin = new Login("Tomas", "pass", "LoginSecond");
+        secondLogin = new Login("Tomas", "pass", "LoginSecond", "127.0.0.1", "email2@ukr.net");
         service.saveClient(secondLogin);
 
     }

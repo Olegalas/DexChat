@@ -39,10 +39,10 @@ public class TestClientDao {
     @Before
     public void saveLogin(){
 
-        login = new Login("Dan", "pass", "login");
+        login = new Login("Dan", "pass", "login", "127.0.0.1", "email2@ukr.net");
         clientDao.saveClient(login);
 
-        client = new Client("loginForClient", "James", "pass");
+        client = new Client("loginForClient", "James", "pass", "email@ukr.net");
         clientDao.saveClient(client);
 
     }
