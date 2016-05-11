@@ -5,7 +5,7 @@ socket.onmessage = function(event) {
 
 
     if("Login or email has already used" == webMessage.message){
-        alert(webMessage.message);
+        $('#mainAlert').show();
     } else if ("Registration complete" == webMessage.message) {
         alert(webMessage.message);
         redirect("/", "GET");
@@ -24,6 +24,13 @@ $(document).ready( function () {
 
     $(document).on("click", "#Ready", function () {
 
+        $('#mainAlert').hide();
+        $('#loginAlert').hide();
+        $('#nameAlert').hide();
+        $('#emailAlert').hide();
+        $('#passAlert').hide();
+        $('#repassAlert').hide();
+
         var fail = false;
 
         var login = $('#login').val();
@@ -36,20 +43,24 @@ $(document).ready( function () {
         var mailPattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
 
         if (!stringPattern.test(login)) {
+            $('#loginAlert').show();
             fail = "Incorrect login";
         } else if (!stringPattern.test(name)) {
+            $('#nameAlert').show();
             fail = "Incorrect name";
         } else if (!mailPattern.test(email)) {
+            $('#emailAlert').show();
             fail = "Enter your email";
         } else if (!stringPattern.test(pass)) {
+            $('#passAlert').show();
             fail = "Enter your pass";
         } else if (pass != rePass) {
+            $('#repassAlert').show();
             fail = "Your passwords are different";
         }
 
-        if (fail) {
-            alert(fail);
-        } else {
+        if (!fail) {
+
             $.ajax({
 
                 type: 'POST',

@@ -81,17 +81,15 @@ public class ClientService {
     public int saveClient(Login login){
         Client client = new Client(login);
 
-        int idClient = clientDao.saveClient(client);
+        clientDao.saveClient(client);
 
-        if(idClient == -1){
-            return -1;
-        }
+        Client clientFromDB = clientDao.findClient(client.getId());
 
         TemporaryBuffer buff = new TemporaryBuffer();
-        buff.setIdOwnerr(client.getId());
+        buff.setIdOwnerr(clientFromDB.getId());
         bufferDao.saveTempBuffer(buff);
 
-        return idClient;
+        return clientFromDB.getId();
     }
 
     public Client findClientByLoginObject(Login login){

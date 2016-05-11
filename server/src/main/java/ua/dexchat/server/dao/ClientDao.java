@@ -52,21 +52,13 @@ public class ClientDao {
         return manager.find(Client.class, id);
     }
 
-    public int saveClient(Login login){
+    public void saveClient(Login login){
         Client client = new Client(login);
-        return saveClient(client);
+        saveClient(client);
     }
 
-    public int saveClient(Client client){
-
-        try{
-            manager.persist(client);
-        }catch (Exception e){
-            LOGGER.error("***This login has already used: " + e.getMessage());
-            return -1;
-        }
-        LOGGER.info("***Client was persisted");
-        return client.getId();
+    public void saveClient(Client client){
+        manager.persist(client);
     }
 
     public List<Client> findClientsByLogin(String login, int amount){

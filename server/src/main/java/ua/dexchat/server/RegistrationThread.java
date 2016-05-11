@@ -27,14 +27,15 @@ public class RegistrationThread extends Thread{
         ApplicationContext context = GetSpringContext.getContext();
         ClientService service = context.getBean(ClientService.class);
 
-        int idClient = service.saveClient(login);
-
-        if(idClient == -1){
+        try{
+            service.saveClient(login);
+        }catch (Exception e){
+            LOGGER.error("Some error during save client : ", e);
             WebSocketUtils.sendTextMessageToClient("Login or email has already used", clientSocket);
             LOGGER.info("***Login or email has already used");
-        } else {
-            WebSocketUtils.sendTextMessageToClient("Registration complete", clientSocket);
-            LOGGER.info("***Registration complete");
+            return;
         }
+        WebSocketUtils.sendTextMessageToClient("Registration complete", clientSocket);
+        LOGGER.info("***Registration complete");
     }
 }

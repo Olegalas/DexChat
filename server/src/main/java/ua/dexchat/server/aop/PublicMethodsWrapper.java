@@ -29,7 +29,7 @@ public class PublicMethodsWrapper {
     public void publicModelMethodsPointCut(){}
 
     @Around(value = "publicServerMethodsPointCut()")
-    public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
+    public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 
         String methodName = proceedingJoinPoint.getSignature().getName();
         LOGGER.info("***" + methodName + " method was started");
@@ -42,6 +42,7 @@ public class PublicMethodsWrapper {
             LOGGER.error("***" + methodName + " method threw exception");
             LOGGER.error(throwable.getClass().getName());
             LOGGER.error(throwable.getMessage());
+            throw throwable;
         }
 
         LOGGER.info("***" + methodName + " method was ended");
