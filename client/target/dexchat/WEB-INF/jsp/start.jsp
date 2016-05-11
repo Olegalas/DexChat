@@ -4,26 +4,41 @@
 <head>
 
     <title>DexChat</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/web_socket.js"></script>
     <script type="text/javascript" src="/js/login.js"></script>
 
 </head>
 <body>
+<div class="container">
+    <form action="/registration" method="POST" name="form" id="form" class="form-horizontal" role="form">
 
-<form action="/registration" method="POST" name="form" id="form">
+        <h2>DexChat</h2>
+        <p>Welcome to Dex world</p>
 
-    <label for="login">Enter login</label>
-    <input type="text" name="login" placeholder="login" id="login" title="Enter your login" /></br></br>
+        <div class="form-group">
+            <label for="login" class="control-label col-sm-2">Enter login : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="login" placeholder="login" id="login"
+                       title="Enter your login"/>
+            </div>
+        </div>
 
-    <label for="pass">Enter pass</label>
-    <input type="password" name="pass" placeholder="pass" id="pass" /></br></br>
+        <div class="form-group">
+            <label for="pass" class="control-label col-sm-2">Enter pass : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" name="pass" placeholder="pass" id="pass"/>
+            </div>
+        </div>
 
-    <input type="button" name="Sign in" value="Sign in" onclick="return false" id="Sign_in"/>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
 
-    <input type="submit" name="Sign up" value="Sign up" id="Sign_up"/>
-</form>
+        <input class="btn btn-default" type="button" name="Sign in" value="Sign in" onclick="return false"
+               id="Sign_in"/>
 
+        <input class="btn btn-default" type="submit" name="Sign up" value="Sign up" id="Sign_up"/>
+    </form>
+</div>
 
 </body>
 </html>

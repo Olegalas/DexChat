@@ -77,7 +77,8 @@ function sendRegistrationForm(login, name, email, pass){
         login : login,
         pass : pass,
         name : name,
-        ip : ip
+        ip : ip,
+        email : email
 
     };
 
