@@ -47,8 +47,10 @@ public class ServerWebSocket extends WebSocketServer {
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
         LOGGER.info("***" + conn.getRemoteSocketAddress().getAddress().getHostAddress() + " : has left the room!");
         Thread messageServiceThread = threads.get(conn);
-        messageServiceThread.interrupt();
-        LOGGER.info("***Server sent interrupt command to messageServiceThread");
+        if(messageServiceThread != null){
+            messageServiceThread.interrupt();
+            LOGGER.info("***Server sent interrupt command to messageServiceThread");
+        }
     }
 
     @Override
@@ -128,10 +130,6 @@ public class ServerWebSocket extends WebSocketServer {
     @Override
     public void onError(WebSocket conn, Exception ex) {
         LOGGER.error("***OnError method...", ex);
-        if (conn != null) {
-            // some errors like port binding failed may not be assignable to a specific websocket
-            LOGGER.error("***But connection steel alive");
-        }
     }
 
     /**

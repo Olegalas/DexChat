@@ -14,6 +14,10 @@
         <h2>DexChat</h2>
         <p>Welcome to Dex world</p>
 
+        <div class="alert alert-danger" style="display: none" id="mainAlert">
+            <strong>Sorry!</strong> Incorrect login or pass
+        </div>
+
         <div class="form-group">
             <label for="login" class="control-label col-sm-2">Enter login : </label>
             <div class="col-sm-10">
@@ -37,6 +41,23 @@
                id="Sign_in"/>
 
         <input class="btn btn-default" type="submit" name="Sign up" value="Sign up" id="Sign_up"/>
+
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" id="forgotPass">Forgot pass?</button>
+
+        <div id="demo" class="collapse">
+
+            <label for="email" class="control-label col-sm-2">Enter email : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="email" placeholder="email" id="email"/>
+            </div>
+
+            <label for="loginEmail" class="control-label col-sm-2">Enter login : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="loginEmail" placeholder="login" id="loginEmail"/>
+            </div>
+
+            <input class="btn btn-default" type="submit" name="Send email" onclick="return false" value="Send pass on your email" id="Send_email"/>
+        </div>
     </form>
 </div>
 

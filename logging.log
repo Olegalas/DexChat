@@ -9667,3 +9667,532 @@ java.lang.NullPointerException
 	at java.lang.Thread.run(Thread.java:745)
 2016-05-11 17:29:37 ERROR ServerWebSocket:133 - ***But connection steel alive
 2016-05-11 17:29:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:37:05 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 17:37:08 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:37:08 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:37:08 ERROR ServerWebSocket:133 - ***But connection steel alive
+2016-05-11 17:37:10 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:37:16 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqg","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-11 17:37:16 INFO  ServerWebSocket:64 - ***LOGIN case
+2016-05-11 17:37:16 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-11 17:37:16 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-11 17:37:17 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 17:37:17 INFO  ClientDao:39 - ***Client was founded
+2016-05-11 17:37:17 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-11 17:37:17 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-11 17:37:17 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-11 17:37:23 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqg","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-11 17:37:23 INFO  ServerWebSocket:64 - ***LOGIN case
+2016-05-11 17:37:23 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-11 17:37:23 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-11 17:37:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-11 17:37:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-11 17:37:23 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-11 17:37:23 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-11 17:37:24 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqg","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-11 17:37:24 INFO  ServerWebSocket:64 - ***LOGIN case
+2016-05-11 17:37:24 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-11 17:37:24 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-11 17:37:24 INFO  ClientDao:39 - ***Client was founded
+2016-05-11 17:37:24 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-11 17:37:24 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-11 17:37:24 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-11 17:37:29 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-11 17:37:29 INFO  ServerWebSocket:64 - ***LOGIN case
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-11 17:37:29 INFO  ClientDao:39 - ***Client was founded
+2016-05-11 17:37:29 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***sendAllHistoryToClient method was ended
+2016-05-11 17:37:29 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***sendAllFriends method was ended
+2016-05-11 17:37:29 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-11 17:37:29 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-11 17:37:30 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-11 17:37:30 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-11 17:37:30 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-11 17:37:30 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-11 17:37:31 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-11 17:37:31 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-11 17:37:31 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-11 17:37:31 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-11 17:37:31 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-11 17:37:31 INFO  ClientController:83 - ***User entered : 
+2016-05-11 17:37:31 INFO  ClientController:84 - ***Login : Oleg
+2016-05-11 17:37:31 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-11 17:37:32 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:37:32 INFO  ServerWebSocket:51 - ***Server sent interrupt command to messageServiceThread
+2016-05-11 17:37:32 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-11 17:37:32 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-11 17:37:33 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:37:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:37:44 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:472)
+	at org.java_websocket.WebSocketImpl.eot(WebSocketImpl.java:520)
+	at org.java_websocket.SocketChannelIOHelper.read(SocketChannelIOHelper.java:16)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:327)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:37:44 ERROR ServerWebSocket:133 - ***But connection steel alive
+2016-05-11 17:50:47 INFO  Server:34 - ***Server was run
+2016-05-11 17:50:56 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 17:50:57 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 17:51:01 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:51:32 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-11 17:51:32 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:51:32 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:51:33 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:51:39 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:51:39 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:51:40 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:51:44 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-11 17:51:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:51:45 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:51:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 17:51:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 17:51:47 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 17:51:47 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 18:04:54 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 18:04:56 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 18:04:56 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 18:04:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 18:05:19 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 18:05:19 INFO  ServerWebSocket:120 - ***EMAIL case
+2016-05-11 18:05:19 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@595e912d: startup date [Wed May 11 18:05:19 EEST 2016]; root of context hierarchy
+2016-05-11 18:05:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 18:05:21 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 18:05:21 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 18:05:22 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 18:05:24 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 18:05:24 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 18:05:25 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 18:05:25 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 18:05:25 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 18:05:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 18:05:31 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 18:05:31 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 18:05:34 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 18:05:39 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 18:05:40 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 18:05:40 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 18:05:41 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 18:05:41 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 18:05:41 ERROR EmailUtils:55 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1282)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:370)
+	at javax.mail.Service.connect(Service.java:275)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:50)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:232)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:189)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1250)
+	... 8 more
+2016-05-11 18:07:53 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 18:07:53 INFO  ServerWebSocket:120 - ***EMAIL case
+2016-05-11 18:07:53 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 18:07:54 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 18:07:54 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 18:07:54 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 18:07:54 ERROR EmailUtils:55 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1282)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:370)
+	at javax.mail.Service.connect(Service.java:275)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:50)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:232)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:189)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1250)
+	... 8 more
+2016-05-11 18:30:03 INFO  Server:34 - ***Server was run
+2016-05-11 18:34:51 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 18:35:06 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 18:35:33 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 18:35:33 INFO  ServerWebSocket:120 - ***EMAIL case
+2016-05-11 18:35:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7bfd0bea: startup date [Wed May 11 18:35:34 EEST 2016]; root of context hierarchy
+2016-05-11 18:35:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 18:35:36 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 18:35:37 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 18:35:38 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 18:35:38 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 18:35:38 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 18:35:38 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 18:35:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 18:35:39 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 18:35:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 18:35:44 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 18:35:44 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 18:35:46 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 18:35:56 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 18:35:57 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 18:35:58 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 18:36:00 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 18:36:01 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 18:36:02 ERROR EmailUtils:54 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1282)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:370)
+	at javax.mail.Service.connect(Service.java:275)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:47)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:232)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:189)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1250)
+	... 8 more
+2016-05-11 18:37:25 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 18:37:25 INFO  ServerWebSocket:120 - ***EMAIL case
+2016-05-11 18:37:25 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 18:37:26 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 18:37:26 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 18:37:26 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 18:37:26 ERROR EmailUtils:54 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1282)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:370)
+	at javax.mail.Service.connect(Service.java:275)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:47)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:232)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:189)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1250)
+	... 8 more
+2016-05-11 18:59:50 INFO  Server:34 - ***Server was run
+2016-05-11 19:08:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 19:08:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 19:09:41 INFO  ServerWebSocket:57 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 19:09:41 INFO  ServerWebSocket:120 - ***EMAIL case
+2016-05-11 19:09:43 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc4acdd: startup date [Wed May 11 19:09:43 EEST 2016]; root of context hierarchy
+2016-05-11 19:09:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 19:09:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 19:09:47 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 19:09:48 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 19:09:50 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 19:09:52 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 19:09:52 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 19:09:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 19:09:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 19:09:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 19:10:30 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 19:10:34 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 19:10:45 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 19:10:56 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 19:10:58 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 19:10:58 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 19:10:59 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 19:10:59 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 19:11:08 ERROR EmailUtils:70 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 19:17:15 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 19:17:15 ERROR ServerWebSocket:130 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:50)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.eot(WebSocketImpl.java:511)
+	at org.java_websocket.SocketChannelIOHelper.read(SocketChannelIOHelper.java:16)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:327)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 21:04:55 INFO  Server:34 - ***Server was run
+2016-05-11 21:06:05 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:06:09 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 21:06:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:06:22 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 21:06:22 ERROR ServerWebSocket:131 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:51)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:479)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:64)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:349)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 21:06:23 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 21:06:42 INFO  ServerWebSocket:58 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 21:06:42 INFO  ServerWebSocket:121 - ***EMAIL case
+2016-05-11 21:06:42 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2826f246: startup date [Wed May 11 21:06:42 EEST 2016]; root of context hierarchy
+2016-05-11 21:06:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 21:06:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 21:06:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 21:06:47 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 21:06:47 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 21:06:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 21:06:48 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 21:06:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 21:06:48 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 21:06:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 21:06:52 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 21:06:52 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 21:06:54 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 21:06:55 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 21:06:56 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 21:06:56 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 21:06:56 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 21:06:56 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 21:06:59 ERROR EmailUtils:70 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 21:21:59 INFO  Server:34 - ***Server was run
+2016-05-11 21:23:31 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:23:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 21:23:52 INFO  ServerWebSocket:58 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 21:23:52 INFO  ServerWebSocket:121 - ***EMAIL case
+2016-05-11 21:23:53 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@70e434ae: startup date [Wed May 11 21:23:53 EEST 2016]; root of context hierarchy
+2016-05-11 21:23:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 21:23:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 21:23:56 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 21:23:57 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 21:23:57 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 21:23:57 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 21:23:57 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 21:23:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 21:23:57 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 21:23:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 21:23:59 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 21:23:59 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 21:24:01 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 21:24:03 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 21:24:03 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 21:24:03 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 21:24:03 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 21:24:03 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 21:24:07 ERROR EmailUtils:71 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 21:27:35 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-11 21:27:35 ERROR ServerWebSocket:131 - ***OnError method...
+java.lang.NullPointerException
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onClose(ServerWebSocket.java:51)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:489)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:459)
+	at org.java_websocket.WebSocketImpl.eot(WebSocketImpl.java:511)
+	at org.java_websocket.SocketChannelIOHelper.read(SocketChannelIOHelper.java:16)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:327)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-11 21:28:07 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:28:09 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 21:51:28 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:52:22 INFO  Server:34 - ***Server was run
+2016-05-11 21:52:34 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 21:52:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 21:52:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 21:52:46 INFO  ServerWebSocket:122 - ***EMAIL case
+2016-05-11 21:52:47 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45df7a1b: startup date [Wed May 11 21:52:47 EEST 2016]; root of context hierarchy
+2016-05-11 21:52:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 21:52:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 21:52:49 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 21:52:50 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 21:52:51 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 21:52:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 21:52:51 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 21:52:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 21:52:51 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 21:52:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 21:52:55 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 21:52:55 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 21:52:57 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 21:52:59 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 21:52:59 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 21:52:59 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 21:53:00 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 21:53:01 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 21:53:04 ERROR EmailUtils:71 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 22:08:15 INFO  Server:34 - ***Server was run
+2016-05-11 22:08:30 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-11 22:08:39 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-11 22:08:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 22:08:51 INFO  ServerWebSocket:122 - ***EMAIL case
+2016-05-11 22:08:52 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5bf0bea8: startup date [Wed May 11 22:08:52 EEST 2016]; root of context hierarchy
+2016-05-11 22:08:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-11 22:08:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-11 22:08:55 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-11 22:08:56 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-11 22:08:56 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-11 22:08:56 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-11 22:08:57 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-11 22:08:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-11 22:08:57 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-11 22:08:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-11 22:09:05 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-11 22:09:05 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-11 22:09:07 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-11 22:09:09 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 22:09:09 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 22:09:09 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-11 22:09:10 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 22:09:10 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 22:09:13 ERROR EmailUtils:71 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 22:13:04 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 22:13:04 INFO  ServerWebSocket:122 - ***EMAIL case
+2016-05-11 22:13:04 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 22:13:05 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 22:13:05 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 22:13:05 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 22:13:07 ERROR EmailUtils:71 - Something wrong during sendMessage in EmailUtils : 
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at ua.dexchat.server.utils.EmailUtils.sendMessage(EmailUtils.java:61)
+	at ua.dexchat.server.SendEmailThread.run(SendEmailThread.java:23)
+2016-05-11 22:14:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 22:14:46 INFO  ServerWebSocket:122 - ***EMAIL case
+2016-05-11 22:14:46 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 22:14:46 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 22:14:47 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 22:14:47 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 22:14:49 INFO  EmailUtils:68 - ***Pass on Client email was sent
+2016-05-11 22:16:10 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"EMAIL"}
+2016-05-11 22:16:10 INFO  ServerWebSocket:122 - ***EMAIL case
+2016-05-11 22:16:10 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-11 22:16:10 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-11 22:16:11 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-11 22:16:11 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-11 22:16:12 INFO  EmailUtils:68 - ***Pass on Client email was sent
