@@ -1,6 +1,5 @@
 var socket = new WebSocket("ws://localhost:8887");
-var login;
-var pass;
+
 
 socket.onopen = function() {
     console.log("Connection complete");

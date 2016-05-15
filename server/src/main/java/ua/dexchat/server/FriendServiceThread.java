@@ -5,6 +5,7 @@ import org.java_websocket.WebSocket;
 import ua.dexchat.model.ClientDTO;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.List;
 
@@ -38,9 +39,13 @@ public class FriendServiceThread extends Thread {
                     "want search new friends by \'" + clientDTO.getLogin() + "\'");
             // search new friends among clients database
             List<ClientDTO> clients;
-            clients = service.findPotentialFriends(clientDTO.getLogin(), 25);
+            clients = service.findPotentialFriends(clientDTO.getLogin(), 10);
 
-            service.sendAllFriends(clientSocket, clients);
+            if(clients.isEmpty()){
+                WebSocketUtils.sendTextMessageToClient("incorrect friend login", clientSocket);
+            }else{
+                service.sendAllFriends(clientSocket, clients);
+            }
 
         } else{
             LOGGER.info("***Client " + clientSocket.getRemoteSocketAddress() + " " +
