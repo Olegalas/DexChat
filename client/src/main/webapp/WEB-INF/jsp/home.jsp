@@ -103,7 +103,7 @@
                 <h4 class="modal-title">Search results</h4>
             </div>
             <div class="modal-body">
-                <div class="chat-users" id="#chat-users_model">
+                <div class="chat-users" id="chat-users_model">
                     <h6>Friends</h6>
                     <p style="display: none" id="model_message">Incorrect friend login</p>
 

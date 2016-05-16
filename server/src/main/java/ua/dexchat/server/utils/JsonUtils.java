@@ -1,9 +1,6 @@
 package ua.dexchat.server.utils;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.google.gson.internal.Primitives;
 import ua.dexchat.model.ClientDTO;
 import ua.dexchat.model.Login;
@@ -44,13 +41,15 @@ public class JsonUtils {
 
         List<ClientDTO> friends = new ArrayList<>();
 
-        Gson gson = new Gson();
-        JsonElement element = gson.toJsonTree(messageString);
+        JsonParser parser = new JsonParser();
+        JsonElement element = parser.parse(messageString);
         JsonObject object = element.getAsJsonObject();
-        JsonArray array = object.getAsJsonArray("friends");
-        String name = object.get("name").getAsString();
-        String login = object.get("login").getAsString();
-        String email = object.get("email").getAsString();
+
+        JsonObject message = object.getAsJsonObject("message");
+        JsonArray array = message.getAsJsonArray("friends");
+        String name = message.get("name").getAsString();
+        String login = message.get("login").getAsString();
+        String email = message.get("email").getAsString();
 
         for(JsonElement tmp : array){
             JsonObject obj = tmp.getAsJsonObject();
