@@ -59,14 +59,12 @@ socket.onmessage = function (event) {
 
             }).appendTo("#chat-users_model");
 
-            console.log("created user_model div");
-            createFriend(webMessage.message.login);
+            createFriendForModel(webMessage.message.login, webMessage.message.login);
 
-            $("<button type='button' class='btn btn-default' />").text("add").click(function(){
-
-
+            $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("add").click(function(){
+                
                 $( ".user_model" ).remove();
-                $("#myModal").modal();
+                $("#model_add_message").show();
                 
                 createUserDiv(webMessage.message.login);
 
@@ -124,16 +122,24 @@ $(document).on("click", "#search_button", function () {
     // 1) delete previous
     $( ".user_model" ).remove();
     $("#model_message").show();
+    $("#model_add_message").hide();
 
     // 2) read input
     var input = $("#search_input").val();
+    
+    if(input == ""){
+        $("#model_message").show();
+        $("#myModal").modal();
+        return;
+    }
+    
     console.log("search - " + input);
     // 3) send input
     
     var friend = {
         
         login: input,
-        name: "unknown",
+        name: $('#login').text(),
         email: "unknown",
         friends: []
         
@@ -172,39 +178,82 @@ function sendMessage(type, message) {
 
 function createUserDiv(login) {
 
-    $('<div/>', {
+    $('<div class="user" style="position: relative;padding: 0 0 0 50px; display: block; cursor: pointer; margin: 0 0 20px;"/>').attr({
 
-        class: "user",
         id: login
 
     }).appendTo('#chat-users_frame');
-    console.log("created user div");
+
     createFriend(login);
+
+    $('<button type="button" class="btn btn-default"></button>').text("menu")
+        .click(function () {
+
+        $( ".user_model" ).remove();
+        $("#model_add_message").hide();
+        $("#model_message").hide();
+
+        $('<div class="user_model"/>').attr({
+
+            id: "id_model_" + login
+
+        }).appendTo("#chat-users_model");
+        
+        createFriendForModel("id_model_" + login, login);
+
+        $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("remove").click(function(){
+
+            alert("CLICK");
+            
+        }).appendTo('#id_model_' + login + "_avatar");
+
+        $("#myModal").modal();
+        
+    }).appendTo("#" + login);
 
 }
 
 function createFriend(login) {
+
+    $('<div calss="avatar" style="top: 0; left: 0; width: 40px; height: 40px; position: absolute;"/>').attr({
+
+        id: login + "_avatar"
+
+    }).appendTo('#' + login);
+
+    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" style="display: block; border-radius: 20px; height: 100%;"/>').attr({
+
+        alt: login
+
+    }).appendTo('#' + login + "_avatar");
+    
+    $('<div class="name" style="font-size: 14px; font-weight: bold; line-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"/>').text(login)
+        .appendTo('#' + login);
+    
+    $('<div class="mood" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"/>').text("mood")
+        .appendTo('#' + login);
+
+}
+
+function createFriendForModel(login, loginName) {
 
     $('<div calss="avatar"/>').attr({
 
         id: login + "_avatar"
 
     }).appendTo('#' + login);
-    console.log("created avatar div");
 
-    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png"/>').attr({
+    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({
 
         alt: login
 
     }).appendTo('#' + login + "_avatar");
-    console.log("created img div");
-    
-    $('<div class="name"/>').text(login)
-        .appendTo('#' + login + "_avatar");
-    console.log("created name div");
-    
-    $('<div class="mood"/>').text("mood").appendTo('#' + login + "_avatar");
-    console.log("created mood div");
+
+    $('<div class="name" />').text(loginName)
+        .appendTo('#' + login);
+
+    $('<div class="mood" />').text("mood")
+        .appendTo('#' + login);
 
 }
 

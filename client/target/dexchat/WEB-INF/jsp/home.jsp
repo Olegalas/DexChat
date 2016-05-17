@@ -38,15 +38,6 @@
 
                     <!-- FRIENDS LIST -->
 
-
-
-
-
-
-
-
-                    <!-- END FRINED LIST -->
-
                 </div>
             </div>
         </div>
@@ -71,13 +62,6 @@
                         </div>
                         <div class="time">5 min ago</div>
                     </div>
-
-
-
-                    <!-- END DIALOG  -->
-
-
-
 
                     <!-- ANSWER ADD -->
 
@@ -106,7 +90,7 @@
                 <div class="chat-users" id="chat-users_model">
                     <h6>Friends</h6>
                     <p style="display: none" id="model_message">Incorrect friend login</p>
-
+                    <h3 style="display: none" id="model_add_message">Friend was added</h3>
 
                 </div>
             </div>

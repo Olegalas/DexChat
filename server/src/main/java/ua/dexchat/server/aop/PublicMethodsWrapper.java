@@ -32,7 +32,7 @@ public class PublicMethodsWrapper {
     public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 
         String methodName = proceedingJoinPoint.getSignature().getName();
-        LOGGER.info("***" + methodName + " method was started");
+        LOGGER.debug("***" + methodName + " method was started");
 
         Object value = null;
 
@@ -45,7 +45,7 @@ public class PublicMethodsWrapper {
             throw throwable;
         }
 
-        LOGGER.info("***" + methodName + " method was ended");
+        LOGGER.debug("***" + methodName + " method was ended");
 
         return value;
     }

@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <input type="button" name="Ready" value="Ready" onclick="return false" id="Ready"/>
+        <input class="btn btn-default" type="button" name="Ready" value="Ready" onclick="return false" id="Ready"/>
     </form>
 </div>
 </body>

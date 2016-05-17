@@ -87,4 +87,18 @@ public class ClientDao {
         manager.merge(client);
         manager.merge(friend);
     }
+
+    public void removeFriendFromClient(String clientLogin, String friendLogin){
+        Client client = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
+                .setParameter("login", clientLogin).getSingleResult();
+        Client friend = manager.createQuery("SELECT c FROM Client c WHERE c.login = :login", Client.class)
+                .setParameter("login", friendLogin).getSingleResult();
+
+        client.getMyFriends().remove(friend);
+        friend.getiFriendTo().remove(client);
+
+        manager.merge(client);
+        manager.merge(friend);
+    }
+
 }

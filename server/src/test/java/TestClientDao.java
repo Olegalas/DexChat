@@ -97,7 +97,7 @@ public class TestClientDao {
 
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void findClientByLoginNegative(){
 
         login.login = WRONG_LOGIN;
@@ -132,8 +132,8 @@ public class TestClientDao {
 
     }
 
-    @Test
-    public void addFriendToClientWrongFriendLogin(){
+    @Test(expected = NoResultException.class)
+    public void addFriendToClient_WrongFriendLogin(){
 
         clientDao.addFriendToClient(client.getLogin(), WRONG_LOGIN);
         Client clientFromDB = clientDao.findClient(client.getId());
@@ -142,13 +142,35 @@ public class TestClientDao {
 
     }
 
-    @Test
-    public void addFriendToClientWrongClientLogin(){
+    @Test(expected = NoResultException.class)
+    public void addFriendToClient_WrongClientLogin(){
 
         clientDao.addFriendToClient(WRONG_LOGIN, client.getLogin());
         Client clientFromDB = clientDao.findClient(client.getId());
 
         Assert.assertEquals(clientFromDB.getMyFriends().size(), EMPTY_FRIENDS_LIST);
+    }
+
+    @Test
+    public void removeFriendFromClient(){
+
+        clientDao.addFriendToClient(client.getLogin(), login.login);
+        clientDao.removeFriendFromClient(client.getLogin(), login.login);
+
+        Client clientFromDB = clientDao.findClient(client.getId());
+        Assert.assertTrue(clientFromDB.getMyFriends().isEmpty());
+
+    }
+
+    @Test(expected = NoResultException.class)
+    public void removeFriendFromClient_WrongFriendLogin(){
+
+        clientDao.addFriendToClient(client.getLogin(), login.login);
+        clientDao.removeFriendFromClient(client.getLogin(), WRONG_LOGIN);
+
+//        Client clientFromDB = clientDao.findClient(client.getId());
+//        Assert.assertEquals(clientFromDB.getMyFriends().get(0).getLogin(), login.login);
+
     }
 
 }

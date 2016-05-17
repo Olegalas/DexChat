@@ -2,6 +2,7 @@ package ua.dexchat.server;
 
 import org.apache.log4j.Logger;
 import org.java_websocket.WebSocket;
+import ua.dexchat.model.Client;
 import ua.dexchat.model.ClientDTO;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
@@ -33,13 +34,15 @@ public class FriendServiceThread extends Thread {
 
         // if DTO have empty list... it means that client want to find new friends by login
         // else... it means that client want to add new friend
+        // if email - "delete" it's mean that client want to delete friend with next login
         if(clientDTO.getFriends().isEmpty()){
 
-            LOGGER.info("***Client " + clientSocket.getRemoteSocketAddress() + " " +
-                    "want search new friends by \'" + clientDTO.getLogin() + "\'");
-            // search new friends among clients database
-            List<ClientDTO> clients;
-            clients = service.findPotentialFriends(clientDTO.getLogin(), 10);
+            if("delete".equals(clientDTO.getEmail())){
+                // name field - login client // login field - login friend
+                service.removeFriend(clientDTO.getName(), clientDTO.getLogin());
+            }
+
+            List<ClientDTO> clients = clientsSearch();
 
             if(clients.isEmpty()){
                 LOGGER.info("***No clients with \"" + clientDTO.getLogin() + "\" login were found");
@@ -56,5 +59,30 @@ public class FriendServiceThread extends Thread {
             service.saveNewFriend(clientDTO);
         }
 
+    }
+
+    private List<ClientDTO> clientsSearch() {
+
+        LOGGER.info("***Client " + clientSocket.getRemoteSocketAddress() + " " +
+                "want search new friends by \'" + clientDTO.getLogin() + "\'");
+
+        // search new friends among clients database
+        List<ClientDTO> clients;
+
+        // in DTO login filed - this is login friends for search
+        clients = service.findPotentialFriends(clientDTO.getLogin(), 10);
+
+        // in DTO name field - this is login of client
+        Client client = service.findByLogin(clientDTO.getName());
+
+        // remove duplicate
+        for(Client friend : client.getMyFriends()){
+            for(int i = 0; i < clients.size(); i++){
+                if(friend.getLogin().equals(clients.get(i).getLogin())){
+                    clients.remove(i);
+                }
+            }
+        }
+        return clients;
     }
 }

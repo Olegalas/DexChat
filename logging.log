@@ -14424,3 +14424,1997 @@
 2016-05-16 22:25:43 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
 2016-05-16 22:25:43 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
 2016-05-16 22:25:43 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 11:41:15 INFO  DropTables:24 - ********DataBase was removed
+2016-05-17 12:59:44 INFO  Server:34 - ***Server was run
+2016-05-17 13:00:37 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:00:40 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:01:03 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:01:03 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:01:04 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:01:07 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:01:07 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:01:07 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ddeb18b: startup date [Tue May 17 13:01:07 EEST 2016]; root of context hierarchy
+2016-05-17 13:01:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-17 13:01:08 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-17 13:01:09 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-17 13:01:10 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-17 13:01:10 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-17 13:01:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-17 13:01:10 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-17 13:01:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-17 13:01:10 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-17 13:01:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-17 13:01:14 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-17 13:01:14 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-17 13:01:16 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-17 13:01:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-17 13:01:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-17 13:01:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-17 13:01:17 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-17 13:01:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-17 13:01:18 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-17 13:01:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-17 13:01:19 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-17 13:01:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-17 13:01:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-17 13:01:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-17 13:01:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-17 13:01:33 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-17 13:01:33 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:01:33 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-17 13:01:34 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$b0b74f0b.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:96)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$eae40eea.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-17 13:01:34 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:01:34 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-17 13:01:41 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:01:41 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:01:41 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-17 13:01:41 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:01:41 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$b0b74f0b.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:96)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$eae40eea.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-17 13:01:41 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:01:41 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-17 13:01:45 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 13:01:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:01:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:02:11 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 13:02:11 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 13:02:11 INFO  ClientController:57 - ***Login : Oleg
+2016-05-17 13:02:11 INFO  ClientController:58 - ***Name : Oleg
+2016-05-17 13:02:11 INFO  ClientController:59 - ***Email : disposition@ukr.net
+2016-05-17 13:02:11 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 13:02:11 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"REGISTRATION"}
+2016-05-17 13:02:11 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 13:02:11 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-17 13:02:11 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:48 - ***saveClient method was ended
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:48 - ***saveTempBuffer method was ended
+2016-05-17 13:02:12 INFO  PublicMethodsWrapper:48 - ***saveClient method was ended
+2016-05-17 13:02:12 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 13:02:14 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:02:14 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:02:15 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:02:17 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 13:02:17 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:02:18 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:02:37 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 13:02:37 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 13:02:37 INFO  ClientController:57 - ***Login : Vaso
+2016-05-17 13:02:37 INFO  ClientController:58 - ***Name : Vaso
+2016-05-17 13:02:37 INFO  ClientController:59 - ***Email : vaso@ukr.net
+2016-05-17 13:02:37 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 13:02:37 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":"Vaso","ip":"176.105.1.157","email":"vaso@ukr.net"},"type":"REGISTRATION"}
+2016-05-17 13:02:37 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:35 - ***saveClient method was started
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:48 - ***saveClient method was ended
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:02:37 INFO  PublicMethodsWrapper:35 - ***saveTempBuffer method was started
+2016-05-17 13:02:38 INFO  PublicMethodsWrapper:48 - ***saveTempBuffer method was ended
+2016-05-17 13:02:38 INFO  PublicMethodsWrapper:48 - ***saveClient method was ended
+2016-05-17 13:02:38 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 13:02:39 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:02:39 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:02:39 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:02:43 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:02:43 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:02:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:02:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***sendAllHistoryToClient method was ended
+2016-05-17 13:02:43 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***sendAllFriends method was ended
+2016-05-17 13:02:43 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:43 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:44 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:44 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 13:02:44 INFO  ClientController:83 - ***User entered : 
+2016-05-17 13:02:44 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 13:02:44 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 13:02:44 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:44 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:44 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:02:45 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:02:45 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:02:45 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:02:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:02:47 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:02:47 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***findClientByLoginObject method was started
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***findClient method was started
+2016-05-17 13:02:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:02:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***findClient method was ended
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***findClientByLoginObject method was ended
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***sendAllHistoryToClient method was started
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***sendAllHistoryToClient method was ended
+2016-05-17 13:02:47 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***sendAllFriends method was ended
+2016-05-17 13:02:47 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:47 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:48 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:48 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:48 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:48 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:49 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:49 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:49 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:49 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:50 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:50 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:50 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:50 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:51 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:51 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:51 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:51 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:52 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:52 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:52 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:52 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:53 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:53 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:53 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:53 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:54 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:54 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:54 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:54 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:55 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:55 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:55 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:55 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:56 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:56 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:56 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:56 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:57 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:58 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:58 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:58 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:02:59 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:02:59 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:02:59 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:02:59 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:00 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:00 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:00 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:00 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:01 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:01 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:01 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:01 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:02 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:02 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:02 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:02 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:03 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:03 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:03 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:03 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:04 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:04 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:04 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:04 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:05 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:05 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:05 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:05 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:06 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:06 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:06 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:06 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:07 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:07 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:07 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:07 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:08 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:08 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:08 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:08 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:09 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:09 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:09 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:09 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:10 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:10 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:10 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:10 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:11 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:11 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:11 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:11 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:12 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:12 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:12 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:12 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:13 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:13 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:13 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:13 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:14 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:14 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:14 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:14 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:15 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:15 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:15 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:15 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:16 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:16 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:16 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:16 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:17 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:17 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:17 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:17 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:18 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:18 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:18 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:18 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:19 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:19 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:19 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:19 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:20 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:20 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:20 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:20 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:21 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:21 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:21 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:21 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:22 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:22 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:22 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:22 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:23 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:23 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:24 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:24 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:25 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:25 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:25 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:25 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:26 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:26 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:26 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:26 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:27 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:27 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:27 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:27 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:28 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:28 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:28 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:28 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:29 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:29 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:29 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:29 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:30 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:30 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:30 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:30 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:31 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:31 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:31 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:31 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:32 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:32 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:32 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:32 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:33 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:33 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:33 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:33 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:34 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:34 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:34 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:34 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:35 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:35 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:35 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:35 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:36 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:36 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:36 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:36 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:37 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:37 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:37 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:37 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:38 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:38 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:38 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:38 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:39 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:39 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:39 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:39 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:40 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:40 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:40 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:40 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:41 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:41 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:41 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:41 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:42 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 13:03:42 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:37698 want search new friends by 'Vaso'
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***findPotentialFriends method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***findClientsByLogin method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***findClientsByLogin method was ended
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***findPotentialFriends method was ended
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-17 13:03:42 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***sendAllFriends method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***sendAllFriends method was ended
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:42 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:43 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:43 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:43 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:43 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:44 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:44 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:44 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:44 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:45 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:45 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:45 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:45 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:46 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:46 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:46 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:46 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:47 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:47 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:47 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:47 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:48 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:48 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:48 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:48 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:49 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:49 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:49 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:49 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:50 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 13:03:50 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:37698 want add new friend 'Vaso'
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:35 - ***saveNewFriend method was started
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:35 - ***addFriendToClient method was started
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:48 - ***addFriendToClient method was ended
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:48 - ***saveNewFriend method was ended
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:50 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:51 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:51 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:51 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:51 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:52 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:52 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:52 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:52 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:53 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:53 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:53 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:53 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:54 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:54 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:54 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:54 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:55 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:56 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:56 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:56 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:57 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:57 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:57 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:57 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:58 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:58 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:58 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:58 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:03:59 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:03:59 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:03:59 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:03:59 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:00 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:00 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:00 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:00 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 13:04:01 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:37698 want search new friends by 'Vaso'
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***findPotentialFriends method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***findClientsByLogin method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***findClientsByLogin method was ended
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***findPotentialFriends method was ended
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***findByLogin method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:35 - ***findClientByLogin method was started
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***findClientByLogin method was ended
+2016-05-17 13:04:01 INFO  PublicMethodsWrapper:48 - ***findByLogin method was ended
+2016-05-17 13:04:02 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:02 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:02 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:02 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:03 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:03 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:03 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:03 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:04 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:04 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:04 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:04 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:05 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:05 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:05 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:05 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:06 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:06 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:06 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:06 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:07 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:07 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:07 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:07 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:08 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:08 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:08 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:08 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:09 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:09 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:09 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:09 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:10 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:10 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:10 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:10 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:11 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:11 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:11 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:11 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:12 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:12 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:12 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:12 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:13 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:13 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:13 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:13 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:14 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:14 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:14 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:14 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:15 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:15 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:15 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:15 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:16 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:16 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:16 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:16 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:17 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:17 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:17 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:17 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:18 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:18 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:18 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:18 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:19 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:19 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:19 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:19 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:20 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:20 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:20 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:20 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:21 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:21 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:21 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:21 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:22 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:22 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:22 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:22 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:23 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:23 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:23 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:23 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:24 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:25 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:25 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:25 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:26 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:26 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:26 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:26 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:27 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:27 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:27 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:27 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:28 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:28 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:28 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:28 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:29 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:29 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:29 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:29 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:30 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:30 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:30 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:30 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:31 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:31 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:31 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:31 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:32 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:32 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:32 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:32 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:33 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:33 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:33 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:33 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:34 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:34 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:34 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:34 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:34 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:04:35 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:35 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:04:35 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:35 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:36 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:36 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:36 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:36 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:37 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:37 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:37 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:37 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:38 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:38 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:38 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:38 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:39 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:39 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:39 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:39 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:40 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:40 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:40 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:40 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:41 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:41 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:41 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:41 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:42 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:42 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:42 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:42 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:43 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:43 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:43 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:43 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:44 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:44 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:44 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:44 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:45 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:46 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:46 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:46 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:47 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:47 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:47 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:47 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:48 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:48 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:48 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:48 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:49 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:49 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:49 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:49 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:50 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:50 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:50 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:50 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:51 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:51 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:51 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:51 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:52 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:52 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:52 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:52 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:53 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:53 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:53 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:53 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:54 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:54 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:54 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:54 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:55 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:55 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:55 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:55 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:56 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:56 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:56 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:56 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:57 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:57 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:57 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:57 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:58 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:58 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:58 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:58 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:04:59 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:04:59 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:04:59 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:04:59 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:00 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:00 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:00 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:00 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:01 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:01 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:01 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:01 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:02 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:02 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:02 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:02 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:03 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:03 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:03 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:03 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:04 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:04 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:04 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:04 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:05 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:05 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:05 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:05 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:06 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:06 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:06 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:06 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:07 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:07 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:07 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:07 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:08 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:08 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:08 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:08 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:09 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:10 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:10 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:10 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:11 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:11 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:11 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:11 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:12 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:12 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:12 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:12 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:13 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:13 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:13 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:13 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:14 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:14 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:14 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:14 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:15 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:15 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:15 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:15 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:16 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:16 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:16 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:16 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:17 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:17 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:17 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:17 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:18 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:18 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:18 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:18 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:19 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:19 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:19 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:19 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:20 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:20 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:20 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:20 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:21 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:21 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:21 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:21 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:22 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:22 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:22 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:22 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:23 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:23 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:23 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:23 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:24 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:24 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:24 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:24 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:25 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:25 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:25 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:25 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:26 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:26 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:26 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:26 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:27 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:27 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:27 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:27 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:28 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:28 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:28 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:28 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:29 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:29 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:29 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:29 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:30 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:30 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:30 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:30 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:31 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:31 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:31 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:31 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:32 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:32 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:32 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:32 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:33 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:33 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:33 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:33 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:34 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:34 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:34 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:34 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:35 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:35 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:35 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:35 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:36 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:36 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:36 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:36 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:37 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:37 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:37 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:37 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:38 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:39 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:39 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:39 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:40 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:40 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:40 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:40 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:41 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:41 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:41 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:41 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:42 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:42 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:42 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:42 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:43 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:43 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:43 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:43 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:44 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:44 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:44 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:44 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:45 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:45 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:45 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:45 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:46 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:46 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:46 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:46 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:47 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:47 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:47 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:47 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:48 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:48 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:48 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:48 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:49 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:49 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:49 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:49 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:50 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:50 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:50 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:50 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:51 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:51 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:51 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:51 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:52 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:52 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:52 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:52 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:53 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:53 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:53 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:53 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:54 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:54 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:54 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:54 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:55 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:55 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:55 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:55 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:56 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:56 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:56 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:56 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:57 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:57 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:57 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:57 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:58 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:58 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:58 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:58 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:05:59 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:05:59 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:05:59 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:05:59 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:00 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:00 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:00 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:00 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:01 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:01 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:01 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:01 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:02 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:02 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:02 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:02 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:03 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:03 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:03 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:03 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:04 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:04 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:04 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:04 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:05 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:05 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:05 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:05 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:06 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:06 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:06 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:06 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:07 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:07 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:07 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:07 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:08 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:08 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:08 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:08 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:09 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:09 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:09 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:09 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:10 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:10 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:10 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:11 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:12 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:12 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:12 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:12 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:06:13 INFO  PublicMethodsWrapper:35 - ***sendMessagesFromTemporaryBufferToClient method was started
+2016-05-17 13:06:13 INFO  PublicMethodsWrapper:35 - ***findBufferByIdOwner method was started
+2016-05-17 13:06:13 INFO  PublicMethodsWrapper:48 - ***findBufferByIdOwner method was ended
+2016-05-17 13:06:13 INFO  PublicMethodsWrapper:48 - ***sendMessagesFromTemporaryBufferToClient method was ended
+2016-05-17 13:17:14 INFO  Server:34 - ***Server was run
+2016-05-17 13:18:10 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:18:12 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:18:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:18:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:18:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:18:47 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@356f11ff: startup date [Tue May 17 13:18:46 EEST 2016]; root of context hierarchy
+2016-05-17 13:18:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-17 13:18:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-17 13:18:48 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-17 13:18:49 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-17 13:18:49 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-17 13:18:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-17 13:18:49 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-17 13:18:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-17 13:18:49 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-17 13:18:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-17 13:18:50 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-17 13:18:50 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-17 13:18:52 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-17 13:18:54 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-17 13:18:54 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:18:54 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:18:54 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:18:54 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:19:04 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 13:19:04 INFO  ClientController:83 - ***User entered : 
+2016-05-17 13:19:04 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 13:19:04 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 13:19:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:19:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:19:05 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:19:05 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:19:06 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:19:07 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:19:07 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:19:07 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:19:07 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:19:07 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:19:07 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:19:15 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 13:19:15 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:37998 want search new friends by 'Vaso'
+2016-05-17 13:19:15 INFO  FriendServiceThread:48 - ***No clients with "Vaso" login were found
+2016-05-17 13:30:42 INFO  Server:34 - ***Server was run
+2016-05-17 13:32:35 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:32:35 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:32:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:32:59 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:32:59 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:32:59 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@498ec019: startup date [Tue May 17 13:32:59 EEST 2016]; root of context hierarchy
+2016-05-17 13:32:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-17 13:33:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-17 13:33:01 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-17 13:33:01 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-17 13:33:02 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-17 13:33:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-17 13:33:02 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-17 13:33:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-17 13:33:02 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-17 13:33:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-17 13:33:03 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-17 13:33:03 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-17 13:33:05 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-17 13:33:06 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-17 13:33:07 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:33:07 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:33:07 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:33:07 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:33:12 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 13:33:12 INFO  ClientController:83 - ***User entered : 
+2016-05-17 13:33:12 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 13:33:12 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 13:33:13 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:33:13 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:33:13 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:33:13 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:33:14 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:33:14 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:33:14 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:33:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:33:14 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:33:14 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:33:14 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:33:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 13:33:32 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:38127 want search new friends by 'Vaso'
+2016-05-17 13:33:32 INFO  FriendServiceThread:48 - ***No clients with "Vaso" login were found
+2016-05-17 13:33:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:33:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:36:10 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:36:11 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 13:36:14 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:36:14 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:36:14 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:36:14 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:36:14 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:36:16 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:36:16 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:36:16 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:36:16 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:36:16 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:36:16 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:36:18 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 13:36:18 INFO  ClientController:83 - ***User entered : 
+2016-05-17 13:36:18 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 13:36:18 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 13:36:19 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:36:19 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:36:19 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:36:19 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:36:20 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:36:20 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:36:20 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:36:20 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:36:20 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:36:20 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:36:20 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 13:36:50 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 13:36:50 INFO  ClientController:83 - ***User entered : 
+2016-05-17 13:36:50 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 13:36:50 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 13:36:50 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 13:36:50 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 13:36:50 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 13:36:50 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 13:36:51 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 13:36:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 13:36:51 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 13:36:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 13:36:52 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 13:36:52 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 13:36:52 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 14:37:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 14:37:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 14:37:33 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 14:37:33 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 14:37:33 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 14:37:33 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 14:37:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 14:37:38 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 14:37:38 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 14:37:39 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 14:37:39 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 14:37:39 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 14:37:39 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 14:37:43 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 14:37:43 INFO  ClientController:83 - ***User entered : 
+2016-05-17 14:37:43 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 14:37:43 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 14:37:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 14:37:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 14:37:44 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 14:37:44 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 14:37:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 14:37:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 14:37:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 14:37:46 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 14:37:46 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 14:37:46 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 14:37:46 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 14:57:09 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 14:57:12 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 14:57:12 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 14:57:12 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 14:57:12 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 14:57:14 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 14:59:07 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 14:59:07 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 14:59:07 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 14:59:07 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 14:59:07 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 14:59:07 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 14:59:08 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 14:59:08 INFO  ClientController:83 - ***User entered : 
+2016-05-17 14:59:08 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 14:59:08 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 14:59:09 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 14:59:09 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 14:59:09 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 14:59:09 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 14:59:11 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 14:59:11 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 14:59:11 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 14:59:11 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 14:59:11 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 14:59:11 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 14:59:11 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:00:01 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:00:02 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:00:04 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:00:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:00:05 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:00:48 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 15:00:48 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 15:00:48 INFO  ClientController:57 - ***Login : Dexx
+2016-05-17 15:00:48 INFO  ClientController:58 - ***Name : Dexx
+2016-05-17 15:00:48 INFO  ClientController:59 - ***Email : dexter@ter.wrt
+2016-05-17 15:00:48 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 15:00:48 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Dexx","pass":"qqqq","name":"Dexx","ip":"176.105.1.157","email":"dexter@ter.wrt"},"type":"REGISTRATION"}
+2016-05-17 15:00:48 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 15:00:50 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 15:00:51 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:00:51 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:00:52 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:00:54 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:00:54 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:00:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:01:15 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 15:01:15 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 15:01:15 INFO  ClientController:57 - ***Login : Vano
+2016-05-17 15:01:15 INFO  ClientController:58 - ***Name : Vano
+2016-05-17 15:01:15 INFO  ClientController:59 - ***Email : vano@ukr.net
+2016-05-17 15:01:15 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 15:01:15 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vano","pass":"qqqq","name":"Vano","ip":"176.105.1.157","email":"vano@ukr.net"},"type":"REGISTRATION"}
+2016-05-17 15:01:15 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 15:01:16 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 15:01:18 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:01:18 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:01:18 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:01:30 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:01:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:01:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:01:52 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 15:01:52 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 15:01:52 INFO  ClientController:57 - ***Login : Vanon
+2016-05-17 15:01:52 INFO  ClientController:58 - ***Name : Vanon
+2016-05-17 15:01:52 INFO  ClientController:59 - ***Email : vanon@wt.wt
+2016-05-17 15:01:52 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 15:01:52 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vanon","pass":"qqqq","name":"Vanon","ip":"176.105.1.157","email":"vanon@wt.wt"},"type":"REGISTRATION"}
+2016-05-17 15:01:52 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 15:01:52 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 15:01:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:01:53 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:01:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:02:00 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vano","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:02:00 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:43476 want search new friends by 'Vano'
+2016-05-17 15:02:00 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vano', name='Vano', friends=[]}, ClientDTO{login='Vanon', name='Vanon', friends=[]}]
+2016-05-17 15:15:39 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:16:21 INFO  Server:34 - ***Server was run
+2016-05-17 15:16:29 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:16:29 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:17:09 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:17:10 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:17:10 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c232a41: startup date [Tue May 17 15:17:10 EEST 2016]; root of context hierarchy
+2016-05-17 15:17:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-17 15:17:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-17 15:17:12 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-17 15:17:12 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-17 15:17:12 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-17 15:17:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-17 15:17:13 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-17 15:17:13 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-17 15:17:13 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-17 15:17:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-17 15:17:14 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-17 15:17:15 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-17 15:17:16 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-17 15:17:18 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-17 15:17:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:17:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:17:19 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:17:19 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:17:21 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 15:17:21 INFO  ClientController:83 - ***User entered : 
+2016-05-17 15:17:21 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 15:17:21 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 15:17:21 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:17:21 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:17:21 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:17:21 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:17:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:17:23 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:17:23 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:17:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:17:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:17:23 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:17:23 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:22:21 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vano","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:22:21 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:43897 want search new friends by 'Vano'
+2016-05-17 15:22:21 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vano', name='Vano', friends=[]}, ClientDTO{login='Vanon', name='Vanon', friends=[]}]
+2016-05-17 15:22:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"Vano","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 15:22:46 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:43897 want add new friend 'Vano'
+2016-05-17 15:25:20 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:25:20 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:25:22 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:25:22 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:25:22 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:25:22 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:25:23 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:25:27 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:25:27 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:25:27 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:25:27 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:25:27 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:25:27 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:25:28 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 15:25:28 INFO  ClientController:83 - ***User entered : 
+2016-05-17 15:25:28 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 15:25:28 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 15:25:29 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:25:29 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:25:29 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:25:29 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:25:29 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:25:30 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:25:30 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:25:30 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:25:30 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:25:30 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:25:30 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:25:37 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Vano","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:25:37 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:44394 want search new friends by 'Vano'
+2016-05-17 15:25:37 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vanon', name='Vanon', friends=[]}]
+2016-05-17 15:25:40 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"Vanon","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 15:25:40 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:44394 want add new friend 'Vanon'
+2016-05-17 15:34:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:34:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:34:47 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:34:47 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:35:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:35:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:35:44 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:35:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:35:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:36:09 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 15:36:09 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 15:36:09 INFO  ClientController:57 - ***Login : BatMan
+2016-05-17 15:36:09 INFO  ClientController:58 - ***Name : BatMan
+2016-05-17 15:36:09 INFO  ClientController:59 - ***Email : batman@ukr.net
+2016-05-17 15:36:09 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 15:36:09 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqq","name":"BatMan","ip":"176.105.1.157","email":"batman@ukr.net"},"type":"REGISTRATION"}
+2016-05-17 15:36:09 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 15:36:10 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 15:36:11 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:36:11 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:36:12 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:38:12 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:38:12 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:38:12 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:38:12 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:38:12 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:38:12 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:38:13 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 15:38:13 INFO  ClientController:83 - ***User entered : 
+2016-05-17 15:38:13 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 15:38:13 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 15:38:15 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:38:15 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:38:15 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:38:15 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:38:16 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:38:16 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:38:16 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:38:16 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:38:16 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:38:16 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:38:16 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:38:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Bat","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:38:26 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:45070 want search new friends by 'Bat'
+2016-05-17 15:38:26 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-17 15:38:29 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 15:38:29 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:45070 want add new friend 'BatMan'
+2016-05-17 15:49:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:49:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:49:30 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:49:30 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:49:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:49:34 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:49:35 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:49:40 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:41 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:49:42 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:49:42 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:49:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:49:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:49:43 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:49:43 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:49:45 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 15:49:45 INFO  ClientController:83 - ***User entered : 
+2016-05-17 15:49:45 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 15:49:45 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 15:49:46 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:46 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:49:46 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:49:46 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:49:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:49:47 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:49:47 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:49:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:49:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:49:47 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:49:47 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:49:52 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:52 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:49:52 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:49:52 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:49:52 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:49:53 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 15:49:54 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:49:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:50:19 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 15:50:19 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 15:50:19 INFO  ClientController:57 - ***Login : Werr
+2016-05-17 15:50:19 INFO  ClientController:58 - ***Name : werr
+2016-05-17 15:50:19 INFO  ClientController:59 - ***Email : wer@ukr.net
+2016-05-17 15:50:19 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 15:50:19 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Werr","pass":"qqqq","name":"werr","ip":"176.105.1.157","email":"wer@ukr.net"},"type":"REGISTRATION"}
+2016-05-17 15:50:19 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 15:50:20 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 15:50:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 15:50:22 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:50:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:50:24 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:50:24 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:50:24 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:50:24 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:50:24 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:50:24 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:50:25 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 15:50:25 INFO  ClientController:83 - ***User entered : 
+2016-05-17 15:50:25 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 15:50:25 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 15:50:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 15:50:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 15:50:25 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 15:50:25 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 15:50:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 15:50:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 15:50:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 15:50:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 15:50:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 15:50:26 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 15:50:26 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 15:50:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"wer","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:50:32 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:45836 want search new friends by 'wer'
+2016-05-17 15:50:32 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Werr', name='werr', friends=[]}]
+2016-05-17 15:50:39 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"Werr","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 15:50:39 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:45836 want add new friend 'Werr'
+2016-05-17 15:50:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"werafas","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 15:50:51 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:45836 want search new friends by 'werafas'
+2016-05-17 15:50:51 INFO  FriendServiceThread:48 - ***No clients with "werafas" login were found
+2016-05-17 16:26:39 INFO  Server:34 - ***Server was run
+2016-05-17 16:27:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 16:27:59 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:28:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:28:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:28:02 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@356f11ff: startup date [Tue May 17 16:28:02 EEST 2016]; root of context hierarchy
+2016-05-17 16:28:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-17 16:28:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-17 16:28:05 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-17 16:28:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-17 16:28:07 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-17 16:28:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-17 16:28:07 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-17 16:28:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-17 16:28:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-17 16:28:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-17 16:28:14 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-17 16:28:14 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-17 16:28:16 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-17 16:28:20 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-17 16:28:21 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:28:21 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:28:21 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:28:21 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 16:28:27 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 16:28:27 INFO  ClientController:83 - ***User entered : 
+2016-05-17 16:28:27 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 16:28:27 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 16:28:29 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 16:28:29 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 16:28:29 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 16:28:29 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 16:28:32 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:28:34 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:28:34 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:28:34 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:28:34 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:28:34 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:28:34 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 16:35:31 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 16:35:34 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 16:35:34 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 16:35:34 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 16:35:34 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 16:35:36 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:35:44 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:35:44 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:35:44 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:35:44 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:35:44 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:35:44 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 16:35:45 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 16:35:45 INFO  ClientController:83 - ***User entered : 
+2016-05-17 16:35:45 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 16:35:45 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 16:35:46 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 16:35:46 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 16:35:46 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 16:35:46 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 16:35:51 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:35:53 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:35:53 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:35:53 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:35:53 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:35:53 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:35:53 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 16:40:14 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 16:40:14 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 16:40:14 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 16:40:14 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 16:40:54 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 16:40:54 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 16:40:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:41:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:41:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:41:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:41:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:41:01 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:41:01 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 16:41:02 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 16:41:02 INFO  ClientController:83 - ***User entered : 
+2016-05-17 16:41:02 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 16:41:02 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 16:41:03 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 16:41:03 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 16:41:03 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 16:41:03 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 16:41:04 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 16:41:05 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 16:41:05 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 16:41:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 16:41:05 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 16:41:05 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 16:41:05 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:04:56 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:04:59 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:04:59 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:04:59 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:04:59 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:05:02 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:05:05 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:05:05 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:05:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:05:05 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:05:05 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:05:05 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:05:07 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:05:07 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:05:07 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:05:07 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:05:08 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:05:08 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:05:08 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:05:08 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:05:09 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:05:09 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:05:09 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:05:09 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:05:09 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:05:09 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:05:09 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:15:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:15:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:15:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:15:25 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:15:25 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:15:27 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:15:30 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:15:30 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:15:30 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:15:30 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:15:30 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:15:30 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:15:31 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:15:31 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:15:31 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:15:31 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:15:32 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:15:32 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:15:32 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:15:32 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:15:34 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:15:34 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:15:34 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:15:34 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:15:34 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:15:34 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:15:34 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:21:33 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:21:36 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:21:36 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:21:36 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:21:36 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:21:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:21:41 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:21:41 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:21:41 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:21:41 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:21:41 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:21:41 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:21:43 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:21:43 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:21:43 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:21:43 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:21:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:21:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:21:44 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:21:44 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:21:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:21:45 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:21:45 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:21:46 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:21:46 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:21:46 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:21:46 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:27:30 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:27:33 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:27:33 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:27:33 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:27:33 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:27:34 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:27:36 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:27:36 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:27:36 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:27:36 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:27:36 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:27:36 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:27:38 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:27:38 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:27:38 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:27:38 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:27:38 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:27:38 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:27:38 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:27:38 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:27:40 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:27:40 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:27:40 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:27:40 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:27:40 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:27:40 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:27:40 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:40:17 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:40:20 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:40:20 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:40:20 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:40:20 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:40:21 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:40:23 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:40:23 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:40:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:40:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:40:23 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:40:23 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:40:24 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:40:24 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:40:24 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:40:24 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:40:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:40:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:40:25 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:40:25 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:40:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:40:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:40:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:40:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:40:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:40:26 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:40:26 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:45:11 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:45:11 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:45:14 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:45:14 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:45:14 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:45:14 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:45:15 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:45:16 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:45:16 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:45:16 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:45:16 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:45:16 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:45:16 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:45:18 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:45:18 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:45:18 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:45:18 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:45:19 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:45:19 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:45:19 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:45:19 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:45:20 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:45:20 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:45:20 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:45:20 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:45:20 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:45:20 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:45:20 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:54:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:54:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 17:54:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:54:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:54:44 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:54:44 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:54:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:54:47 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:54:47 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:54:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:54:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:54:47 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:54:47 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 17:54:48 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 17:54:48 INFO  ClientController:83 - ***User entered : 
+2016-05-17 17:54:48 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 17:54:48 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 17:54:49 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 17:54:49 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 17:54:49 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 17:54:49 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 17:54:50 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 17:54:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 17:54:51 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 17:54:51 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 17:54:51 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 17:54:51 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 17:54:51 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 18:58:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 18:58:28 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 18:58:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 18:58:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 18:58:30 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 18:58:30 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 18:58:32 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 18:58:39 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 18:58:39 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 18:58:40 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 18:58:40 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 18:58:40 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 18:58:40 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 18:58:41 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 18:58:41 INFO  ClientController:83 - ***User entered : 
+2016-05-17 18:58:41 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 18:58:41 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 18:58:42 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 18:58:42 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 18:58:42 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 18:58:42 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 18:58:42 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 18:58:43 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 18:58:43 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 18:58:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 18:58:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 18:58:43 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 18:58:43 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 18:59:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 18:59:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 18:59:23 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 18:59:23 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 18:59:23 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 18:59:23 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:11:15 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:11:15 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:11:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:11:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:11:19 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:11:19 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:11:23 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:11:23 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:11:23 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:11:23 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:11:26 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:11:26 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:11:26 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:11:26 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:11:27 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:11:29 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:11:29 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:11:29 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:11:29 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:11:29 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:11:29 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:18:40 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:18:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:18:43 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:18:43 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:18:43 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:18:43 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:18:44 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:18:45 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:18:45 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:18:45 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:18:45 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:18:45 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:18:45 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:18:47 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:18:47 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:18:47 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:18:47 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:18:48 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:18:48 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:18:48 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:18:48 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:18:49 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:18:49 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:18:49 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:18:49 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:18:49 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:18:50 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:18:50 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:33:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:33:43 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:33:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:33:45 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:33:45 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:33:45 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:33:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:33:52 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:33:52 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:33:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:33:52 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:33:52 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:33:52 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:33:54 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:33:54 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:33:54 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:33:54 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:33:55 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:33:55 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:33:55 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:33:55 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:33:55 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:33:56 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:33:56 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:33:56 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:33:56 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:33:56 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:33:56 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:46:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:46:54 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:46:54 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:46:54 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:46:54 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:46:56 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:47:10 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:47:10 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:47:10 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:47:10 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:47:10 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:47:10 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:47:11 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:47:11 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:47:11 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:47:11 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:47:12 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:47:12 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:47:12 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:47:12 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:47:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:47:13 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:47:13 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:47:13 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:47:13 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:47:13 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:47:13 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:47:25 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:47:25 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:47:25 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:47:25 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:47:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:47:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:47:25 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:47:25 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:47:25 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:47:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:47:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:47:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:47:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:47:26 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:47:26 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:48:10 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-17 19:48:10 INFO  ClientController:83 - ***User entered : 
+2016-05-17 19:48:10 INFO  ClientController:84 - ***Login : Oleg
+2016-05-17 19:48:10 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-17 19:48:10 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:48:10 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:48:10 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:48:10 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:48:11 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:48:12 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-17 19:48:12 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-17 19:48:12 INFO  ClientDao:39 - ***Client was founded
+2016-05-17 19:48:12 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqq'}
+2016-05-17 19:48:12 INFO  MessageServiceThread:31 - ***All history was sent
+2016-05-17 19:48:12 INFO  MessageServiceThread:34 - ***All friends was sent
+2016-05-17 19:48:50 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Der","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 19:48:51 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:58254 want search new friends by 'Der'
+2016-05-17 19:48:53 INFO  FriendServiceThread:48 - ***No clients with "Der" login were found
+2016-05-17 19:48:54 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Der","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 19:48:54 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:58254 want search new friends by 'Der'
+2016-05-17 19:48:54 INFO  FriendServiceThread:48 - ***No clients with "Der" login were found
+2016-05-17 19:49:03 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:49:04 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:49:09 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-17 19:49:09 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:49:10 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:49:33 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-17 19:49:33 INFO  ClientController:56 - ***User was registered : 
+2016-05-17 19:49:33 INFO  ClientController:57 - ***Login : Bandit
+2016-05-17 19:49:33 INFO  ClientController:58 - ***Name : Bandit
+2016-05-17 19:49:33 INFO  ClientController:59 - ***Email : bandit@iwe.we
+2016-05-17 19:49:33 INFO  ClientController:60 - ***Pass : qqqq
+2016-05-17 19:49:33 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Bandit","pass":"qqqq","name":"Bandit","ip":"176.105.1.157","email":"bandit@iwe.we"},"type":"REGISTRATION"}
+2016-05-17 19:49:33 INFO  ServerWebSocket:75 - ***REGISTRATION case
+2016-05-17 19:49:37 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-17 19:49:38 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-17 19:49:39 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:49:39 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-17 19:49:45 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"ban","name":"Oleg","email":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-17 19:49:45 INFO  FriendServiceThread:66 - ***Client /127.0.0.1:58254 want search new friends by 'ban'
+2016-05-17 19:49:45 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Bandit', name='Bandit', friends=[]}]
+2016-05-17 19:49:50 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","friends":[{"login":"Bandit","name":"unknown","email":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-17 19:49:50 INFO  FriendServiceThread:56 - ***Client /127.0.0.1:58254 want add new friend 'Bandit'
+2016-05-17 19:50:07 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-17 19:50:07 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-17 19:50:07 ERROR MessageServiceThread:43 - InterruptedException sleep interrupted
+2016-05-17 19:50:07 INFO  MessageServiceThread:49 - ***Thread was killed
+2016-05-17 19:50:10 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!

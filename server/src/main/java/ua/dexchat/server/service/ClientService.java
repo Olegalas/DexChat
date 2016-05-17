@@ -135,4 +135,7 @@ public class ClientService {
         return clientDao.findClientByLogin(login);
     }
 
+    public void removeFriend(String loginClient, String loginFriend){
+        clientDao.removeFriendFromClient(loginClient, loginFriend);
+    }
 }
