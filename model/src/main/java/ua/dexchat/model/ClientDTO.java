@@ -8,31 +8,34 @@ import java.util.List;
  */
 public class ClientDTO {
 
+    private String idClient;
     private String login;
     private String name;
     private String email;
 
     private List<ClientDTO> friends = new ArrayList<>();
 
-    public ClientDTO(String login, String name, String email){
+    public ClientDTO(String login, String name, String email, String id){
         this.login = login;
         this.name = name;
         this.email = email;
+        this.idClient = id;
     }
 
-    public ClientDTO(String login, String name, String email, List<ClientDTO> friends){
+    public ClientDTO(String login, String name, String email, String id, List<ClientDTO> friends){
         this.login = login;
         this.name = name;
         this.friends = friends;
         this.email = email;
+        this.idClient = id;
     }
 
     public static ClientDTO getClientDTOWithFriends(Client client){
-        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail(), initFriends(client.getMyFriends()));
+        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail(), String.valueOf(client.getId()), initFriends(client.getMyFriends()));
     }
 
     public static ClientDTO getClientDTOWithoutFriends(Client client){
-        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail());
+        return new ClientDTO(client.getLogin(), client.getName(), client.getEmail(), String.valueOf(client.getId()));
     }
 
     private static List<ClientDTO> initFriends(List<Client> myFriends) {
@@ -73,6 +76,14 @@ public class ClientDTO {
 
     public void setFriends(List<ClientDTO> friends) {
         this.friends = friends;
+    }
+
+    public String getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(String idClient) {
+        this.idClient = idClient;
     }
 
     @Override

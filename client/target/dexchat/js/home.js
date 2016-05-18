@@ -2,6 +2,7 @@ var socket = new WebSocket("ws://localhost:8887");
 var history;
 var id;
 var mainLogin;
+var friendLogin;
 
 socket.onopen = function() {
     console.log("Connection complete");
@@ -49,6 +50,9 @@ socket.onmessage = function (event) {
         case "FRIEND":{
 
             console.log(webMessage.message.friends);
+            id = webMessage.message.idClient;
+            console.log("your id : " + id);
+
 
             if(webMessage.message.friends.length == 0 && webMessage.message.login != mainLogin){
 
@@ -115,7 +119,7 @@ socket.onmessage = function (event) {
 
             console.log(webMessage.message);
             history = webMessage.message;
-
+            
             break;
         }
         case "TEXT":{
@@ -124,11 +128,6 @@ socket.onmessage = function (event) {
                 $("#model_message").show();
                 $("#myModal").modal();
             }
-            break;
-        }
-        case "ID":{
-
-            id = webMessage.message;
             break;
         }
 
@@ -201,12 +200,16 @@ function createUserDiv(login) {
         id: login
 
     }).click(function(){
-        
+
+        friendLogin = login;
         $(".user").css("background", "#46be8a")
         $(this).css("background", "#33ccff");
 
         if(typeof history[0] !== 'undefined' && history[0] !== null){
+            $("#empty_answer").hide();
             initDialogFrame(login);    
+        } else {
+            $("#empty_answer").show();
         }
         
     }).appendTo('#chat-users_frame');
@@ -312,13 +315,15 @@ function initDialogFrame(login){
 
     for(i = 0; i < history.length; i++){
         if(login == history[i].loginSender){
-            for(j = 0; j < history[i].messages.length; ++i){
-                if(history[i].messages[i].idSender == id){
-                    initAnswer(mainLogin, history[i].messages[i].message, history[i].messages[i].date, "answer right");
+            for(j = 0; j < history[i].messages.length; ++j){
+                if(history[i].messages[j].idSender == id){
+                    initAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date, "answer right");
                 } else{
-                    initAnswer(mainLogin, history[i].messages[i].message, history[i].messages[i].date, "answer left");
+                    initAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date, "answer left");
                 }
+                break;
             }
+            break;
         }
     }
     console.log("init dialog frame complete");
@@ -363,3 +368,40 @@ function initLeftAnswer(login, message, date){
 
 }
 
+
+$("#answer_button").click(function () {
+
+    // 1) get message from input
+    var messageText = $("#answer_input").val();
+    console.log(messageText);
+    
+    // 2) init new answer tag to dialog frame
+    var date = new Date();
+    console.log(date.toLocaleString());
+    initAnswer(mainLogin, messageText, date.toLocaleString());
+    console.log("after initAnswer");
+
+
+    // 3) persist message in history
+    for(i = 0; i < history.length; i++){
+        if(friendLogin == history[i].loginSender){
+
+            // create message
+            var message = {
+
+                idSender: id, 
+                idReceiver: history[i].idSender,
+                message: messageText
+
+            };
+
+            history[i].messages.add(message);
+            console.log("after add to History");
+            console.log(message);
+        }
+    }
+
+    // 4) send it on server to permanently persist in database history
+    sendMessage("MESSAGE", message);
+
+});
