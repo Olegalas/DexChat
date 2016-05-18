@@ -40,7 +40,8 @@ public class WebSocketMessage {
         LOGIN,
         REGISTRATION,
         CONFIRMATION,
-        EMAIL
+        EMAIL,
+        ID
 
     }
 }

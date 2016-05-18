@@ -40,16 +40,17 @@ public class FriendServiceThread extends Thread {
             if("delete".equals(clientDTO.getEmail())){
                 // name field - login client // login field - login friend
                 service.removeFriend(clientDTO.getName(), clientDTO.getLogin());
-            }
-
-            List<ClientDTO> clients = clientsSearch();
-
-            if(clients.isEmpty()){
-                LOGGER.info("***No clients with \"" + clientDTO.getLogin() + "\" login were found");
-                WebSocketUtils.sendTextMessageToClient("incorrect friend login", clientSocket);
+                WebSocketUtils.sendTextMessageToClient("friend - " + clientDTO.getLogin() + " was delete", clientSocket);
             }else{
-                LOGGER.info("***Were found next clients : " + clients.toString());
-                service.sendAllFriends(clientSocket, clients);
+                List<ClientDTO> clients = clientsSearch();
+
+                if(clients.isEmpty()){
+                    LOGGER.info("***No clients with \"" + clientDTO.getLogin() + "\" login were found");
+                    WebSocketUtils.sendTextMessageToClient("incorrect friend login", clientSocket);
+                }else{
+                    LOGGER.info("***Were found next clients : " + clients.toString());
+                    service.sendAllFriends(clientSocket, clients);
+                }
             }
 
         } else{

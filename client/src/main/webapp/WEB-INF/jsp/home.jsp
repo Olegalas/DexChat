@@ -43,32 +43,18 @@
         </div>
         <div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
             <div class="col-inside-lg decor-default">
+                <!-- DIALOG  -->
                 <div class="chat-body">
                     <h6>DexChat</h6>
+                    <p style="display: none" id="empty_answer">Empty message list</p>
 
-
-                    <!-- DIALOG  -->
-
-
-                    <div class="answer left">
-                        <div class="avatar">
-                            <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
-                            <div class="status offline"></div>
-                        </div>
-                        <div class="name">Friend</div>
-                        <div class="text">
-                            Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur
-                            adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-                        </div>
-                        <div class="time">5 min ago</div>
-                    </div>
 
                     <!-- ANSWER ADD -->
 
                     <div class="answer-add">
-                        <input placeholder="Write a message">
+                        <input placeholder="Write a message" id="answer_input">
                         <span class="answer-btn answer-btn-1"></span>
-                        <span class="answer-btn answer-btn-2"></span>
+                        <span class="answer-btn answer-btn-2" id="answer_button"></span>
                     </div>
                 </div>
             </div>

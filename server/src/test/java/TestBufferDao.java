@@ -10,6 +10,8 @@ import ua.dexchat.server.dao.BufferDao;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.service.ClientService;
 
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceException;
 import java.util.Date;
 
 /**
@@ -54,7 +56,7 @@ public class TestBufferDao {
         Assert.assertEquals(bufFromDB, buff);
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void testFindBufferByIdOwnerNegative(){
         TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(UNEXPECTED_ID);
         Assert.assertNull(bufFromDB);
@@ -72,14 +74,14 @@ public class TestBufferDao {
         Assert.assertNull(bufFromDB);
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void testRemoveBuffer(){
         bufferDao.removeBuffer(buff);
         TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(ID_OWNER);
         Assert.assertNull(bufFromDB);
     }
 
-    @Test(expected = TransactionSystemException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testRemoveBufferNegative(){
         bufferDao.removeBuffer(new TemporaryBuffer());
         TemporaryBuffer bufFromDB = bufferDao.findBufferByIdOwner(ID_OWNER);
@@ -113,18 +115,18 @@ public class TestBufferDao {
         Assert.assertEquals(buff.getMessages().size(), 2); // we put second message, that't why we have size - 2
     }
 
-    @Test(expected = TransactionSystemException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testSaveMessageInBufferNegative(){
         bufferDao.saveMessageInBuffer(null);
         buff = bufferDao.findBufferByIdOwner(ID_OWNER);
     }
 
-    @Test(expected = TransactionSystemException.class)
+    @Test(expected = PersistenceException.class)
     public void testSaveMessageInBufferNegativeDuplicating(){
         Message newMessageFirst = new Message(TEXT_MESSAGE, ID_SENDER, ID_OWNER, new Date());
         newMessageFirst.setTempBuffer(buff);
         bufferDao.saveMessageInBuffer(newMessageFirst);
-        bufferDao.saveMessageInBuffer(newMessageFirst); // resave - will throw TransactionSystemException.class
+        bufferDao.saveMessageInBuffer(newMessageFirst); // resave - will throw PersistenceException.class
      }
 
     @Test
@@ -147,7 +149,7 @@ public class TestBufferDao {
         Assert.assertEquals(history, historyFromDB);
     }
 
-    @Test(expected = TransactionSystemException.class)
+    @Test(expected = PersistenceException.class)
     public void testSaveNewHistoryNegativeDuplicating(){
         History history = new History();
 
@@ -162,11 +164,11 @@ public class TestBufferDao {
         clientDao.saveClient(owner);
         clientDao.saveClient(sender);
         bufferDao.saveNewHistory(history);
-        bufferDao.saveNewHistory(history); // resave - will throw TransactionSystemException.class
+        bufferDao.saveNewHistory(history); // resave - will throw PersistenceException.class
 
     }
 
-    @Test(expected = TransactionSystemException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testSaveNewHistoryNegativeNull(){
         bufferDao.saveNewHistory(null);
     }

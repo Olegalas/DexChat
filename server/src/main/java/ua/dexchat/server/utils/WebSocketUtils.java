@@ -16,6 +16,12 @@ public class WebSocketUtils {
         clientSocket.send(jsonMessage);
     }
 
+    public static void sendIdMessageToClient(String text, WebSocket clientSocket){
+        WebSocketMessage message = new WebSocketMessage(text, WebSocketMessage.MessageType.ID);
+        String jsonMessage = JsonUtils.transformObjectInJson(message);
+        clientSocket.send(jsonMessage);
+    }
+
     public static void sendMessageToClient(Message message, WebSocket clientSocket){
         WebSocketMessage webMessage = new WebSocketMessage(message, WebSocketMessage.MessageType.MESSAGE);
         String jsonWebMessage = JsonUtils.transformObjectInJson(webMessage);

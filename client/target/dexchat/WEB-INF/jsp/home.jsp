@@ -43,13 +43,9 @@
         </div>
         <div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
             <div class="col-inside-lg decor-default">
+                <!-- DIALOG  -->
                 <div class="chat-body">
                     <h6>DexChat</h6>
-
-
-                    <!-- DIALOG  -->
-
-
                     <div class="answer left">
                         <div class="avatar">
                             <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">

@@ -4,6 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.dexchat.model.*;
 import ua.dexchat.server.service.ClientService;
 
+import javax.persistence.NoResultException;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class TestClientService {
     private static final int EMPTY_FRIENDS_LIST = 0;
     private static final int TEST_ID_SENDER = 10;
     private int idOwnerBuffer;
+    private int idSender;
 
     private final ApplicationContext context = new ClassPathXmlApplicationContext("/spring-context.xml");
     private final ClientService service = context.getBean(ClientService.class);
@@ -41,7 +43,7 @@ public class TestClientService {
         idOwnerBuffer = service.saveClient(ownerLogin);
 
         secondLogin = new Login("Tomas", "pass", "LoginSecond", "127.0.0.1", "email2@ukr.net");
-        service.saveClient(secondLogin);
+        idSender = service.saveClient(secondLogin);
 
     }
 
@@ -79,7 +81,7 @@ public class TestClientService {
 
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void findByLoginNegative(){
 
         Client clientFromDB = service.findByLogin(WRONG_LOGIN);
@@ -111,7 +113,7 @@ public class TestClientService {
 
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void findTemporaryBufferNegative(){
 
         TemporaryBuffer buffFromDB = service.findTemporaryBuffer(UNEXPECTED_ID);
@@ -122,27 +124,27 @@ public class TestClientService {
     @Test
     public void sendMessageToFriend(){
 
-        Message message = new Message(TEST_TEXT_MESSAGE, TEST_ID_SENDER, idOwnerBuffer, new Date());
+        Message message = new Message(TEST_TEXT_MESSAGE, idSender, idOwnerBuffer, new Date());
         service.sendMessageToFriend(message);
         TemporaryBuffer buffFromDB = service.findTemporaryBuffer(idOwnerBuffer);
         Assert.assertEquals(TEST_TEXT_MESSAGE, buffFromDB.getMessages().get(0).getMessage());
 
     }
 
-    @Test
+    @Test(expected = NoResultException.class)
     public void sendMessageToFriendNegative(){
 
         Message message = new Message(TEST_TEXT_MESSAGE, TEST_ID_SENDER, UNEXPECTED_ID, new Date());
-        service.sendMessageToFriend(message); // AOP will be catching WasNotFoundException
+        service.sendMessageToFriend(message);
 
     }
 
     @Test
     public void saveMessageInHistory(){
 
-        Message message = new Message(TEST_TEXT_MESSAGE, TEST_ID_SENDER, idOwnerBuffer, new Date());
+        Message message = new Message(TEST_TEXT_MESSAGE, idSender, idOwnerBuffer, new Date());
         service.saveMessageInHistory(message.getIdReceiver(), message.getIdSender(), message);
-        Client client = service.findByLogin(ownerLogin.login);
+        Client client = service.findByLogin(secondLogin.login);
 
         Assert.assertEquals(TEST_TEXT_MESSAGE, client.getHistory().get(0).getMessages().get(0).getMessage());
 

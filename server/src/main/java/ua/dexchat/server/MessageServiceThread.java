@@ -5,6 +5,7 @@ import org.java_websocket.WebSocket;
 import ua.dexchat.model.Client;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
+import ua.dexchat.server.utils.WebSocketUtils;
 
 /**
  * Created by dexter on 15.04.16.
@@ -26,6 +27,8 @@ public class MessageServiceThread extends Thread {
 
     @Override
     public void run() {
+
+        WebSocketUtils.sendIdMessageToClient(String.valueOf(client.getId()), clientSocket);
 
         service.sendAllHistoryToClient(clientSocket, client);
         LOGGER.info("***All history was sent");

@@ -1,5 +1,7 @@
 var socket = new WebSocket("ws://localhost:8887");
-
+var history;
+var id;
+var mainLogin;
 
 socket.onopen = function() {
     console.log("Connection complete");
@@ -23,7 +25,7 @@ socket.onmessage = function (event) {
 
     var webMessage = JSON.parse(event.data);
 
-    var mainLogin;
+
 
     $(document).ready(function () {
 
@@ -42,77 +44,93 @@ socket.onmessage = function (event) {
         }
     });
 
-    if ("incorrect friend login" == webMessage.message){
-        $("#model_message").show();
-        $("#myModal").modal();
-    }
+    switch (webMessage.type){
 
-    if("FRIEND" == webMessage.type){
-        
-        console.log(webMessage.message.friends);
- 
-        if(webMessage.message.friends.length == 0 && webMessage.message.login != mainLogin){
+        case "FRIEND":{
 
-            $('<div class="user_model"/>').attr({
+            console.log(webMessage.message.friends);
 
-                id: webMessage.message.login
+            if(webMessage.message.friends.length == 0 && webMessage.message.login != mainLogin){
 
-            }).appendTo("#chat-users_model");
+                $('<div class="user_model"/>').attr({
 
-            createFriendForModel(webMessage.message.login, webMessage.message.login);
+                    id: webMessage.message.login
 
-            $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("add").click(function(){
-                
-                $( ".user_model" ).remove();
-                $("#model_add_message").show();
-                
-                createUserDiv(webMessage.message.login);
+                }).appendTo("#chat-users_model");
 
-                var friend = {
+                createFriendForModel(webMessage.message.login, webMessage.message.login);
 
-                    login: mainLogin,
-                    name: "unknown",
-                    email: "unknown",
-                    friends: [{login: webMessage.message.login, name: "unknown", email: "unknown", friends:[]}]
+                $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("add").click(function(){
 
-                };
+                    $( ".user_model" ).remove();
+                    $("#model_add_message").show();
 
-                sendMessage("FRIEND", friend);
-                
-            }).appendTo('#' + webMessage.message.login + "_avatar");
+                    createUserDiv(webMessage.message.login);
 
-            $("#model_message").hide();
-            $("#myModal").modal();
+                    var friend = {
+
+                        login: mainLogin,
+                        name: "unknown",
+                        email: "unknown",
+                        friends: [{login: webMessage.message.login, name: "unknown", email: "unknown", friends:[]}]
+
+                    };
+
+                    sendMessage("FRIEND", friend);
+
+                }).appendTo('#' + webMessage.message.login + "_avatar");
+
+                $("#model_message").hide();
+                $("#myModal").modal();
 
 
-        } else{
+            } else{
 
-            for(i = 0; i != webMessage.message.friends.length; ++i){
-                console.log(webMessage.message.friends[i].login);
+                for(i = 0; i != webMessage.message.friends.length; ++i){
+                    console.log(webMessage.message.friends[i].login);
 
 
-                
 
-                // EXAMPLE
 
-                // <div class="user">
-                //     <div class="avatar">
-                //         <img src="http://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                //             <!-- status online; off; busy; offline-->
-                //             <div class="status online"></div>
-                //     </div>
-                //     <div class="name">Friend</div>
-                //     <div class="mood">mood</div>
-                // </div>
+                    // EXAMPLE
 
-                createUserDiv(webMessage.message.friends[i].login);
+                    // <div class="user">
+                    //     <div class="avatar">
+                    //         <img src="http://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
+                    //             <!-- status online; off; busy; offline-->
+                    //             <div class="status online"></div>
+                    //     </div>
+                    //     <div class="name">Friend</div>
+                    //     <div class="mood">mood</div>
+                    // </div>
 
+                    createUserDiv(webMessage.message.friends[i].login);
+
+                }
             }
-        }
-    } else  if("HISTORY" == webMessage.type){
 
-        console.log(webMessage.message);
-        // init dialog frame
+            break;
+        }
+        case "HISTORY":{
+
+            console.log(webMessage.message);
+            history = webMessage.message;
+
+            break;
+        }
+        case "TEXT":{
+
+            if ("incorrect friend login" == webMessage.message){
+                $("#model_message").show();
+                $("#myModal").modal();
+            }
+            break;
+        }
+        case "ID":{
+
+            id = webMessage.message;
+            break;
+        }
 
     }
 };
@@ -178,10 +196,19 @@ function sendMessage(type, message) {
 
 function createUserDiv(login) {
 
-    $('<div class="user" style="position: relative;padding: 0 0 0 50px; display: block; cursor: pointer; margin: 0 0 20px;"/>').attr({
+    $('<div class="user" style="background: #46be8a;border:1px ridge black;; position: relative;padding: 0 0 0 50px; display: block; cursor: pointer; margin: 0 0 20px;"/>').attr({
 
         id: login
 
+    }).click(function(){
+        
+        $(".user").css("background", "#46be8a")
+        $(this).css("background", "#33ccff");
+
+        if(typeof history[0] !== 'undefined' && history[0] !== null){
+            initDialogFrame(login);    
+        }
+        
     }).appendTo('#chat-users_frame');
 
     createFriend(login);
@@ -203,8 +230,20 @@ function createUserDiv(login) {
 
         $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("remove").click(function(){
 
-            alert("CLICK");
-            
+            $('#' + login).remove();
+            alert("Friend was deleted");
+            var friend = {
+
+                login: login,
+                name: $('#login').text(),
+                email: "delete",
+                friends: []
+
+            };
+
+            sendMessage("FRIEND", friend);
+
+
         }).appendTo('#id_model_' + login + "_avatar");
 
         $("#myModal").modal();
@@ -269,6 +308,58 @@ $.getScript("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 
 });
 
+function initDialogFrame(login){
+
+    for(i = 0; i < history.length; i++){
+        if(login == history[i].loginSender){
+            for(j = 0; j < history[i].messages.length; ++i){
+                if(history[i].messages[i].idSender == id){
+                    initAnswer(mainLogin, history[i].messages[i].message, history[i].messages[i].date, "answer right");
+                } else{
+                    initAnswer(mainLogin, history[i].messages[i].message, history[i].messages[i].date, "answer left");
+                }
+            }
+        }
+    }
+    console.log("init dialog frame complete");
+}
+
+function initAnswer(login, message, date, classType){
+
+    $('<div/>').attr({
+        
+        id: "dialog_ " + login,
+        class: classType
+        
+    }).insertBefore( ".answer-add" );
 
 
+    $('<div calss="avatar"/>').attr({
+
+        id: "dialog_avatar_" + login
+
+    }).appendTo("#dialog_ " + login);
+
+    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({
+
+        alt: login
+
+    }).appendTo("#dialog_avatar_" + login);
+
+    $('<div class="name" />').text(login)
+        .appendTo("#dialog_avatar_" + login);
+
+    $('<div class="text" />').text(message)
+        .appendTo("#dialog_avatar_" + login);
+
+    $('<div class="time" />').text(date)
+        .appendTo("#dialog_avatar_" + login);
+
+}
+
+function initLeftAnswer(login, message, date){
+
+
+
+}
 

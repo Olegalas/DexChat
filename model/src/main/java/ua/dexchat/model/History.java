@@ -21,6 +21,9 @@ public class History extends IdGenerate {
     @Column(nullable = false, unique = true)
     private int idSender;
 
+
+    private String loginSender;
+
     public History() {
     }
 
@@ -46,6 +49,14 @@ public class History extends IdGenerate {
 
     public void setIdSender(int idSender) {
         this.idSender = idSender;
+    }
+
+    public String getLoginSender() {
+        return loginSender;
+    }
+
+    public void setLoginSender(String loginSender) {
+        this.loginSender = loginSender;
     }
 
     @Override

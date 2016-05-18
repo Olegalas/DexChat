@@ -35,7 +35,7 @@ public class ClientService {
         saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
     }
 
-    public void saveMessageInHistory(int idBufferOwner, int idSenderInBuffer, Message message){
+    public void saveMessageInHistory(int idSenderInBuffer, int idBufferOwner, Message message){
 
         Client client = clientDao.findClient(idBufferOwner);
 
@@ -53,6 +53,10 @@ public class ClientService {
 
         newHistory.setIdOwner(client);
         newHistory.setIdSender(idSenderInBuffer);
+
+        Client friend = clientDao.findClient(idSenderInBuffer);
+        newHistory.setLoginSender(friend.getLogin());
+
         client.getHistory().add(newHistory);
         bufferDao.saveNewHistory(newHistory);
         LOGGER.info("***New history for new friend was created");
