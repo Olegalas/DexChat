@@ -18,44 +18,57 @@
 <span id="login" hidden><c:out value="${login}"/></span>
 <span id="pass" hidden><c:out value="${pass}"/></span>
 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DexChat</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Exit</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search_form">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search new friends.." id="search_input">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="search_button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
 <div class="content container-fluid bootstrap snippets">
     <div class="row row-broken">
         <div class="col-sm-3 col-xs-12">
             <div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5000">
-                <div class="chat-users" id ="chat-users_frame">
+                <div class="chat-users" id="chat-users_frame">
                     <h6>Friends</h6>
-
-                    <form class="navbar-form navbar-left" method="GET" role="search" id="search_form">
-                        <div class="form-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search" id="search_input">
-                        </div>
-                        <button type="buttom" class="btn btn-default" id="search_button"
-                                onclick="return false"><i class="glyphicon glyphicon-search"></i></button>
-                    </form>
-
-
-                    </br></br></br></br></br></br>
-
                     <!-- FRIENDS LIST -->
 
                 </div>
             </div>
         </div>
-        <div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
-            <div class="col-inside-lg decor-default">
+        <div class="col-sm-9 col-xs-12">
+            <div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5001">
                 <!-- DIALOG  -->
                 <div class="chat-body">
-                    <h6>DexChat</h6>
+                    <h6 id="login_speaker">DexChat</h6>
                     <p style="display: none" id="empty_answer">Empty message list</p>
 
-
-                    <!-- ANSWER ADD -->
-
-                    <div class="answer-add">
-                        <input placeholder="Write a message" id="answer_input">
-                        <span class="answer-btn answer-btn-1"></span>
-                        <span class="answer-btn answer-btn-2" id="answer_button"></span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -87,6 +100,12 @@
 
     </div>
 </div>
-
+<footer>
+    <div class="answer-add">
+        <textarea placeholder="Write a message" id="answer_input"></textarea>
+        <span class="answer-btn answer-btn-1"></span>
+        <span class="answer-btn answer-btn-2" id="answer_button"></span>
+    </div>
+</footer>
 </body>
 </html>

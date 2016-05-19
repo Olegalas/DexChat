@@ -3,6 +3,7 @@ var history;
 var id;
 var mainLogin;
 var friendLogin;
+var friendId;
 
 socket.onopen = function() {
     console.log("Connection complete");
@@ -76,7 +77,8 @@ socket.onmessage = function (event) {
                         login: mainLogin,
                         name: "unknown",
                         email: "unknown",
-                        friends: [{login: webMessage.message.login, name: "unknown", email: "unknown", friends:[]}]
+                        idClient: "unknown",
+                        friends: [{login: webMessage.message.login, name: "unknown", email: "unknown", idClient: "unknown", friends:[]}]
 
                     };
 
@@ -108,7 +110,7 @@ socket.onmessage = function (event) {
                     //     <div class="mood">mood</div>
                     // </div>
 
-                    createUserDiv(webMessage.message.friends[i].login);
+                    createUserDiv(webMessage.message.friends[i].login, webMessage.message.friends[i].idClient);
 
                 }
             }
@@ -119,6 +121,11 @@ socket.onmessage = function (event) {
 
             console.log(webMessage.message);
             history = webMessage.message;
+            // if(history.length > 0){
+            //     for(i = 0; i < history.length; ++i){
+            //         console.log(history[i]);
+            //     }
+            // }
             
             break;
         }
@@ -143,6 +150,7 @@ $(document).on("click", "#search_button", function () {
 
     // 2) read input
     var input = $("#search_input").val();
+    $("#search_input").val('');
     
     if(input == ""){
         $("#model_message").show();
@@ -158,6 +166,7 @@ $(document).on("click", "#search_button", function () {
         login: input,
         name: $('#login').text(),
         email: "unknown",
+        idClient: "unknown",
         friends: []
         
     };
@@ -193,7 +202,7 @@ function sendMessage(type, message) {
     socket.send(JSON.stringify(webSocketMessage));
 }
 
-function createUserDiv(login) {
+function createUserDiv(login, id) {
 
     $('<div class="user" style="background: #46be8a;border:1px ridge black;; position: relative;padding: 0 0 0 50px; display: block; cursor: pointer; margin: 0 0 20px;"/>').attr({
 
@@ -202,6 +211,11 @@ function createUserDiv(login) {
     }).click(function(){
 
         friendLogin = login;
+        friendId = id;
+        
+        $(".answer").remove();
+        $("#login_speaker").text(login);
+
         $(".user").css("background", "#46be8a")
         $(this).css("background", "#33ccff");
 
@@ -240,6 +254,7 @@ function createUserDiv(login) {
                 login: login,
                 name: $('#login').text(),
                 email: "delete",
+                idClient: "unknown",
                 friends: []
 
             };
@@ -257,7 +272,7 @@ function createUserDiv(login) {
 
 function createFriend(login) {
 
-    $('<div calss="avatar" style="top: 0; left: 0; width: 40px; height: 40px; position: absolute;"/>').attr({
+    $('<div class="avatar" style="top: 0; left: 0; width: 40px; height: 40px; position: absolute;"/>').attr({
 
         id: login + "_avatar"
 
@@ -279,7 +294,7 @@ function createFriend(login) {
 
 function createFriendForModel(login, loginName) {
 
-    $('<div calss="avatar"/>').attr({
+    $('<div class="avatar"/>').attr({
 
         id: login + "_avatar"
 
@@ -314,12 +329,12 @@ $.getScript("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 function initDialogFrame(login){
 
     for(i = 0; i < history.length; i++){
-        if(login == history[i].loginSender){
+        if(typeof history[i] !== 'undefined' && history[i] !== null && login == history[i].loginSender){
             for(j = 0; j < history[i].messages.length; ++j){
                 if(history[i].messages[j].idSender == id){
-                    initAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date, "answer right");
+                    initRightAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date);
                 } else{
-                    initAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date, "answer left");
+                    initLeftAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date);
                 }
                 break;
             }
@@ -329,79 +344,111 @@ function initDialogFrame(login){
     console.log("init dialog frame complete");
 }
 
-function initAnswer(login, message, date, classType){
+function initRightAnswer(login, message, date){
+    // style="border-radius: 20px; height: 10%;"
+    
+    var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({alt: login});
 
-    $('<div/>').attr({
-        
-        id: "dialog_ " + login,
-        class: classType
-        
-    }).insertBefore( ".answer-add" );
-
-
-    $('<div calss="avatar"/>').attr({
-
-        id: "dialog_avatar_" + login
-
-    }).appendTo("#dialog_ " + login);
-
-    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({
-
-        alt: login
-
-    }).appendTo("#dialog_avatar_" + login);
-
-    $('<div class="name" />').text(login)
-        .appendTo("#dialog_avatar_" + login);
-
-    $('<div class="text" />').text(message)
-        .appendTo("#dialog_avatar_" + login);
-
-    $('<div class="time" />').text(date)
-        .appendTo("#dialog_avatar_" + login);
+    var avatar = $('<div class="avatar"/>').append(image);
+    var name = $('<div class="name"/>').text(login);
+    var text = $('<div class="text"/>').text(message);
+    var time = $('<div class="time"/>').text(date);
+    
+    // style="padding: 0 58px 0 0; text-align: right; float: right; position: relative; max-width: 600px; overflow: hidden; clear: both;"
+    $('<div class="answer right" />')
+        .append(avatar).append(name).append(text).append(time).appendTo(".chat-body");
+    
+    // $("#dialog_" + login).show();
+    $("#empty_answer").hide();
 
 }
 
 function initLeftAnswer(login, message, date){
 
+    $('<div class="answer left" style="padding: 0 0 0 58px; text-align: left; float: left; position: relative; max-width: 600px; overflow: hidden; clear: both;"/>').attr({
 
+        id: "dialog_" + login
+
+    }).appendTo(".chat-body");
+
+
+    $('<div class="avatar" style="left: 0; bottom: 36px; width: 40px; height: 40px; position: absolute;"/>').attr({
+
+        id: "dialog_avatar_" + login
+
+    }).appendTo("#dialog_" + login);
+    
+    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" style="display: block; border-radius: 20px; height: 100%;" />').attr({
+
+        alt: login
+
+    }).appendTo("#dialog_avatar_" + login);
+
+    $('<div class="name" style="font-size: 14px; line-height: 36px;"/>').text(login)
+        .appendTo("#dialog_avatar_" + login);
+
+    $('<div class="text" style="background: #ebebeb; color: #333333; border-radius: 8px 8px 8px 0; padding: 12px; font-size: 16px; line-height: 26px; position: relative;"/>').text(message)
+        .appendTo("#dialog_avatar_" + login);
+
+    $('<div class="time" style="padding-left: 12px; color: #333333; font-size: 16px; line-height: 36px; position: relative; padding-bottom: 1px;"/>').text(date)
+        .appendTo("#dialog_avatar_" + login);
+
+
+    $("#dialog_" + login).show();
+    $("#empty_answer").hide();
 
 }
 
 
-$("#answer_button").click(function () {
+$(document).on("click", "#answer_button", function () {
 
     // 1) get message from input
     var messageText = $("#answer_input").val();
-    console.log(messageText);
+    $("#answer_input").val('');
+    console.log("from input : " + messageText);
     
     // 2) init new answer tag to dialog frame
     var date = new Date();
     console.log(date.toLocaleString());
-    initAnswer(mainLogin, messageText, date.toLocaleString());
+    initRightAnswer(mainLogin, messageText, date.toLocaleString());
     console.log("after initAnswer");
 
 
     // 3) persist message in history
+    console.log("length : " + history.length)
     for(i = 0; i < history.length; i++){
-        if(friendLogin == history[i].loginSender){
+        console.log(history[i]);
+        if(typeof history[i] !== 'undefined' && history[i] !== null){
+            if(friendLogin == history[i].loginSender){
 
-            // create message
-            var message = {
+                // create message
+                var messageToSend = {idReceiver: history[i].idSender, idSender: id, message: messageText};
+                history[i].messages.push(messageToSend);
+                console.log("after add to History");
+                console.log(messageToSend);
 
-                idSender: id, 
-                idReceiver: history[i].idSender,
-                message: messageText
-
-            };
-
-            history[i].messages.add(message);
-            console.log("after add to History");
-            console.log(message);
+                // send it on server to permanently persist in database history
+                sendMessage("MESSAGE", messageToSend);
+                return;
+            }
         }
     }
 
-    // 4) send it on server to permanently persist in database history
-    sendMessage("MESSAGE", message);
+    var messageInNewHistory = {idReceiver: friendId, idSender: id, message: messageText};
+    
+    var buff = {
+
+        messages: [],
+        idSender: friendId,
+        loginSender: friendLogin
+
+    };
+    
+    buff.messages.push(messageInNewHistory);
+    history = [];
+    console.log("new array for history .. length - " + history.length);
+    history[history.length] = buff;
+    // send it on server to permanently persist in database history
+    sendMessage("MESSAGE", messageInNewHistory);
 
 });

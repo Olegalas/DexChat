@@ -12,6 +12,7 @@ body {
 }
 
 .chat {
+    border: 4px double black;
     height: calc(100vh - 180px);
 }
 
@@ -220,36 +221,35 @@ body {
 }
 
 /**************ADD FORM ***************/
-.chat-body .answer-add {
+footer .answer-add {
+    border: 4px double black;
     clear: both;
-    position: relative;
-    margin: 20px -20px -20px;
-    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 40px;
     background: #46be8a;
 }
-
-.chat-body .answer-add input {
+footer .answer-add textarea {
     border: none;
     background: none;
     display: block;
-    width: 100%;
+    width: 90%;
     font-size: 16px;
     line-height: 20px;
     padding: 0;
     color: #ffffff;
 }
-
-.chat input {
+footer textarea {
     -webkit-appearance: none;
     border-radius: 0;
 }
-
-.chat-body .answer-add .answer-btn-1 {
+footer .answer-add .answer-btn-1 {
     background: url("http://91.234.35.26/iwiki-admin/v1.0.0/admin/img/icon-40.png") 50% 50% no-repeat;
     right: 56px;
 }
-
-.chat-body .answer-add .answer-btn {
+footer .answer-add .answer-btn {
     display: block;
     cursor: pointer;
     width: 36px;
@@ -258,29 +258,31 @@ body {
     top: 50%;
     margin-top: -18px;
 }
-
-.chat-body .answer-add .answer-btn-2 {
+footer .answer-add .answer-btn-2 {
     background: url("http://91.234.35.26/iwiki-admin/v1.0.0/admin/img/icon-41.png") 50% 50% no-repeat;
     right: 20px;
 }
-
-.chat input::-webkit-input-placeholder {
+footer textarea::-webkit-input-placeholder {
     color: #fff;
 }
 
-.chat input:-moz-placeholder { /* Firefox 18- */
+footer textarea:-moz-placeholder { /* Firefox 18- */
     color: #fff;
 }
 
-.chat input::-moz-placeholder { /* Firefox 19+ */
+footer textarea::-moz-placeholder {  /* Firefox 19+ */
     color: #fff;
 }
 
-.chat input:-ms-input-placeholder {
+footer textarea:-ms-input-placeholder {
     color: #fff;
 }
-
-.chat input {
+footer textarea {
     -webkit-appearance: none;
     border-radius: 0;
+}
+
+footer {
+    border: 4px double black;
+    padding: 15px;
 }
