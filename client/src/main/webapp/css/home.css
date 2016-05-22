@@ -31,7 +31,8 @@ body {
     display: block;
     cursor: pointer;
     margin: 0 0 20px;
-    border-style: ridge;
+    background: #46be8a;
+    border:1px ridge black;
 }
 
 .chat-users .user .avatar {

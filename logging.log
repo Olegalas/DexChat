@@ -20155,3 +20155,1853 @@ java.lang.NullPointerException: text
 	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
 	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
 	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-20 13:41:43 INFO  Server:34 - ***Server was run
+2016-05-20 13:43:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 13:43:56 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 13:43:58 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 13:43:58 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 13:43:59 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6d7f133: startup date [Fri May 20 13:43:59 EEST 2016]; root of context hierarchy
+2016-05-20 13:43:59 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-20 13:44:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-20 13:44:01 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-20 13:44:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-20 13:44:02 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-20 13:44:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-20 13:44:02 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-20 13:44:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-20 13:44:02 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-20 13:44:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-20 13:44:06 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-20 13:44:06 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-20 13:44:09 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-20 13:44:12 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-20 13:44:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 13:44:14 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 13:44:14 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 13:44:14 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 13:44:16 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 13:44:16 INFO  ClientController:83 - ***User entered : 
+2016-05-20 13:44:16 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 13:44:16 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 13:44:17 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 13:44:17 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 13:44:17 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 13:44:17 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 13:44:18 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 13:44:19 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 13:44:19 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 13:44:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 13:44:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 13:44:19 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 13:44:19 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 13:51:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 13:51:56 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 13:51:56 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 13:51:56 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 13:51:56 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 13:51:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 13:52:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 13:52:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 13:52:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 13:52:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 13:52:01 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 13:52:01 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 13:52:03 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 13:52:03 INFO  ClientController:83 - ***User entered : 
+2016-05-20 13:52:03 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 13:52:03 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 13:52:03 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 13:52:03 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 13:52:03 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 13:52:03 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 13:52:04 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 13:52:05 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 13:52:05 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 13:52:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 13:52:05 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 13:52:05 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 13:52:05 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 13:52:27 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"idReceiver":"5","idSender":"1","message":"EFSAFASGSDFASG"},"type":"MESSAGE"}
+2016-05-20 13:52:27 INFO  ServerWebSocket:97 - ***MESSAGE case
+2016-05-20 13:52:27 ERROR ServerWebSocket:132 - ***OnError method...
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.Instant.parse(Instant.java:395)
+	at ua.dexchat.model.Message.<init>(Message.java:45)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:98)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-20 13:54:49 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 13:54:49 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 13:54:49 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 13:54:49 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 13:54:57 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 13:54:57 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 13:54:57 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 13:54:57 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 13:54:57 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 13:54:57 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 13:54:57 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:04:54 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:04:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:04:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:04:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:04:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:04:59 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:05:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:05:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:05:02 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:05:02 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:05:02 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:05:02 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:05:04 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:05:04 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:05:04 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:05:04 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:05:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:05:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:05:05 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:05:05 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:05:06 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:05:06 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:05:06 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:05:06 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:05:06 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:05:06 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:05:06 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:05:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:05:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:05:30 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:05:30 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:05:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:05:39 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:05:39 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:05:39 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:05:39 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:05:39 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:05:39 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:05:49 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"sfas","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-20 14:05:50 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:45022 want search new friends by 'sfas'
+2016-05-20 14:05:50 INFO  FriendServiceThread:48 - ***No clients with "sfas" login were found
+2016-05-20 14:06:46 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:06:46 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:06:46 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:06:46 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:06:53 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:06:54 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:06:54 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:06:54 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:06:54 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:06:54 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:06:54 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:09:43 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:09:48 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:09:48 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:09:48 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:09:48 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:09:50 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:09:53 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:09:53 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:09:53 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:09:53 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:09:53 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:09:53 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:09:56 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:09:56 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:09:56 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:09:56 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:09:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:09:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:09:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:09:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:09:59 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:10:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:10:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:10:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:10:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:10:01 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:10:01 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:10:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:10:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:10:05 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:10:05 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:10:10 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:10:10 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:10:10 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:10:11 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:10:11 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:10:11 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:10:11 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:19:09 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:19:11 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:19:11 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:19:11 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:19:11 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:19:14 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:19:17 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:19:17 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:19:17 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:19:17 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:19:17 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:19:17 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:19:18 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:19:18 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:19:18 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:19:18 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:19:19 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:19:19 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:19:19 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:19:19 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:19:20 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:19:21 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:19:21 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:19:21 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:19:21 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:19:21 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:19:21 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:19:24 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:19:24 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:19:24 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:19:24 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:19:28 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:19:28 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:19:28 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:19:28 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:19:28 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:19:28 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:19:28 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:23:39 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:23:42 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:23:42 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:23:42 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:23:42 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:23:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:23:45 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:23:45 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:23:45 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:23:45 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:23:45 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:23:45 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:23:46 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:23:46 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:23:46 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:23:46 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:23:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:23:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:23:47 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:23:47 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:23:48 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:23:48 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:23:48 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:23:48 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:23:48 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:23:48 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:23:48 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:23:52 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:23:52 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:23:52 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:23:52 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:23:56 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:23:57 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:23:57 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:23:57 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:23:57 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:23:57 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:23:57 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:28:47 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:28:50 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:28:50 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:28:50 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:28:50 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:28:52 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:28:55 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:28:55 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:28:55 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:28:55 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:28:55 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:28:55 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:28:56 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:28:56 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:28:56 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:28:56 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:28:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:28:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:28:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:28:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:28:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:28:59 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:28:59 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:28:59 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:28:59 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:28:59 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:28:59 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:29:08 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:29:08 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:29:08 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:29:08 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:29:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:29:13 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:29:13 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:29:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:29:14 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:29:14 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:29:14 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:33:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:33:55 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:33:55 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:33:55 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:33:55 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:33:57 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:34:00 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:34:00 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:34:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:34:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:34:01 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:34:01 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:34:02 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:34:02 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:34:02 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:34:02 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:34:03 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:34:03 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:34:03 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:34:03 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:34:04 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:34:05 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:34:05 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:34:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:34:05 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:34:05 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:34:05 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:34:08 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:34:08 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:34:08 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:34:08 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:34:14 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:34:15 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:34:15 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:34:15 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:34:15 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:34:15 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:34:15 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:42:39 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:42:39 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:42:42 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:42:42 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:42:42 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:42:42 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:42:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:42:44 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:42:44 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:42:45 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:42:45 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:42:45 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:42:45 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:42:46 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:42:46 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:42:46 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:42:46 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:42:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:42:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:42:47 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:42:47 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:42:48 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:42:48 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:42:48 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:42:48 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:42:48 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:42:48 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:42:48 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:43:04 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:43:04 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:43:04 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:43:04 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:43:08 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:43:08 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:43:08 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:43:08 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:43:08 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:43:08 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:43:08 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:44:15 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:44:15 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:44:15 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:44:15 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:54:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:54:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:54:55 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:54:57 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:54:57 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:54:57 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:54:57 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:54:57 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:54:57 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:54:59 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:54:59 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:54:59 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:54:59 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:55:00 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:55:00 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:55:00 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:55:00 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:55:01 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:55:01 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:55:01 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:55:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:55:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:55:01 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:55:01 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:55:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:55:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 14:55:41 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:55:41 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:55:41 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:55:41 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:55:42 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:55:44 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:55:44 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:55:44 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:55:44 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:55:44 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:55:44 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 14:55:45 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 14:55:45 INFO  ClientController:83 - ***User entered : 
+2016-05-20 14:55:45 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 14:55:45 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 14:55:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 14:55:45 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 14:55:45 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 14:55:45 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 14:55:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 14:55:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 14:55:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 14:55:46 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 14:55:46 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 14:55:46 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 14:55:46 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:01:57 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:01:59 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:01:59 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:01:59 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:01:59 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:02:00 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:02:03 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:02:03 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:02:03 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:02:03 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:02:03 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:02:03 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:02:04 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:02:04 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:02:04 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:02:04 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:02:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:02:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:02:05 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:02:05 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:02:06 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:02:06 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:02:06 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:02:06 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:02:06 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:02:06 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:02:06 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:02:17 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:02:17 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:02:17 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:02:17 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:02:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:02:23 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:02:23 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:02:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:02:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:02:23 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:02:23 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:05:35 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:05:37 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:05:37 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:05:37 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:05:37 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:05:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:05:40 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:05:40 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:05:40 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:05:40 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:05:40 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:05:40 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:05:41 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:05:41 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:05:41 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:05:41 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:05:42 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:05:42 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:05:42 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:05:42 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:05:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:05:43 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:05:43 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:05:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:05:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:05:44 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:05:44 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:05:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:05:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:05:47 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:05:47 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:05:51 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:05:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:05:51 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:05:51 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:05:51 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:05:51 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:05:51 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:05:57 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:05:57 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:05:57 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:05:57 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:05:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:05:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:05:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:05:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:05:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:05:59 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:05:59 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:05:59 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:05:59 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:05:59 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:05:59 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:12:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:12:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:12:26 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:12:26 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:12:26 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:12:26 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:12:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:12:28 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:12:28 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:12:28 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:12:28 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:12:28 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:12:28 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:12:29 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:12:29 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:12:29 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:12:29 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:12:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:12:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:12:30 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:12:30 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:12:32 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:12:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:12:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:12:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:12:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:12:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:12:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:13:59 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:13:59 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:13:59 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:13:59 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:14:03 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:14:03 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:14:03 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:14:03 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:14:03 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:14:03 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:14:03 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:19:10 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:19:13 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:19:13 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:19:13 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:19:13 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:19:15 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:19:18 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:19:18 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:19:18 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:19:18 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:19:18 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:19:18 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:19:19 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:19:19 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:19:19 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:19:19 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:19:20 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:19:20 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:19:20 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:19:20 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:19:21 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:19:22 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:19:22 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:19:22 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:19:22 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:19:22 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:19:22 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:19:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:19:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:19:44 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:19:44 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:19:50 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:19:50 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:19:50 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:19:50 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:19:50 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:19:50 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:19:50 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:20:15 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:20:15 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:20:15 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:20:15 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:20:19 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:20:19 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:20:19 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:20:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:20:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:20:19 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:20:19 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:22:55 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:22:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:22:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:22:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:22:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:22:58 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:23:00 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:23:00 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:23:00 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:23:00 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:23:00 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:23:00 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:23:01 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:23:01 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:23:01 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:23:01 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:23:02 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:23:02 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:23:02 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:23:02 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:23:03 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:23:04 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:23:04 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:23:04 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:23:04 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:23:04 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:23:04 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:23:21 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:23:21 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:23:21 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:23:21 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:23:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:23:27 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:23:27 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:23:27 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:23:27 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:23:27 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:23:27 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:26:19 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:26:19 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:26:21 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:26:21 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:26:21 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:26:21 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:26:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:26:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:26:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:26:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:26:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:26:26 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:26:26 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:26:27 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:26:27 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:26:27 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:26:27 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:26:28 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:26:28 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:26:28 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:26:28 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:26:29 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:26:30 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:26:30 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:26:30 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:26:30 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:26:30 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:26:30 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:27:50 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:27:50 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:27:50 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:27:50 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:28:26 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:28:26 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:28:30 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:28:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:28:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:28:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:28:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:28:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:28:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:28:34 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:28:34 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:28:34 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:28:34 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:28:34 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:28:34 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:28:34 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:28:34 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:28:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:28:36 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:28:36 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:28:36 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:28:36 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:28:36 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:28:36 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:28:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:28:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:28:47 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:28:47 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:31:24 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:31:24 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:31:27 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:31:30 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:31:30 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:31:30 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:31:30 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:31:30 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:31:30 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:31:31 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:31:31 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:31:31 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:31:31 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:31:32 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:31:32 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:31:32 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:31:32 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:31:33 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:31:33 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:31:33 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:31:33 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:31:33 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:31:33 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:31:33 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:31:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:31:45 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:31:45 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:31:45 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:31:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:31:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:35:46 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:39:11 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:39:15 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:39:17 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:39:17 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:39:17 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:39:17 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:39:17 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:39:17 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:39:24 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:39:24 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:39:24 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:39:24 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:39:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:39:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:39:25 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:39:25 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:39:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:39:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:39:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:39:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:39:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:39:26 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:39:26 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:39:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:39:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:39:44 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:39:44 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:46:17 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:46:17 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:46:20 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:46:22 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:46:22 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:46:22 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:46:22 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:46:22 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:46:22 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:46:23 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:46:23 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:46:23 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:46:23 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:46:24 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:46:24 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:46:24 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:46:24 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:46:25 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:46:26 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:46:26 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:46:26 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:46:26 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:46:26 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:46:26 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:46:48 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:46:48 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:46:48 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:46:48 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:46:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:46:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:51:38 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:51:38 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:51:39 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:51:41 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:51:41 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:51:41 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:51:41 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:51:41 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:51:41 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:51:42 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:51:42 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:51:42 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:51:42 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:51:43 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:51:43 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:51:43 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:51:43 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:51:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:51:44 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:51:44 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:51:44 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:51:44 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:51:44 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:51:44 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:51:54 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:51:54 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:51:54 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:51:54 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:57:19 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:57:19 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 15:57:20 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:57:29 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:57:29 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:57:29 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:57:29 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:57:29 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:57:29 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 15:57:30 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 15:57:30 INFO  ClientController:83 - ***User entered : 
+2016-05-20 15:57:30 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 15:57:30 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 15:57:31 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 15:57:31 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 15:57:31 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 15:57:31 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 15:57:32 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 15:57:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 15:57:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 15:57:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 15:57:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 15:57:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 15:57:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:12:34 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:12:34 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:12:37 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:12:37 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:12:37 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:12:37 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:12:37 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:12:40 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:12:40 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:12:40 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:12:40 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:12:40 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:12:40 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:12:42 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 16:12:42 INFO  ClientController:83 - ***User entered : 
+2016-05-20 16:12:42 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 16:12:42 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 16:12:42 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:12:42 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:12:42 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:12:42 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:12:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:12:44 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:12:44 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:12:44 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:12:44 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:12:44 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:12:44 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:12:59 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:12:59 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:12:59 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:12:59 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:26:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:26:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:26:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:26:28 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:26:28 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:26:28 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:26:28 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:26:28 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:26:28 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:26:30 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 16:26:30 INFO  ClientController:83 - ***User entered : 
+2016-05-20 16:26:30 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 16:26:30 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 16:26:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:26:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:26:30 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:26:30 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:26:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:26:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:26:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:26:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:26:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:26:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:26:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:27:21 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:27:21 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:27:21 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:27:21 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:27:24 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:27:25 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:27:25 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:27:25 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:27:25 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:27:25 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:27:25 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:27:43 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:27:43 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:27:43 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:27:43 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:27:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:27:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:27:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:27:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:27:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:27:47 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:27:47 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:27:53 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"sfssdf","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-20 16:27:53 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:50976 want search new friends by 'sfssdf'
+2016-05-20 16:27:53 INFO  FriendServiceThread:48 - ***No clients with "sfssdf" login were found
+2016-05-20 16:29:28 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:29:28 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:29:28 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:29:28 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:29:33 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:29:34 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:29:34 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:29:34 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:29:34 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:29:34 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:29:34 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:29:40 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:29:40 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:29:40 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:29:40 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:29:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:29:43 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:29:43 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:29:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:29:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:29:43 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:29:43 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:30:07 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:30:07 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:30:07 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:30:07 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:30:11 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:30:11 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:30:11 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:30:11 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:30:11 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:30:11 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:30:11 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:30:16 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:30:16 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:30:16 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:30:16 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:30:38 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:30:39 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:30:42 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:30:42 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:30:42 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:30:42 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:30:42 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:30:42 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:30:44 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 16:30:44 INFO  ClientController:83 - ***User entered : 
+2016-05-20 16:30:44 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 16:30:44 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 16:30:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:30:44 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:30:44 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:30:44 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:30:45 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:30:45 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:30:45 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:30:45 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:30:45 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:30:45 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:30:45 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:31:17 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:31:17 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:31:17 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:31:17 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:31:36 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:31:36 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:31:36 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:31:36 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:31:36 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:31:36 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:31:36 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:45:01 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:45:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:45:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:45:05 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:45:05 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:45:12 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:45:17 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:45:17 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:45:18 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:45:18 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:45:18 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:45:18 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:45:20 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 16:45:20 INFO  ClientController:83 - ***User entered : 
+2016-05-20 16:45:20 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 16:45:20 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 16:45:22 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:45:22 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:45:22 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:45:22 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:45:22 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:45:23 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:45:23 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:45:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:45:23 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:45:23 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:45:23 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:45:28 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:45:28 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:45:28 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:45:28 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:45:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:45:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:45:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:45:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:45:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:45:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:45:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:51:21 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-20 16:51:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:51:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:51:25 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:51:25 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:51:27 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:51:30 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:51:30 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:51:31 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:51:31 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:51:31 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:51:31 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:51:33 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-20 16:51:33 INFO  ClientController:83 - ***User entered : 
+2016-05-20 16:51:33 INFO  ClientController:84 - ***Login : Oleg
+2016-05-20 16:51:33 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-20 16:51:34 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:51:34 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:51:34 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:51:34 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:51:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:51:36 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:51:36 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:51:36 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:51:36 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:51:36 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:51:36 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:51:39 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:51:39 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:51:39 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:51:39 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:51:43 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:51:43 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:51:43 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:51:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:51:43 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:51:43 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:51:43 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-20 16:52:06 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-20 16:52:06 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-20 16:52:06 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-20 16:52:06 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-20 16:52:08 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-20 16:52:08 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-20 16:52:08 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-20 16:52:08 INFO  ClientDao:39 - ***Client was founded
+2016-05-20 16:52:08 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-20 16:52:08 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-20 16:52:08 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 12:58:36 INFO  Server:34 - ***Server was run
+2016-05-22 13:00:12 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:00:16 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:00:22 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:00:22 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:00:22 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@356f11ff: startup date [Sun May 22 13:00:22 EEST 2016]; root of context hierarchy
+2016-05-22 13:00:22 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-22 13:00:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-22 13:00:24 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-22 13:00:25 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-22 13:00:25 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-22 13:00:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-22 13:00:25 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-22 13:00:25 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-22 13:00:25 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-22 13:00:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-22 13:00:28 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-22 13:00:28 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-22 13:00:29 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-22 13:00:32 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-22 13:00:33 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:00:33 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:00:33 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:00:33 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:00:44 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:00:44 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:00:44 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:00:44 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:00:45 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:00:45 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:00:45 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:00:45 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:00:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:00:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:00:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:00:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:00:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:00:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:01:18 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:01:19 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:01:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:01:25 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:01:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:01:29 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:01:29 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:01:29 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:01:29 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:01:29 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:01:29 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:01:30 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:01:30 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:01:30 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:01:30 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:01:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:01:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:01:30 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:01:30 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:01:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:01:31 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:01:54 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:01:54 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:01:59 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:02:04 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:02:04 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:02:05 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:02:12 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:02:12 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:02:12 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:02:12 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:02:13 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:02:13 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:02:17 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:02:17 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:02:17 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:02:17 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:02:17 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:02:17 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:02:17 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:02:17 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:02:18 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:02:18 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:06:49 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:06:53 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:06:56 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:06:56 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:06:56 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:06:56 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:06:56 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:06:56 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:06:58 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:06:58 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:06:58 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:06:58 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:06:58 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:06:58 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:06:58 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:06:58 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:06:59 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:07:00 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:07:00 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:07:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:07:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:07:01 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:07:01 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:07:09 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:07:09 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:07:09 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:07:09 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:07:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:07:14 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:07:14 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:07:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:07:14 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:07:14 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:07:14 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:14:43 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:14:43 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:14:46 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:14:46 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:14:46 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:14:46 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:14:46 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:14:49 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:14:49 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:14:49 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:14:49 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:14:49 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:14:49 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:14:50 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:14:50 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:14:50 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:14:50 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:14:51 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:14:51 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:14:51 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:14:51 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:14:52 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:14:52 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:14:52 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:14:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:14:52 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:14:52 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:14:52 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:14:56 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:14:56 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:14:56 INFO  ClientController:84 - ***Login : null
+2016-05-22 13:14:56 INFO  ClientController:85 - ***Pass : null
+2016-05-22 13:14:56 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:14:56 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:14:56 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:14:56 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:14:56 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:14:57 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"","pass":"","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:14:57 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:14:57 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$de428205.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:100)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$c12d3b96.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-22 13:15:02 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:15:02 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:15:02 INFO  ClientController:84 - ***Login : null
+2016-05-22 13:15:02 INFO  ClientController:85 - ***Pass : null
+2016-05-22 13:15:02 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:15:02 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:15:02 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"","pass":"","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:15:02 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:15:02 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$de428205.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:100)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$c12d3b96.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-22 13:15:08 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:15:08 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:15:08 INFO  ClientController:84 - ***Login : null
+2016-05-22 13:15:08 INFO  ClientController:85 - ***Pass : null
+2016-05-22 13:15:08 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:15:08 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:15:09 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"","pass":"","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:15:09 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:15:09 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$de428205.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:100)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$c12d3b96.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-22 13:22:36 INFO  Server:34 - ***Server was run
+2016-05-22 13:41:31 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:41:35 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:41:37 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:41:37 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:41:37 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@51a4e4e7: startup date [Sun May 22 13:41:37 EEST 2016]; root of context hierarchy
+2016-05-22 13:41:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-22 13:41:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-22 13:41:39 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-22 13:41:40 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-22 13:41:41 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-22 13:41:41 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-22 13:41:41 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-22 13:41:41 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-22 13:41:41 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-22 13:41:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-22 13:41:42 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-22 13:41:43 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-22 13:41:44 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-22 13:41:47 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-22 13:41:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:41:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:41:47 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:41:47 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:41:48 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:41:48 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:41:48 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:41:48 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:41:49 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:41:49 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:41:49 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:41:49 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:41:50 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:41:51 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:41:51 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:41:51 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:41:51 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:41:51 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:41:51 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:41:58 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:41:58 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:41:58 INFO  ClientController:84 - ***Login : null
+2016-05-22 13:41:58 INFO  ClientController:85 - ***Pass : null
+2016-05-22 13:41:58 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:41:58 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:41:58 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:41:58 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:41:59 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:41:59 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"","pass":"","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:41:59 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:41:59 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$d039c67b.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:100)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$e442808f.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-22 13:47:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:47:27 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:47:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:47:30 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:47:35 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:47:35 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:47:35 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:47:35 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:47:35 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:47:35 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:47:36 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:47:36 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:47:36 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:47:36 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:47:37 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:47:37 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:47:37 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:47:37 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:47:38 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:47:38 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:47:38 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:47:38 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:47:38 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:47:38 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:47:38 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:47:47 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:47:47 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:47:47 INFO  ClientController:84 - ***Login : null
+2016-05-22 13:47:47 INFO  ClientController:85 - ***Pass : null
+2016-05-22 13:47:47 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:47:47 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:47:47 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:47:47 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:47:48 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:47:48 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"","pass":"","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:47:48 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:47:48 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$d039c67b.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:100)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$e442808f.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-22 13:58:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 13:58:44 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:58:44 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:58:46 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:58:46 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:58:46 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:58:46 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:58:46 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:58:46 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 13:58:48 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 13:58:48 INFO  ClientController:83 - ***User entered : 
+2016-05-22 13:58:48 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 13:58:48 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 13:58:48 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 13:58:48 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 13:58:48 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 13:58:48 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 13:58:49 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 13:58:50 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 13:58:50 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 13:58:50 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 13:58:50 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 13:58:50 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 13:58:50 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:02:23 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:02:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:02:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:02:25 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:02:25 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:02:26 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:02:28 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:02:28 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:02:28 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:02:28 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:02:28 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:02:28 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:02:31 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:02:31 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:02:31 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:02:31 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:02:32 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:02:32 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:02:32 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:02:32 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:02:32 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:02:33 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:02:33 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:02:33 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:02:33 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:02:33 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:02:33 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:13:48 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:13:50 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:13:50 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:13:50 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:13:50 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:13:51 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:13:53 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:13:53 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:13:53 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:13:53 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:13:53 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:13:53 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:13:54 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:13:54 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:13:54 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:13:54 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:13:55 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:13:55 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:13:55 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:13:55 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:13:56 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:13:56 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:13:56 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:13:56 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:13:56 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:13:56 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:13:56 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:20:09 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:20:11 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:20:11 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:20:11 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:20:11 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:20:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:20:15 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:20:15 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:20:15 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:20:15 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:20:15 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:20:15 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:20:17 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:20:17 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:20:17 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:20:17 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:20:18 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:20:18 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:20:18 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:20:18 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:20:19 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:20:19 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:20:19 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:20:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:20:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:20:19 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:20:19 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:24:22 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:24:25 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:24:25 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:24:25 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:24:25 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:24:27 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:24:28 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:24:28 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:24:28 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:24:28 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:24:28 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:24:28 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:24:30 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:24:30 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:24:30 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:24:30 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:24:30 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:24:30 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:24:30 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:24:30 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:24:31 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:24:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:24:32 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:24:32 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:24:32 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:24:32 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:24:32 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:24:36 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"fsfs","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:24:36 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46629 want search new friends by 'fsfs'
+2016-05-22 14:24:36 INFO  FriendServiceThread:48 - ***No clients with "fsfs" login were found
+2016-05-22 14:25:31 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"gsdgdada","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:25:31 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46629 want search new friends by 'gsdgdada'
+2016-05-22 14:25:31 INFO  FriendServiceThread:48 - ***No clients with "gsdgdada" login were found
+2016-05-22 14:25:39 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"ascas","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:25:39 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46629 want search new friends by 'ascas'
+2016-05-22 14:25:39 INFO  FriendServiceThread:48 - ***No clients with "ascas" login were found
+2016-05-22 14:31:57 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:31:57 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:31:57 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:31:57 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:32:04 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:32:08 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:32:10 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:32:10 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:32:10 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:32:10 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:32:10 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:32:10 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:32:11 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:32:11 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:32:11 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:32:11 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:32:12 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:32:12 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:32:12 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:32:12 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:32:13 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:32:14 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:32:14 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:32:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:32:14 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:32:14 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:32:14 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:34:07 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"kh","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:34:07 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:47115 want search new friends by 'kh'
+2016-05-22 14:34:07 INFO  FriendServiceThread:48 - ***No clients with "kh" login were found
+2016-05-22 14:43:38 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:43:41 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:43:41 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:43:41 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:43:41 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:43:44 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:43:47 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:43:47 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:43:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:43:47 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:43:47 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:43:47 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:43:49 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:43:49 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:43:49 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:43:49 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:43:50 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:43:50 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:43:50 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:43:50 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:43:51 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:43:52 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:43:52 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:43:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:43:52 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:43:52 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:43:52 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:44:06 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:44:06 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:44:06 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:44:06 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:44:06 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:44:06 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:44:07 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:47:58 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:47:58 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:47:58 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:47:58 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:47:58 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:47:58 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:48:01 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:48:01 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:48:01 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:48:01 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:48:05 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:48:05 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:48:05 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:48:05 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:48:08 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:48:09 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:48:09 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:48:09 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:48:09 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:48:09 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:48:09 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:48:48 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"sgsdsa","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:48:48 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:47861 want search new friends by 'sgsdsa'
+2016-05-22 14:48:48 INFO  FriendServiceThread:48 - ***No clients with "sgsdsa" login were found
+2016-05-22 14:58:49 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-22 14:58:52 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:58:52 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:58:52 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:58:52 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:58:55 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:58:59 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:58:59 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:58:59 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:58:59 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:58:59 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:58:59 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:59:00 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-22 14:59:00 INFO  ClientController:83 - ***User entered : 
+2016-05-22 14:59:00 INFO  ClientController:84 - ***Login : Oleg
+2016-05-22 14:59:00 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-22 14:59:01 INFO  ServerWebSocket:48 - ***127.0.0.1 : has left the room!
+2016-05-22 14:59:01 INFO  ServerWebSocket:52 - ***Server sent interrupt command to messageServiceThread
+2016-05-22 14:59:01 ERROR MessageServiceThread:44 - InterruptedException sleep interrupted
+2016-05-22 14:59:01 INFO  MessageServiceThread:50 - ***Thread was killed
+2016-05-22 14:59:02 INFO  ServerWebSocket:42 - ***127.0.0.1 : entered the room!
+2016-05-22 14:59:03 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-22 14:59:03 INFO  ServerWebSocket:66 - ***LOGIN case
+2016-05-22 14:59:03 INFO  ClientDao:39 - ***Client was founded
+2016-05-22 14:59:03 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-22 14:59:03 INFO  MessageServiceThread:32 - ***All history was sent
+2016-05-22 14:59:03 INFO  MessageServiceThread:35 - ***All friends was sent
+2016-05-22 14:59:10 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"login":"khkh","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-22 14:59:10 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:48523 want search new friends by 'khkh'
+2016-05-22 14:59:10 INFO  FriendServiceThread:48 - ***No clients with "khkh" login were found
+2016-05-22 14:59:27 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"idReceiver":"7","idSender":"1","message":"kgkkj"},"type":"MESSAGE"}
+2016-05-22 14:59:27 INFO  ServerWebSocket:97 - ***MESSAGE case
+2016-05-22 14:59:27 ERROR ServerWebSocket:132 - ***OnError method...
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.Instant.parse(Instant.java:395)
+	at ua.dexchat.model.Message.<init>(Message.java:45)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:98)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-22 14:59:32 INFO  ServerWebSocket:59 - ***127.0.0.1 : {"message":{"idReceiver":"7","idSender":"1","message":",n,n,n"},"type":"MESSAGE"}
+2016-05-22 14:59:32 INFO  ServerWebSocket:97 - ***MESSAGE case
+2016-05-22 14:59:32 ERROR ServerWebSocket:132 - ***OnError method...
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.Instant.parse(Instant.java:395)
+	at ua.dexchat.model.Message.<init>(Message.java:45)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:98)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)

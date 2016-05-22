@@ -44,6 +44,7 @@ socket.onmessage = function (event) {
             });
            
         }
+              
     });
 
     switch (webMessage.type){
@@ -141,7 +142,48 @@ socket.onmessage = function (event) {
     }
 };
 
+$(document).on("keydown", "#search_input", function (e) {
+
+    e.which = e.which || e.keyCode;
+    if(e.which == 13) {
+        searchFriends();
+    }
+    
+});
+
 $(document).on("click", "#search_button", function () {
+    // 1) delete previous
+    $( ".user_model" ).remove();
+    $("#model_message").show();
+    $("#model_add_message").hide();
+
+    // 2) read input
+    var input = $("#search_input").val();
+    $("#search_input").val('');
+
+    if(input == ""){
+        $("#model_message").show();
+        $("#myModal").modal();
+        return;
+    }
+
+    console.log("search - " + input);
+    // 3) send input
+
+    var friend = {
+
+        login: input,
+        name: $('#login').text(),
+        email: "unknown",
+        idClient: "unknown",
+        friends: []
+
+    };
+
+    sendMessage("FRIEND", friend);
+});
+
+function searchFriends(){
 
     // 1) delete previous
     $( ".user_model" ).remove();
@@ -151,29 +193,30 @@ $(document).on("click", "#search_button", function () {
     // 2) read input
     var input = $("#search_input").val();
     $("#search_input").val('');
-    
+
     if(input == ""){
         $("#model_message").show();
         $("#myModal").modal();
         return;
     }
-    
+
     console.log("search - " + input);
     // 3) send input
-    
+
     var friend = {
-        
+
         login: input,
         name: $('#login').text(),
         email: "unknown",
         idClient: "unknown",
         friends: []
-        
+
     };
-    
+
     sendMessage("FRIEND", friend);
 
-});
+
+}
 
 function doLogin(login, pass, ip) {
 
@@ -204,55 +247,20 @@ function sendMessage(type, message) {
 
 function createUserDiv(login, id) {
 
-    $('<div class="user" style="background: #46be8a;border:1px ridge black;; position: relative;padding: 0 0 0 50px; display: block; cursor: pointer; margin: 0 0 20px;"/>').attr({
+    var icon = $('<span class="glyphicon glyphicon-option-horizontal" style="right:0; position: absolute;"/>').click(function () {
 
-        id: login
-
-    }).click(function(){
-
-        friendLogin = login;
-        friendId = id;
-        
-        $(".answer").remove();
-        $("#login_speaker").text(login);
-
-        $(".user").css("background", "#46be8a")
-        $(this).css("background", "#33ccff");
-
-        if(typeof history[0] !== 'undefined' && history[0] !== null){
-            $("#empty_answer").hide();
-            initDialogFrame(login);    
-        } else {
-            $("#empty_answer").show();
-        }
-        
-    }).appendTo('#chat-users_frame');
-
-    createFriend(login);
-
-    $('<button type="button" class="btn btn-default"></button>').text("menu")
-        .click(function () {
-
-        $( ".user_model" ).remove();
+        $(".user_model").remove();
         $("#model_add_message").hide();
         $("#model_message").hide();
 
-        $('<div class="user_model"/>').attr({
-
-            id: "id_model_" + login
-
-        }).appendTo("#chat-users_model");
-        
-        createFriendForModel("id_model_" + login, login);
-
-        $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("remove").click(function(){
+        var removeButton =  $("<button type='button' class='btn btn-default' data-dismiss='modal'>").text("remove").click(function () {
 
             $('#' + login).remove();
             alert("Friend was deleted");
             var friend = {
 
                 login: login,
-                name: $('#login').text(),
+                name: mainLogin,
                 email: "delete",
                 idClient: "unknown",
                 friends: []
@@ -260,13 +268,45 @@ function createUserDiv(login, id) {
             };
 
             sendMessage("FRIEND", friend);
+        });
 
+        var mood = $('<div class="mood"/>').text("mood");
+        var name = $('<div class="name"/>').text(login);
 
-        }).appendTo('#id_model_' + login + "_avatar");
+        var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png"/>').attr({alt: login});
+        var avatar = $('<div class="avatar" />').append(image);
+
+        var userModel = $('<div class="user_model"/>').append(avatar).append(name).append(mood)
+            .append(removeButton).appendTo("#chat-users_model");
 
         $("#myModal").modal();
-        
-    }).appendTo("#" + login);
+    });
+
+    var mood = $('<div class="mood"/>').text("mood");
+    var name = $('<div class="name"/>').text(login);
+
+    var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png"/>').attr({alt: login});
+    var avatar = $('<div class="avatar" />').append(image);
+
+    var user = $('<div class="user" />').attr({id: login}).click(function(){
+
+            friendLogin = login;
+            friendId = id;
+
+            $(".answer").remove();
+            $("#login_speaker").text(login);
+
+            $(".user").css("background", "#46be8a")
+            $(this).css("background", "#33ccff");
+
+            if(typeof history[0] !== 'undefined' && history[0] !== null){
+                $("#empty_answer").hide();
+                initDialogFrame(login);
+            } else {
+                $("#empty_answer").show();
+            }
+
+        }).append(avatar).append(name).append(mood).append(icon).appendTo('#chat-users_frame');
 
 }
 
@@ -345,58 +385,34 @@ function initDialogFrame(login){
 }
 
 function initRightAnswer(login, message, date){
-    // style="border-radius: 20px; height: 10%;"
-    
-    var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({alt: login});
+
+    var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar1.png" />').attr({alt: login});
 
     var avatar = $('<div class="avatar"/>').append(image);
     var name = $('<div class="name"/>').text(login);
     var text = $('<div class="text"/>').text(message);
     var time = $('<div class="time"/>').text(date);
     
-    // style="padding: 0 58px 0 0; text-align: right; float: right; position: relative; max-width: 600px; overflow: hidden; clear: both;"
     $('<div class="answer right" />')
         .append(avatar).append(name).append(text).append(time).appendTo(".chat-body");
     
-    // $("#dialog_" + login).show();
     $("#empty_answer").hide();
 
 }
 
 function initLeftAnswer(login, message, date){
 
-    $('<div class="answer left" style="padding: 0 0 0 58px; text-align: left; float: left; position: relative; max-width: 600px; overflow: hidden; clear: both;"/>').attr({
+    var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" />').attr({alt: login});
 
-        id: "dialog_" + login
+    var avatar = $('<div class="avatar"/>').append(image);
+    var name = $('<div class="name"/>').text(login);
+    var text = $('<div class="text"/>').text(message);
+    var time = $('<div class="time"/>').text(date);
 
-    }).appendTo(".chat-body");
+    $('<div class="answer left" />')
+        .append(avatar).append(name).append(text).append(time).appendTo(".chat-body");
 
-
-    $('<div class="avatar" style="left: 0; bottom: 36px; width: 40px; height: 40px; position: absolute;"/>').attr({
-
-        id: "dialog_avatar_" + login
-
-    }).appendTo("#dialog_" + login);
-    
-    $('<img src="http://bootdey.com/img/Content/avatar/avatar2.png" style="display: block; border-radius: 20px; height: 100%;" />').attr({
-
-        alt: login
-
-    }).appendTo("#dialog_avatar_" + login);
-
-    $('<div class="name" style="font-size: 14px; line-height: 36px;"/>').text(login)
-        .appendTo("#dialog_avatar_" + login);
-
-    $('<div class="text" style="background: #ebebeb; color: #333333; border-radius: 8px 8px 8px 0; padding: 12px; font-size: 16px; line-height: 26px; position: relative;"/>').text(message)
-        .appendTo("#dialog_avatar_" + login);
-
-    $('<div class="time" style="padding-left: 12px; color: #333333; font-size: 16px; line-height: 36px; position: relative; padding-bottom: 1px;"/>').text(date)
-        .appendTo("#dialog_avatar_" + login);
-
-
-    $("#dialog_" + login).show();
     $("#empty_answer").hide();
-
 }
 
 
@@ -452,3 +468,13 @@ $(document).on("click", "#answer_button", function () {
     sendMessage("MESSAGE", messageInNewHistory);
 
 });
+
+
+
+
+//
+// <fieldset class="form-group">
+//     <label for="exampleInputFile">File input</label>
+//     <input type="file" class="form-control-file" id="exampleInputFile">
+//         <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+// </fieldset>

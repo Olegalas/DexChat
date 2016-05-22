@@ -18,26 +18,27 @@
 <span id="login" hidden><c:out value="${login}"/></span>
 <span id="pass" hidden><c:out value="${pass}"/></span>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<nav class="navbar navbar-inverse" >
+    <div class="container-fluid" >
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">DexChat</a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="collapse navbar-collapse" id="myNavbar" >
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Exit</a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="search" id="search_form">
-                <div class="form-group input-group">
+
+            <form onsubmit="return false" class="navbar-form navbar-right" id="search_form" >
+                <div class="form-group input-group" >
                     <input type="text" class="form-control" placeholder="Search new friends.." id="search_input">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button" id="search_button">
+                    <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="search_button" onkeydown="return false"  onkeyup="return false">
               <span class="glyphicon glyphicon-search"></span>
             </button>
           </span>
