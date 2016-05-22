@@ -1,6 +1,5 @@
 var socket = new WebSocket("ws://localhost:8887");
-var history;
-var id;
+var mainId;
 var mainLogin;
 var friendLogin;
 var friendId;
@@ -52,8 +51,8 @@ socket.onmessage = function (event) {
         case "FRIEND":{
 
             console.log(webMessage.message.friends);
-            id = webMessage.message.idClient;
-            console.log("your id : " + id);
+            mainId = webMessage.message.idClient;
+            console.log("your id : " + mainId);
 
 
             if(webMessage.message.friends.length == 0 && webMessage.message.login != mainLogin){
@@ -119,14 +118,23 @@ socket.onmessage = function (event) {
             break;
         }
         case "HISTORY":{
-
+            
             console.log(webMessage.message);
-            history = webMessage.message;
-            // if(history.length > 0){
-            //     for(i = 0; i < history.length; ++i){
-            //         console.log(history[i]);
-            //     }
-            // }
+            if("EMPTY" == webMessage.message.type){
+                console.log("history is empty");
+                $("#empty_answer").show();
+            } else{
+                
+                $("#empty_answer").hide();
+                
+                for(i = 0; i < webMessage.message.messages.length; ++i){
+                    if(webMessage.message.messages[i].idSender == mainId){
+                        initRightAnswer(mainLogin, webMessage.message.messages[i].message, webMessage.message.messages[i].date);
+                    }else{
+                        initLeftAnswer(friendLogin, webMessage.message.messages[i].message, webMessage.message.messages[i].date);
+                    }
+                }
+            }
             
             break;
         }
@@ -298,13 +306,10 @@ function createUserDiv(login, id) {
 
             $(".user").css("background", "#46be8a")
             $(this).css("background", "#33ccff");
-
-            if(typeof history[0] !== 'undefined' && history[0] !== null){
-                $("#empty_answer").hide();
-                initDialogFrame(login);
-            } else {
-                $("#empty_answer").show();
-            }
+        
+            var webMessage = {loginFriend: friendLogin, login: mainLogin};
+            
+            sendMessage("HISTORY", webMessage);
 
         }).append(avatar).append(name).append(mood).append(icon).appendTo('#chat-users_frame');
 
@@ -366,24 +371,6 @@ $.getScript("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 
 });
 
-function initDialogFrame(login){
-
-    for(i = 0; i < history.length; i++){
-        if(typeof history[i] !== 'undefined' && history[i] !== null && login == history[i].loginSender){
-            for(j = 0; j < history[i].messages.length; ++j){
-                if(history[i].messages[j].idSender == id){
-                    initRightAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date);
-                } else{
-                    initLeftAnswer(mainLogin, history[i].messages[j].message, history[i].messages[j].date);
-                }
-                break;
-            }
-            break;
-        }
-    }
-    console.log("init dialog frame complete");
-}
-
 function initRightAnswer(login, message, date){
 
     var image = $('<img src="http://bootdey.com/img/Content/avatar/avatar1.png" />').attr({alt: login});
@@ -429,43 +416,12 @@ $(document).on("click", "#answer_button", function () {
     initRightAnswer(mainLogin, messageText, date.toLocaleString());
     console.log("after initAnswer");
 
-
-    // 3) persist message in history
-    console.log("length : " + history.length)
-    for(i = 0; i < history.length; i++){
-        console.log(history[i]);
-        if(typeof history[i] !== 'undefined' && history[i] !== null){
-            if(friendLogin == history[i].loginSender){
-
-                // create message
-                var messageToSend = {idReceiver: history[i].idSender, idSender: id, message: messageText};
-                history[i].messages.push(messageToSend);
-                console.log("after add to History");
-                console.log(messageToSend);
-
-                // send it on server to permanently persist in database history
-                sendMessage("MESSAGE", messageToSend);
-                return;
-            }
-        }
-    }
-
-    var messageInNewHistory = {idReceiver: friendId, idSender: id, message: messageText};
+    console.log("idReceiver: " + friendId);
+    console.log("idSender: " + mainId);
+    var message = {idReceiver: friendId, idSender: mainId, message: messageText, date: date.getMilliseconds()};
     
-    var buff = {
-
-        messages: [],
-        idSender: friendId,
-        loginSender: friendLogin
-
-    };
-    
-    buff.messages.push(messageInNewHistory);
-    history = [];
-    console.log("new array for history .. length - " + history.length);
-    history[history.length] = buff;
     // send it on server to permanently persist in database history
-    sendMessage("MESSAGE", messageInNewHistory);
+    sendMessage("MESSAGE", message);
 
 });
 

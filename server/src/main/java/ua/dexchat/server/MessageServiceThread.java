@@ -28,9 +28,6 @@ public class MessageServiceThread extends Thread {
     @Override
     public void run() {
 
-        service.sendAllHistoryToClient(clientSocket, client);
-        LOGGER.info("***All history was sent");
-
         service.sendAllFriends(clientSocket, client);
         LOGGER.info("***All friends was sent");
 

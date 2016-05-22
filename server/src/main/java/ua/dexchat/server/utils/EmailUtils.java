@@ -22,14 +22,7 @@ public class EmailUtils {
     private static final String PASS = "11235813lateralusemailpass";
     public static final String HOST = "smtp.gmail.com";
 
-    public static void sendMessage(String login, String email, WebSocket clientSocket){
-
-        ClientService service = GetSpringContext.getContext().getBean(ClientService.class);
-        Client client = service.findByLogin(login);
-
-        if(client == null || !client.getEmail().equals(email)){
-            WebSocketUtils.sendTextMessageToClient("Incorrect Email or Login", clientSocket);
-        }
+    public static void sendMessage(String login, String email, WebSocket clientSocket, String pass){
 
         Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
@@ -52,7 +45,7 @@ public class EmailUtils {
             generateMailMessage.setSubject("Recover pass for " + login);
 
 
-            String emailBody = "your pass : " + client.getPass();
+            String emailBody = "your pass : " + pass;
 
             generateMailMessage.setText(emailBody);
 

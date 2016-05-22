@@ -8,6 +8,7 @@ import ua.dexchat.model.*;
 import ua.dexchat.server.dao.ClientDao;
 import ua.dexchat.server.dao.BufferDao;
 import ua.dexchat.server.exceptions.WasNotFoundException;
+import ua.dexchat.server.utils.EmailUtils;
 import ua.dexchat.server.utils.WebSocketUtils;
 
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ public class ClientService {
         if(buffer == null) throw new WasNotFoundException("incorrect id receiver");
         message.setTempBuffer(buffer);
         bufferDao.saveMessageInBuffer(message);
-        saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
+//        saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
+        saveMessageInHistory(message.getIdReceiver(), message.getIdSender(), message);
     }
 
     public void saveMessageInHistory(int idSenderInBuffer, int idBufferOwner, Message message){
@@ -73,7 +75,7 @@ public class ClientService {
 
         for(Message message : buff.getMessages()){
             WebSocketUtils.sendMessageToClient(message, clientSocket);
-            saveMessageInHistory(message.getIdReceiver(), message.getIdSender(), message);
+            saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
             removeMessageFromTempBuff(message);
         }
     }
@@ -141,5 +143,56 @@ public class ClientService {
 
     public void removeFriend(String loginClient, String loginFriend){
         clientDao.removeFriendFromClient(loginClient, loginFriend);
+    }
+
+    public void sendHistory(WebSocket clientSocket, String loginClient, String loginFriend, int maxSize) {
+
+        Client client = clientDao.findClientByLogin(loginClient);
+        List<History> histories = client.getHistory();
+        for(History tmp : histories){
+            if(tmp.getLoginSender().equals(loginFriend)){
+                LOGGER.info("***history was found");
+                List<MessageDTO> lustHistory = new ArrayList<>();
+                if(tmp.getMessages().size() > 20){
+                    for(int i = tmp.getMessages().size() - maxSize; i < tmp.getMessages().size(); i++){
+                        MessageDTO message = new MessageDTO(tmp.getMessages().get(i));
+                        lustHistory.add(message);
+                    }
+                    HistoryDTO historyDTO = new HistoryDTO(lustHistory, HistoryDTO.HistoryType.FULL);
+                    WebSocketUtils.sendHistoryToClient(historyDTO, clientSocket);
+                    return;
+                }
+                for(int i = 0; i < tmp.getMessages().size(); i++){
+                    MessageDTO message = new MessageDTO(tmp.getMessages().get(i));
+                    lustHistory.add(message);
+                }
+                HistoryDTO historyDTO = new HistoryDTO(lustHistory, HistoryDTO.HistoryType.FULL);
+                WebSocketUtils.sendHistoryToClient(historyDTO, clientSocket);
+                return;
+            }
+        }
+
+        LOGGER.info("***new history was created");
+        List<MessageDTO> lustHistory = new ArrayList<>();
+        HistoryDTO historyDTO = new HistoryDTO(lustHistory, HistoryDTO.HistoryType.EMPTY);
+        WebSocketUtils.sendHistoryToClient(historyDTO, clientSocket);
+    }
+
+    public void sendMessage(String login, String email, WebSocket clientSocket) {
+
+        Client client = null;
+        try{
+            client = findByLogin(login);
+        }catch (Exception e){
+            WebSocketUtils.sendTextMessageToClient("Incorrect Email or Login", clientSocket);
+            return;
+        }
+
+        if(client == null || !client.getEmail().equals(email)){
+            WebSocketUtils.sendTextMessageToClient("Incorrect Email or Login", clientSocket);
+        } else{
+            EmailUtils.sendMessage(client.getLogin(), client.getEmail(), clientSocket, client.getPass());
+        }
+
     }
 }

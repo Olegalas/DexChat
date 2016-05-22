@@ -18,10 +18,7 @@ public class History extends IdGenerate {
     @JoinColumn(name="client_id", referencedColumnName = "id")
     private Client idOwner;
 
-    @Column(nullable = false, unique = true)
     private int idSender;
-
-
     private String loginSender;
 
     public History() {
@@ -61,8 +58,7 @@ public class History extends IdGenerate {
 
     @Override
     public String toString() {
-        return "ua.dexchat.model.History{" +
-                "messages=" + messages +
+        return "History{" +
                 ", idOwner=" + idOwner +
                 ", idSender=" + idSender +
                 '}';

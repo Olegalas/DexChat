@@ -38,11 +38,11 @@ public class Message extends IdGenerate{
         this.date = date;
     }
 
-    public Message(String message, String idSender, String idReceiver, String date) {
+    public Message(String message, String idSender, String idReceiver, Double date) {
         this.message = message;
         this.idSender = Integer.parseInt(idSender);
         this.idReceiver = Integer.parseInt(idReceiver);
-        this.date = Date.from(Instant.parse(date)) ;
+        this.date = new Date(date.intValue()) ;
     }
 
     public Message(String message, int idSender, int idReceiver, Date date, History buffer) {

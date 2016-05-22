@@ -22,5 +22,6 @@ public class SendMessageThread extends Thread {
         ClientService service = GetSpringContext.getContext().getBean(ClientService.class);
         service.sendMessageToFriend(message);
         LOGGER.info("***Message was added to friends TemporaryBuffer");
+
     }
 }

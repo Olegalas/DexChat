@@ -3,6 +3,7 @@ package ua.dexchat.server.utils;
 import org.java_websocket.WebSocket;
 import ua.dexchat.model.*;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,6 +32,12 @@ public class WebSocketUtils {
     public static void sendHistoryToClient(Client client, WebSocket clientSocket){
         List<History> histories = client.getHistory();
         WebSocketMessage historyPackage = new WebSocketMessage(histories, WebSocketMessage.MessageType.HISTORY);
+        String historyPackageJson = JsonUtils.transformObjectInJson(historyPackage);
+        clientSocket.send(historyPackageJson);
+    }
+
+    public static void sendHistoryToClient(HistoryDTO history, WebSocket clientSocket){
+        WebSocketMessage historyPackage = new WebSocketMessage(history, WebSocketMessage.MessageType.HISTORY);
         String historyPackageJson = JsonUtils.transformObjectInJson(historyPackage);
         clientSocket.send(historyPackageJson);
     }

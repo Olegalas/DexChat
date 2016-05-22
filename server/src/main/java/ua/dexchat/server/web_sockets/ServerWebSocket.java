@@ -13,6 +13,7 @@ import ua.dexchat.server.utils.WebSocketUtils;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -95,7 +96,7 @@ public class ServerWebSocket extends WebSocketServer {
             case MESSAGE: {
 
                 LOGGER.info("***MESSAGE case");
-                Message message = new Message((String) map.get("message"), (String) map.get("idSender"), (String) map.get("idReceiver"), (String) map.get("date"));
+                Message message = new Message((String) map.get("message"), (String) map.get("idSender"), (String) map.get("idReceiver"), (Double) map.get("date"));
                 new SendMessageThread(message).start();
                 break;
             }
@@ -122,6 +123,13 @@ public class ServerWebSocket extends WebSocketServer {
                 LOGGER.info("***EMAIL case");
                 Login login = new Login(null, null, (String) map.get("login"), (String) map.get("ip"), (String) map.get("email"));
                 new SendEmailThread(login.login, login.email, conn).start();
+                break;
+            }
+            case HISTORY: {
+
+                LOGGER.info("***HISTORY case");
+                new HistorySendThread(conn, (String) map.get("loginFriend"), (String) map.get("login")).start();
+
                 break;
             }
         }
