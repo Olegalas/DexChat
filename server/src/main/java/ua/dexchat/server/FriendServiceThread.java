@@ -81,6 +81,7 @@ public class FriendServiceThread extends Thread {
             for(int i = 0; i < clients.size(); i++){
                 if(friend.getLogin().equals(clients.get(i).getLogin())){
                     clients.remove(i);
+                    // TODO: 26.05.16   if after remove - list will empty - send "incorrect friend login"
                 }
             }
         }

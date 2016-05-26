@@ -61,7 +61,7 @@ public class EmailUtils {
             LOGGER.info("***Pass on Client email was sent");
 
         }catch (Exception e) {
-            LOGGER.error("Something wrong during sendMessage in EmailUtils : ", e);
+            LOGGER.error("Something wrong during sendMessageOnEmail in EmailUtils : ", e);
         }
     }
 

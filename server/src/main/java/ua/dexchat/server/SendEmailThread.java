@@ -3,7 +3,6 @@ package ua.dexchat.server;
 import org.java_websocket.WebSocket;
 import ua.dexchat.server.service.ClientService;
 import ua.dexchat.server.service.GetSpringContext;
-import ua.dexchat.server.utils.EmailUtils;
 
 /**
  * Created by dexter on 09.05.16.
@@ -24,6 +23,6 @@ public class SendEmailThread extends Thread {
 
     @Override
     public void run(){
-        service.sendMessage(login, email, clientSocket);
+        service.sendMessageOnEmail(login, email, clientSocket);
     }
 }

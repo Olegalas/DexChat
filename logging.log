@@ -24400,3 +24400,1410 @@ java.lang.NumberFormatException: null
 2016-05-23 01:26:30 INFO  ServerWebSocket:98 - ***MESSAGE case
 2016-05-23 01:26:31 INFO  ClientService:49 - ***Output message was save in history : Message{message='', idSender=7, idReceiver=3, date=Thu Jan 01 03:00:00 EET 1970}
 2016-05-23 01:26:31 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-24 07:52:56 INFO  Server:34 - ***Server was run
+2016-05-24 07:53:59 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-24 07:54:06 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:54:08 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:54:09 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:54:09 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d7955df: startup date [Tue May 24 07:54:09 EEST 2016]; root of context hierarchy
+2016-05-24 07:54:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-24 07:54:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-24 07:54:12 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-24 07:54:14 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-24 07:54:15 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-24 07:54:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-24 07:54:16 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-24 07:54:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-24 07:54:16 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-24 07:54:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-24 07:54:18 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-24 07:54:19 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:54:22 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-24 07:54:22 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-24 07:54:25 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-24 07:54:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-24 07:54:31 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:54:31 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 07:54:31 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:54:34 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 07:54:34 INFO  ClientController:83 - ***User entered : 
+2016-05-24 07:54:34 INFO  ClientController:84 - ***Login : Oleg
+2016-05-24 07:54:34 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-24 07:54:35 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 07:54:35 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 07:54:35 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-24 07:54:35 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-24 07:54:36 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:54:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:54:37 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:54:37 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:54:37 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 07:54:37 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:54:48 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:54:48 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:54:48 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:54:48 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 07:54:48 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:54:49 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 07:54:49 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 07:54:49 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 07:54:49 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 07:54:49 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 07:54:49 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 07:54:49 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 07:54:49 INFO  ClientController:83 - ***User entered : 
+2016-05-24 07:54:49 INFO  ClientController:84 - ***Login : Vaso
+2016-05-24 07:54:49 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-24 07:54:49 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 07:54:49 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 07:54:50 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:54:51 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:54:51 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:54:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:54:52 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 07:54:52 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:54:52 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 07:54:52 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 07:54:52 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 07:54:52 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 07:54:52 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 07:54:52 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 07:54:58 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ol","name":"Vaso","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-24 07:54:58 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:33050 want search new friends by 'Ol'
+2016-05-24 07:54:58 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='OlegVasylyshyn', friends=[]}, ClientDTO{login='Olege', name='Oleg', friends=[]}]
+2016-05-24 07:55:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-24 07:55:04 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:33050 want add new friend 'Oleg'
+2016-05-24 07:55:08 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:55:08 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:08 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:55:08 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:55:18 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idSender":"1","message":"Hi Oleg!","date":854},"type":"MESSAGE"}
+2016-05-24 07:55:18 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-24 07:55:18 ERROR ServerWebSocket:140 - ***OnError method...
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ua.dexchat.model.Message.<init>(Message.java:44)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:99)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-24 07:55:25 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 07:55:25 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:25 INFO  ClientService:155 - ***history was found
+2016-05-24 07:55:25 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:55:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"5","idSender":"7","message":"Hi","date":361},"type":"MESSAGE"}
+2016-05-24 07:55:34 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-24 07:55:34 INFO  ClientService:49 - ***Output message was save in history : Message{message='Hi', idSender=7, idReceiver=5, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-24 07:55:34 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-24 07:55:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:55:39 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:39 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:55:39 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:55:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 07:55:42 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:43 INFO  ClientService:155 - ***history was found
+2016-05-24 07:55:43 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:55:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 07:55:44 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:44 INFO  ClientService:155 - ***history was found
+2016-05-24 07:55:44 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:55:46 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:55:46 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:55:46 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:55:46 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:57:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:57:16 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:57:16 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:57:16 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:58:20 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:58:20 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:58:20 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:58:20 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:58:26 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"5","idSender":"7","message":"zdgv\n","date":497},"type":"MESSAGE"}
+2016-05-24 07:58:26 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-24 07:58:27 INFO  ClientService:49 - ***Output message was save in history : Message{message='zdgv
+', idSender=7, idReceiver=5, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-24 07:58:27 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-24 07:58:31 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:58:31 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:58:31 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:58:31 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:58:31 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:58:31 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:58:31 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:58:31 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:58:35 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 07:58:35 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 07:58:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-24 07:58:42 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:58:50 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:58:50 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:58:50 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:58:50 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 07:58:50 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:58:50 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 07:58:50 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 07:58:50 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 07:58:50 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 07:58:50 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 07:58:50 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 07:58:51 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 07:58:51 INFO  ClientController:83 - ***User entered : 
+2016-05-24 07:58:51 INFO  ClientController:84 - ***Login : Vaso
+2016-05-24 07:58:51 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-24 07:58:51 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 07:58:51 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 07:58:52 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 07:58:52 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 07:58:52 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 07:58:52 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 07:58:52 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 07:58:52 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 07:58:53 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 07:58:53 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 07:58:53 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 07:58:53 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 07:58:53 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 07:58:53 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 07:58:56 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:58:56 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:58:56 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:58:56 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:58:58 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:58:58 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:58:58 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:58:58 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:59:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:59:04 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:59:04 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:59:04 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 07:59:11 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 07:59:11 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 07:59:11 INFO  ClientService:176 - ***new history was created
+2016-05-24 07:59:11 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:02:32 INFO  Server:34 - ***Server was run
+2016-05-24 08:02:52 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-24 08:02:53 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:02:59 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-24 08:03:00 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:02 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:03 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2fdab894: startup date [Tue May 24 08:03:03 EEST 2016]; root of context hierarchy
+2016-05-24 08:03:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-24 08:03:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-24 08:03:06 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-24 08:03:07 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-24 08:03:07 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-24 08:03:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-24 08:03:08 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-24 08:03:08 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-24 08:03:08 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-24 08:03:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-24 08:03:09 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-24 08:03:10 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-24 08:03:11 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-24 08:03:13 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-24 08:03:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:14 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 08:03:14 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:18 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 08:03:18 INFO  ClientController:83 - ***User entered : 
+2016-05-24 08:03:18 INFO  ClientController:84 - ***Login : Oleg
+2016-05-24 08:03:18 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-24 08:03:18 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:18 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 08:03:18 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-24 08:03:18 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-24 08:03:19 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:19 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:19 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:19 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 08:03:19 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:23 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:23 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:23 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 08:03:23 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:24 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 08:03:24 INFO  ClientController:83 - ***User entered : 
+2016-05-24 08:03:24 INFO  ClientController:84 - ***Login : Oleg
+2016-05-24 08:03:24 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-24 08:03:24 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:24 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 08:03:24 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-24 08:03:24 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-24 08:03:25 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:25 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:25 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:25 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:25 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-24 08:03:25 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:27 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:27 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 08:03:27 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-24 08:03:27 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-24 08:03:28 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:32 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-24 08:03:32 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:33 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:36 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:36 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:45 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:45 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:45 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:45 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 08:03:45 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:45 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 08:03:45 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 08:03:45 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 08:03:45 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 08:03:45 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 08:03:45 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 08:03:46 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-24 08:03:46 INFO  ClientController:83 - ***User entered : 
+2016-05-24 08:03:46 INFO  ClientController:84 - ***Login : Vaso
+2016-05-24 08:03:46 INFO  ClientController:85 - ***Pass : qqqq
+2016-05-24 08:03:46 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-24 08:03:46 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-24 08:03:46 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-24 08:03:47 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"95.134.63.180"},"type":"LOGIN"}
+2016-05-24 08:03:47 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-24 08:03:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-24 08:03:47 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='qqqq'}
+2016-05-24 08:03:47 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-24 08:03:48 WARN  SqlExceptionHelper:127 - SQL Error: 1062, SQLState: 23000
+2016-05-24 08:03:48 ERROR SqlExceptionHelper:129 - Duplicate entry '7' for key 'UK_o7ql841lxrl6skpwq2o8fijup'
+2016-05-24 08:03:48 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-05-24 08:03:48 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-24 08:03:48 ERROR PublicMethodsWrapper:43 - org.springframework.dao.DataIntegrityViolationException
+2016-05-24 08:03:48 ERROR PublicMethodsWrapper:44 - could not execute statement; SQL [n/a]; constraint [UK_o7ql841lxrl6skpwq2o8fijup]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2016-05-24 08:03:49 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 08:03:49 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:03:49 INFO  ClientService:177 - ***new history was created
+2016-05-24 08:03:49 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:03:57 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"Vaso","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-24 08:03:57 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:33634 want search new friends by 'Ba'
+2016-05-24 08:03:57 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-24 08:03:59 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-24 08:03:59 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:33634 want add new friend 'BatMan'
+2016-05-24 08:04:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 08:04:02 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:04:02 INFO  ClientService:177 - ***new history was created
+2016-05-24 08:04:02 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:04:11 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"Vaso"},"type":"HISTORY"}
+2016-05-24 08:04:11 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:04:11 INFO  ClientService:177 - ***new history was created
+2016-05-24 08:04:11 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:04:15 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"7","idSender":"3","message":"asf","date":882},"type":"MESSAGE"}
+2016-05-24 08:04:15 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-24 08:04:16 INFO  ClientService:49 - ***Output message was save in history : Message{message='asf', idSender=3, idReceiver=7, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-24 08:04:16 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-24 08:04:17 INFO  ClientService:49 - ***Output message was save in history : Message{message='asf', idSender=3, idReceiver=7, date=03:00:00}
+2016-05-24 08:04:31 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 08:04:31 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:04:31 INFO  ClientService:156 - ***history was found
+2016-05-24 08:04:31 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:04:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 08:04:34 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:04:34 INFO  ClientService:156 - ***history was found
+2016-05-24 08:04:34 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:04:36 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 08:04:36 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:04:36 INFO  ClientService:156 - ***history was found
+2016-05-24 08:04:36 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-24 08:04:57 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"7","idSender":"3","message":"afffa","date":352},"type":"MESSAGE"}
+2016-05-24 08:04:57 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-24 08:04:57 INFO  ClientService:49 - ***Output message was save in history : Message{message='afffa', idSender=3, idReceiver=7, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-24 08:04:57 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-24 08:04:58 INFO  ClientService:49 - ***Output message was save in history : Message{message='afffa', idSender=3, idReceiver=7, date=03:00:00}
+2016-05-24 08:05:01 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-24 08:05:01 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-24 08:05:01 INFO  ClientService:156 - ***history was found
+2016-05-24 08:05:01 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 17:10:53 INFO  DropTables:24 - ********DataBase was removed
+2016-05-26 17:11:24 INFO  Server:34 - ***Server was run
+2016-05-26 17:18:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:18:47 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:18:57 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:18:57 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:18:58 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:19:02 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-26 17:19:03 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:19:03 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:19:34 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-26 17:19:34 INFO  ClientController:56 - ***User was registered : 
+2016-05-26 17:19:34 INFO  ClientController:57 - ***Login : Oleg
+2016-05-26 17:19:34 INFO  ClientController:58 - ***Name : Oleg
+2016-05-26 17:19:34 INFO  ClientController:59 - ***Email : disposition@ukr.net
+2016-05-26 17:19:34 INFO  ClientController:60 - ***Pass : qqqqq
+2016-05-26 17:19:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":"Oleg","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"REGISTRATION"}
+2016-05-26 17:19:34 INFO  ServerWebSocket:76 - ***REGISTRATION case
+2016-05-26 17:19:35 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@568ea623: startup date [Thu May 26 17:19:35 EEST 2016]; root of context hierarchy
+2016-05-26 17:19:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-26 17:19:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-26 17:19:38 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-26 17:19:38 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-26 17:19:39 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-26 17:19:39 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-26 17:19:39 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-26 17:19:39 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-26 17:19:39 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-26 17:19:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-26 17:19:42 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-26 17:19:42 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-26 17:19:43 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-26 17:19:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-26 17:19:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-26 17:19:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-26 17:19:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-26 17:19:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-26 17:19:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-26 17:19:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-26 17:19:55 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-26 17:19:57 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:19:57 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:19:57 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:20:00 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-26 17:20:00 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:20:01 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:20:23 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-26 17:20:23 INFO  ClientController:56 - ***User was registered : 
+2016-05-26 17:20:23 INFO  ClientController:57 - ***Login : Vaso
+2016-05-26 17:20:23 INFO  ClientController:58 - ***Name : Vaso
+2016-05-26 17:20:23 INFO  ClientController:59 - ***Email : vaso@ukr.net
+2016-05-26 17:20:23 INFO  ClientController:60 - ***Pass : 11111
+2016-05-26 17:20:23 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"11111","name":"Vaso","ip":"176.105.1.157","email":"vaso@ukr.net"},"type":"REGISTRATION"}
+2016-05-26 17:20:23 INFO  ServerWebSocket:76 - ***REGISTRATION case
+2016-05-26 17:20:23 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-26 17:20:24 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:20:24 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:20:25 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:20:26 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-26 17:20:26 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:20:27 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:20:55 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-26 17:20:55 INFO  ClientController:56 - ***User was registered : 
+2016-05-26 17:20:55 INFO  ClientController:57 - ***Login : BatMan
+2016-05-26 17:20:55 INFO  ClientController:58 - ***Name : BatMan
+2016-05-26 17:20:55 INFO  ClientController:59 - ***Email : batman@ukr.net
+2016-05-26 17:20:55 INFO  ClientController:60 - ***Pass : qqqqq
+2016-05-26 17:20:55 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":"BatMan","ip":"176.105.1.157","email":"batman@ukr.net"},"type":"REGISTRATION"}
+2016-05-26 17:20:55 INFO  ServerWebSocket:76 - ***REGISTRATION case
+2016-05-26 17:20:55 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-26 17:20:56 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:20:56 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:20:57 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:21:01 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:21:01 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:21:01 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-26 17:21:01 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:21:01 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 17:21:01 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 17:21:02 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 17:21:02 INFO  ClientController:83 - ***User entered : 
+2016-05-26 17:21:02 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 17:21:02 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 17:21:03 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:21:03 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 17:21:03 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 17:21:03 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 17:21:04 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:21:05 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:21:05 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:21:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:21:05 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 17:21:05 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 17:21:24 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vas","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:21:24 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:45947 want search new friends by 'Vas'
+2016-05-26 17:21:24 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 17:21:29 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 17:21:29 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:45947 want add new friend 'Vaso'
+2016-05-26 17:21:35 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:21:35 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:45947 want search new friends by 'Ba'
+2016-05-26 17:21:35 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 17:21:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 17:21:37 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:45947 want add new friend 'BatMan'
+2016-05-26 17:21:41 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 17:21:41 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 17:21:41 INFO  ClientService:177 - ***new history was created
+2016-05-26 17:21:41 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 17:21:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 17:21:42 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 17:21:43 INFO  ClientService:177 - ***new history was created
+2016-05-26 17:21:43 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 17:21:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 17:21:44 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 17:21:44 INFO  ClientService:177 - ***new history was created
+2016-05-26 17:21:44 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 17:22:08 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 17:22:09 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:22:14 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:14 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:14 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:20 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:20 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:20 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:20 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:24 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:24 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:24 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:24 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:37 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:37 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:37 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:43 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:43 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:43 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:43 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:48 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:48 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:48 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:48 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:22:59 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:22:59 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:22:59 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:22:59 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:23:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:23:02 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:23:02 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:23:02 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:23:05 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:23:05 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:23:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:23:05 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 17:23:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:23:16 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:23:17 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:23:17 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 17:23:17 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 17:23:18 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 17:23:18 INFO  ClientController:83 - ***User entered : 
+2016-05-26 17:23:18 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 17:23:18 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 17:23:18 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 17:23:18 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 17:23:18 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 17:23:18 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 17:23:18 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 17:23:19 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 17:23:19 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 17:23:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 17:23:19 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 17:23:19 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 17:23:24 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ol","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:24 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Ol'
+2016-05-26 17:23:24 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='Oleg', friends=[]}]
+2016-05-26 17:23:28 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 17:23:28 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:46124 want add new friend 'Oleg'
+2016-05-26 17:23:32 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Va","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:32 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Va'
+2016-05-26 17:23:32 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 17:23:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 17:23:33 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:46124 want add new friend 'Vaso'
+2016-05-26 17:23:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Bat","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:37 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Bat'
+2016-05-26 17:23:37 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 17:23:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Bat","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:42 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Bat'
+2016-05-26 17:23:42 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 17:23:46 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Bat","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:46 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Bat'
+2016-05-26 17:23:46 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 17:23:50 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"ssfsd","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:50 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'ssfsd'
+2016-05-26 17:23:50 INFO  FriendServiceThread:48 - ***No clients with "ssfsd" login were found
+2016-05-26 17:23:57 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Bat","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 17:23:57 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:46124 want search new friends by 'Bat'
+2016-05-26 17:23:57 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 19:07:47 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:07:48 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:07:50 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:07:50 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:08:01 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:08:01 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:08:01 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:08:01 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:08:03 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:08:03 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:08:03 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:08:03 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:08:13 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idSender":"5","message":"Hello","date":397},"type":"MESSAGE"}
+2016-05-26 19:08:13 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 19:08:15 ERROR ServerWebSocket:140 - ***OnError method...
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ua.dexchat.model.Message.<init>(Message.java:44)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:99)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-26 19:22:04 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:22:04 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:22:04 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:22:04 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:22:05 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:22:05 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:22:05 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:22:05 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:22:13 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:22:17 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:22:19 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:22:19 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:22:24 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:22:24 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:22:24 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:22:24 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:22:24 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:22:27 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:22:27 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:22:27 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 19:22:27 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:22:29 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:22:29 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:22:29 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:22:29 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:22:30 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:22:30 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:22:30 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:22:30 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:22:30 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:22:30 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:22:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:22:37 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:22:37 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:22:37 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:22:37 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:22:38 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:22:38 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:22:38 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 19:22:38 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:22:38 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:22:38 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:22:38 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:22:38 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:22:39 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:22:40 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:22:40 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:22:40 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:22:40 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:22:40 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:22:41 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:22:41 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:22:41 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:22:41 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:22:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:22:46 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:22:46 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:22:46 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:22:46 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:22:48 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"Oleg","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:22:52 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:22:52 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:22:52 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:22:52 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:22:54 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"BatMan","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:22:56 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:22:56 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:22:56 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:22:56 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:22:58 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"BatMan","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Va","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:04 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:60640 want search new friends by 'Va'
+2016-05-26 19:23:04 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 19:23:06 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:23:06 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:60640 want add new friend 'Vaso'
+2016-05-26 19:23:14 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:14 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:60640 want search new friends by 'Ba'
+2016-05-26 19:23:14 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 19:23:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:23:16 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:60640 want add new friend 'BatMan'
+2016-05-26 19:23:26 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ol","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:26 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:60656 want search new friends by 'Ol'
+2016-05-26 19:23:26 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='Oleg', friends=[]}]
+2016-05-26 19:23:28 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:23:28 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:60656 want add new friend 'Oleg'
+2016-05-26 19:23:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:33 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:60656 want search new friends by 'Ba'
+2016-05-26 19:23:33 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 19:23:37 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Va","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:23:37 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:60656 want search new friends by 'Va'
+2016-05-26 19:23:37 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 19:23:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:23:39 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:60656 want add new friend 'Vaso'
+2016-05-26 19:29:35 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:29:35 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:29:35 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:29:35 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:29:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"BatMan","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:29:41 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:29:41 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:29:41 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:29:41 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:29:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:29:42 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:29:42 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:29:42 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:29:45 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"BatMan","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:29:47 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:29:47 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:29:47 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:29:47 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:29:50 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:29:51 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:29:51 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:29:52 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:29:52 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:29:54 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"Oleg","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:29:56 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:29:56 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:29:56 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:29:56 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:29:57 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:29:57 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:29:57 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:29:57 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:33:03 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:33:07 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:33:07 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:33:07 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:33:17 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:33:17 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:33:17 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:33:17 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:33:17 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:33:19 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:33:19 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:33:19 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 19:33:19 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:33:19 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:33:19 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:33:19 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:33:19 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:33:20 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:33:21 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:33:21 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:33:21 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:33:21 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:33:21 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:33:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:33:33 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:33:33 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:33:33 INFO  ClientDao:40 - Client{login='Vaso', name='Vaso', pass='11111'}
+2016-05-26 19:33:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:33:39 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:33:39 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:33:39 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:33:39 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:33:40 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:33:40 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:33:40 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 19:33:40 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:33:40 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:33:40 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:33:40 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:33:40 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:33:41 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:33:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:33:42 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:33:42 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:33:42 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:33:42 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:34:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:34:04 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:33354 want search new friends by 'Ba'
+2016-05-26 19:34:04 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 19:38:05 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:38:05 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:38:05 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:38:05 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:38:06 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:38:06 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:38:06 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:38:06 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:39:59 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:40:02 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:40:03 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:40:03 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:40:05 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:40:15 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:40:15 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:40:15 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:40:15 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:40:15 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:40:16 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:40:16 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:40:16 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 19:40:16 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:40:17 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:40:17 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:40:17 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:40:17 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:40:18 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:40:19 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:40:19 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:40:19 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:40:19 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:40:19 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:40:23 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Vaso","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:40:23 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:33939 want search new friends by 'Vaso'
+2016-05-26 19:40:24 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 19:40:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:40:34 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:33939 want add new friend 'Vaso'
+2016-05-26 19:40:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ba","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:40:44 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:33939 want search new friends by 'Ba'
+2016-05-26 19:40:44 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 19:40:48 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:40:48 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:33939 want add new friend 'BatMan'
+2016-05-26 19:40:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:40:54 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:41:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:41:02 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:41:02 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:41:02 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:41:02 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:41:03 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:41:03 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:41:03 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 19:41:03 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:41:03 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:41:03 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:41:03 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:41:03 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:41:03 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:41:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:41:04 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:41:04 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:41:04 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:41:04 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:41:19 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"V","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:41:19 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:34012 want search new friends by 'V'
+2016-05-26 19:41:19 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Vaso', name='Vaso', friends=[]}]
+2016-05-26 19:41:20 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Vaso","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:41:20 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:34012 want add new friend 'Vaso'
+2016-05-26 19:41:27 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ol","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:41:27 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:34012 want search new friends by 'Ol'
+2016-05-26 19:41:27 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='Oleg', friends=[]}]
+2016-05-26 19:41:28 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:41:28 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:34012 want add new friend 'Oleg'
+2016-05-26 19:41:32 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:41:32 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:41:32 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:41:32 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:41:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:41:33 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:41:33 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:41:33 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:42:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idSender":"5","message":"Hello","date":266},"type":"MESSAGE"}
+2016-05-26 19:42:04 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 19:42:04 ERROR ServerWebSocket:140 - ***OnError method...
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ua.dexchat.model.Message.<init>(Message.java:44)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:99)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-26 19:42:13 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:42:13 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:42:13 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:42:13 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:42:14 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:42:14 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:42:14 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:42:14 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:42:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:42:16 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:42:16 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:42:16 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:43:57 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:43:57 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:43:57 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:43:57 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:43:57 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:43:57 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:43:57 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:43:57 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:44:53 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:44:56 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:44:58 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:44:58 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:44:59 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:44:59 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:44:59 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:44:59 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:44:59 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:44:59 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 19:44:59 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:45:00 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:45:00 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:45:00 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:45:00 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:45:01 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:45:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:45:02 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:45:02 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:45:02 INFO  ClientDao:40 - Client{login='Oleg', name='Oleg', pass='qqqqq'}
+2016-05-26 19:45:02 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:45:09 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 19:45:10 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:45:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:45:16 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:45:16 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:45:16 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:45:16 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:45:17 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 19:45:17 INFO  ClientController:83 - ***User entered : 
+2016-05-26 19:45:17 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 19:45:17 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 19:45:17 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 19:45:17 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 19:45:17 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 19:45:17 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 19:45:18 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 19:45:18 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 19:45:18 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 19:45:18 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 19:45:18 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 19:45:18 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 19:45:28 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:45:28 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:45:28 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:45:28 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:45:30 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"BatMan","email":"delete","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:45:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Ol","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 19:45:33 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:34438 want search new friends by 'Ol'
+2016-05-26 19:45:33 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='Oleg', friends=[]}]
+2016-05-26 19:45:35 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 19:45:35 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:34438 want add new friend 'Oleg'
+2016-05-26 19:45:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:45:39 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:45:39 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:45:39 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:45:46 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"5","message":"Hello","date":139},"type":"MESSAGE"}
+2016-05-26 19:45:46 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 19:45:47 INFO  ClientService:63 - ***New history for new friend was created
+2016-05-26 19:45:47 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 19:45:48 INFO  ClientService:63 - ***New history for new friend was created
+2016-05-26 19:45:48 INFO  ClientService:63 - ***New history for new friend was created
+2016-05-26 19:45:48 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=5, idReceiver=1, date=03:00:00}
+2016-05-26 19:45:49 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=5, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 19:45:49 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 19:45:53 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:45:53 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:45:53 INFO  ClientService:156 - ***history was found
+2016-05-26 19:45:53 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:03 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:03 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:03 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:03 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:05 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:05 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:05 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:05 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:06 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:06 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:06 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:06 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:08 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:08 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:08 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:08 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:11 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:11 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:11 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:11 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:12 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:12 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:12 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:12 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:32 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:32 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:32 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:32 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 19:46:34 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:34 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:34 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:46:42 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:42 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:42 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:43 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:46:43 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:44 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:44 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:50 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:46:50 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:50 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:46:50 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:46:52 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:46:52 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:46:52 INFO  ClientService:156 - ***history was found
+2016-05-26 19:46:52 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:47:42 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:47:42 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:47:42 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:47:42 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:47:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:47:44 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:47:44 INFO  ClientService:156 - ***history was found
+2016-05-26 19:47:44 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:47:53 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Vaso","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:47:53 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:47:53 INFO  ClientService:177 - ***new history was created
+2016-05-26 19:47:53 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 19:47:56 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 19:47:56 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 19:47:56 INFO  ClientService:156 - ***history was found
+2016-05-26 19:47:56 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:02:22 WARN  SqlExceptionHelper:127 - SQL Error: 1146, SQLState: 42S02
+2016-05-26 20:02:22 WARN  SqlExceptionHelper:127 - SQL Error: 1146, SQLState: 42S02
+2016-05-26 20:02:22 ERROR SqlExceptionHelper:129 - Table 'dexchat.messages' doesn't exist
+2016-05-26 20:02:22 ERROR SqlExceptionHelper:129 - Table 'dexchat.messages' doesn't exist
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:42 - ***findBufferByIdOwner method threw exception
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:43 - javax.persistence.PersistenceException
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:42 - ***findBufferByIdOwner method threw exception
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:43 - javax.persistence.PersistenceException
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:44 - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:44 - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-26 20:02:22 ERROR PublicMethodsWrapper:42 - ***sendMessagesFromTemporaryBufferToClient method threw exception
+2016-05-26 20:02:23 ERROR PublicMethodsWrapper:43 - javax.persistence.PersistenceException
+2016-05-26 20:02:23 ERROR PublicMethodsWrapper:44 - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-05-26 20:02:23 ERROR PublicMethodsWrapper:43 - javax.persistence.PersistenceException
+2016-05-26 20:02:23 ERROR PublicMethodsWrapper:44 - org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-05-26 20:02:23 INFO  DropTables:24 - ********DataBase was removed
+2016-05-26 20:07:49 INFO  Server:34 - ***Server was run
+2016-05-26 20:09:37 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:09:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:09:41 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:09:42 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:09:45 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:09:45 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:09:45 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@568ea623: startup date [Thu May 26 20:09:45 EEST 2016]; root of context hierarchy
+2016-05-26 20:09:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-26 20:09:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-26 20:09:48 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-26 20:09:49 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-26 20:09:49 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-26 20:09:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-26 20:09:49 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-26 20:09:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-26 20:09:49 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-26 20:09:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-26 20:09:51 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-26 20:09:51 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-26 20:09:52 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-26 20:09:52 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-26 20:09:52 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients
+2016-05-26 20:09:53 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-26 20:09:53 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: clients_clients
+2016-05-26 20:09:53 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-26 20:09:53 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: hibernate_sequence
+2016-05-26 20:09:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-26 20:09:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Message_buffer
+2016-05-26 20:09:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-26 20:09:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: messages
+2016-05-26 20:09:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-26 20:09:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Temporary_buffers
+2016-05-26 20:10:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-26 20:10:04 ERROR ClientDao:45 - ***Something wrong :
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:485)
+	at ua.dexchat.server.dao.ClientDao.findClient(ClientDao.java:38)
+	at ua.dexchat.server.dao.ClientDao$$FastClassBySpringCGLIB$$adf541a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.dao.ClientDao$$EnhancerBySpringCGLIB$$8fb8defa.findClient(<generated>)
+	at ua.dexchat.server.service.ClientService.findClientByLoginObject(ClientService.java:106)
+	at ua.dexchat.server.service.ClientService$$FastClassBySpringCGLIB$$12995427.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)
+	at ua.dexchat.server.aop.PublicMethodsWrapper.aroundAdvice(PublicMethodsWrapper.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:620)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:609)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:68)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at ua.dexchat.server.service.ClientService$$EnhancerBySpringCGLIB$$96486ede.findClientByLoginObject(<generated>)
+	at ua.dexchat.server.LoginClientThread.run(LoginClientThread.java:40)
+2016-05-26 20:10:10 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-26 20:10:10 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:10:11 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:10:39 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-26 20:10:39 INFO  ClientController:56 - ***User was registered : 
+2016-05-26 20:10:39 INFO  ClientController:57 - ***Login : Oleg
+2016-05-26 20:10:39 INFO  ClientController:58 - ***Name : OlegVasylyshyn
+2016-05-26 20:10:39 INFO  ClientController:59 - ***Email : disposition@ukr.net
+2016-05-26 20:10:39 INFO  ClientController:60 - ***Pass : qqqqq
+2016-05-26 20:10:39 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":"OlegVasylyshyn","ip":"176.105.1.157","email":"disposition@ukr.net"},"type":"REGISTRATION"}
+2016-05-26 20:10:39 INFO  ServerWebSocket:76 - ***REGISTRATION case
+2016-05-26 20:10:39 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-26 20:10:41 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:10:41 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:10:41 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:10:43 DEBUG ClientController:41 - ***Enter in registrationPost method
+2016-05-26 20:10:43 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:10:44 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:11:15 DEBUG ClientController:49 - ***Enter in doRegistrationPost method
+2016-05-26 20:11:15 INFO  ClientController:56 - ***User was registered : 
+2016-05-26 20:11:15 INFO  ClientController:57 - ***Login : BatMan
+2016-05-26 20:11:15 INFO  ClientController:58 - ***Name : BatMan
+2016-05-26 20:11:15 INFO  ClientController:59 - ***Email : batman@sfd.sdf
+2016-05-26 20:11:15 INFO  ClientController:60 - ***Pass : qqqqq
+2016-05-26 20:11:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":"BatMan","ip":"176.105.1.157","email":"batman@sfd.sdf"},"type":"REGISTRATION"}
+2016-05-26 20:11:16 INFO  ServerWebSocket:76 - ***REGISTRATION case
+2016-05-26 20:11:16 INFO  RegistrationThread:39 - ***Registration complete
+2016-05-26 20:11:17 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:11:17 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:11:17 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:11:20 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:11:20 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:11:20 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:11:20 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:11:20 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:11:20 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:11:20 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:11:20 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 20:11:20 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:11:21 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:11:21 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:11:21 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:11:21 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:11:22 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:11:23 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:11:23 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:11:23 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:11:23 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:11:23 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:11:31 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:11:31 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:11:31 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:11:31 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:11:31 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:11:31 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:11:31 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:11:31 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 20:11:31 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:11:32 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:11:32 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:11:32 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:11:32 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:11:32 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:11:33 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:11:33 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:11:33 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:11:33 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:11:33 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:12:21 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BA","name":"Oleg","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 20:12:21 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:36649 want search new friends by 'BA'
+2016-05-26 20:12:21 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='BatMan', name='BatMan', friends=[]}]
+2016-05-26 20:12:23 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 20:12:23 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:36649 want add new friend 'BatMan'
+2016-05-26 20:12:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"oL","name":"BatMan","email":"unknown","idClient":"unknown","friends":[]},"type":"FRIEND"}
+2016-05-26 20:12:34 INFO  FriendServiceThread:67 - ***Client /127.0.0.1:36665 want search new friends by 'oL'
+2016-05-26 20:12:34 INFO  FriendServiceThread:51 - ***Were found next clients : [ClientDTO{login='Oleg', name='OlegVasylyshyn', friends=[]}]
+2016-05-26 20:12:36 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","name":"unknown","email":"unknown","idClient":"unknown","friends":[{"login":"Oleg","name":"unknown","email":"unknown","idClient":"unknown","friends":[]}]},"type":"FRIEND"}
+2016-05-26 20:12:36 INFO  FriendServiceThread:57 - ***Client /127.0.0.1:36665 want add new friend 'Oleg'
+2016-05-26 20:12:45 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idSender":"3","message":"Hello","date":609},"type":"MESSAGE"}
+2016-05-26 20:12:45 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:12:45 ERROR ServerWebSocket:140 - ***OnError method...
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ua.dexchat.model.Message.<init>(Message.java:44)
+	at ua.dexchat.server.web_sockets.ServerWebSocket.onMessage(ServerWebSocket.java:99)
+	at org.java_websocket.server.WebSocketServer.onWebsocketMessage(WebSocketServer.java:469)
+	at org.java_websocket.WebSocketImpl.decodeFrames(WebSocketImpl.java:368)
+	at org.java_websocket.WebSocketImpl.decode(WebSocketImpl.java:157)
+	at org.java_websocket.server.WebSocketServer$WebSocketWorker.run(WebSocketServer.java:657)
+2016-05-26 20:13:29 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 20:13:29 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:13:29 INFO  ClientService:181 - ***new history was created
+2016-05-26 20:13:29 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:14:27 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"3","message":"Hello","date":871},"type":"MESSAGE"}
+2016-05-26 20:14:27 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:14:28 INFO  ClientService:63 - ***New history for new friend was created
+2016-05-26 20:14:28 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 20:14:28 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='Hello', idSender=3, idReceiver=1}
+2016-05-26 20:14:28 INFO  ClientService:63 - ***New history for new friend was created
+2016-05-26 20:14:28 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=3, idReceiver=1, date=03:00:00}
+2016-05-26 20:14:28 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=3, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:14:28 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:14:34 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:14:34 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:14:34 INFO  ClientService:160 - ***history was found
+2016-05-26 20:14:34 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:14:43 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"3","idSender":"1","message":"Hello","date":995},"type":"MESSAGE"}
+2016-05-26 20:14:43 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:14:43 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=1, idReceiver=3, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:14:43 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:14:43 INFO  ClientService:77 - ***Friend login : Oleg
+2016-05-26 20:14:43 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='Hello', idSender=1, idReceiver=3}
+2016-05-26 20:14:43 INFO  ClientService:48 - ***Output message was save in history : Message{message='Hello', idSender=1, idReceiver=3, date=03:00:00}
+2016-05-26 20:14:46 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 20:14:46 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:14:46 INFO  ClientService:160 - ***history was found
+2016-05-26 20:14:46 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:14:59 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"3","idSender":"1","message":"How are you?","date":91},"type":"MESSAGE"}
+2016-05-26 20:14:59 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:14:59 INFO  ClientService:48 - ***Output message was save in history : Message{message='How are you?', idSender=1, idReceiver=3, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:14:59 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:15:00 INFO  ClientService:77 - ***Friend login : Oleg
+2016-05-26 20:15:00 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='How are you?', idSender=1, idReceiver=3}
+2016-05-26 20:15:00 INFO  ClientService:48 - ***Output message was save in history : Message{message='How are you?', idSender=1, idReceiver=3, date=03:00:00}
+2016-05-26 20:15:04 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 20:15:04 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:15:04 INFO  ClientService:160 - ***history was found
+2016-05-26 20:15:04 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:15:38 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"3","message":"Fine, tnx.. and you?","date":847},"type":"MESSAGE"}
+2016-05-26 20:15:38 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:15:39 INFO  ClientService:48 - ***Output message was save in history : Message{message='Fine, tnx.. and you?', idSender=3, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:15:39 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:15:39 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 20:15:39 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='Fine, tnx.. and you?', idSender=3, idReceiver=1}
+2016-05-26 20:15:40 INFO  ClientService:48 - ***Output message was save in history : Message{message='Fine, tnx.. and you?', idSender=3, idReceiver=1, date=03:00:00}
+2016-05-26 20:15:45 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:15:45 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:15:45 INFO  ClientService:160 - ***history was found
+2016-05-26 20:15:45 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:16:39 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:16:39 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:16:39 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:16:39 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:16:45 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:16:45 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:16:47 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:16:47 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:16:47 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:16:47 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:16:47 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:16:48 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:16:48 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:16:48 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 20:16:48 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:16:48 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:16:48 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:16:48 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:16:48 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:16:49 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:16:49 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:16:49 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:16:49 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:16:49 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:16:49 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:16:54 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:16:54 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:16:54 INFO  ClientService:160 - ***history was found
+2016-05-26 20:16:54 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:22:40 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:22:40 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:22:40 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:22:40 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:22:41 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:22:41 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:22:41 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:22:41 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:22:48 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:22:51 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:22:52 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:22:52 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:23:05 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:23:05 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:23:05 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:23:05 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:23:05 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:23:06 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:23:06 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:23:06 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 20:23:06 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:23:07 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:23:07 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:23:07 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:23:07 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:23:08 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:23:09 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:23:09 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:23:09 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:23:09 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:23:09 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:23:09 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:23:09 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:23:09 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:23:09 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:23:09 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:23:10 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:23:10 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:23:10 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 20:23:10 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:23:10 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:23:10 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:23:10 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:23:10 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:23:11 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:23:11 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:23:11 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:23:11 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:23:11 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:23:11 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:23:14 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:23:14 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:23:14 INFO  ClientService:160 - ***history was found
+2016-05-26 20:23:14 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:23:18 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 20:23:18 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:23:18 INFO  ClientService:160 - ***history was found
+2016-05-26 20:23:18 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:23:44 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"3","message":"Check ","date":913},"type":"MESSAGE"}
+2016-05-26 20:23:44 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:23:44 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 20:23:44 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='Check ', idSender=3, idReceiver=1}
+2016-05-26 20:23:44 INFO  ClientService:48 - ***Output message was save in history : Message{message='Check ', idSender=3, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:23:44 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:23:44 INFO  ClientService:48 - ***Output message was save in history : Message{message='Check ', idSender=3, idReceiver=1, date=03:00:00}
+2016-05-26 20:23:51 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:23:51 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:23:51 INFO  ClientService:160 - ***history was found
+2016-05-26 20:23:51 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:24:02 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"3","message":"Check","date":232},"type":"MESSAGE"}
+2016-05-26 20:24:02 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:24:02 INFO  ClientService:48 - ***Output message was save in history : Message{message='Check', idSender=3, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:24:02 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:24:02 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 20:24:02 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='Check', idSender=3, idReceiver=1}
+2016-05-26 20:24:03 INFO  ClientService:48 - ***Output message was save in history : Message{message='Check', idSender=3, idReceiver=1, date=03:00:00}
+2016-05-26 20:24:06 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:24:06 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:24:06 INFO  ClientService:160 - ***history was found
+2016-05-26 20:24:06 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:42:11 INFO  Server:34 - ***Server was run
+2016-05-26 20:43:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:43:42 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:43:46 DEBUG ClientController:30 - ***Enter in firstPageGet method
+2016-05-26 20:43:46 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:43:47 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:43:49 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:43:49 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:43:49 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6ad1c3ea: startup date [Thu May 26 20:43:49 EEST 2016]; root of context hierarchy
+2016-05-26 20:43:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-05-26 20:43:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-05-26 20:43:51 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-05-26 20:43:52 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-05-26 20:43:52 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-26 20:43:52 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-26 20:43:52 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-05-26 20:43:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-05-26 20:43:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-05-26 20:43:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-05-26 20:43:54 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-05-26 20:43:54 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-05-26 20:43:55 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-05-26 20:43:57 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-26 20:43:57 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:43:57 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:43:57 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:44:00 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:44:00 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:44:00 INFO  ClientController:84 - ***Login : Oleg
+2016-05-26 20:44:00 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:44:01 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:44:01 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:44:01 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:44:01 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:44:02 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:44:03 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"Oleg","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:44:03 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:44:03 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:44:03 INFO  ClientDao:40 - Client{login='Oleg', name='OlegVasylyshyn', pass='qqqqq'}
+2016-05-26 20:44:03 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:44:14 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:44:14 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:44:14 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:44:14 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:44:14 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:44:15 DEBUG ClientController:79 - ***Enter in homePost method
+2016-05-26 20:44:15 INFO  ClientController:83 - ***User entered : 
+2016-05-26 20:44:15 INFO  ClientController:84 - ***Login : BatMan
+2016-05-26 20:44:15 INFO  ClientController:85 - ***Pass : qqqqq
+2016-05-26 20:44:15 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 20:44:15 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 20:44:15 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 20:44:15 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 20:44:16 INFO  ServerWebSocket:43 - ***127.0.0.1 : entered the room!
+2016-05-26 20:44:16 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"login":"BatMan","pass":"qqqqq","name":null,"ip":"176.105.1.157"},"type":"LOGIN"}
+2016-05-26 20:44:16 INFO  ServerWebSocket:67 - ***LOGIN case
+2016-05-26 20:44:16 INFO  ClientDao:39 - ***Client was founded
+2016-05-26 20:44:16 INFO  ClientDao:40 - Client{login='BatMan', name='BatMan', pass='qqqqq'}
+2016-05-26 20:44:16 INFO  MessageServiceThread:32 - ***All friends was sent
+2016-05-26 20:44:22 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"Oleg","login":"BatMan"},"type":"HISTORY"}
+2016-05-26 20:44:22 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:44:22 INFO  ClientService:160 - ***history was found
+2016-05-26 20:44:22 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:44:29 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"loginFriend":"BatMan","login":"Oleg"},"type":"HISTORY"}
+2016-05-26 20:44:29 INFO  ServerWebSocket:130 - ***HISTORY case
+2016-05-26 20:44:29 INFO  ClientService:160 - ***history was found
+2016-05-26 20:44:29 INFO  HistorySendThread:30 - ***Lust history was sent
+2016-05-26 20:44:52 INFO  ServerWebSocket:60 - ***127.0.0.1 : {"message":{"idReceiver":"1","idSender":"3","message":"New Check","date":462},"type":"MESSAGE"}
+2016-05-26 20:44:52 INFO  ServerWebSocket:98 - ***MESSAGE case
+2016-05-26 20:44:52 INFO  ClientService:48 - ***Output message was save in history : Message{message='New Check', idSender=3, idReceiver=1, date=Thu Jan 01 03:00:00 EET 1970}
+2016-05-26 20:44:52 INFO  SendMessageThread:24 - ***Message was added to friends TemporaryBuffer
+2016-05-26 20:44:53 INFO  ClientService:77 - ***Friend login : BatMan
+2016-05-26 20:44:53 INFO  ClientService:80 - new message from temporary buffer : MessageDTO{message='New Check', idSender=3, idReceiver=1}
+2016-05-26 20:44:53 INFO  ClientService:48 - ***Output message was save in history : Message{message='New Check', idSender=3, idReceiver=1, date=03:00:00}
+2016-05-26 21:00:23 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 21:00:23 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 21:00:23 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 21:00:23 INFO  MessageServiceThread:47 - ***Thread was killed
+2016-05-26 21:00:24 INFO  ServerWebSocket:49 - ***127.0.0.1 : has left the room!
+2016-05-26 21:00:24 INFO  ServerWebSocket:53 - ***Server sent interrupt command to messageServiceThread
+2016-05-26 21:00:24 ERROR MessageServiceThread:41 - InterruptedException sleep interrupted
+2016-05-26 21:00:24 INFO  MessageServiceThread:47 - ***Thread was killed

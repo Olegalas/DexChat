@@ -23,7 +23,7 @@ public class WebSocketUtils {
         clientSocket.send(jsonMessage);
     }
 
-    public static void sendMessageToClient(Message message, WebSocket clientSocket){
+    public static void sendMessageToClient(MessageDTO message, WebSocket clientSocket){
         WebSocketMessage webMessage = new WebSocketMessage(message, WebSocketMessage.MessageType.MESSAGE);
         String jsonWebMessage = JsonUtils.transformObjectInJson(webMessage);
         clientSocket.send(jsonWebMessage);

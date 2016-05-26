@@ -33,7 +33,6 @@ public class ClientService {
         if(buffer == null) throw new WasNotFoundException("incorrect id receiver");
         message.setTempBuffer(buffer);
         bufferDao.saveMessageInBuffer(message);
-//        saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
         saveMessageInHistory(message.getIdReceiver(), message.getIdSender(), message);
     }
 
@@ -74,7 +73,12 @@ public class ClientService {
         TemporaryBuffer buff = findTemporaryBuffer(client.getId());
 
         for(Message message : buff.getMessages()){
-            WebSocketUtils.sendMessageToClient(message, clientSocket);
+            Client friend = clientDao.findClient(message.getIdSender());
+            LOGGER.info("***Friend login : " + friend.getLogin());
+            MessageDTO messageDTO = new MessageDTO(message, friend.getLogin());
+            WebSocketUtils.sendMessageToClient(messageDTO, clientSocket);
+            LOGGER.info("new message from temporary buffer : " + messageDTO);
+//            Message newMessage = new Message(message);
             saveMessageInHistory(message.getIdSender(), message.getIdReceiver(), message);
             removeMessageFromTempBuff(message);
         }
@@ -114,7 +118,9 @@ public class ClientService {
         clients = clientDao.findClientsByLogin(friendsLoginStartsWith, maxListSize);
 
         for(Client client : clients){
-            clientsDTO.add(ClientDTO.getClientDTOWithoutFriends(client));
+            ClientDTO tmp = ClientDTO.getClientDTOWithoutFriends(client);
+            tmp.setIdClient(String.valueOf(client.getId()));
+            clientsDTO.add(tmp);
         }
 
         return clientsDTO;
@@ -178,7 +184,7 @@ public class ClientService {
         WebSocketUtils.sendHistoryToClient(historyDTO, clientSocket);
     }
 
-    public void sendMessage(String login, String email, WebSocket clientSocket) {
+    public void sendMessageOnEmail(String login, String email, WebSocket clientSocket) {
 
         Client client = null;
         try{

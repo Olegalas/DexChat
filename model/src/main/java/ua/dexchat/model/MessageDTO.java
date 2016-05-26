@@ -10,20 +10,29 @@ public class MessageDTO {
     private String message;
     private int idSender;
     private int idReceiver;
-    private Date date;
+    private long date;
+    private String loginFriend;
 
     public MessageDTO(String message, int idSender, int idReceiver, Date date) {
         this.message = message;
         this.idSender = idSender;
         this.idReceiver = idReceiver;
-        this.date = date;
+        this.date = date.getTime();
     }
 
     public MessageDTO(Message message){
         this.message = message.getMessage();
         this.idSender = message.getIdSender();
         this.idReceiver = message.getIdReceiver();
-        this.date = message.getDate();
+        this.date = message.getDate().getTime();
+    }
+
+    public MessageDTO(Message message, String loginFriend){
+        this.message = message.getMessage();
+        this.idSender = message.getIdSender();
+        this.idReceiver = message.getIdReceiver();
+        this.date = message.getDate().getTime();
+        this.loginFriend = loginFriend;
     }
 
     public String getMessage() {
@@ -48,6 +57,22 @@ public class MessageDTO {
 
     public void setIdReceiver(int idReceiver) {
         this.idReceiver = idReceiver;
+    }
+
+    public long getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date.getTime();
+    }
+
+    public String getLoginFriend() {
+        return loginFriend;
+    }
+
+    public void setLoginFriend(String loginFriend) {
+        this.loginFriend = loginFriend;
     }
 
     @Override

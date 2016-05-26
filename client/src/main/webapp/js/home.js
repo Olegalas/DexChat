@@ -51,8 +51,6 @@ socket.onmessage = function (event) {
         case "FRIEND":{
 
             console.log(webMessage.message.friends);
-            mainId = webMessage.message.idClient;
-            console.log("your id : " + mainId);
 
 
             if(webMessage.message.friends.length == 0 && webMessage.message.login != mainLogin){
@@ -70,7 +68,7 @@ socket.onmessage = function (event) {
                     $( ".user_model" ).remove();
                     $("#model_add_message").show();
 
-                    createUserDiv(webMessage.message.login);
+                    createUserDiv(webMessage.message.login, webMessage.message.idClient);
 
                     var friend = {
 
@@ -92,26 +90,12 @@ socket.onmessage = function (event) {
 
             } else{
 
+                mainId = webMessage.message.idClient;
+                console.log("your id : " + mainId);
+
                 for(i = 0; i != webMessage.message.friends.length; ++i){
                     console.log(webMessage.message.friends[i].login);
-
-
-
-
-                    // EXAMPLE
-
-                    // <div class="user">
-                    //     <div class="avatar">
-                    //         <img src="http://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                    //             <!-- status online; off; busy; offline-->
-                    //             <div class="status online"></div>
-                    //     </div>
-                    //     <div class="name">Friend</div>
-                    //     <div class="mood">mood</div>
-                    // </div>
-
                     createUserDiv(webMessage.message.friends[i].login, webMessage.message.friends[i].idClient);
-
                 }
             }
 
@@ -129,9 +113,9 @@ socket.onmessage = function (event) {
                 
                 for(i = 0; i < webMessage.message.messages.length; ++i){
                     if(webMessage.message.messages[i].idSender == mainId){
-                        initRightAnswer(mainLogin, webMessage.message.messages[i].message, webMessage.message.messages[i].date);
+                        initRightAnswer(mainLogin, webMessage.message.messages[i].message, new Date(webMessage.message.messages[i].date));
                     }else{
-                        initLeftAnswer(friendLogin, webMessage.message.messages[i].message, webMessage.message.messages[i].date);
+                        initLeftAnswer(friendLogin, webMessage.message.messages[i].message, new Date(webMessage.message.messages[i].date));
                     }
                 }
             }
@@ -144,6 +128,25 @@ socket.onmessage = function (event) {
                 $("#model_message").show();
                 $("#myModal").modal();
             }
+            break;
+        }
+        case "MESSAGE":{
+
+            console.log("new message : " + webMessage.message.message);
+            console.log("from : " + webMessage.message.loginFriend);
+            console.log("selected now  : " + friendLogin);
+            
+            if(friendLogin == webMessage.message.loginFriend){
+                initLeftAnswer(friendLogin, webMessage.message.message, new Date(webMessage.message.date));
+            } else {
+                $("<span class='glyphicon glyphicon-envelope'/>").attr({
+                    id: "alert_" + webMessage.message.loginFriend
+                }).appendTo('#' + webMessage.message.loginFriend);
+                // make alert next to the login friend in friends frame
+                // and if client want to see new message he select this friend and download all messages with new message
+
+            }
+            
             break;
         }
 
@@ -298,10 +301,14 @@ function createUserDiv(login, id) {
 
     var user = $('<div class="user" />').attr({id: login}).click(function(){
 
+            console.log("was selected " + login);
+
             friendLogin = login;
             friendId = id;
 
             $(".answer").remove();
+            $("#alert_" + login).remove();
+        
             $("#login_speaker").text(login);
 
             $(".user").css("background", "#46be8a")
@@ -378,7 +385,7 @@ function initRightAnswer(login, message, date){
     var avatar = $('<div class="avatar"/>').append(image);
     var name = $('<div class="name"/>').text(login);
     var text = $('<div class="text"/>').text(message);
-    var time = $('<div class="time"/>').text(date);
+    var time = $('<div class="time"/>').text(date.toLocaleString());
     
     $('<div class="answer right" />')
         .append(avatar).append(name).append(text).append(time).appendTo(".chat-body");
@@ -394,7 +401,7 @@ function initLeftAnswer(login, message, date){
     var avatar = $('<div class="avatar"/>').append(image);
     var name = $('<div class="name"/>').text(login);
     var text = $('<div class="text"/>').text(message);
-    var time = $('<div class="time"/>').text(date);
+    var time = $('<div class="time"/>').text(date.toLocaleString());
 
     $('<div class="answer left" />')
         .append(avatar).append(name).append(text).append(time).appendTo(".chat-body");
@@ -413,7 +420,7 @@ $(document).on("click", "#answer_button", function () {
     // 2) init new answer tag to dialog frame
     var date = new Date();
     console.log(date.toLocaleString());
-    initRightAnswer(mainLogin, messageText, date.toLocaleString());
+    initRightAnswer(mainLogin, messageText, date);
     console.log("after initAnswer");
 
     console.log("idReceiver: " + friendId);
